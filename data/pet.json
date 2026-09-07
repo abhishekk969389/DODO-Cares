@@ -1,0 +1,143 @@
+{
+  "brand": {
+    "name": "Dodo Cares",
+    "tagline": "Care . Love . Companionship",
+    "logo": "/logo.png"
+  },
+  "navbar": {
+    "logo": {
+      "src": "/logo.png",
+      "alt": "Dodo Cares - Care, Love, Companionship",
+      "width": 300,
+      "height": 100
+    },
+    "navLinks": [
+      {
+        "id": "home",
+        "label": "Home",
+        "href": "/",
+        "active": true
+      },
+      {
+        "id": "about",
+        "label": "About Us",
+        "href": "/about",
+        "active": false
+      },
+      {
+        "id": "services",
+        "label": "Services",
+        "href": "/services",
+        "active": false
+      },
+      {
+        "id": "blog",
+        "label": "Blog",
+        "href": "/blog",
+        "active": false
+      },
+      {
+        "id": "gallery",
+        "label": "Gallery",
+        "href": "/gallery",
+        "active": false
+      }
+    ],
+    "ctaButton": {
+      "label": "Contact Us",
+      "href": "/contact"
+    }
+  },
+  "footer": {
+    "brand": {
+      "logo": "/logo.png",
+      "alt": "Dodo Cares Logo",
+      "description": "We provide loving care, expert guidance, and reliable pet care services to keep your pets healthy, happy, and thriving every day.",
+      "features": [
+        {
+          "id": "trusted",
+          "title": "Trusted Pet Care",
+          "subtitle": "Compassionate care you can trust.",
+          "icon": "paw"
+        },
+        {
+          "id": "priority",
+          "title": "Your Pet, Our Priority",
+          "subtitle": "We treat every pet like our own.",
+          "icon": "shield"
+        }
+      ]
+    },
+    "quickLinks": {
+      "title": "Quick Links",
+      "links": [
+        { "label": "Home", "href": "/" },
+        { "label": "About Us", "href": "/about" },
+        { "label": "Our Services", "href": "/services" },
+        { "label": "Our Team", "href": "/team" },
+        { "label": "Service Areas", "href": "/service-areas" },
+        { "label": "Pricing / Packages", "href": "/pricing" },
+        { "label": "Blog", "href": "/blog" },
+        { "label": "Gallery", "href": "/gallery" },
+        { "label": "Testimonials", "href": "/testimonials" },
+        { "label": "Contact Us", "href": "/contact" }
+      ]
+    },
+    "ourServices": {
+      "title": "Our Services",
+      "links": [
+        { "label": "Dog Grooming", "href": "/services/dog-grooming" },
+        { "label": "Cat Grooming", "href": "/services/cat-grooming" },
+        { "label": "Bath & Brush", "href": "/services/bath-brush" },
+        { "label": "Nail Trimming", "href": "/services/nail-trimming" },
+        { "label": "Ear Cleaning", "href": "/services/ear-cleaning" },
+        { "label": "Pet Boarding", "href": "/services/pet-boarding" },
+        { "label": "Pet Day Care", "href": "/services/pet-day-care" },
+        { "label": "Veterinary Care", "href": "/services/veterinary-care" },
+        { "label": "Nutrition Advice", "href": "/services/nutrition-advice" },
+        { "label": "Puppy Training", "href": "/services/puppy-training" }
+      ]
+    },
+    "resources": {
+      "title": "Resources",
+      "links": [
+        { "label": "Articles & Tips", "href": "/resources/articles-tips" },
+        { "label": "Pet Care Guide", "href": "/resources/pet-care-guide" },
+        { "label": "FAQs", "href": "/faqs" },
+        { "label": "How It Works", "href": "/how-it-works" },
+        { "label": "Appointment", "href": "/appointment" },
+        { "label": "Privacy Policy", "href": "/privacy-policy" },
+        { "label": "Terms & Conditions", "href": "/terms-conditions" },
+        { "label": "Cancellation Policy", "href": "/cancellation-policy" },
+        { "label": "Sitemap", "href": "/sitemap" }
+      ]
+    },
+    "contactInfo": {
+      "title": "Contact Info",
+      "address": {
+        "title": "Address",
+        "lines": ["123 Pet Care Avenue,", "Happy Paws City, 12345"]
+      },
+      "phone": {
+        "title": "Phone",
+        "numbers": ["+91 98765 43210", "+91 98765 43211"]
+      },
+      "email": {
+        "title": "Email",
+        "emails": ["info@dodocares.com", "support@dodocares.com"]
+      }
+    },
+    "bottomBar": {
+      "copyright": "© Copyright 2026 Dodo Cares. All Rights Reserved.",
+      "loveText": "Made with love for pets",
+      "followText": "Follow Us",
+      "socialLinks": [
+        { "platform": "facebook", "url": "https://facebook.com" },
+        { "platform": "instagram", "url": "https://instagram.com" },
+        { "platform": "twitter", "url": "https://twitter.com" },
+        { "platform": "youtube", "url": "https://youtube.com" },
+        { "platform": "linkedin", "url": "https://linkedin.com" }
+      ]
+    }
+  }
+}

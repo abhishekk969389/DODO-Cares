@@ -1,0 +1,314 @@
+import React from "react";
+import Image from "next/image";
+import Link from "next/link";
+import {
+    ChevronRight,
+    MapPin,
+    Phone,
+    Mail,
+    Heart,
+    Shield,
+    PawPrint,
+} from "lucide-react";
+import petDataJson from "@/data/pet.json";
+import type { PetData, FooterLink } from "@/types/pet";
+
+const petData: PetData = petDataJson as PetData;
+
+const FacebookIcon = ({ className = "w-4 h-4" }: { className?: string }) => (
+    <svg className={className} viewBox="0 0 24 24" fill="currentColor">
+        <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" />
+    </svg>
+);
+
+const InstagramIcon = ({ className = "w-4 h-4" }: { className?: string }) => (
+    <svg className={className} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+        <rect width="20" height="20" x="2" y="2" rx="5" ry="5" />
+        <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+        <line x1="17.5" x2="17.51" y1="6.5" y2="6.5" />
+    </svg>
+);
+
+const TwitterIcon = ({ className = "w-4 h-4" }: { className?: string }) => (
+    <svg className={className} viewBox="0 0 24 24" fill="currentColor">
+        <path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z" />
+    </svg>
+);
+
+const YoutubeIcon = ({ className = "w-4 h-4" }: { className?: string }) => (
+    <svg className={className} viewBox="0 0 24 24" fill="currentColor">
+        <path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z" />
+        <polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02" fill="#fff" />
+    </svg>
+);
+
+const LinkedinIcon = ({ className = "w-4 h-4" }: { className?: string }) => (
+    <svg className={className} viewBox="0 0 24 24" fill="currentColor">
+        <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
+        <rect width="4" height="12" x="2" y="9" />
+        <circle cx="4" cy="4" r="2" />
+    </svg>
+);
+
+export default function Footer() {
+    const { footer } = petData;
+
+    const renderSocialIcon = (platform: string) => {
+        switch (platform.toLowerCase()) {
+            case "facebook":
+                return <FacebookIcon className="w-4 h-4" />;
+            case "instagram":
+                return <InstagramIcon className="w-4 h-4" />;
+            case "twitter":
+                return <TwitterIcon className="w-4 h-4" />;
+            case "youtube":
+                return <YoutubeIcon className="w-4 h-4" />;
+            case "linkedin":
+                return <LinkedinIcon className="w-4 h-4" />;
+            default:
+                return null;
+        }
+    };
+
+    return (
+        <footer className="w-full bg-white font-sans">
+            {/* Upper Main Footer Section */}
+            <div className="w-full max-w-[1320px] mx-auto px-4 sm:px-6 lg:px-3 pt-10 sm:pt-12 lg:pt-16 pb-10 sm:pb-12 lg:pb-14">
+                <div className="px-0 sm:px-2 lg:px-6">
+                    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-6 lg:grid-cols-5 gap-8 sm:gap-6 lg:gap-6">
+                        {/* Column 1: Brand Info */}
+                        <div className="col-span-1 sm:col-span-2 md:col-span-6 lg:col-span-1 flex flex-col justify-between">
+                            <div>
+                                <Link href="/" className="inline-block mb-4 sm:mb-6 lg:ml-4">
+                                    <Image
+                                        src={footer.brand.logo}
+                                        alt={footer.brand.alt}
+                                        width={300}
+                                        height={100}
+                                        priority
+                                        className="h-14 sm:h-18 md:h-22 lg:h-30 w-auto object-contain transition-transform duration-300 group-hover:scale-[1.02]"
+                                    />
+                                </Link>
+                                <p className="text-[#2C1810] text-sm sm:text-base lg:text-lg mb-6 sm:mb-8 text-left sm:text-justify max-w-xl lg:max-w-none">
+                                    {footer.brand.description}
+                                </p>
+                            </div>
+
+                            {/* Feature Highlights */}
+                            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-1 gap-4 sm:gap-6 space-y-0 lg:space-y-6">
+                                <div className="flex items-center gap-3.5 sm:gap-4">
+                                    <div className="w-12 h-12 sm:w-13 sm:h-13 rounded-full bg-[#FFF3EB] flex items-center justify-center shrink-0 text-[#F37021]">
+                                        <PawPrint className="w-5 h-5 sm:w-6 sm:h-6 fill-[#F37021]" />
+                                    </div>
+                                    <div>
+                                        <h4 className="text-[#2C1810] font-bold text-sm sm:text-base lg:text-lg">
+                                            {footer.brand.features[0]?.title}
+                                        </h4>
+                                        <p className="text-neutral-500 text-xs sm:text-sm mt-0.5 font-medium">
+                                            {footer.brand.features[0]?.subtitle}
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <div className="flex items-center gap-3.5 sm:gap-4">
+                                    <div className="w-12 h-12 sm:w-13 sm:h-13 rounded-full bg-[#FFF3EB] flex items-center justify-center shrink-0 text-[#F37021]">
+                                        <Shield className="w-5 h-5 sm:w-6 sm:h-6 text-[#F37021]" />
+                                    </div>
+                                    <div>
+                                        <h4 className="text-[#2C1810] font-bold text-sm sm:text-base lg:text-lg">
+                                            {footer.brand.features[1]?.title}
+                                        </h4>
+                                        <p className="text-neutral-500 text-xs sm:text-sm mt-0.5 font-medium">
+                                            {footer.brand.features[1]?.subtitle}
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        {/* Column 2: Quick Links */}
+                        <div className="col-span-1 sm:col-span-1 md:col-span-2 lg:col-span-1 mt-2 sm:mt-4 md:mt-6 lg:mt-8 lg:mx-4">
+                            <h3 className="text-lg sm:text-xl lg:text-2xl font-bold text-[#2C1810] mb-2">
+                                {footer.quickLinks.title}
+                            </h3>
+                            <div className="w-10 h-[3px] bg-[#F37021] rounded-full mb-4 sm:mb-6" />
+                            <ul className="space-y-2">
+                                {footer.quickLinks.links.map((link: FooterLink, index: number) => (
+                                    <li key={index}>
+                                        <Link
+                                            href={link.href}
+                                            className="flex items-center text-sm sm:text-base lg:text-[17px] font-semibold text-[#2C1810] hover:text-[#F37021] transition-colors group"
+                                        >
+                                            <ChevronRight className="w-4 h-4 mr-2 text-[#F37021] transition-transform group-hover:translate-x-1 shrink-0" />
+                                            <span>{link.label}</span>
+                                        </Link>
+                                    </li>
+                                ))}
+                            </ul>
+                        </div>
+
+                        {/* Column 3: Our Services */}
+                        <div className="col-span-1 sm:col-span-1 md:col-span-2 lg:col-span-1 mt-2 sm:mt-4 md:mt-6 lg:mt-8">
+                            <h3 className="text-lg sm:text-xl lg:text-2xl font-bold text-[#2C1810] mb-2">
+                                {footer.ourServices.title}
+                            </h3>
+                            <div className="w-10 h-[3px] bg-[#F37021] rounded-full mb-4 sm:mb-6" />
+                            <ul className="space-y-2">
+                                {footer.ourServices.links.map((link: FooterLink, index: number) => (
+                                    <li key={index}>
+                                        <Link
+                                            href={link.href}
+                                            className="flex items-center text-sm sm:text-base lg:text-[17px] font-semibold text-[#2C1810] hover:text-[#F37021] transition-colors group"
+                                        >
+                                            <ChevronRight className="w-4 h-4 mr-2 text-[#F37021] transition-transform group-hover:translate-x-1 shrink-0" />
+                                            <span>{link.label}</span>
+                                        </Link>
+                                    </li>
+                                ))}
+                            </ul>
+                        </div>
+
+                        {/* Column 4: Resources */}
+                        <div className="col-span-1 sm:col-span-1 md:col-span-2 lg:col-span-1 mt-2 sm:mt-4 md:mt-6 lg:mt-8">
+                            <h3 className="text-lg sm:text-xl lg:text-2xl font-bold text-[#2C1810] mb-2">
+                                {footer.resources.title}
+                            </h3>
+                            <div className="w-10 h-[3px] bg-[#F37021] rounded-full mb-4 sm:mb-6" />
+                            <ul className="space-y-2">
+                                {footer.resources.links.map((link: FooterLink, index: number) => (
+                                    <li key={index}>
+                                        <Link
+                                            href={link.href}
+                                            className="flex items-center text-sm sm:text-base lg:text-[17px] font-semibold text-[#2C1810] hover:text-[#F37021] transition-colors group"
+                                        >
+                                            <ChevronRight className="w-4 h-4 mr-2 text-[#F37021] transition-transform group-hover:translate-x-1 shrink-0" />
+                                            <span>{link.label}</span>
+                                        </Link>
+                                    </li>
+                                ))}
+                            </ul>
+                        </div>
+
+                        {/* Column 5: Contact Info */}
+                        <div className="col-span-1 sm:col-span-2 md:col-span-6 lg:col-span-1 mt-2 sm:mt-6 md:mt-6 lg:mt-8">
+                            <h3 className="text-lg sm:text-xl lg:text-2xl font-bold text-[#2C1810] mb-2">
+                                {footer.contactInfo.title}
+                            </h3>
+                            <div className="w-10 h-[3px] bg-[#F37021] rounded-full mb-4 sm:mb-6" />
+
+                            <div className="flex flex-col">
+                                {/* Address */}
+                                <div className="flex items-start gap-3.5 sm:gap-4">
+                                    <div className="w-11 h-11 sm:w-12 sm:h-12 rounded-full bg-[#FFF3EB] flex items-center justify-center shrink-0 text-[#F37021] mt-0.5">
+                                        <MapPin className="w-5 h-5 fill-[#F37021] text-white" />
+                                    </div>
+                                    <div>
+                                        <h4 className="text-[#2C1810] font-bold text-sm sm:text-base lg:text-lg mb-1">
+                                            {footer.contactInfo.address.title}
+                                        </h4>
+                                        {footer.contactInfo.address.lines.map((line: string, i: number) => (
+                                            <p key={i} className="text-neutral-600 text-xs sm:text-sm lg:text-[15px] font-medium leading-relaxed">
+                                                {line}
+                                            </p>
+                                        ))}
+                                    </div>
+                                </div>
+
+                                <hr className="border-neutral-100 my-3.5" />
+
+                                {/* Phone */}
+                                <div className="flex items-start gap-3.5 sm:gap-4">
+                                    <div className="w-11 h-11 sm:w-12 sm:h-12 rounded-full bg-[#FFF3EB] flex items-center justify-center shrink-0 text-[#F37021] mt-0.5">
+                                        <Phone className="w-4.5 h-4.5 sm:w-5 sm:h-5 fill-[#F37021] text-[#F37021]" />
+                                    </div>
+                                    <div>
+                                        <h4 className="text-[#2C1810] font-bold text-sm sm:text-base lg:text-lg mb-1">
+                                            {footer.contactInfo.phone.title}
+                                        </h4>
+                                        {footer.contactInfo.phone.numbers.map((num: string, i: number) => (
+                                            <p key={i} className="text-neutral-600 text-xs sm:text-sm lg:text-[15px] font-medium leading-relaxed">
+                                                {num}
+                                            </p>
+                                        ))}
+                                    </div>
+                                </div>
+
+                                <hr className="border-neutral-100 my-3.5" />
+
+                                {/* Email */}
+                                <div className="flex items-start gap-3.5 sm:gap-4">
+                                    <div className="w-11 h-11 sm:w-12 sm:h-12 rounded-full bg-[#FFF3EB] flex items-center justify-center shrink-0 text-[#F37021] mt-0.5">
+                                        <Mail className="w-4.5 h-4.5 sm:w-5 sm:h-5 text-[#F37021]" />
+                                    </div>
+                                    <div>
+                                        <h4 className="text-[#2C1810] font-bold text-sm sm:text-base lg:text-lg mb-1">
+                                            {footer.contactInfo.email.title}
+                                        </h4>
+                                        {footer.contactInfo.email.emails.map((email: string, i: number) => (
+                                            <p key={i} className="text-neutral-600 text-xs sm:text-sm lg:text-[15px] font-medium leading-relaxed">
+                                                {email}
+                                            </p>
+                                        ))}
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            {/* Bottom Bar Section */}
+            <div className="bg-[#0A101D] text-neutral-200 py-5 sm:py-6 relative overflow-hidden border-t border-neutral-800/80">
+                <div className="w-full max-w-[1320px] mx-auto px-4 sm:px-6 lg:px-3">
+                    <div className="px-0 sm:px-2 lg:px-6 flex flex-col lg:flex-row items-center justify-between gap-5 sm:gap-6 relative z-10 text-center lg:text-left">
+
+                        {/* Left: Copyright & Divider & Made with love */}
+                        <div className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-5 lg:gap-6 text-xs sm:text-sm lg:text-base font-medium text-neutral-200">
+                            <div>
+                                © Copyright 2026{" "}
+                                <span className="text-[#F37021] font-semibold">Dodo Cares.</span> All Rights Reserved.
+                            </div>
+
+                            {/* Vertical Divider Line */}
+                            <div className="hidden sm:block h-5 sm:h-6 w-[1.5px] bg-neutral-700/80" />
+
+                            {/* Made with love for pets */}
+                            <div className="flex items-center gap-2">
+                                <Heart className="w-4 h-4 text-[#F37021] stroke-[2.2] fill-none" />
+                                <span>{footer.bottomBar.loveText}</span>
+                                <Heart className="w-4 h-4 text-[#F37021] stroke-[2.2] fill-none" />
+                            </div>
+                        </div>
+
+                        {/* Right: Follow Us & Social Icons & Paw Watermark */}
+                        <div className="flex flex-wrap items-center justify-center gap-3 sm:gap-4 lg:gap-6">
+                            <div className="flex items-center gap-2.5 sm:gap-3">
+                                <span className="text-xs sm:text-sm lg:text-base font-medium text-neutral-200 mr-1">
+                                    {footer.bottomBar.followText}
+                                </span>
+                                {footer.bottomBar.socialLinks.map((social, index: number) => (
+                                    <a
+                                        key={index}
+                                        href={social.url}
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className="w-8 h-8 sm:w-9 sm:h-9 lg:w-9.5 lg:h-9.5 rounded-full border border-neutral-600/80 flex items-center justify-center text-white hover:bg-[#F37021] hover:border-[#F37021] transition-all duration-200 shadow-xs"
+                                        aria-label={social.platform}
+                                    >
+                                        {renderSocialIcon(social.platform)}
+                                    </a>
+                                ))}
+                            </div>
+
+                            {/* Translucent Paw Watermark */}
+                            <div className="hidden sm:flex items-center justify-center opacity-30 text-[#2C384E] ml-2 shrink-0">
+                                <PawPrint className="w-10 h-10 sm:w-14 sm:h-14 lg:w-20 lg:h-20" />
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </footer>
+    );
+}
