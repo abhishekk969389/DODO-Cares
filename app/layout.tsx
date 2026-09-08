@@ -3,6 +3,7 @@ import { Outfit, Plus_Jakarta_Sans } from "next/font/google";
 import "./globals.css";
 import Navbar from "./navbar";
 import Footer from "./footer";
+import SmoothScroll from "./smoothscroll";
 
 const outfit = Outfit({
   variable: "--font-outfit",
@@ -32,9 +33,12 @@ export default function RootLayout({
       className={`${outfit.variable} ${plusJakarta.variable} ${outfit.className} h-full antialiased`}
     >
       <body className={`min-h-full flex flex-col ${outfit.className}`}>
-        <Navbar />
+         <SmoothScroll>
+          <Navbar />
         {children}
         <Footer />
+        </SmoothScroll>
+        
       </body>
     </html>
   );

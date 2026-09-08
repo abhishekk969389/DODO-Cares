@@ -257,12 +257,17 @@
     "titleHighlight": "Deserves",
     "titleSuffix": "the Best Care",
     "description": "From daily walks to expert grooming and personalized care, we're here to keep your furry family happy and healthy.",
-    "bgImage": "/bg.png",
+    "bgImage": "/homebanner.jpg",
+    "bgImages": [
+      "/homebanner.jpg",
+      "/homebanner.jpg",
+      "/homebanner.jpg"
+    ],
     "features": [
       {
         "id": "1",
         "title": "Loving Care",
-        "icon": "Heart"
+        "icon": "PawPrint"
       },
       {
         "id": "2",
@@ -272,7 +277,7 @@
       {
         "id": "3",
         "title": "Expert Team",
-        "icon": "UserCheck"
+        "icon": "User"
       },
       {
         "id": "4",
@@ -284,5 +289,271 @@
     "primaryBtnLink": "/services",
     "secondaryBtnText": "Learn More",
     "secondaryBtnLink": "/about"
+  },
+  "about": {
+    "badge": "ABOUT US",
+    "title": "We Provide Breed-Specific Cuts And Can Customize",
+    "paragraphs": [
+      "Our grooming sessions generally take 1-2 hours, depending on your dog's size and coat condition Yes, we use hypoallergenic and gentle grooming products tailored to dogs with sensitive skin depending on breed and coat type.Our grooming sessions generally take 1-2 hours, depending on your dog's size and coat condition Yes,",
+      "Our grooming sessions generally take 1-2 hours, depending on your dog's size and coat condition Yes, we use hypoallergenic and gentle grooming products tailored to dogs with sensitive skin depending on breed and coat type."
+    ],
+    "experienceYears": "25+",
+    "experienceTitle": "Years Experience Hair Cutting Service",
+    "mainImage": "/about2.jpg",
+    "secondaryImage": "/about1.jpg",
+    "btnText": "MORE ABOUT US",
+    "btnLink": "/about"
+  },
+  "serviceAreas": {
+    "badge": "SERVICE AREAS",
+    "titlePrefix": "We Are Present In Multiple",
+    "titleMiddle": "Locations",
+    "titleSuffix": "To Serve You",
+    "description": "Find a Dodo Cares center near you and give your pet the best care, always.",
+    "locations": [
+      {
+        "id": "1",
+        "name": "Delhi",
+        "description": "Serving all major areas in Delhi.",
+        "image": "/service/service1.jpg"
+      },
+      {
+        "id": "2",
+        "name": "Gurugram",
+        "description": "Serving all major areas in Gurugram.",
+        "image": "/service/service2.jpg"
+      },
+      {
+        "id": "3",
+        "name": "Noida",
+        "description": "Serving all major areas in Noida.",
+        "image": "/service/service3.jpg"
+      },
+      {
+        "id": "4",
+        "name": "Faridabad",
+        "description": "Serving all major areas in Faridabad.",
+        "image": "/service/service4.jpg"
+      },
+      {
+        "id": "5",
+        "name": "Ghaziabad",
+        "description": "Serving all major areas in Ghaziabad.",
+        "image": "/service/service5.jpg"
+      },
+      {
+        "id": "6",
+        "name": "Ghaziabad",
+        "description": "Serving all major areas in Ghaziabad.",
+        "image": "/service/service5.jpg"
+      }
+    ],
+    "stats": [
+      {
+        "id": "1",
+        "value": "25+",
+        "label": "Service Locations",
+        "icon": "MapPin"
+      },
+      {
+        "id": "2",
+        "value": "10000+",
+        "label": "Happy Pets",
+        "icon": "Home"
+      },
+      {
+        "id": "3",
+        "value": "12+",
+        "label": "Years of Trust",
+        "icon": "Heart"
+      },
+      {
+        "id": "4",
+        "value": "24/7",
+        "label": "Support Available",
+        "icon": "Headphones"
+      }
+    ]
+  },
+  "ourServices": {
+    "badge": "OUR SERVICES",
+    "titlePrefix": "Customized Dog Training",
+    "titleMiddle": "for",
+    "titleHighlight": "Every Pup",
+    "description": "Tailored training programs to build good behavior, boost confidence, and strengthen the bond between you and your furry friend.",
+    "services": [
+      {
+        "id": "1",
+        "title": "Comprehensive Puppy Training",
+        "description": "Build a strong foundation with socialization, basic commands, and positive habits.",
+        "image": "/works/works1.jpg",
+        "badgeIcon": "Dog",
+        "link": "/services/puppy-training"
+      },
+      {
+        "id": "2",
+        "title": "Complete Obedience Training",
+        "description": "Teach essential commands and good manners for a well-behaved and confident dog.",
+        "image": "/works/works2.jpg",
+        "badgeIcon": "Dog",
+        "link": "/services/obedience-training"
+      },
+      {
+        "id": "3",
+        "title": "Behavior Correction Program",
+        "description": "We address unwanted behaviors with proven techniques and positive reinforcement.",
+        "image": "/works/works3.jpg",
+        "badgeIcon": "Dog",
+        "link": "/services/behavior-correction"
+      },
+      {
+        "id": "4",
+        "title": "Advanced Skills Training",
+        "description": "Take your dog's abilities to the next level with advanced tricks and skill training.",
+        "image": "/works/works4.jpg",
+        "badgeIcon": "Star",
+        "link": "/services/advanced-skills"
+      }
+    ]
+  },
+  "whyChooseUs": {
+    "badge": "Your Pet Care",
+    "titlePrefix": "Why Choose",
+    "titleHighlight": "Us?",
+    "description": "Your pet's health and happiness are our top priorities. We provide a wide range of services to ensure they receive the best care, every step of the way our pet's health and happiness are our top priorities. We provide a wide range of services to ensure they receive the best care, every step of the way.",
+    "mainImage": "/whychoose.jpg",
+    "btnText": "More About Us",
+    "btnLink": "/about",
+    "features": [
+      {
+        "id": "1",
+        "title": "Medical Services",
+        "description": "Comprehensive healthcare to keep your pets healthy, from checkups to treatments.",
+        "icon": "FaKitMedical",
+        "link": "/services/medical"
+      },
+      {
+        "id": "2",
+        "title": "Pet Shower",
+        "description": "Hygienic and relaxing baths that keep your pet fresh, clean, and happy.",
+        "icon": "FaShower",
+        "link": "/services/shower"
+      },
+      {
+        "id": "3",
+        "title": "Pets Hair Trimmer",
+        "description": "Professional grooming and coat care for a neat, healthy, and comfortable pet.",
+        "icon": "FaScissors",
+        "link": "/services/trimmer"
+      },
+      {
+        "id": "4",
+        "title": "Surgical Care",
+        "description": "Safe and advanced surgical services for your pet's specialized health needs.",
+        "icon": "FaStethoscope",
+        "link": "/services/surgical"
+      },
+      {
+        "id": "5",
+        "title": "Senior Pet Wellness",
+        "description": "Special care and regular checkups to ensure a healthy and active senior life.",
+        "icon": "FaShieldHeart",
+        "link": "/services/senior-wellness"
+      },
+      {
+        "id": "6",
+        "title": "Wellness Approach",
+        "description": "Preventive care and wellness plans for long-term health and happiness.",
+        "icon": "FaHeartPulse",
+        "link": "/services/wellness-approach"
+      }
+    ],
+    "bottomBanner": {
+      "title": "Happy Pets, Happy Hearts – That's Our Promise.",
+      "subtitle": "We are dedicated to providing the best care and love for your furry family members.",
+      "icon": "FaDog",
+      "btnText": "Book an Appointment",
+      "btnLink": "/contact"
+    }
+  },
+  "ourTeam": {
+    "badge": "OUR TEAM",
+    "titlePrefix": "Meet Our",
+    "titleHighlight": "Pet Care Experts",
+    "description": "Our passionate team of professionals is dedicated to providing the best care and support for your furry family members.",
+    "members": [
+      {
+        "id": "1",
+        "name": "Kajal Bhardwaj",
+        "role": "Pet Expert",
+        "image": "/teams/teams1.jpg",
+        "link": "/team/john-simon"
+      },
+      {
+        "id": "2",
+        "name": "Shefali Thakur",
+        "role": "Pet Expert",
+        "image": "/teams/teams2.jpg",
+        "link": "/team/jessica-lauren"
+      },
+      {
+        "id": "3",
+        "name": "Dipak Singh",
+        "role": "Pet Expert",
+        "image": "/teams/teams3.jpg",
+        "link": "/team/jenny-william"
+      },
+      {
+        "id": "4",
+        "name": "Abhishek Kumar",
+        "role": "Pet Expert",
+        "image": "/teams/teams4.jpg",
+        "link": "/team/daniel-thomas"
+      }
+    ]
+  },
+  "ourBlogs": {
+    "badge": "OUR BLOGS",
+    "titlePrefix": "Latest",
+    "titleHighlight": "Pet Care Insights",
+    "description": "Helpful tips, expert advice, and pet care insights to help you keep your furry friends happy, healthy, and well-cared for.",
+    "posts": [
+      {
+        "id": "1",
+        "category": "Pet Health",
+        "date": "May 10, 2024",
+        "title": "How to Keep Your Pets Healthy and Happy",
+        "excerpt": "Discover essential tips to maintain your pet's health and happiness every day.",
+        "image": "/blogs/blog1.jpg",
+        "link": "/blog/how-to-keep-your-pets-healthy-and-happy"
+      },
+      {
+        "id": "2",
+        "category": "Training Tips",
+        "date": "May 07, 2024",
+        "title": "5 Positive Training Tips for a Well-Behaved Pet",
+        "excerpt": "Learn simple and effective training techniques to build a strong bond.",
+        "image": "/blogs/blog2.jpg",
+        "link": "/blog/5-positive-training-tips"
+      },
+      {
+        "id": "3",
+        "category": "Nutrition",
+        "date": "May 03, 2024",
+        "title": "A Complete Guide to Pet Nutrition",
+        "excerpt": "Explore the best nutrition tips and food choices for your pet's overall well-being.",
+        "image": "/blogs/blog3.jpg",
+        "link": "/blog/a-complete-guide-to-pet-nutrition"
+      },
+      {
+        "id": "4",
+        "category": "Pet Care",
+        "date": "Apr 30, 2024",
+        "title": "Daily Pet Care Routine You Should Follow",
+        "excerpt": "A simple daily routine can make a big difference in your pet's life.",
+        "image": "/blogs/blog4.jpg",
+        "link": "/blog/daily-pet-care-routine"
+      }
+    ]
   }
 }
