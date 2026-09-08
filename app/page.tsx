@@ -1,8 +1,9 @@
-import Navbar from "./navbar";
+import Banner from "./banner";
 
 export default function Home() {
   return (
-    <main className="min-h-screen py-6">
+    <main className="w-full min-h-screen">
+      <Banner />
     </main>
   );
 }

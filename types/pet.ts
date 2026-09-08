@@ -100,5 +100,27 @@ export interface FooterData {
 export interface PetData {
   brand: BrandData;
   navbar: NavbarData;
+  banner: BannerData;
   footer: FooterData;
+}
+
+
+export interface FeatureItem {
+  id: string;
+  title: string;
+  icon: string; 
+}
+
+export interface BannerData {
+  badge: string;
+  titlePrefix: string;
+  titleHighlight: string;
+  titleSuffix: string;
+  description: string;
+  bgImage: string;
+  features: FeatureItem[];
+  primaryBtnText: string;
+  primaryBtnLink: string;
+  secondaryBtnText: string;
+  secondaryBtnLink: string;
 }

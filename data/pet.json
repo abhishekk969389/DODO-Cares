@@ -71,60 +71,156 @@
     "quickLinks": {
       "title": "Quick Links",
       "links": [
-        { "label": "Home", "href": "/" },
-        { "label": "About Us", "href": "/about" },
-        { "label": "Our Services", "href": "/services" },
-        { "label": "Our Team", "href": "/team" },
-        { "label": "Service Areas", "href": "/service-areas" },
-        { "label": "Pricing / Packages", "href": "/pricing" },
-        { "label": "Blog", "href": "/blog" },
-        { "label": "Gallery", "href": "/gallery" },
-        { "label": "Testimonials", "href": "/testimonials" },
-        { "label": "Contact Us", "href": "/contact" }
+        {
+          "label": "Home",
+          "href": "/"
+        },
+        {
+          "label": "About Us",
+          "href": "/about"
+        },
+        {
+          "label": "Our Services",
+          "href": "/services"
+        },
+        {
+          "label": "Our Team",
+          "href": "/team"
+        },
+        {
+          "label": "Service Areas",
+          "href": "/service-areas"
+        },
+        {
+          "label": "Pricing / Packages",
+          "href": "/pricing"
+        },
+        {
+          "label": "Blog",
+          "href": "/blog"
+        },
+        {
+          "label": "Gallery",
+          "href": "/gallery"
+        },
+        {
+          "label": "Testimonials",
+          "href": "/testimonials"
+        },
+        {
+          "label": "Contact Us",
+          "href": "/contact"
+        }
       ]
     },
     "ourServices": {
       "title": "Our Services",
       "links": [
-        { "label": "Dog Grooming", "href": "/services/dog-grooming" },
-        { "label": "Cat Grooming", "href": "/services/cat-grooming" },
-        { "label": "Bath & Brush", "href": "/services/bath-brush" },
-        { "label": "Nail Trimming", "href": "/services/nail-trimming" },
-        { "label": "Ear Cleaning", "href": "/services/ear-cleaning" },
-        { "label": "Pet Boarding", "href": "/services/pet-boarding" },
-        { "label": "Pet Day Care", "href": "/services/pet-day-care" },
-        { "label": "Veterinary Care", "href": "/services/veterinary-care" },
-        { "label": "Nutrition Advice", "href": "/services/nutrition-advice" },
-        { "label": "Puppy Training", "href": "/services/puppy-training" }
+        {
+          "label": "Dog Grooming",
+          "href": "/services/dog-grooming"
+        },
+        {
+          "label": "Cat Grooming",
+          "href": "/services/cat-grooming"
+        },
+        {
+          "label": "Bath & Brush",
+          "href": "/services/bath-brush"
+        },
+        {
+          "label": "Nail Trimming",
+          "href": "/services/nail-trimming"
+        },
+        {
+          "label": "Ear Cleaning",
+          "href": "/services/ear-cleaning"
+        },
+        {
+          "label": "Pet Boarding",
+          "href": "/services/pet-boarding"
+        },
+        {
+          "label": "Pet Day Care",
+          "href": "/services/pet-day-care"
+        },
+        {
+          "label": "Veterinary Care",
+          "href": "/services/veterinary-care"
+        },
+        {
+          "label": "Nutrition Advice",
+          "href": "/services/nutrition-advice"
+        },
+        {
+          "label": "Puppy Training",
+          "href": "/services/puppy-training"
+        }
       ]
     },
     "resources": {
       "title": "Resources",
       "links": [
-        { "label": "Articles & Tips", "href": "/resources/articles-tips" },
-        { "label": "Pet Care Guide", "href": "/resources/pet-care-guide" },
-        { "label": "FAQs", "href": "/faqs" },
-        { "label": "How It Works", "href": "/how-it-works" },
-        { "label": "Appointment", "href": "/appointment" },
-        { "label": "Privacy Policy", "href": "/privacy-policy" },
-        { "label": "Terms & Conditions", "href": "/terms-conditions" },
-        { "label": "Cancellation Policy", "href": "/cancellation-policy" },
-        { "label": "Sitemap", "href": "/sitemap" }
+        {
+          "label": "Articles & Tips",
+          "href": "/resources/articles-tips"
+        },
+        {
+          "label": "Pet Care Guide",
+          "href": "/resources/pet-care-guide"
+        },
+        {
+          "label": "FAQs",
+          "href": "/faqs"
+        },
+        {
+          "label": "How It Works",
+          "href": "/how-it-works"
+        },
+        {
+          "label": "Appointment",
+          "href": "/appointment"
+        },
+        {
+          "label": "Privacy Policy",
+          "href": "/privacy-policy"
+        },
+        {
+          "label": "Terms & Conditions",
+          "href": "/terms-conditions"
+        },
+        {
+          "label": "Cancellation Policy",
+          "href": "/cancellation-policy"
+        },
+        {
+          "label": "Sitemap",
+          "href": "/sitemap"
+        }
       ]
     },
     "contactInfo": {
       "title": "Contact Info",
       "address": {
         "title": "Address",
-        "lines": ["123 Pet Care Avenue,", "Happy Paws City, 12345"]
+        "lines": [
+          "123 Pet Care Avenue,",
+          "Happy Paws City, 12345"
+        ]
       },
       "phone": {
         "title": "Phone",
-        "numbers": ["+91 98765 43210", "+91 98765 43211"]
+        "numbers": [
+          "+91 98765 43210",
+          "+91 98765 43211"
+        ]
       },
       "email": {
         "title": "Email",
-        "emails": ["info@dodocares.com", "support@dodocares.com"]
+        "emails": [
+          "info@dodocares.com",
+          "support@dodocares.com"
+        ]
       }
     },
     "bottomBar": {
@@ -132,12 +228,61 @@
       "loveText": "Made with love for pets",
       "followText": "Follow Us",
       "socialLinks": [
-        { "platform": "facebook", "url": "https://facebook.com" },
-        { "platform": "instagram", "url": "https://instagram.com" },
-        { "platform": "twitter", "url": "https://twitter.com" },
-        { "platform": "youtube", "url": "https://youtube.com" },
-        { "platform": "linkedin", "url": "https://linkedin.com" }
+        {
+          "platform": "facebook",
+          "url": "https://facebook.com"
+        },
+        {
+          "platform": "instagram",
+          "url": "https://instagram.com"
+        },
+        {
+          "platform": "twitter",
+          "url": "https://twitter.com"
+        },
+        {
+          "platform": "youtube",
+          "url": "https://youtube.com"
+        },
+        {
+          "platform": "linkedin",
+          "url": "https://linkedin.com"
+        }
       ]
     }
+  },
+  "banner": {
+    "badge": "Trusted Care, Happy Pets",
+    "titlePrefix": "Because Every Pet",
+    "titleHighlight": "Deserves",
+    "titleSuffix": "the Best Care",
+    "description": "From daily walks to expert grooming and personalized care, we're here to keep your furry family happy and healthy.",
+    "bgImage": "/homebanner.jpg",
+    "features": [
+      {
+        "id": "1",
+        "title": "Loving Care",
+        "icon": "Heart"
+      },
+      {
+        "id": "2",
+        "title": "Safe & Reliable",
+        "icon": "ShieldCheck"
+      },
+      {
+        "id": "3",
+        "title": "Expert Team",
+        "icon": "UserCheck"
+      },
+      {
+        "id": "4",
+        "title": "Home Like Comfort",
+        "icon": "Home"
+      }
+    ],
+    "primaryBtnText": "Our Services",
+    "primaryBtnLink": "/services",
+    "secondaryBtnText": "Learn More",
+    "secondaryBtnLink": "/about"
   }
 }
