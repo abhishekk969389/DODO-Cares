@@ -55,26 +55,28 @@ const DecorativeScribbleHeart = () => (
     </svg>
 );
 
+const TOTAL_SLIDES = 3;
+
 export default function Banner() {
     const [currentSlide, setCurrentSlide] = useState(0);
 
     if (!bannerData) return null;
 
     const handlePrev = () => {
-        setCurrentSlide((prev) => (prev === 0 ? 0 : prev - 1));
+        setCurrentSlide((prev) => (prev === 0 ? TOTAL_SLIDES - 1 : prev - 1));
     };
 
     const handleNext = () => {
-        setCurrentSlide((prev) => prev + 1);
+        setCurrentSlide((prev) => (prev === TOTAL_SLIDES - 1 ? 0 : prev + 1));
     };
 
     return (
-        <section className="relative w-full min-h-[660px] sm:min-h-[720px] lg:min-h-[760px] pt-36 sm:pt-40 lg:pt-44 pb-28 sm:pb-36 lg:pb-44 bg-[#FDF8F3] overflow-hidden flex flex-col justify-center">
+        <section className="relative w-full min-h-[660px] sm:min-h-[720px] lg:min-h-[760px] pt-36 sm:pt-40 lg:pt-44 pb-36 sm:pb-44 lg:pb-56 bg-[#FDF8F3] overflow-hidden flex flex-col justify-center">
 
             {/* FULL BACKGROUND IMAGE (homebanner.jpg) */}
             <div className="absolute inset-0 w-full h-full pointer-events-none z-0">
                 <Image
-                    src={bannerData.bgImage || "/homebanner.jpg"}
+                    src={bannerData.bgImage || "/bg.png"}
                     alt="Pet Banner"
                     fill
                     priority
@@ -83,8 +85,8 @@ export default function Banner() {
                 />
 
 
-                <div className="absolute inset-0 bg-gradient-to-r from-[#FDF8F3] via-[#FDF8F3] via-42% sm:via-46% to-transparent hidden lg:block" />
-                <div className="absolute inset-0 bg-gradient-to-b from-[#FDF8F3] via-[#FDF8F3]/95 to-[#FDF8F3]/40 lg:hidden" />
+                <div className="absolute inset-0 bg-gradient-to-r from-[#FDF8F3] from-18% via-[#FDF8F3]/55 via-38% to-transparent to-56% hidden lg:block" />
+                <div className="absolute inset-0 bg-gradient-to-b from-[#FDF8F3] via-[#FDF8F3]/80 to-[#FDF8F3]/25 lg:hidden" />
             </div>
 
             {/* ALIGNED WRAPPER CONTAINER - Matches Header max-w-[1320px] boundary */}
@@ -112,7 +114,7 @@ export default function Banner() {
                 <div className="grid mx-12 grid-cols-1 lg:grid-cols-12 gap-8 items-center px-4 sm:px-6 lg:px-8">
 
                     {/* Left Text Column */}
-                    <div className="lg:col-span-7 xl:col-span-6 flex flex-col justify-center">
+                    <div className="lg:col-span-7 flex flex-col justify-center">
 
                         {/* Top Tagline / Badge */}
                         <div className="inline-flex items-center gap-1.5 mb-3 sm:mb-4 mt-8">
@@ -123,7 +125,7 @@ export default function Banner() {
                         </div>
 
                         {/* Main Title */}
-                        <h1 className="text-4xl sm:text-5xl lg:text-6xl font-semibold text-[#2C1810] tracking-tight leading-[1.12] mb-5 sm:mb-6 max-w-xl">
+                        <h1 className="text-4xl sm:text-5xl lg:text-6xl font-semibold text-[#2C1810] tracking-tight leading-[1.12] mb-5 sm:mb-6 max-w-2xl">
                             {bannerData.titlePrefix}{" "}
                             <span className="text-[#F37021] font-semibold">
                                 {bannerData.titleHighlight}
@@ -185,25 +187,54 @@ export default function Banner() {
                     </div>
 
                     {/* Right Column Spacer for Background Image */}
-                    <div className="lg:col-span-5 xl:col-span-6 min-h-[280px] sm:min-h-[340px] lg:min-h-0 pointer-events-none" />
+                    <div className="lg:col-span-5 min-h-[280px] sm:min-h-[340px] lg:min-h-0 pointer-events-none" />
 
                 </div>
             </div>
 
-            {/* Smooth Curved Bottom Divider Cut */}
+            {/* Curved Bottom Band - White curve stroke over the orange band */}
             <div className="absolute bottom-0 left-0 right-0 w-full overflow-hidden leading-none pointer-events-none z-20">
                 <svg
-                    className="relative block w-full h-[60px] sm:h-[100px] md:h-[140px] lg:h-[170px]"
-                    viewBox="0 0 1440 170"
+                    className="relative block w-full h-[90px] sm:h-[130px] md:h-[170px] lg:h-[200px]"
+                    viewBox="0 0 1440 200"
                     fill="none"
                     preserveAspectRatio="none"
                     xmlns="http://www.w3.org/2000/svg"
                 >
+                    {/* White curve line */}
                     <path
-                        d="M0 170 L0 70 C 380 150, 950 160, 1440 15 L 1440 170 Z"
+                        d="M0 200 L0 76 C 400 159, 980 166, 1440 4 L 1440 200 Z"
                         fill="#FFFFFF"
                     />
+                    {/* Orange band below the white curve */}
+                    <path
+                        d="M0 200 L0 92 C 400 175, 980 182, 1440 20 L 1440 200 Z"
+                        fill="#F37021"
+                    />
                 </svg>
+
+                {/* Large Paw Watermark on the orange band */}
+                <PawPrint
+                    className="absolute right-[5%] bottom-4 sm:bottom-5 lg:bottom-6 w-14 h-14 sm:w-20 sm:h-20 lg:w-28 lg:h-28 text-white/20 rotate-[18deg]"
+                    strokeWidth={1.5}
+                    aria-hidden="true"
+                />
+            </div>
+
+            {/* Slider Pagination Dots */}
+            <div className="absolute bottom-14 sm:bottom-20 lg:bottom-24 left-0 right-0 z-30 flex items-center justify-center gap-2.5">
+                {Array.from({ length: TOTAL_SLIDES }).map((_, index) => (
+                    <button
+                        key={index}
+                        onClick={() => setCurrentSlide(index)}
+                        aria-label={`Go to slide ${index + 1}`}
+                        aria-current={index === currentSlide}
+                        className={`w-2.5 h-2.5 rounded-full transition-all duration-300 cursor-pointer shadow-2xs ${index === currentSlide
+                            ? "bg-[#F37021] scale-110"
+                            : "bg-white ring-1 ring-black/5 hover:bg-white/90"
+                            }`}
+                    />
+                ))}
             </div>
 
         </section>
