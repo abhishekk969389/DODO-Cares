@@ -3,6 +3,7 @@
 import React, { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { ArrowRight, Menu, X } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import petDataJson from "@/data/pet.json";
@@ -12,10 +13,15 @@ const petData: PetData = petDataJson as PetData;
 
 export default function Navbar() {
     const { navbar } = petData;
-    const [activeTab, setActiveTab] = useState<string>(
-        navbar.navLinks.find((link) => link.active)?.id || "home"
-    );
+    const pathname = usePathname();
     const [mobileMenuOpen, setMobileMenuOpen] = useState<boolean>(false);
+
+    const checkIsActive = (href: string) => {
+        if (href === "/") {
+            return pathname === "/";
+        }
+        return pathname === href || pathname.startsWith(`${href}/`);
+    };
 
     return (
         <header className="fixed top-0 left-0 right-0 z-50 w-full max-w-[1320px] mx-auto px-4 py-4 sm:px-6 lg:px-8">
@@ -41,12 +47,11 @@ export default function Navbar() {
                 {/* Desktop Navigation Links */}
                 <div className="hidden lg:flex items-center gap-8 xl:gap-12">
                     {navbar.navLinks.map((link: NavLink) => {
-                        const isActive = activeTab === link.id;
+                        const isActive = checkIsActive(link.href);
                         return (
                             <Link
                                 key={link.id}
                                 href={link.href}
-                                onClick={() => setActiveTab(link.id)}
                                 className={`relative py-1.5 text-lg xl:text-xl font-semibold transition-colors duration-200 ${isActive
                                     ? "text-[#F37021]"
                                     : "text-[#2C1810] hover:text-[#F37021]"
@@ -123,13 +128,12 @@ export default function Navbar() {
                         >
                             <div className="flex flex-col gap-3">
                                 {navbar.navLinks.map((link: NavLink) => {
-                                    const isActive = activeTab === link.id;
+                                    const isActive = checkIsActive(link.href);
                                     return (
                                         <Link
                                             key={link.id}
                                             href={link.href}
                                             onClick={() => {
-                                                setActiveTab(link.id);
                                                 setMobileMenuOpen(false);
                                             }}
                                             className={`px-4 py-2.5 rounded-2xl text-base font-semibold transition-colors ${isActive
