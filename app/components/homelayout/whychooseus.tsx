@@ -58,7 +58,7 @@ const DecorativeWavyPaw = () => (
                 strokeLinecap="round"
             />
         </svg>
-        <FaPaw className="w-4.5 h-4.5 text-[#F37021]" />
+        <FaPaw className="w-5 h-5 text-[#F37021]" />
     </div>
 );
 
@@ -86,7 +86,7 @@ export default function WhyChooseUs() {
                         {/* Top Tag / Pill Badge */}
                         <FadeIn direction="up" delay={0.05}>
                             <div className="bg-white border border-[#F37021]/30 text-[#F37021] text-xs sm:text-sm font-bold tracking-wide rounded-full px-3.5 py-1 inline-flex items-center gap-1.5 w-fit mb-3.5 shadow-2xs">
-                                <FaPaw className="w-4 h-4 text-[#F37021]" />
+                                <FaPaw className="w-5 h-5 text-[#F37021]" />
                                 <span>{whyData.badge}</span>
                             </div>
                         </FadeIn>

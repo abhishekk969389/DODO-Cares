@@ -1,0 +1,119 @@
+"use client";
+
+import React from "react";
+import Image from "next/image";
+import Link from "next/link";
+import { motion } from "framer-motion";
+import petDataJson from "@/data/pet.json";
+import type { PetData, SubBannerData, BreadcrumbItem } from "@/types/pet";
+import { FadeIn } from "@/app/components/ui/animations";
+
+const petData: PetData = petDataJson as unknown as PetData;
+
+interface SubBannerProps {
+    pageKey?: string;
+    title?: string;
+    bgImage?: string;
+    breadcrumbs?: BreadcrumbItem[];
+}
+
+export default function SubBanner({
+    pageKey = "about",
+    title,
+    bgImage,
+    breadcrumbs,
+}: SubBannerProps) {
+    const subBannerData: SubBannerData | undefined = petData.subBanners?.[pageKey];
+
+    const displayTitle = title || subBannerData?.title || "About Us";
+    const displayBgImage = bgImage || subBannerData?.bgImage || "/subbanner.jpg";
+    const displayBreadcrumbs = breadcrumbs || subBannerData?.breadcrumbs || [
+        { label: "Home", href: "/" },
+        { label: displayTitle, active: true },
+    ];
+
+    return (
+        <section className="relative w-full h-[360px] sm:h-[420px] lg:h-[460px] flex items-center justify-center overflow-hidden bg-[#2C1810] pt-24 sm:pt-28 lg:pt-32">
+
+            {/* FULL BACKGROUND IMAGE & OVERLAY */}
+            <div className="absolute inset-0 w-full h-full z-0">
+                <Image
+                    src={displayBgImage}
+                    alt={displayTitle}
+                    fill
+                    priority
+                    sizes="100vw"
+                    className="object-cover object-center sm:object-[center_35%]"
+                />
+                {/* Dark Gradient Overlay for optimal title readability */}
+                <div className="absolute inset-0 bg-black/40 sm:bg-black/35 z-10" />
+            </div>
+
+            {/* CENTER TITLE */}
+            <div className="relative z-20 max-w-[1320px] mx-auto px-4 sm:px-6 lg:px-8 w-full text-center pb-12 sm:pb-16">
+                <FadeIn direction="up" delay={0.1}>
+                    <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold text-white tracking-tight drop-shadow-md">
+                        {displayTitle}
+                    </h1>
+                </FadeIn>
+            </div>
+
+            {/* BOTTOM BREADCRUMB TAB LIKE SCREENSHOT */}
+            <div className="absolute  w-60 md:w-140 bottom-0 left-1/2 -translate-x-1/2 z-20">
+                <FadeIn direction="up" delay={0.15}>
+                    <div className="relative bg-white rounded-t-[28px] sm:rounded-t-[36px] px-8 sm:px-14 py-3 sm:py-4 flex items-center justify-center gap-2.5">
+                        
+                        {/* LEFT CONCAVE INVERTED CORNER WING */}
+                        <div className="absolute right-[calc(100%-0.5px)] bottom-0 w-7 h-7 sm:w-9 sm:h-9 text-white pointer-events-none overflow-hidden">
+                            <svg
+                                viewBox="0 0 36 36"
+                                className="w-full h-full fill-current block"
+                                preserveAspectRatio="none"
+                                aria-hidden="true"
+                            >
+                                <path d="M 0 36 A 36 36 0 0 0 36 0 L 36 36 Z" />
+                            </svg>
+                        </div>
+
+                        {/* BREADCRUMB CONTENT */}
+                        {displayBreadcrumbs.map((item, idx) => (
+                            <React.Fragment key={idx}>
+                                {idx > 0 && (
+                                    <span className="text-[#2C1810] font-bold text-sm sm:text-base md:text-lg mx-0.5">
+                                        /
+                                    </span>
+                                )}
+                                {item.href && !item.active ? (
+                                    <Link
+                                        href={item.href}
+                                        className="text-[#2C1810] hover:text-[#F37021] font-bold text-sm sm:text-base md:text-lg transition-colors duration-200"
+                                    >
+                                        {item.label}
+                                    </Link>
+                                ) : (
+                                    <span className="text-[#F37021] font-bold text-sm sm:text-base md:text-lg">
+                                        {item.label}
+                                    </span>
+                                )}
+                            </React.Fragment>
+                        ))}
+
+                        {/* RIGHT CONCAVE INVERTED CORNER WING */}
+                        <div className="absolute left-[calc(100%-0.5px)] bottom-0 w-7 h-7 sm:w-9 sm:h-9 text-white pointer-events-none overflow-hidden">
+                            <svg
+                                viewBox="0 0 36 36"
+                                className="w-full h-full fill-current block"
+                                preserveAspectRatio="none"
+                                aria-hidden="true"
+                            >
+                                <path d="M 0 0 A 36 36 0 0 0 36 36 L 0 36 Z" />
+                            </svg>
+                        </div>
+
+                    </div>
+                </FadeIn>
+            </div>
+
+        </section>
+    );
+}

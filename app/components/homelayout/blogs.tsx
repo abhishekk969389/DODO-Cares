@@ -30,7 +30,7 @@ export default function Blogs() {
                     {/* Top Tag / Badge */}
                     <FadeIn direction="up" delay={0.05}>
                         <div className="inline-flex items-center gap-1.5 text-[#F37021] font-bold text-xs sm:text-sm tracking-widest uppercase mb-2 sm:mb-3">
-                            <FaPaw className="w-4 h-4 text-[#F37021]" />
+                            <FaPaw className="w-5 h-5 text-[#F37021]" />
                             <span>{blogsData.badge}</span>
                         </div>
                     </FadeIn>
@@ -48,7 +48,7 @@ export default function Blogs() {
                     {/* Paw Icon Divider Line */}
                     <div className="flex items-center justify-center gap-2.5 mt-1 mb-4">
                         <div className="h-[1.5px] w-7 bg-[#F37021]/50 rounded-full" />
-                        <FaPaw className="w-4 h-4 text-[#F37021]" />
+                        <FaPaw className="w-5 h-5 text-[#F37021]" />
                         <div className="h-[1.5px] w-7 bg-[#F37021]/50 rounded-full" />
                     </div>
 
@@ -63,7 +63,7 @@ export default function Blogs() {
 
                 {/* 4 Blog Cards Grid (StaggerContainer + StaggerItem + MotionCard) */}
                 <StaggerContainer className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mt-4 lg:gap-7 w-full">
-                    {blogsData.posts?.map((post) => (
+                    {blogsData.posts?.slice(0, 4).map((post) => (
                         <StaggerItem key={post.id} direction="up">
                             <MotionCard hoverY={-6} hoverScale={1.01} className="h-full">
                                 <div className="bg-white rounded-[24px] sm:rounded-[28px] overflow-hidden p-4 border border-amber-900/10 flex flex-col justify-between group cursor-pointer h-full">

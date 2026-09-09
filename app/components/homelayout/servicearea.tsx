@@ -7,26 +7,15 @@ import petDataJson from "@/data/pet.json";
 import type { PetData, ServiceAreasData } from "@/types/pet";
 import {
     FadeIn,
-    StaggerContainer,
-    StaggerItem,
     MotionCard,
 } from "@/app/components/ui/animations";
 import {
     ChevronLeft,
     ChevronRight,
     MapPin,
-    Home,
-    Heart,
-    Headphones,
 } from "lucide-react";
 import { FaPaw } from "react-icons/fa";
-
-const statIconMap: Record<string, React.ElementType> = {
-    MapPin,
-    Home,
-    Heart,
-    Headphones,
-};
+import Statistics from "@/app/components/ui/statistics";
 
 const petData: PetData = petDataJson as unknown as PetData;
 const serviceData: ServiceAreasData = petData.serviceAreas as ServiceAreasData;
@@ -196,44 +185,7 @@ export default function Services() {
                 </div>
 
                 {/* Bottom Floating Statistics Bar */}
-                <FadeIn direction="up" delay={0.1}>
-                    <div className="bg-white mx-auto max-w-[1320px] rounded-xl shadow-md shadow-neutral-200/60 border border-neutral-100 px-6 sm:px-10 lg:px-12 py-5 sm:py-6 mt-8 w-full">
-                        <div className="flex flex-col sm:grid sm:grid-cols-2 lg:flex lg:flex-row items-center justify-between gap-6 lg:gap-0">
-                            {serviceData.stats?.map((stat, idx) => {
-                                const IconComponent = statIconMap[stat.icon] || MapPin;
-
-                                return (
-                                    <React.Fragment key={stat.id}>
-                                        {idx > 0 && (
-                                            <div className="hidden lg:block h-10 w-[1px] bg-neutral-200/80 shrink-0 mx-2" />
-                                        )}
-                                        <motion.div
-                                            whileHover={{ scale: 1.02 }}
-                                            whileTap={{ scale: 0.98 }}
-                                            transition={{ duration: 0.2, ease: "easeInOut" }}
-                                            className="flex items-center gap-4 sm:gap-5 justify-center flex-1 px-2 sm:px-4 cursor-pointer"
-                                        >
-                                            {/* Orange Circle Icon Badge */}
-                                            <div className="w-13 h-13 sm:w-14 sm:h-14 rounded-full bg-[#F37021] text-white flex items-center justify-center shrink-0 shadow-2xs">
-                                                <IconComponent className="w-6.5 h-6.5 text-white" strokeWidth={1.8} />
-                                            </div>
-
-                                            {/* Stat Value & Label */}
-                                            <div className="flex flex-col text-left">
-                                                <span className="text-xl sm:text-2xl font-extrabold text-[#2C1810] leading-none mb-1 tracking-tight">
-                                                    {stat.value}
-                                                </span>
-                                                <span className="text-xs sm:text-sm font-bold text-[#382219] leading-tight">
-                                                    {stat.label}
-                                                </span>
-                                            </div>
-                                        </motion.div>
-                                    </React.Fragment>
-                                );
-                            })}
-                        </div>
-                    </div>
-                </FadeIn>
+                <Statistics stats={serviceData.stats} />
 
             </div>
         </section>

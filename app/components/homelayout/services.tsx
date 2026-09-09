@@ -43,11 +43,11 @@ const DotMatrixDecoration = () => (
     </svg>
 );
 
-export default function Works() {
+export default function Services() {
     if (!ourServicesData) return null;
 
     return (
-        <section className="relative w-full bg-[#FDF8F3] py-8 mt-8 sm:mt-10 md:mt-12 lg:mt-14 overflow-hidden">
+        <section className="relative w-full mt-8 sm:mt-10 md:mt-12 lg:mt-14 overflow-hidden">
 
             {/* Background Decorative Graphics */}
             <div className="absolute top-10 left-6 sm:left-12 pointer-events-none hidden sm:block">
@@ -65,7 +65,7 @@ export default function Works() {
                     {/* Top Tag / Badge */}
                     <FadeIn direction="up" delay={0.05}>
                         <div className="inline-flex items-center gap-1.5 text-[#F37021] font-bold text-xs sm:text-sm tracking-widest uppercase mb-2 sm:mb-3">
-                            <FaPaw className="w-4 h-4 text-[#F37021]" />
+                            <FaPaw className="w-5 h-5 text-[#F37021]" />
                             <span>{ourServicesData.badge}</span>
                         </div>
                     </FadeIn>
@@ -90,7 +90,7 @@ export default function Works() {
                     {/* Paw Icon Divider Line */}
                     <div className="flex items-center justify-center gap-2.5 mt-1">
                         <div className="h-[1.5px] w-7 bg-[#F37021]/50 rounded-full" />
-                        <FaPaw className="w-4 h-4 text-[#F37021]" />
+                        <FaPaw className="w-5 h-5 text-[#F37021]" />
                         <div className="h-[1.5px] w-7 bg-[#F37021]/50 rounded-full" />
                     </div>
 

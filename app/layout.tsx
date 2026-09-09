@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
 import { Outfit, Plus_Jakarta_Sans } from "next/font/google";
 import "./globals.css";
-import Navbar from "./navbar";
-import Footer from "./footer";
-import SmoothScroll from "./smoothscroll";
+import Navbar from "./components/ui/navbar";
+import Footer from "./components/ui/footer";
+import SmoothScroll from "./components/ui/smoothscroll";
 
 const outfit = Outfit({
   variable: "--font-outfit",
@@ -18,7 +18,7 @@ const plusJakarta = Plus_Jakarta_Sans({
 });
 
 export const metadata: Metadata = {
-  title: "Dodo Cares - Care, Love, Companionship",
+  title: "Dodo Cares",
   description: "From daily walks to expert grooming and personalized care, we're here to keep your furry family happy and healthy.",
 };
 

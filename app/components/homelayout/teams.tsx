@@ -30,7 +30,7 @@ export default function Teams() {
                     {/* Top Tag / Badge */}
                     <FadeIn direction="up" delay={0.05}>
                         <div className="inline-flex items-center gap-1.5 text-[#F37021] font-bold text-xs sm:text-sm tracking-widest uppercase mb-2 sm:mb-3">
-                            <FaPaw className="w-4 h-4 text-[#F37021]" />
+                            <FaPaw className="w-5 h-5 text-[#F37021]" />
                             <span>{teamData.badge}</span>
                         </div>
                     </FadeIn>
@@ -48,7 +48,7 @@ export default function Teams() {
                     {/* Paw Icon Divider Line */}
                     <div className="flex items-center justify-center gap-2.5 mt-1 mb-4">
                         <div className="h-[1.5px] w-7 bg-[#F37021]/50 rounded-full" />
-                        <FaPaw className="w-4 h-4 text-[#F37021]" />
+                        <FaPaw className="w-5 h-5 text-[#F37021]" />
                         <div className="h-[1.5px] w-7 bg-[#F37021]/50 rounded-full" />
                     </div>
 

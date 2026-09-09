@@ -45,8 +45,371 @@
     ],
     "ctaButton": {
       "label": "Contact Us",
-      "href": "/contact"
+      "href": "/contactus"
     }
+  },
+  "subBanners": {
+    "about": {
+      "title": "About Us",
+      "bgImage": "/subbanner.jpg",
+      "breadcrumbs": [
+        {
+          "label": "Home",
+          "href": "/"
+        },
+        {
+          "label": "About Us",
+          "active": true
+        }
+      ]
+    },
+    "mission": {
+      "title": "Vision & Mission",
+      "bgImage": "/subbanner.jpg",
+      "breadcrumbs": [
+        {
+          "label": "Home",
+          "href": "/"
+        },
+        {
+          "label": "Vision & Mission",
+          "active": true
+        }
+      ]
+    },
+    "whychooseus": {
+      "title": "Why Choose Us",
+      "bgImage": "/subbanner.jpg",
+      "breadcrumbs": [
+        {
+          "label": "Home",
+          "href": "/"
+        },
+        {
+          "label": "Why Choose Us",
+          "active": true
+        }
+      ]
+    },
+    "pricing": {
+      "title": "Pricing",
+      "bgImage": "/subbanner.jpg",
+      "breadcrumbs": [
+        {
+          "label": "Home",
+          "href": "/"
+        },
+        {
+          "label": "Pricing",
+          "active": true
+        }
+      ]
+    },
+    "servicelocation": {
+      "title": "Service Locations",
+      "bgImage": "/subbanner.jpg",
+      "breadcrumbs": [
+        {
+          "label": "Home",
+          "href": "/"
+        },
+        {
+          "label": "Service Locations",
+          "active": true
+        }
+      ]
+    },
+    "appointment": {
+      "title": "Book Appointment",
+      "bgImage": "/subbanner.jpg",
+      "breadcrumbs": [
+        {
+          "label": "Home",
+          "href": "/"
+        },
+        {
+          "label": "Book An Appointment",
+          "active": true
+        }
+      ]
+    },
+    "services": {
+      "title": "Our Services",
+      "bgImage": "/subbanner.jpg",
+      "breadcrumbs": [
+        {
+          "label": "Home",
+          "href": "/"
+        },
+        {
+          "label": "Services",
+          "active": true
+        }
+      ]
+    },
+    "contact": {
+      "title": "Contact Us",
+      "bgImage": "/subbanner.jpg",
+      "breadcrumbs": [
+        {
+          "label": "Home",
+          "href": "/"
+        },
+        {
+          "label": "Contact Us",
+          "active": true
+        }
+      ]
+    },
+    "gallery": {
+      "title": "Gallery",
+      "bgImage": "/subbanner.jpg",
+      "breadcrumbs": [
+        {
+          "label": "Home",
+          "href": "/"
+        },
+        {
+          "label": "Gallery",
+          "active": true
+        }
+      ]
+    },
+    "testimonial": {
+      "title": "Testimonials",
+      "bgImage": "/subbanner.jpg",
+      "breadcrumbs": [
+        {
+          "label": "Home",
+          "href": "/"
+        },
+        {
+          "label": "Testimonials",
+          "active": true
+        }
+      ]
+    },
+    "faq": {
+      "title": "FAQS",
+      "bgImage": "/subbanner.jpg",
+      "breadcrumbs": [
+        {
+          "label": "Home",
+          "href": "/"
+        },
+        {
+          "label": "FAQS",
+          "active": true
+        }
+      ]
+    },
+    "blog": {
+      "title": "Blogs",
+      "bgImage": "/subbanner.jpg",
+      "breadcrumbs": [
+        {
+          "label": "Home",
+          "href": "/"
+        },
+        {
+          "label": "Blogs",
+          "active": true
+        }
+      ]
+    },
+    "partners": {
+      "title": "Partners",
+      "bgImage": "/subbanner.jpg",
+      "breadcrumbs": [
+        {
+          "label": "Home",
+          "href": "/"
+        },
+        {
+          "label": "Partners",
+          "active": true
+        }
+      ]
+    },
+    "cookiepolicy": {
+      "title": "Cookie Policy",
+      "bgImage": "/subbanner.jpg",
+      "breadcrumbs": [
+        {
+          "label": "Home",
+          "href": "/"
+        },
+        {
+          "label": "Cookie Policy",
+          "active": true
+        }
+      ]
+    },
+    "disclaimer": {
+      "title": "Disclaimer",
+      "bgImage": "/subbanner.jpg",
+      "breadcrumbs": [
+        {
+          "label": "Home",
+          "href": "/"
+        },
+        {
+          "label": "Disclaimer",
+          "active": true
+        }
+      ]
+    },
+       "termscondition": {
+      "title": "Terms & Condition",
+      "bgImage": "/subbanner.jpg",
+      "breadcrumbs": [
+        {
+          "label": "Home",
+          "href": "/"
+        },
+        {
+          "label": "Terms & Condition",
+          "active": true
+        }
+      ]
+    },
+       "sitemap": {
+      "title": "Sitemap",
+      "bgImage": "/subbanner.jpg",
+      "breadcrumbs": [
+        {
+          "label": "Home",
+          "href": "/"
+        },
+        {
+          "label": "Sitenap",
+          "active": true
+        }
+      ]
+    },
+        "contactus": {
+      "title": "Contact Us",
+      "bgImage": "/subbanner.jpg",
+      "breadcrumbs": [
+        {
+          "label": "Home",
+          "href": "/"
+        },
+        {
+          "label": "Contact Us",
+          "active": true
+        }
+      ]
+    }
+  },
+  "testimonialSec": {
+    "badge": "TESTIMONIALS",
+    "titlePrefix": "What Pet",
+    "titleHighlight": "Parents Say",
+    "description": "Real stories from pet parents who trust Dodo Cares for the love, care and well-being of their furry family.",
+    "testimonials": [
+      {
+        "id": "t1",
+        "name": "Riya Sharma",
+        "role": "Bruno's Mom",
+        "rating": 5,
+        "comment": "Dodo Cares has been a blessing for our dog Bruno! The grooming service is excellent and the staff is so patient and caring. Highly recommended!",
+        "avatar": "/teams/teams1.jpg"
+      },
+      {
+        "id": "t2",
+        "name": "Arjun Mehta",
+        "role": "Milo's Dad",
+        "rating": 5,
+        "comment": "I'm very happy with the care my cat Milo receives here. The team is professional, friendly and truly loves animals. My go-to place for everything!",
+        "avatar": "/teams/teams2.jpg"
+      },
+      {
+        "id": "t3",
+        "name": "Neha Kapoor",
+        "role": "Luna's Mom",
+        "rating": 5,
+        "comment": "From grooming to spa, everything is top-notch. My pet feels so comfortable here and comes back home happy and fresh every time!",
+        "avatar": "/teams/teams3.jpg"
+      },
+      {
+        "id": "t4",
+        "name": "Vikram Singh",
+        "role": "Max's Dad",
+        "rating": 5,
+        "comment": "The play area and hygiene standards are amazing. I love how they treat every pet like their own. Dodo Cares is simply the best!",
+        "avatar": "/teams/teams4.jpg"
+      },
+      {
+        "id": "t5",
+        "name": "Pooja Iyer",
+        "role": "Coco's Mom",
+        "rating": 5,
+        "comment": "Very professional team and a clean, safe environment. My pet enjoys every visit and I have complete peace of mind. Highly trustworthy!",
+        "avatar": "/teams/teams1.jpg"
+      },
+      {
+        "id": "t6",
+        "name": "Karan Malhotra",
+        "role": "Buddy's Dad",
+        "rating": 5,
+        "comment": "We've tried many places but Dodo Cares is on another level. Great service, loving staff and the best care for our furry family member.",
+        "avatar": "/teams/teams2.jpg"
+      }
+    ]
+  },
+  "faqSec": {
+    "titlePrefix": "Frequently",
+    "titleHighlight": "Asked",
+    "titleSuffix": "Questions",
+    "description": "Find answers to common questions about our services, appointments and pet care.",
+    "sidebar": {
+      "titlePrefix": "Still Have",
+      "titleHighlight": "Questions?",
+      "subtitle": "We're here to help! Reach out to our team and we'll be happy to assist you.",
+      "image": "/faqq.png",
+      "phone": "+91 98765 43210",
+      "email": "delhi@dodocares.com",
+      "address": "123 Pet Care Street, South Extension Part 1, New Delhi, Delhi 110049",
+      "hours": "Mon - Sun : 9:00 AM - 8:00 PM"
+    },
+    "faqs": [
+      {
+        "id": "faq1",
+        "question": "What services does Dodo Cares provide?",
+        "answer": "We offer a wide range of services including grooming, spa & bath, daycare, training, vet consultation, pet boarding, and pet taxi. Our goal is to provide complete care for your furry family members."
+      },
+      {
+        "id": "faq2",
+        "question": "How can I book an appointment?",
+        "answer": "You can easily book an appointment through our website's booking page by selecting your desired service and preferred time slot, or by contacting our support team."
+      },
+      {
+        "id": "faq3",
+        "question": "Is prior appointment required for all services?",
+        "answer": "While walk-ins are welcome based on availability, we highly recommend booking a prior appointment to ensure dedicated time for your pet without waiting."
+      },
+      {
+        "id": "faq4",
+        "question": "What are your center's operating hours?",
+        "answer": "Our center is open every day from Monday to Sunday, from 9:00 AM to 8:00 PM."
+      },
+      {
+        "id": "faq5",
+        "question": "Do you provide pet pickup and drop services?",
+        "answer": "Yes, we offer convenient pet taxi and pickup/drop services within our service areas for grooming, daycare, and vet visits."
+      },
+      {
+        "id": "faq6",
+        "question": "What safety measures do you follow for pets?",
+        "answer": "We follow strict sanitation standards, 24/7 CCTV monitoring, supervised play areas, and trained medical first-aid staff to ensure total safety for your pet."
+      },
+      {
+        "id": "faq7",
+        "question": "Can I visit the center before booking?",
+        "answer": "Yes! You are most welcome to visit our center for a quick tour and meet our team before booking any service for your pet."
+      }
+    ]
   },
   "footer": {
     "brand": {
@@ -80,16 +443,16 @@
           "href": "/about"
         },
         {
-          "label": "Our Services",
-          "href": "/services"
+          "label": "Mission & Vision",
+          "href": "/mission"
         },
         {
           "label": "Our Team",
-          "href": "/team"
+          "href": "/teams"
         },
         {
-          "label": "Service Areas",
-          "href": "/service-areas"
+          "label": "Why Choose US",
+          "href": "/whychooseus"
         },
         {
           "label": "Pricing / Packages",
@@ -104,12 +467,12 @@
           "href": "/gallery"
         },
         {
-          "label": "Testimonials",
-          "href": "/testimonials"
+          "label": "Service Locations",
+          "href": "/servicelocation"
         },
         {
           "label": "Contact Us",
-          "href": "/contact"
+          "href": "/contactus"
         }
       ]
     },
@@ -117,36 +480,36 @@
       "title": "Our Services",
       "links": [
         {
-          "label": "Dog Grooming",
-          "href": "/services/dog-grooming"
+          "label": "Book Appointment",
+          "href": "/appointment"
         },
         {
-          "label": "Cat Grooming",
-          "href": "/services/cat-grooming"
+          "label": "Testimonial",
+          "href": "/testimonial"
         },
         {
-          "label": "Bath & Brush",
-          "href": "/services/bath-brush"
+          "label": "Faq's",
+          "href": "/faq"
         },
         {
-          "label": "Nail Trimming",
-          "href": "/services/nail-trimming"
+          "label": "Our Partners",
+          "href": "/partners"
         },
         {
-          "label": "Ear Cleaning",
-          "href": "/services/ear-cleaning"
+          "label": "Disclaimer",
+          "href": "/disclaimer"
         },
         {
-          "label": "Pet Boarding",
-          "href": "/services/pet-boarding"
+          "label": "Terms & Conditions",
+          "href": "/termscondition"
         },
         {
-          "label": "Pet Day Care",
-          "href": "/services/pet-day-care"
+          "label": "Cookie Policy",
+          "href": "/cookiepolicy"
         },
         {
-          "label": "Veterinary Care",
-          "href": "/services/veterinary-care"
+          "label": "Sitemap",
+          "href": "/sitemap"
         },
         {
           "label": "Nutrition Advice",
@@ -343,9 +706,9 @@
       },
       {
         "id": "6",
-        "name": "Ghaziabad",
-        "description": "Serving all major areas in Ghaziabad.",
-        "image": "/service/service5.jpg"
+        "name": "Meerut",
+        "description": "Serving all major areas in Meerut.",
+        "image": "/service/service1.jpg"
       }
     ],
     "stats": [
@@ -476,6 +839,157 @@
       "btnLink": "/contact"
     }
   },
+  "howItWorks": {
+    "badge": "HOW IT WORKS",
+    "titlePrefix": "Simple Steps For",
+    "titleHighlight": "Your Pet's Care",
+    "description": "We follow a simple process to ensure your pet gets the best care, every step of the way.",
+    "steps": [
+      {
+        "id": "1",
+        "stepNumber": "01",
+        "title": "Skilled Personal",
+        "description": "Regular vet visits, vaccinations, and dental care are foundational to pet wellness.",
+        "image": "/works/works1.jpg",
+        "icon": "User"
+      },
+      {
+        "id": "2",
+        "stepNumber": "02",
+        "title": "Pets Care 24/7",
+        "description": "Regular vet visits, vaccinations, and dental care are foundational to pet wellness.",
+        "image": "/works/works2.jpg",
+        "icon": "Clock"
+      },
+      {
+        "id": "3",
+        "stepNumber": "03",
+        "title": "Best Veterinarians",
+        "description": "Regular vet visits, vaccinations, and dental care are foundational to pet wellness.",
+        "image": "/works/works3.jpg",
+        "icon": "Stethoscope"
+      },
+      {
+        "id": "4",
+        "stepNumber": "04",
+        "title": "Quality Food",
+        "description": "Regular vet visits, vaccinations, and dental care are foundational to pet wellness.",
+        "image": "/works/works4.jpg",
+        "icon": "Utensils"
+      }
+    ]
+  },
+  "pricingSec": {
+    "badge": "OUR PRICING",
+    "titlePrefix": "Quality Care,",
+    "titleHighlight": "Fair Price",
+    "description": "Transparent pricing for top-notch grooming and care services. No hidden charges, just happy pets!",
+    "packages": [
+      {
+        "id": "1",
+        "title": "BATH & REFRESH",
+        "subtitle": "A quick refresh to keep your pet clean and happy.",
+        "icon": "FaShower",
+        "price": "25",
+        "period": "/ session",
+        "currency": "$",
+        "features": [
+          "Bath & Shampoo",
+          "Towel Dry",
+          "Ear Cleaning",
+          "Brush & Comb"
+        ],
+        "duration": "30 - 45 mins",
+        "btnText": "Book Now",
+        "btnLink": "/contact"
+      },
+      {
+        "id": "2",
+        "title": "BASIC GROOMING",
+        "subtitle": "Essential grooming for a neat and fresh look.",
+        "icon": "FaScissors",
+        "price": "45",
+        "period": "/ session",
+        "currency": "$",
+        "features": [
+          "Everything in Bath & Refresh",
+          "Hair Trim (Face, Paws, Body)",
+          "Nail Trimming",
+          "Sanitary Cleaning",
+          "Fragrance Spray"
+        ],
+        "duration": "45 - 60 mins",
+        "btnText": "Book Now",
+        "btnLink": "/contact"
+      },
+      {
+        "id": "3",
+        "title": "DELUXE GROOMING",
+        "subtitle": "Complete grooming for a healthy and happy pet.",
+        "icon": "FaBroom",
+        "price": "65",
+        "period": "/ session",
+        "currency": "$",
+        "isPopular": true,
+        "popularBadgeText": "MOST POPULAR",
+        "features": [
+          "Everything in Basic Grooming",
+          "De-shedding Treatment",
+          "Teeth Brushing",
+          "Paw Pad Cleaning",
+          "Premium Fragrance"
+        ],
+        "duration": "60 - 75 mins",
+        "btnText": "Book Now",
+        "btnLink": "/contact"
+      },
+      {
+        "id": "4",
+        "title": "PREMIUM SPA",
+        "subtitle": "The ultimate spa experience for your furry friend.",
+        "icon": "FaCrown",
+        "price": "95",
+        "period": "/ session",
+        "currency": "$",
+        "features": [
+          "Everything in Deluxe Grooming",
+          "Aromatherapy Bath",
+          "Skin & Coat Treatment",
+          "Relaxing Massage",
+          "Bandana / Bow"
+        ],
+        "duration": "75 - 90 mins",
+        "btnText": "Book Now",
+        "btnLink": "/contact"
+      }
+    ],
+    "trustFeatures": [
+      {
+        "id": "1",
+        "title": "Safe & Hygienic",
+        "description": "We maintain top hygiene and use pet-safe products.",
+        "icon": "FaShieldAlt"
+      },
+      {
+        "id": "2",
+        "title": "Trained Experts",
+        "description": "Our groomers are experienced, certified and pet-loving.",
+        "icon": "FaUserNurse"
+      },
+      {
+        "id": "3",
+        "title": "Easy Booking",
+        "description": "Quick online booking at your convenience.",
+        "icon": "FaCalendarCheck"
+      },
+      {
+        "id": "4",
+        "title": "Satisfaction First",
+        "description": "We ensure every pet leaves happy and stress-free.",
+        "icon": "FaAward"
+      }
+    ]
+  },
   "ourTeam": {
     "badge": "OUR TEAM",
     "titlePrefix": "Meet Our",
@@ -555,5 +1069,653 @@
         "link": "/blog/daily-pet-care-routine"
       }
     ]
+  },
+  "appointmentSec": {
+    "badge": "APPOINTMENT",
+    "title": "Book an Appointment",
+    "description": "Fill out the form below and our team will get back to you soon.",
+    "formTitle": "Enquiry Form",
+    "form": {
+      "fullNameLabel": "Full Name *",
+      "fullNamePlaceholder": "Enter your full name",
+      "phoneLabel": "Phone Number *",
+      "phonePlaceholder": "Enter your phone number",
+      "emailLabel": "Email Address",
+      "emailPlaceholder": "Enter your email address",
+      "petNameLabel": "Pet Name *",
+      "petNamePlaceholder": "Enter your pet's name",
+      "petTypeLabel": "Pet Type *",
+      "petTypePlaceholder": "Select pet type",
+      "petTypeOptions": [
+        "Dog",
+        "Cat",
+        "Bird",
+        "Rabbit",
+        "Other"
+      ],
+      "serviceLabel": "Service Required *",
+      "servicePlaceholder": "Select service",
+      "serviceOptions": [
+        "Dog Grooming",
+        "Cat Grooming",
+        "Bath & Brush",
+        "Nail Trimming",
+        "Ear Cleaning",
+        "Pet Boarding",
+        "Veterinary Care",
+        "Puppy Training"
+      ],
+      "dateLabel": "Preferred Date *",
+      "datePlaceholder": "Select date",
+      "timeLabel": "Preferred Time *",
+      "timePlaceholder": "Select time",
+      "timeOptions": [
+        "09:00 AM - 11:00 AM",
+        "11:00 AM - 01:00 PM",
+        "01:00 PM - 03:00 PM",
+        "03:00 PM - 05:00 PM",
+        "05:00 PM - 07:00 PM"
+      ],
+      "messageLabel": "Additional Message",
+      "messagePlaceholder": "Tell us anything about your pet or special request...",
+      "submitBtnText": "Submit Enquiry",
+      "privacyNote": "Your information is safe with us. We never share your details."
+    },
+    "sidebar": {
+      "title": "Need Help?",
+      "subtitle": "We're here to help you!",
+      "contacts": [
+        {
+          "id": "call",
+          "title": "Call Us",
+          "value": "+91 98765 43210",
+          "icon": "phone"
+        },
+        {
+          "id": "email",
+          "title": "Email Us",
+          "value": "delhi@dodocares.com",
+          "icon": "email"
+        },
+        {
+          "id": "visit",
+          "title": "Visit Us",
+          "value": "123 Pet Care Street, South Extension Part 1, New Delhi, Delhi 110049",
+          "icon": "map"
+        },
+        {
+          "id": "hours",
+          "title": "Opening Hours",
+          "value": "Mon - Sun\n9:00 AM - 8:00 PM",
+          "lines": [
+            "Mon - Sun",
+            "9:00 AM - 8:00 PM"
+          ],
+          "icon": "clock"
+        }
+      ],
+      "careBox": {
+        "title": "We Care For Your Pets",
+        "description": "Every pet is special to us. We provide the best care with love and professionalism.",
+        "icon": "paw"
+      }
+    }
+  },
+  "gallerySec": {
+    "titlePrefix": "Image",
+    "titleHighlight": "Gallery",
+    "description": "Moments of love, care and happiness captured every day.",
+    "categories": [
+      {
+        "id": "all",
+        "name": "All Images",
+        "icon": "all"
+      },
+      {
+        "id": "grooming",
+        "name": "Grooming",
+        "icon": "scissors"
+      },
+      {
+        "id": "spa-bath",
+        "name": "Spa & Bath",
+        "icon": "bath"
+      },
+      {
+        "id": "playtime",
+        "name": "Playtime",
+        "icon": "play"
+      },
+      {
+        "id": "our-center",
+        "name": "Our Center",
+        "icon": "center"
+      },
+      {
+        "id": "events",
+        "name": "Events",
+        "icon": "calendar"
+      }
+    ],
+    "items": [
+      {
+        "id": "1",
+        "title": "Dog Grooming Session",
+        "category": "grooming",
+        "image": "/service/service1.jpg",
+        "alt": "Dog Grooming at Dodo Cares"
+      },
+      {
+        "id": "2",
+        "title": "Gentle Dog Bath",
+        "category": "spa-bath",
+        "image": "/service/service2.jpg",
+        "alt": "Dog Bath at Dodo Cares"
+      },
+      {
+        "id": "3",
+        "title": "Coat Brushing & Styling",
+        "category": "grooming",
+        "image": "/service/service3.jpg",
+        "alt": "Coat Brushing"
+      },
+      {
+        "id": "4",
+        "title": "Indoor Play Arena",
+        "category": "playtime",
+        "image": "/service/service4.jpg",
+        "alt": "Indoor Play Arena"
+      },
+      {
+        "id": "5",
+        "title": "Front Reception & Lounge",
+        "category": "our-center",
+        "image": "/service/service5.jpg",
+        "alt": "Dodo Cares Reception"
+      },
+      {
+        "id": "6",
+        "title": "Pet Care Products Store",
+        "category": "our-center",
+        "image": "/about1.jpg",
+        "alt": "Pet Store"
+      },
+      {
+        "id": "7",
+        "title": "Special Pet Event",
+        "category": "events",
+        "image": "/homebanner.jpg",
+        "alt": "Pet Event"
+      },
+      {
+        "id": "8",
+        "title": "Bubble Spa Treatment",
+        "category": "spa-bath",
+        "image": "/about2.jpg",
+        "alt": "Bubble Spa"
+      },
+      {
+        "id": "9",
+        "title": "Outdoor Play & Fun",
+        "category": "playtime",
+        "image": "/whychoose.jpg",
+        "alt": "Outdoor Play"
+      }
+    ]
+  },
+  "videoGallery": {
+    "titlePrefix": "Video",
+    "titleHighlight": "Gallery",
+    "description": "Watch our happy pets, expert grooming sessions, and care tips in action.",
+    "videos": [
+      {
+        "id": "1",
+        "title": "Full Dog Grooming & Spa Experience",
+        "category": "Grooming",
+        "duration": "2:45",
+        "thumbnail": "/service/service1.jpg",
+        "videoUrl": "https://www.youtube.com/embed/dQw4w9WgXcQ"
+      },
+      {
+        "id": "2",
+        "title": "Cat Bathing & Hair Care Tips",
+        "category": "Spa & Bath",
+        "duration": "3:15",
+        "thumbnail": "/service/service2.jpg",
+        "videoUrl": "https://www.youtube.com/embed/dQw4w9WgXcQ"
+      },
+      {
+        "id": "3",
+        "title": "Indoor Dog Play & Agility Fun",
+        "category": "Playtime",
+        "duration": "1:50",
+        "thumbnail": "/service/service4.jpg",
+        "videoUrl": "https://www.youtube.com/embed/dQw4w9WgXcQ"
+      },
+      {
+        "id": "4",
+        "title": "Pet Boarding Facility Tour",
+        "category": "Our Center",
+        "duration": "4:10",
+        "thumbnail": "/service/service5.jpg",
+        "videoUrl": "https://www.youtube.com/embed/dQw4w9WgXcQ"
+      },
+      {
+        "id": "5",
+        "title": "Puppy Training & Socialization",
+        "category": "Training",
+        "duration": "3:30",
+        "thumbnail": "/about1.jpg",
+        "videoUrl": "https://www.youtube.com/embed/dQw4w9WgXcQ"
+      },
+      {
+        "id": "6",
+        "title": "Veterinary Care & Wellness Check",
+        "category": "Care",
+        "duration": "2:20",
+        "thumbnail": "/about2.jpg",
+        "videoUrl": "https://www.youtube.com/embed/dQw4w9WgXcQ"
+      }
+    ]
+  },
+  "blogSec": {
+    "badge": "Pet Care Insights",
+    "titlePrefix": "Latest",
+    "titleHighlight": "Pet Care Insights",
+    "description": "Helpful tips, expert advice, and pet care insights to help you keep your furry friends happy, healthy, and well-cared for.",
+    "posts": [
+      {
+        "id": "1",
+        "category": "Pet Health",
+        "date": "May 10, 2024",
+        "title": "How to Keep Your Pets Healthy and Happy",
+        "excerpt": "Discover essential tips to maintain your pet's health and happiness every day.",
+        "image": "/blogs/blog1.jpg",
+        "link": "/blog/how-to-keep-your-pets-healthy-and-happy"
+      },
+      {
+        "id": "2",
+        "category": "Training Tips",
+        "date": "May 07, 2024",
+        "title": "5 Positive Training Tips for a Well-Behaved Pet",
+        "excerpt": "Learn simple and effective training techniques to build a strong bond with your pet.",
+        "image": "/blogs/blog2.jpg",
+        "link": "/blog/5-positive-training-tips-for-a-well-behaved-pet"
+      },
+      {
+        "id": "3",
+        "category": "Nutrition",
+        "date": "May 03, 2024",
+        "title": "A Complete Guide to Pet Nutrition",
+        "excerpt": "Explore the best nutrition tips and food choices for your pet's overall well-being.",
+        "image": "/blogs/blog3.jpg",
+        "link": "/blog/a-complete-guide-to-pet-nutrition"
+      },
+      {
+        "id": "4",
+        "category": "Pet Care",
+        "date": "Apr 30, 2024",
+        "title": "Daily Pet Care Routine You Should Follow",
+        "excerpt": "A simple daily routine can make a big difference in your pet's life.",
+        "image": "/blogs/blog4.jpg",
+        "link": "/blog/daily-pet-care-routine-you-should-follow"
+      },
+      {
+        "id": "5",
+        "category": "Grooming",
+        "date": "Apr 25, 2024",
+        "title": "Grooming 101: Keep Your Pet Clean and Comfortable",
+        "excerpt": "Regular grooming keeps your pet looking great and feeling their best.",
+        "image": "/blogs/blog5.jpg",
+        "link": "/blog/grooming-101-keep-your-pet-clean-and-comfortable"
+      },
+      {
+        "id": "6",
+        "category": "Kitten Care",
+        "date": "Apr 20, 2024",
+        "title": "New Kitten Checklist: Everything You Need to Know",
+        "excerpt": "Your ultimate checklist to prepare for your new furry family member.",
+        "image": "/blogs/blog6.jpg",
+        "link": "/blog/new-kitten-checklist-everything-you-need-to-know"
+      }
+    ]
+  },
+  "ourBlogs": {
+    "badge": "Pet Care Insights",
+    "titlePrefix": "Latest",
+    "titleHighlight": "Pet Care Insights",
+    "description": "Helpful tips, expert advice, and pet care insights to help you keep your furry friends happy, healthy, and well-cared for.",
+    "posts": [
+      {
+        "id": "1",
+        "category": "Pet Health",
+        "date": "May 10, 2024",
+        "title": "How to Keep Your Pets Healthy and Happy",
+        "excerpt": "Discover essential tips to maintain your pet's health and happiness every day.",
+        "image": "/blogs/blog1.jpg",
+        "link": "/blog/how-to-keep-your-pets-healthy-and-happy"
+      },
+      {
+        "id": "2",
+        "category": "Training Tips",
+        "date": "May 07, 2024",
+        "title": "5 Positive Training Tips for a Well-Behaved Pet",
+        "excerpt": "Learn simple and effective training techniques to build a strong bond with your pet.",
+        "image": "/blogs/blog2.jpg",
+        "link": "/blog/5-positive-training-tips-for-a-well-behaved-pet"
+      },
+      {
+        "id": "3",
+        "category": "Nutrition",
+        "date": "May 03, 2024",
+        "title": "A Complete Guide to Pet Nutrition",
+        "excerpt": "Explore the best nutrition tips and food choices for your pet's overall well-being.",
+        "image": "/blogs/blog3.jpg",
+        "link": "/blog/a-complete-guide-to-pet-nutrition"
+      },
+      {
+        "id": "4",
+        "category": "Pet Care",
+        "date": "Apr 30, 2024",
+        "title": "Daily Pet Care Routine You Should Follow",
+        "excerpt": "A simple daily routine can make a big difference in your pet's life.",
+        "image": "/blogs/blog4.jpg",
+        "link": "/blog/daily-pet-care-routine-you-should-follow"
+      },
+      {
+        "id": "5",
+        "category": "Grooming",
+        "date": "Apr 25, 2024",
+        "title": "Grooming 101: Keep Your Pet Clean and Comfortable",
+        "excerpt": "Regular grooming keeps your pet looking great and feeling their best.",
+        "image": "/blogs/blog5.jpg",
+        "link": "/blog/grooming-101-keep-your-pet-clean-and-comfortable"
+      },
+      {
+        "id": "6",
+        "category": "Kitten Care",
+        "date": "Apr 20, 2024",
+        "title": "New Kitten Checklist: Everything You Need to Know",
+        "excerpt": "Your ultimate checklist to prepare for your new furry family member.",
+        "image": "/blogs/blog6.jpg",
+        "link": "/blog/new-kitten-checklist-everything-you-need-to-know"
+      }
+    ]
+  },
+  "partnerSec": {
+    "badge": "OUR PARTNERS",
+    "titlePrefix": "Trusted Partners,",
+    "titleHighlight": "Better Care",
+    "description": "We collaborate with trusted brands and organizations who share our passion for pets and their well-being.",
+    "partners": [
+      {
+        "id": "1",
+        "name": "Royal Canin",
+        "logo": "/partners/part1.png"
+      },
+      {
+        "id": "2",
+        "name": "Drools",
+        "logo": "/partners/part2.png"
+      },
+      {
+        "id": "3",
+        "name": "Purepet",
+        "logo": "/partners/part3.png"
+      },
+      {
+        "id": "4",
+        "name": "Pedigree",
+        "logo": "/partners/part4.png"
+      },
+      {
+        "id": "5",
+        "name": "VetLife",
+        "logo": "/partners/part5.png"
+      },
+      {
+        "id": "6",
+        "name": "Purina",
+        "logo": "/partners/part6.png"
+      },
+      {
+        "id": "7",
+        "name": "Himalaya",
+        "logo": "/partners/part7.png"
+      },
+      {
+        "id": "8",
+        "name": "Boehringer Ingelheim",
+        "logo": "/partners/part8.png"
+      },
+      {
+        "id": "9",
+        "name": "PetFed India",
+        "logo": "/partners/part1.png"
+      },
+      {
+        "id": "10",
+        "name": "Swiggy Food For Pets",
+        "logo": "/partners/part2.png"
+      }
+    ]
+  },
+  "partnerCta": {
+    "title": "Stronger Together for Pets",
+    "description": "Together with our partners, we are committed to delivering the best care, products and services for pets.",
+    "icon": "handshake",
+    "btnText": "Become a Partner",
+    "btnLink": "/contactus",
+    "btnIcon": "paw"
+  },
+  "contactSec": {
+    "touchTitle": "Get in Touch",
+    "infoCards": [
+      {
+        "id": "call",
+        "title": "Call Us",
+        "value": "+91 98765 43210",
+        "subtext": "Monday – Sunday, 9:00 AM – 8:00 PM",
+        "icon": "phone",
+        "iconBgColor": "orange"
+      },
+      {
+        "id": "email",
+        "title": "Email Us",
+        "value": "hello@dodocares.com",
+        "subtext": "We'll reply as soon as possible.",
+        "icon": "email",
+        "iconBgColor": "dark"
+      },
+      {
+        "id": "visit",
+        "title": "Visit Us",
+        "value": "123 Pet Care Street, South Extension Part 1, New Delhi, Delhi 110049",
+        "subtext": "Near Green Park Metro Station",
+        "icon": "location",
+        "iconBgColor": "orange"
+      },
+      {
+        "id": "hours",
+        "title": "Working Hours",
+        "value": "Mon – Sun : 9:00 AM – 8:00 PM",
+        "subtext": "(Open All Days)",
+        "icon": "clock",
+        "iconBgColor": "dark"
+      }
+    ],
+    "formTitle": "Send Us a Message",
+    "formSubtitle": "Fill out the form below and our team will get back to you soon.",
+    "form": {
+      "namePlaceholder": "Your Name",
+      "phonePlaceholder": "Phone Number",
+      "emailPlaceholder": "Email Address",
+      "subjectPlaceholder": "Select Subject",
+      "subjectOptions": [
+        "General Inquiry",
+        "Pet Grooming",
+        "Veterinary Care",
+        "Pet Boarding & Daycare",
+        "Dog Training",
+        "Other Services"
+      ],
+      "messagePlaceholder": "Your Message",
+      "submitBtnText": "Send Message"
+    }
+  },
+  "disclaimerSec": {
+    "titlePrefix": "Disclaimer",
+    "titleHighlight": "",
+    "lastUpdated": "May 10, 2024",
+    "intro": "Welcome to Dodo Cares. By accessing or using our website and services, you agree to be bound by the following Terms and Conditions. Please read them carefully.",
+    "sections": [
+      {
+        "id": 1,
+        "title": "Acceptance of Terms",
+        "content": "By using the Dodo Cares website and our services, you agree to comply with and be legally bound by these Terms and Conditions. If you do not agree with any part of these terms, please do not use our website or services."
+      },
+      {
+        "id": 2,
+        "title": "Services",
+        "content": "Dodo Cares provides pet care services including grooming, boarding, daycare, training, nutrition advice, and related services. The availability and details of services may vary by location and are subject to change without prior notice."
+      },
+      {
+        "id": 3,
+        "title": "Appointments and Bookings",
+        "content": "All appointments are subject to availability. We recommend booking in advance. You will receive a confirmation once your appointment is successfully scheduled. Please arrive on time for your appointment. Late arrivals may result in rescheduling or shortened services."
+      },
+      {
+        "id": 4,
+        "title": "Cancellations and Refunds",
+        "content": "Cancellations made at least 24 hours in advance are eligible for rescheduling. Cancellations made within 24 hours may be subject to a cancellation fee. Refunds, if applicable, will be processed as per our Refund Policy."
+      },
+      {
+        "id": 5,
+        "title": "Pet Health and Safety",
+        "content": "Pet owners are responsible for ensuring their pets are healthy and up-to-date on vaccinations. Please inform us of any medical conditions, behavioral issues, or special needs. Dodo Cares is not liable for any illness, injury, or harm resulting from undisclosed information."
+      },
+      {
+        "id": 6,
+        "title": "User Responsibilities",
+        "content": "You agree to provide accurate information when booking our services. You are responsible for your pet's behavior and agree to any necessary actions taken by our staff to ensure safety and well-being."
+      },
+      {
+        "id": 7,
+        "title": "Limitation of Liability",
+        "content": "Dodo Cares will make every effort to provide the best care for your pet. However, we are not liable for any unforeseen incidents beyond our control, including illness, injury, or escape."
+      },
+      {
+        "id": 8,
+        "title": "Changes to Terms",
+        "content": "We reserve the right to modify these Terms and Conditions at any time. Changes will be posted on this page with the updated effective date."
+      },
+      {
+        "id": 9,
+        "title": "Contact Us",
+        "content": "If you have any questions about these Terms and Conditions, please contact us."
+      }
+    ],
+    "footerNote": "Thank you for trusting Dodo Cares with your furry family members.",
+    "footerSubnote": "We are here to provide the best care, every time."
+  },
+  "cookiePolicySec": {
+    "titlePrefix": "Cookie",
+    "titleHighlight": "Policy",
+    "lastUpdated": "May 10, 2024",
+    "intro": "At Dodo Cares, we believe in being clear and open about how we collect and use data related to you. This Cookie Policy explains how and why we use cookies on our website.",
+    "sections": [
+      {
+        "id": 1,
+        "title": "What Are Cookies",
+        "content": "Cookies are small text files stored on your device when you visit a website. They help us remember your preferences, enhance site navigation, and provide a seamless browsing experience."
+      },
+      {
+        "id": 2,
+        "title": "How We Use Cookies",
+        "content": "Dodo Cares uses cookies to analyze website traffic, remember your appointment preferences, improve our pet care services, and deliver relevant information tailored to your pet's needs."
+      },
+      {
+        "id": 3,
+        "title": "Types of Cookies We Use",
+        "content": "We use Essential Cookies (required for site functionality), Analytical Cookies (to understand usage patterns), Preference Cookies (to remember your choices), and Marketing Cookies (to show relevant promotions)."
+      },
+      {
+        "id": 4,
+        "title": "Managing Your Cookie Preferences",
+        "content": "You can manage or disable cookies at any time through your browser settings. However, disabling essential cookies may impact certain website features like online booking and inquiry forms."
+      },
+      {
+        "id": 5,
+        "title": "Third-Party Cookies",
+        "content": "In some cases, we use cookies provided by trusted third parties such as Google Analytics to help us understand how pet parents use our site and how we can improve our services."
+      },
+      {
+        "id": 6,
+        "title": "Updates to This Policy",
+        "content": "We may update this Cookie Policy periodically to reflect changes in technology, law, or our operations. Please review this page regularly for the latest information."
+      },
+      {
+        "id": 7,
+        "title": "Contact Us",
+        "content": "If you have any questions or concerns regarding our Cookie Policy, please contact us at privacy@dodocares.com or call us directly."
+      }
+    ],
+    "footerNote": "Thank you for trusting Dodo Cares with your furry family members.",
+    "footerSubnote": "We are here to provide the best care, every time."
+  },
+  "termsConditionSec": {
+    "titlePrefix": "Terms and",
+    "titleHighlight": "Conditions",
+    "lastUpdated": "May 10, 2024",
+    "intro": "Welcome to Dodo Cares. By accessing or using our website and services, you agree to be bound by the following Terms and Conditions. Please read them carefully.",
+    "sections": [
+      {
+        "id": 1,
+        "title": "Acceptance of Terms",
+        "content": "By using the Dodo Cares website and our services, you agree to comply with and be legally bound by these Terms and Conditions. If you do not agree with any part of these terms, please do not use our website or services."
+      },
+      {
+        "id": 2,
+        "title": "Services",
+        "content": "Dodo Cares provides pet care services including grooming, boarding, daycare, training, nutrition advice, and related services. The availability and details of services may vary by location and are subject to change without prior notice."
+      },
+      {
+        "id": 3,
+        "title": "Appointments and Bookings",
+        "content": "All appointments are subject to availability. We recommend booking in advance. You will receive a confirmation once your appointment is successfully scheduled. Please arrive on time for your appointment. Late arrivals may result in rescheduling or shortened services."
+      },
+      {
+        "id": 4,
+        "title": "Cancellations and Refunds",
+        "content": "Cancellations made at least 24 hours in advance are eligible for rescheduling. Cancellations made within 24 hours may be subject to a cancellation fee. Refunds, if applicable, will be processed as per our Refund Policy."
+      },
+      {
+        "id": 5,
+        "title": "Pet Health and Safety",
+        "content": "Pet owners are responsible for ensuring their pets are healthy and up-to-date on vaccinations. Please inform us of any medical conditions, behavioral issues, or special needs. Dodo Cares is not liable for any illness, injury, or harm resulting from undisclosed information."
+      },
+      {
+        "id": 6,
+        "title": "User Responsibilities",
+        "content": "You agree to provide accurate information when booking our services. You are responsible for your pet's behavior and agree to any necessary actions taken by our staff to ensure safety and well-being."
+      },
+      {
+        "id": 7,
+        "title": "Limitation of Liability",
+        "content": "Dodo Cares will make every effort to provide the best care for your pet. However, we are not liable for any unforeseen incidents beyond our control, including illness, injury, or escape."
+      },
+      {
+        "id": 8,
+        "title": "Changes to Terms",
+        "content": "We reserve the right to modify these Terms and Conditions at any time. Changes will be posted on this page with the updated effective date."
+      },
+      {
+        "id": 9,
+        "title": "Contact Us",
+        "content": "If you have any questions about these Terms and Conditions, please contact us."
+      }
+    ],
+    "footerNote": "Thank you for trusting Dodo Cares with your furry family members.",
+    "footerSubnote": "We are here to provide the best care, every time."
   }
 }
