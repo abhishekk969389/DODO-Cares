@@ -25,7 +25,7 @@ export default function Navbar() {
 
     return (
         <header className="fixed top-0 left-0 right-0 z-50 w-full max-w-[1320px] mx-auto px-4 py-4 sm:px-6 lg:px-8">
-            <nav className="relative bg-white/95 backdrop-blur-md rounded-3xl sm:rounded-[24px] shadow-md border border-neutral-100/80 px-6 py-2 flex items-center justify-between transition-all duration-300">
+            <nav className="relative bg-white/95 backdrop-blur-md rounded-3xl sm:rounded-[24px] shadow-md border border-neutral-100/80 px-6 flex items-center justify-between transition-all duration-300">
                 {/* Brand Logo */}
                 <Link href="/" className="flex items-center group shrink-0">
                     <motion.div
@@ -39,7 +39,7 @@ export default function Navbar() {
                             width={300}
                             height={100}
                             priority
-                            className="h-18 sm:h-22 md:h-26 lg:h-30 w-auto object-contain"
+                            className="h-18 sm:h-22 md:h-24 lg:h-28 w-auto object-contain"
                         />
                     </motion.div>
                 </Link>

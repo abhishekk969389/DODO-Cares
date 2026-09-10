@@ -29,7 +29,6 @@ export interface BrandData {
   logo: string;
 }
 
-// Footer Types
 export interface FooterFeature {
   id: string;
   title: string;
@@ -91,8 +90,10 @@ export interface FooterBrandData {
 export interface FooterData {
   brand: FooterBrandData;
   quickLinks: FooterLinkSection;
-  ourServices: FooterLinkSection;
-  resources: FooterLinkSection;
+  ourCauses: FooterLinkSection;
+  usefullinks: FooterLinkSection;
+  ourServices?: FooterLinkSection;
+  resources?: FooterLinkSection;
   contactInfo: FooterContactInfo;
   bottomBar: FooterBottomBar;
 }
@@ -114,6 +115,7 @@ export interface ServiceLocation {
   name: string;
   description: string;
   image: string;
+  link?: string;
 }
 
 export interface ServiceStat {
@@ -536,6 +538,267 @@ export interface TermsConditionSecData {
   footerSubnote?: string;
 }
 
+export interface SitemapLink {
+  label: string;
+  href: string;
+}
+
+export interface SitemapItem {
+  id: string;
+  number: string;
+  title: string;
+  links: SitemapLink[];
+}
+
+export interface SitemapSecData {
+  items: SitemapItem[];
+}
+
+export interface MissionCheckPoint {
+  id: string | number;
+  title: string;
+  description: string;
+}
+
+export interface VisionCardData {
+  badge: string;
+  icon?: string;
+  title: string;
+  description: string;
+  image: string;
+  btnText: string;
+  btnLink: string;
+}
+
+export interface MissionCardData {
+  badge: string;
+  icon?: string;
+  description: string;
+  points: MissionCheckPoint[];
+  image: string;
+}
+
+export interface MissionSecData {
+  badge: string;
+  titlePrefix: string;
+  titleHighlight: string;
+  description: string;
+  vision: VisionCardData;
+  mission: MissionCardData;
+}
+
+export interface MissionCtaItem {
+  id: string | number;
+  title: string;
+  description: string;
+  icon: string;
+}
+
+export interface MissionCtaSecData {
+  items: MissionCtaItem[];
+}
+
+export interface TeamSocialLink {
+  platform: string;
+  url: string;
+  icon: string;
+}
+
+export interface TeamGetInTouch {
+  title: string;
+  subtitle: string;
+  phone: string;
+  email: string;
+  location: string;
+  btnText: string;
+  btnLink: string;
+}
+
+export interface TeamAboutSection {
+  title: string;
+  paragraphs: string[];
+}
+
+export interface TeamStatItem {
+  id: string;
+  title: string;
+  value: string;
+  icon: string;
+}
+
+export interface TeamDetailItem {
+  slug: string;
+  title?: string;
+  name: string;
+  firstName: string;
+  lastName: string;
+  role: string;
+  badge: string;
+  experience: string;
+  image: string;
+  shortBio: string;
+  bgImage?: string;
+  breadcrumbs: BreadcrumbItem[];
+  socialLinks: TeamSocialLink[];
+  getInTouch: TeamGetInTouch;
+  aboutSection: TeamAboutSection;
+  stats: TeamStatItem[];
+}
+
+export interface LocationContactCard {
+  title: string;
+  text: string;
+  subtext?: string;
+  icon: string;
+}
+
+export interface LocationAboutSection {
+  title: string;
+  description: string;
+  points: string[];
+  btnText: string;
+  btnLink: string;
+}
+
+export interface LocationMapInfo {
+  image?: string;
+  mapEmbedUrl?: string;
+  pinTitle: string;
+  pinAddress: string;
+}
+
+export interface LocationFacilityItem {
+  id: string | number;
+  title: string;
+  description: string;
+  icon: string;
+}
+
+export interface LocationFacilitiesSection {
+  title: string;
+  items: LocationFacilityItem[];
+}
+
+export interface LocationDetailItem {
+  slug: string;
+  title?: string;
+  name: string;
+  titlePrefix?: string;
+  titleHighlight?: string;
+  subtitleBadge: string;
+  description: string;
+  bgImage?: string;
+  breadcrumbs: BreadcrumbItem[];
+  contacts: {
+    address: LocationContactCard;
+    phone: LocationContactCard;
+    email: LocationContactCard;
+    timings: LocationContactCard;
+  };
+  aboutSection: LocationAboutSection;
+  mapInfo: LocationMapInfo;
+  facilitiesSection: LocationFacilitiesSection;
+}
+
+export interface BlogContentPoint {
+  id: string | number;
+  title: string;
+  description: string;
+}
+
+export interface BlogDetailItem {
+  slug: string;
+  title?: string;
+  articleTitle: string;
+  category: string;
+  date: string;
+  author: string;
+  readTime: string;
+  heroImage: string;
+  bgImage?: string;
+  breadcrumbs: BreadcrumbItem[];
+  introParagraph: string;
+  contentPoints: BlogContentPoint[];
+}
+
+export interface BlogSidebarCategory {
+  name: string;
+  slug?: string;
+  active?: boolean;
+}
+
+export interface BlogSidebarData {
+  searchPlaceholder: string;
+  categoriesTitle: string;
+  categories: BlogSidebarCategory[];
+  latestUpdatesTitle: string;
+  viewAllBtnText: string;
+}
+
+export interface ServiceHeroFeature {
+  id: string | number;
+  title: string;
+  icon: string;
+}
+
+export interface ServiceIncludedItem {
+  id: string | number;
+  title: string;
+  shortDesc: string;
+  icon: string;
+  image?: string;
+  fullDesc?: string;
+  bulletPoints?: string[];
+}
+
+export interface ServiceBenefitItem {
+  id: string | number;
+  title: string;
+  description: string;
+  icon: string;
+}
+
+export interface ServiceProcessStep {
+  id: string | number;
+  stepNumber: string | number;
+  title: string;
+  description: string;
+  icon: string;
+}
+
+export interface ServiceDetailItem {
+  slug: string;
+  title: string;
+  titlePrefix?: string;
+  titleHighlight?: string;
+  badge: string;
+  description: string;
+  heroImage: string;
+  bgImage?: string;
+  breadcrumbs: BreadcrumbItem[];
+  heroFeatures: ServiceHeroFeature[];
+  includedSection: {
+    badge: string;
+    title: string;
+    items: ServiceIncludedItem[];
+  };
+  benefitsSection: {
+    badge: string;
+    title: string;
+    items: ServiceBenefitItem[];
+  };
+  processSection: {
+    badge: string;
+    title: string;
+    items: ServiceProcessStep[];
+  };
+}
+
+export type ServiceDetailsList = ServiceDetailItem[];
+export type TeamDetailsList = TeamDetailItem[];
+export type LocationDetailsList = LocationDetailItem[];
+export type BlogDetailsList = BlogDetailItem[];
+
 export interface PetData {
   brand: BrandData;
   navbar: NavbarData;
@@ -555,15 +818,22 @@ export interface PetData {
   disclaimerSec?: DisclaimerSecData;
   cookiePolicySec?: CookiePolicySecData;
   termsConditionSec?: TermsConditionSecData;
+  sitemapSec?: SitemapSecData;
+  missionSec?: MissionSecData;
+  missionCtaSec?: MissionCtaSecData;
+  serviceDetails?: ServiceDetailsList;
   ourTeam?: OurTeamData;
+  teamDetails?: TeamDetailsList;
+  locationDetails?: LocationDetailsList;
   ourBlogs?: OurBlogsData;
   blogSec?: BlogSecData;
+  blogDetails?: BlogDetailsList;
+  blogSidebar?: BlogSidebarData;
   partnerSec?: PartnerSecData;
   partnerCta?: PartnerCtaData;
   contactSec?: ContactSecData;
   footer: FooterData;
 }
-
 
 export interface FeatureItem {
   id: string;

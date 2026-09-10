@@ -17,7 +17,7 @@ export default function About() {
     if (!aboutData) return null;
 
     return (
-        <section className="relative w-full bg-[#F37021] py-16 sm:py-20 lg:py-24 overflow-hidden">
+        <section className="relative w-full bg-[#F37021] py-16 sm:py-20 overflow-hidden">
             <div className="max-w-[1320px] mx-auto px-4 sm:px-6 lg:px-8 w-full">
                 <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
 
@@ -106,7 +106,7 @@ export default function About() {
                         <div className="flex flex-col gap-4 sm:gap-5 mb-8 max-w-xl">
                             {aboutData.paragraphs?.map((para, index) => (
                                 <FadeIn key={index} direction="up" delay={0.15 + index * 0.05}>
-                                    <p className="text-white/95 text-base sm:text-lg leading-relaxed font-normal">
+                                    <p className="text-white/95 text-justify text-base sm:text-lg leading-relaxed font-normal">
                                         {para}
                                     </p>
                                 </FadeIn>

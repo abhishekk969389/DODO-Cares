@@ -3,6 +3,7 @@
 import React, { useState, useRef } from "react";
 import Image from "next/image";
 import { motion } from "framer-motion";
+import Link from "next/link";
 import petDataJson from "@/data/pet.json";
 import type { PetData, ServiceAreasData } from "@/types/pet";
 import {
@@ -123,31 +124,33 @@ export default function Services() {
                                 key={loc.id}
                                 hoverY={-6}
                                 hoverScale={1.01}
-                                className="w-full sm:w-[calc(50%-0.75rem)] md:w-[calc(33.333%-0.75rem)] lg:w-[calc(20%-1rem)] shrink-0 snap-start bg-white rounded-[28px] sm:rounded-[32px] overflow-hidden border border-amber-900/5 flex flex-col items-center pb-6 text-center group cursor-pointer"
+                                className="w-full sm:w-[calc(50%-0.75rem)] md:w-[calc(33.333%-0.75rem)] lg:w-[calc(20%-1rem)] shrink-0 snap-start bg-white rounded-[28px] sm:rounded-[32px] overflow-hidden border border-amber-900/5 flex flex-col items-center text-center group cursor-pointer"
                             >
-                                {/* Arched Image Frame */}
-                                <div className="relative w-full h-[180px] sm:h-[200px] overflow-hidden rounded-t-[28px] sm:rounded-t-[32px]">
-                                    <Image
-                                        src={loc.image}
-                                        alt={loc.name}
-                                        fill
-                                        sizes="(max-width: 640px) 100vw, (max-width: 1024px) 33vw, 20vw"
-                                        className="object-cover object-center group-hover:scale-105 transition-transform duration-500"
-                                    />
-                                </div>
+                                <Link href={loc.link || `/servicelocation/${loc.name.toLowerCase()}`} className="w-full h-full flex flex-col items-center pb-6">
+                                    {/* Arched Image Frame */}
+                                    <div className="relative w-full h-[180px] sm:h-[200px] overflow-hidden rounded-t-[28px] sm:rounded-t-[32px]">
+                                        <Image
+                                            src={loc.image}
+                                            alt={loc.name}
+                                            fill
+                                            sizes="(max-width: 640px) 100vw, (max-width: 1024px) 33vw, 20vw"
+                                            className="object-cover object-center group-hover:scale-105 transition-transform duration-500"
+                                        />
+                                    </div>
 
-                                {/* Overlapping Location Pin Badge */}
-                                <div className="relative z-10 w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-white shadow-md border border-neutral-100 flex items-center justify-center -mt-5 mb-2 shrink-0">
-                                    <MapPin className="w-5 h-5 text-[#F37021] fill-[#F37021]" strokeWidth={1.5} />
-                                </div>
+                                    {/* Overlapping Location Pin Badge */}
+                                    <div className="relative z-10 w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-white shadow-md border border-neutral-100 flex items-center justify-center -mt-5 mb-2 shrink-0">
+                                        <MapPin className="w-5 h-5 text-[#F37021] fill-[#F37021]" strokeWidth={1.5} />
+                                    </div>
 
-                                {/* Location Details */}
-                                <h3 className="text-lg sm:text-xl font-extrabold text-[#2C1810] mb-1">
-                                    {loc.name}
-                                </h3>
-                                <p className="text-xs sm:text-sm text-[#7A6A60] px-3 font-medium leading-snug">
-                                    {loc.description}
-                                </p>
+                                    {/* Location Details */}
+                                    <h3 className="text-lg sm:text-xl font-extrabold text-[#2C1810] mb-1 group-hover:text-[#F37021] transition-colors">
+                                        {loc.name}
+                                    </h3>
+                                    <p className="text-xs sm:text-sm text-[#7A6A60] px-3 font-medium leading-snug">
+                                        {loc.description}
+                                    </p>
+                                </Link>
                             </MotionCard>
                         ))}
                     </div>

@@ -99,7 +99,7 @@ export default function Footer() {
                             {/* Column 1: Brand Info */}
                             <div className="col-span-1 sm:col-span-2 md:col-span-6 lg:col-span-3 xl:col-span-3 flex flex-col justify-between">
                                 <div>
-                                    <Link href="/" className="inline-block mb-4 sm:mb-6">
+                                    <Link href="/" className="inline-block ">
                                         <motion.div
                                             whileHover={{ scale: 1.03 }}
                                             whileTap={{ scale: 0.97 }}
@@ -111,11 +111,11 @@ export default function Footer() {
                                                 width={300}
                                                 height={100}
                                                 priority
-                                                className="w-44 sm:w-52 md:w-56 lg:w-[210px] xl:w-[250px] h-auto object-contain transition-transform duration-300"
+                                                className="w-44 sm:w-52 md:w-56 lg:w-[190px] xl:w-[230px] h-auto object-contain transition-transform duration-300"
                                             />
                                         </motion.div>
                                     </Link>
-                                    <p className="text-[#2C1810] text-sm sm:text-base lg:text-[14px] xl:text-base mb-6 sm:mb-8 text-left max-w-xl lg:max-w-none leading-relaxed">
+                                    <p className="text-[#2C1810] text-sm sm:text-base lg:text-[14px] xl:text-base text-left max-w-xl lg:max-w-none leading-relaxed">
                                         {footer.brand.description}
                                     </p>
                                 </div>
@@ -153,19 +153,19 @@ export default function Footer() {
                             </div>
 
                             {/* Column 2: Quick Links */}
-                            <div className="col-span-1 sm:col-span-1 md:col-span-2 lg:col-span-2 xl:col-span-2 mt-2 sm:mt-4 md:mt-6 lg:mt-4 xl:mt-8">
+                            <div className="col-span-1 sm:col-span-1 md:col-span-2 lg:col-span-2 xl:col-span-2 mt-2 sm:mt-4 md:mt-8 lg:mt-10 xl:mt-12">
                                 <h3 className="text-lg sm:text-xl lg:text-xl xl:text-2xl font-bold text-[#2C1810] mb-2">
                                     {footer.quickLinks.title}
                                 </h3>
                                 <div className="w-10 h-[3px] bg-[#F37021] rounded-full mb-4 sm:mb-6" />
-                                <ul className="space-y-2">
+                                <ul className="space-y-4">
                                     {footer.quickLinks.links.map((link: FooterLink, index: number) => (
                                         <li key={index}>
                                             <Link
                                                 href={link.href}
-                                                className="flex items-center text-sm sm:text-base lg:text-[14px] xl:text-[17px] font-semibold text-[#2C1810] hover:text-[#F37021] transition-colors group"
+                                                className="flex items-center text-sm sm:text-base lg:text-[16px] xl:text-[17px] text-[#2C1810] hover:text-[#F37021] transition-colors group"
                                             >
-                                                <ChevronRight className="w-4 h-4 lg:w-3.5 lg:h-3.5 xl:w-4 xl:h-4 mr-1.5 sm:mr-2 text-[#F37021] transition-transform group-hover:translate-x-1 shrink-0" />
+                                                <ChevronRight className="w-5 h-5 mr-1.5 sm:mr-2 text-[#F37021] transition-transform group-hover:translate-x-1 shrink-0" />
                                                 <span className="truncate">{link.label}</span>
                                             </Link>
                                         </li>
@@ -174,19 +174,19 @@ export default function Footer() {
                             </div>
 
                             {/* Column 3: Our Services */}
-                            <div className="col-span-1 sm:col-span-1 md:col-span-2 lg:col-span-2 xl:col-span-2 mt-2 sm:mt-4 md:mt-6 lg:mt-4 xl:mt-8">
+                            <div className="col-span-1 sm:col-span-1 md:col-span-2 lg:col-span-2 xl:col-span-2 mt-2 sm:mt-4 md:mt-8 lg:mt-10 xl:mt-12">
                                 <h3 className="text-lg sm:text-xl lg:text-xl xl:text-2xl font-bold text-[#2C1810] mb-2">
-                                    {footer.ourServices.title}
+                                    {footer.ourCauses.title}
                                 </h3>
                                 <div className="w-10 h-[3px] bg-[#F37021] rounded-full mb-4 sm:mb-6" />
-                                <ul className="space-y-2">
-                                    {footer.ourServices.links.map((link: FooterLink, index: number) => (
+                                <ul className="space-y-4">
+                                    {footer.ourCauses.links.map((link: FooterLink, index: number) => (
                                         <li key={index}>
                                             <Link
                                                 href={link.href}
-                                                className="flex items-center text-sm sm:text-base lg:text-[14px] xl:text-[17px] font-semibold text-[#2C1810] hover:text-[#F37021] transition-colors group"
+                                                className="flex items-center text-sm sm:text-base lg:text-[16px] xl:text-[17px] text-[#2C1810] hover:text-[#F37021] transition-colors group"
                                             >
-                                                <ChevronRight className="w-4 h-4 lg:w-3.5 lg:h-3.5 xl:w-4 xl:h-4 mr-1.5 sm:mr-2 text-[#F37021] transition-transform group-hover:translate-x-1 shrink-0" />
+                                                <ChevronRight className="w-5 h-5 mr-1.5 sm:mr-2 text-[#F37021] transition-transform group-hover:translate-x-1 shrink-0" />
                                                 <span className="truncate">{link.label}</span>
                                             </Link>
                                         </li>
@@ -195,19 +195,19 @@ export default function Footer() {
                             </div>
 
                             {/* Column 4: Resources */}
-                            <div className="col-span-1 sm:col-span-1 md:col-span-2 lg:col-span-2 xl:col-span-2 mt-2 sm:mt-4 md:mt-6 lg:mt-4 xl:mt-8">
+                            <div className="col-span-1 sm:col-span-1 md:col-span-2 lg:col-span-2 xl:col-span-2 mt-2 sm:mt-4 md:mt-8 lg:mt-10 xl:mt-12">
                                 <h3 className="text-lg sm:text-xl lg:text-xl xl:text-2xl font-bold text-[#2C1810] mb-2">
-                                    {footer.resources.title}
+                                    {footer.usefullinks.title}
                                 </h3>
                                 <div className="w-10 h-[3px] bg-[#F37021] rounded-full mb-4 sm:mb-6" />
-                                <ul className="space-y-2">
-                                    {footer.resources.links.map((link: FooterLink, index: number) => (
+                                <ul className="space-y-4">
+                                    {footer.usefullinks.links.map((link: FooterLink, index: number) => (
                                         <li key={index}>
                                             <Link
                                                 href={link.href}
-                                                className="flex items-center text-sm sm:text-base lg:text-[14px] xl:text-[17px] font-semibold text-[#2C1810] hover:text-[#F37021] transition-colors group"
+                                                className="flex items-center text-sm sm:text-base lg:text-[16px] xl:text-[17px] text-[#2C1810] hover:text-[#F37021] transition-colors group"
                                             >
-                                                <ChevronRight className="w-4 h-4 lg:w-3.5 lg:h-3.5 xl:w-4 xl:h-4 mr-1.5 sm:mr-2 text-[#F37021] transition-transform group-hover:translate-x-1 shrink-0" />
+                                                <ChevronRight className="w-5 h-5 mr-1.5 sm:mr-2 text-[#F37021] transition-transform group-hover:translate-x-1 shrink-0" />
                                                 <span className="truncate">{link.label}</span>
                                             </Link>
                                         </li>
@@ -216,7 +216,7 @@ export default function Footer() {
                             </div>
 
                             {/* Column 5: Contact Info */}
-                            <div className="col-span-1 sm:col-span-2 md:col-span-6 lg:col-span-3 xl:col-span-3 mt-2 sm:mt-6 md:mt-6 lg:mt-4 xl:mt-8">
+                            <div className="col-span-1 sm:col-span-2 md:col-span-6 lg:col-span-3 xl:col-span-3 mt-2 sm:mt-4 md:mt-8 lg:mt-10 xl:mt-12">
                                 <h3 className="text-lg sm:text-xl lg:text-xl xl:text-2xl font-bold text-[#2C1810] mb-2">
                                     {footer.contactInfo.title}
                                 </h3>
@@ -285,7 +285,7 @@ export default function Footer() {
             </FadeIn>
 
             {/* Bottom Bar Section */}
-            <div className="bg-[#0A101D] text-neutral-200 py-5 sm:py-6 relative overflow-hidden border-t border-neutral-800/80">
+            <div className="bg-[#0A101D] text-neutral-200 py-4 relative overflow-hidden border-t border-neutral-800/80">
                 <div className="w-full max-w-[1320px] mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="px-0 flex flex-col lg:flex-row items-center justify-between gap-4 sm:gap-6 relative z-10 text-center lg:text-left">
 

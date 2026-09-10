@@ -2,6 +2,7 @@
 
 import React from "react";
 import Image from "next/image";
+import Link from "next/link";
 import petDataJson from "@/data/pet.json";
 import type { PetData, ServiceAreasData } from "@/types/pet";
 import { FadeIn, MotionCard } from "@/app/components/ui/animations";
@@ -57,31 +58,33 @@ export default function LocationSec() {
                 hoverScale={1.01}
                 className="bg-white rounded-[28px] sm:rounded-[32px] overflow-hidden border border-neutral-100/90 shadow-sm hover:shadow-md transition-all duration-300 flex flex-col items-center text-center group cursor-pointer h-full"
               >
-                {/* Image Container */}
-                <div className="relative w-full h-[200px] sm:h-[220px] overflow-hidden rounded-t-[28px] sm:rounded-t-[32px]">
-                  <Image
-                    src={loc.image}
-                    alt={loc.name}
-                    fill
-                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                    className="object-cover object-center group-hover:scale-105 transition-transform duration-500"
-                  />
-                </div>
+                <Link href={loc.link || `/servicelocation/${loc.name.toLowerCase()}`} className="w-full h-full flex flex-col items-center">
+                  {/* Image Container */}
+                  <div className="relative w-full h-[200px] sm:h-[220px] overflow-hidden rounded-t-[28px] sm:rounded-t-[32px]">
+                    <Image
+                      src={loc.image}
+                      alt={loc.name}
+                      fill
+                      sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                      className="object-cover object-center group-hover:scale-105 transition-transform duration-500"
+                    />
+                  </div>
 
-                {/* Overlapping Map Pin Badge */}
-                <div className="relative z-10 w-10 h-10 rounded-full bg-white shadow-md border border-neutral-100 flex items-center justify-center -mt-5 mb-2.5 shrink-0">
-                  <MapPin className="w-5 h-5 text-[#F37021] fill-[#F37021]" strokeWidth={1.5} />
-                </div>
+                  {/* Overlapping Map Pin Badge */}
+                  <div className="relative z-10 w-10 h-10 rounded-full bg-white shadow-md border border-neutral-100 flex items-center justify-center -mt-5 mb-2.5 shrink-0">
+                    <MapPin className="w-5 h-5 text-[#F37021] fill-[#F37021]" strokeWidth={1.5} />
+                  </div>
 
-                {/* Location Title & Subtitle */}
-                <div className="px-5 pb-6 flex flex-col items-center">
-                  <h3 className="text-xl font-extrabold text-[#2C1810] mb-1">
-                    {loc.name}
-                  </h3>
-                  <p className="text-xs sm:text-sm text-[#7A6A60] font-medium leading-relaxed max-w-[240px]">
-                    {loc.description}
-                  </p>
-                </div>
+                  {/* Location Title & Subtitle */}
+                  <div className="px-5 pb-6 flex flex-col items-center">
+                    <h3 className="text-xl font-extrabold text-[#2C1810] mb-1 group-hover:text-[#F37021] transition-colors">
+                      {loc.name}
+                    </h3>
+                    <p className="text-xs sm:text-sm text-[#7A6A60] font-medium leading-relaxed max-w-[240px]">
+                      {loc.description}
+                    </p>
+                  </div>
+                </Link>
               </MotionCard>
             </FadeIn>
           ))}

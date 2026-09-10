@@ -50,7 +50,7 @@ export default function VideoGallery() {
   const activeVideo = selectedIndex !== null ? videos[selectedIndex] : null;
 
   return (
-    <section className="relative w-full mt-8 sm:mt-10 md:mt-12 lg:mt-14 overflow-hidden">
+    <section className="relative w-full mt-8 sm:mt-10 md:mt-12 lg:mt-14">
       <div className="max-w-[1320px] mx-auto px-4 sm:px-6 lg:px-8 w-full">
 
         {/* Section Header */}
@@ -79,13 +79,13 @@ export default function VideoGallery() {
         </div>
 
         {/* Video Cards Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 pb-2 -mb-2">
           {videos?.map((vid, idx) => (
             <FadeIn key={vid.id || idx} direction="up" delay={0.1 + idx * 0.05}>
               <MotionCard
                 hoverY={-6}
                 hoverScale={1.02}
-                className="bg-white rounded-[24px] sm:rounded-[28px] overflow-hidden border border-neutral-100/90 shadow-sm hover:shadow-xl transition-all duration-300 group cursor-pointer flex flex-col h-full"
+                className="bg-white rounded-[24px] sm:rounded-[28px] overflow-hidden border border-neutral-200 shadow-sm transition-all duration-300 group cursor-pointer flex flex-col h-full"
                 onClick={() => setSelectedIndex(idx)}
               >
                 {/* Thumbnail Image Frame */}
