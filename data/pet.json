@@ -1,5 +1,303 @@
 {
   "DodoIndustries": {
+    "templateComponents": {
+      "template-1": {
+        "shared": {
+          "Header": "DodoHeader1",
+          "Footer": "DodoFooter1"
+        },
+        "pages": {
+          "home": {
+            "components": [
+              {
+                "key": "Banner",
+                "component": "DodoBanner1"
+              },
+              {
+                "key": "AboutSection",
+                "component": "DodoAboutSection1"
+              },
+              {
+                "key": "ServiceAreas",
+                "component": "DodoServiceAreas1"
+              },
+              {
+                "key": "Services",
+                "component": "DodoServices1"
+              },
+              {
+                "key": "WhyChooseUs",
+                "component": "DodoWhyChooseUs1"
+              },
+              {
+                "key": "HowItWorks",
+                "component": "DodoHowItWorks1"
+              },
+              {
+                "key": "Team",
+                "component": "DodoTeam1"
+              },
+              {
+                "key": "Testimonial",
+                "component": "DodoTestimonial1"
+              },
+              {
+                "key": "Blog",
+                "component": "DodoBlog1"
+              }
+            ]
+          },
+          "about": {
+            "components": [
+              {
+                "key": "SubBanners",
+                "component": "DodoSubBanners1"
+              },
+              {
+                "key": "AboutSection",
+                "component": "DodoAboutSection1"
+              },
+              {
+                "key": "Mission",
+                "component": "DodoMission1"
+              },
+              {
+                "key": "WhyChooseUs",
+                "component": "DodoWhyChooseUs1"
+              },
+              {
+                "key": "Team",
+                "component": "DodoTeam1"
+              }
+            ]
+          },
+          "services": {
+            "components": [
+              {
+                "key": "SubBanners",
+                "component": "DodoSubBanners1"
+              },
+              {
+                "key": "Services",
+                "component": "DodoServices1"
+              },
+              {
+                "key": "HowItWorks",
+                "component": "DodoHowItWorks1"
+              },
+              {
+                "key": "ServiceAreas",
+                "component": "DodoServiceAreas1"
+              }
+            ]
+          },
+          "gallery": {
+            "components": [
+              {
+                "key": "SubBanners",
+                "component": "DodoSubBanners1"
+              },
+              {
+                "key": "Gallery",
+                "component": "DodoGallery1"
+              },
+              {
+                "key": "VideoGallery",
+                "component": "DodoVideoGallery1"
+              }
+            ]
+          },
+          "team": {
+            "components": [
+              {
+                "key": "SubBanners",
+                "component": "DodoSubBanners1"
+              },
+              {
+                "key": "Team",
+                "component": "DodoTeam1"
+              }
+            ]
+          },
+          "blog": {
+            "components": [
+              {
+                "key": "SubBanners",
+                "component": "DodoSubBanners1"
+              },
+              {
+                "key": "BlogPage",
+                "component": "DodoBlogPage1"
+              }
+            ]
+          },
+          "contactus": {
+            "components": [
+              {
+                "key": "SubBanners",
+                "component": "DodoSubBanners1"
+              },
+              {
+                "key": "ContactPage",
+                "component": "DodoContactPage1"
+              }
+            ]
+          },
+          "faq": {
+            "components": [
+              {
+                "key": "SubBanners",
+                "component": "DodoSubBanners1"
+              },
+              {
+                "key": "Faq",
+                "component": "DodoFaq1"
+              }
+            ]
+          },
+          "appointment": {
+            "components": [
+              {
+                "key": "SubBanners",
+                "component": "DodoSubBanners1"
+              },
+              {
+                "key": "AppointmentPage",
+                "component": "DodoAppointmentPage1"
+              }
+            ]
+          },
+          "pricing": {
+            "components": [
+              {
+                "key": "SubBanners",
+                "component": "DodoSubBanners1"
+              },
+              {
+                "key": "PricingPage",
+                "component": "DodoPricingPage1"
+              }
+            ]
+          },
+          "testimonial": {
+            "components": [
+              {
+                "key": "SubBanners",
+                "component": "DodoSubBanners1"
+              },
+              {
+                "key": "Testimonial",
+                "component": "DodoTestimonial1"
+              }
+            ]
+          },
+          "partners": {
+            "components": [
+              {
+                "key": "SubBanners",
+                "component": "DodoSubBanners1"
+              },
+              {
+                "key": "PartnersPage",
+                "component": "DodoPartnersPage1"
+              },
+              {
+                "key": "PartnersCta",
+                "component": "DodoPartnersCta1"
+              }
+            ]
+          },
+          "mission": {
+            "components": [
+              {
+                "key": "SubBanners",
+                "component": "DodoSubBanners1"
+              },
+              {
+                "key": "Mission",
+                "component": "DodoMission1"
+              },
+              {
+                "key": "MissionCta",
+                "component": "DodoMissionCta1"
+              }
+            ]
+          },
+          "whychooseus": {
+            "components": [
+              {
+                "key": "SubBanners",
+                "component": "DodoSubBanners1"
+              },
+              {
+                "key": "WhyChooseUs",
+                "component": "DodoWhyChooseUs1"
+              }
+            ]
+          },
+          "servicelocation": {
+            "components": [
+              {
+                "key": "SubBanners",
+                "component": "DodoSubBanners1"
+              },
+              {
+                "key": "ServiceAreas",
+                "component": "DodoServiceAreas1"
+              }
+            ]
+          },
+          "sitemap": {
+            "components": [
+              {
+                "key": "SubBanners",
+                "component": "DodoSubBanners1"
+              },
+              {
+                "key": "SitemapPage",
+                "component": "DodoSitemapPage1"
+              }
+            ]
+          },
+          "disclaimer": {
+            "components": [
+              {
+                "key": "SubBanners",
+                "component": "DodoSubBanners1"
+              },
+              {
+                "key": "LegalPage",
+                "component": "DodoDisclaimerPage1"
+              }
+            ]
+          },
+          "termscondition": {
+            "components": [
+              {
+                "key": "SubBanners",
+                "component": "DodoSubBanners1"
+              },
+              {
+                "key": "LegalPage",
+                "component": "DodoTermsConditionPage1"
+              }
+            ]
+          },
+          "cookiepolicy": {
+            "components": [
+              {
+                "key": "SubBanners",
+                "component": "DodoSubBanners1"
+              },
+              {
+                "key": "LegalPage",
+                "component": "DodoCookiePolicyPage1"
+              }
+            ]
+          }
+        }
+      }
+    },
     "sections": {
       "Brand": {
         "variants": {
@@ -2077,12 +2375,8 @@
                 "slug": "grooming"
               },
               {
-                "name": "Lifestyle",
-                "slug": "lifestyle"
-              },
-              {
-                "name": "News & Events",
-                "slug": "news-events"
+                "name": "Kitten Care",
+                "slug": "kittencare"
               }
             ],
             "latestUpdatesTitle": "Latest Updates",

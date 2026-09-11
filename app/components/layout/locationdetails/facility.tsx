@@ -42,17 +42,17 @@ export default function Facility({ data }: FacilityProps) {
     if (!data) return null;
 
     return (
-        <div className="bg-[#FFFBF8] border border-[#FDE8DC] rounded-[28px] sm:rounded-[32px] p-6 sm:p-8 lg:px-10 shadow-2xs">
+        <div className="bg-[#FFFBF8] border border-[#FDE8DC] rounded-[28px] sm:rounded-[32px] p-6 lg:px-10 shadow-2xs">
             {/* Header: Title with Side Lines & Paw Print Icon Below */}
-            <div className="flex flex-col items-center text-center mb-8 sm:mb-10">
+            <div className="flex flex-col items-center text-center">
                 <div className="flex items-center justify-center gap-4 w-full max-w-xs sm:max-w-sm mb-1.5">
                     <div className="h-[1.5px] flex-1 bg-[#F37021]/30 rounded-full" />
-                    <h3 className="text-xl sm:text-2xl lg:text-3xl font-extrabold text-[#3E1408] tracking-tight">
+                    <h3 className="text-xl sm:text-2xl lg:text-3xl font-bold text-[#3E1408] tracking-tight">
                         {data.title}
                     </h3>
                     <div className="h-[1.5px] flex-1 bg-[#F37021]/30 rounded-full" />
                 </div>
-                <FaPaw className="w-4 h-4 text-[#F37021]" aria-hidden="true" />
+                <FaPaw className="w-5 h-5 text-[#F37021]" aria-hidden="true" />
             </div>
 
             {/* 5 Items Row with Subtle Vertical Dividers & Orange Theme */}
@@ -68,15 +68,15 @@ export default function Facility({ data }: FacilityProps) {
                             >
                                 {/* Round Icon Badge (Orange Tinted) */}
                                 <div className="w-12 h-12 sm:w-13 sm:h-13 rounded-full bg-[#FFEFE5] text-[#F37021] flex items-center justify-center shrink-0 shadow-2xs">
-                                    <IconComp className="w-5.5 h-5.5 text-[#F37021]" />
+                                    <IconComp className="w-7 h-7 text-[#F37021]" />
                                 </div>
 
                                 {/* Text Info */}
                                 <div className="flex flex-col text-left">
-                                    <h4 className="text-xs sm:text-sm font-extrabold text-[#3E1408] leading-snug mb-0.5">
+                                    <h4 className="text-sm sm:text-[16px] font-bold text-[#3E1408] leading-snug mb-0.5">
                                         {fac.title}
                                     </h4>
-                                    <p className="text-[11px] sm:text-xs text-[#7A6B62] font-medium leading-tight">
+                                    <p className="text-sm sm:text-[14px] text-[#7A6B62] font-medium leading-tight">
                                         {fac.description}
                                     </p>
                                 </div>

@@ -80,7 +80,7 @@ export default function TeamDetails({ data }: TeamDetailsProps) {
                                 {data.role}
                             </h3>
                             {data.experience && (
-                                <p className="text-xs sm:text-sm font-semibold text-[#7A6B62] mb-3">
+                                <p className="text-sm sm:text-[16px] font-semibold text-[#7A6B62] mb-3">
                                     {data.experience}
                                 </p>
                             )}
@@ -129,7 +129,7 @@ export default function TeamDetails({ data }: TeamDetailsProps) {
                                         {data.getInTouch.title}
                                     </h3>
                                     <div className="w-8 h-[2.5px] bg-[#F37021] rounded-full mb-3" />
-                                    <p className="text-xs text-[#7A6B62] mb-5 leading-relaxed">
+                                    <p className="text-sm text-[#7A6B62] mb-5 leading-relaxed">
                                         {data.getInTouch.subtitle}
                                     </p>
 
@@ -199,7 +199,7 @@ export default function TeamDetails({ data }: TeamDetailsProps) {
 
                             <div className="flex flex-col gap-4">
                                 {data.aboutSection.paragraphs?.map((para, idx) => (
-                                    <p key={idx} className="text-xs sm:text-sm text-[#6C5C52] leading-relaxed">
+                                    <p key={idx} className="text-sm md:text-[15px] text-[#6C5C52] leading-relaxed">
                                         {para}
                                     </p>
                                 ))}
@@ -222,7 +222,7 @@ export default function TeamDetails({ data }: TeamDetailsProps) {
                                             <IconComp className="w-6 h-6 sm:w-7 sm:h-7" />
                                         </div>
                                         <div>
-                                            <span className="text-xs text-[#7A6B62] font-semibold block mb-0.5">
+                                            <span className="text-sm text-[#7A6B62] font-semibold block mb-0.5">
                                                 {st.title}
                                             </span>
                                             <span className="text-2xl sm:text-3xl font-extrabold text-[#F37021] leading-none">

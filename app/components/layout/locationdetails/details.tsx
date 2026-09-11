@@ -68,14 +68,14 @@ export default function LocationDetails({ data }: LocationDetailsProps) {
                     </FadeIn>
 
                     <FadeIn direction="up" delay={0.05}>
-                        <div className="inline-flex items-center gap-2 text-[#7A6B62] font-semibold text-xs sm:text-sm mb-4">
-                            <FaPaw className="w-4 h-4 text-[#F37021]" />
+                        <div className="inline-flex items-center gap-2 text-[#7A6B62] font-semibold text-sm sm:text-sm md:text-[16px] mb-4">
+                            <FaPaw className="w-5 h-5 text-[#F37021]" />
                             <span>{data.subtitleBadge}</span>
                         </div>
                     </FadeIn>
 
                     <FadeIn direction="up" delay={0.08}>
-                        <p className="text-xs sm:text-sm md:text-base text-[#6C5C52] leading-relaxed max-w-lg">
+                        <p className="text-sm sm:text-sm md:text-[16px] text-[#6C5C52] leading-relaxed max-w-lg">
                             {data.description}
                         </p>
                     </FadeIn>
@@ -88,13 +88,13 @@ export default function LocationDetails({ data }: LocationDetailsProps) {
                     {data.contacts?.address && (
                         <FadeIn direction="up" delay={0.1}>
                             <div className="bg-[#FFFBF8] border border-[#FDE8DC] rounded-2xl p-4 sm:p-5 flex flex-col items-center text-center h-full shadow-2xs">
-                                <div className="w-11 h-11 rounded-full bg-[#FFEFE5] text-[#F37021] flex items-center justify-center mb-3 shrink-0">
-                                    <AddressIcon className="w-5 h-5" />
+                                <div className="w-12 h-12 rounded-full bg-[#FFEFE5] text-[#F37021] flex items-center justify-center mb-3 shrink-0">
+                                    <AddressIcon className="w-8 h-8" />
                                 </div>
-                                <span className="text-xs font-bold text-[#3E1408] block mb-1">
+                                <span className="text-sm md:text-[16px] font-bold text-[#3E1408] block mb-1">
                                     {data.contacts.address.title}
                                 </span>
-                                <p className="text-[11px] sm:text-xs text-[#7A6B62] font-medium leading-relaxed">
+                                <p className="text-sm sm:text-sm text-[#7A6B62] font-medium leading-relaxed">
                                     {data.contacts.address.text}
                                 </p>
                             </div>
@@ -105,13 +105,13 @@ export default function LocationDetails({ data }: LocationDetailsProps) {
                     {data.contacts?.phone && (
                         <FadeIn direction="up" delay={0.12}>
                             <div className="bg-[#FFFBF8] border border-[#FDE8DC] rounded-2xl p-4 sm:p-5 flex flex-col items-center text-center h-full shadow-2xs">
-                                <div className="w-11 h-11 rounded-full bg-[#FFEFE5] text-[#F37021] flex items-center justify-center mb-3 shrink-0">
-                                    <PhoneIcon className="w-5 h-5" />
+                                <div className="w-12 h-12 rounded-full bg-[#FFEFE5] text-[#F37021] flex items-center justify-center mb-3 shrink-0">
+                                    <PhoneIcon className="w-8 h-8" />
                                 </div>
-                                <span className="text-xs font-bold text-[#3E1408] block mb-1">
+                                <span className="text-sm md:text-[16px] font-bold text-[#3E1408] block mb-1">
                                     {data.contacts.phone.title}
                                 </span>
-                                <p className="text-[11px] sm:text-xs text-[#7A6B62] font-bold">
+                                <p className="text-sm sm:text-sm  text-[#7A6B62] font-bold">
                                     {data.contacts.phone.text}
                                 </p>
                             </div>
@@ -122,13 +122,13 @@ export default function LocationDetails({ data }: LocationDetailsProps) {
                     {data.contacts?.email && (
                         <FadeIn direction="up" delay={0.14}>
                             <div className="bg-[#FFFBF8] border border-[#FDE8DC] rounded-2xl p-4 sm:p-5 flex flex-col items-center text-center h-full shadow-2xs">
-                                <div className="w-11 h-11 rounded-full bg-[#FFEFE5] text-[#F37021] flex items-center justify-center mb-3 shrink-0">
-                                    <EmailIcon className="w-5 h-5" />
+                                <div className="w-12 h-12 rounded-full bg-[#FFEFE5] text-[#F37021] flex items-center justify-center mb-3 shrink-0">
+                                    <EmailIcon className="w-8 h-8" />
                                 </div>
-                                <span className="text-xs font-bold text-[#3E1408] block mb-1">
+                                <span className="text-sm md:text-[16px] font-bold text-[#3E1408] block mb-1">
                                     {data.contacts.email.title}
                                 </span>
-                                <p className="text-[11px] sm:text-xs text-[#7A6B62] font-medium truncate w-full">
+                                <p className="text-sm sm:text-sm  text-[#7A6B62] font-medium w-full">
                                     {data.contacts.email.text}
                                 </p>
                             </div>
@@ -139,17 +139,17 @@ export default function LocationDetails({ data }: LocationDetailsProps) {
                     {data.contacts?.timings && (
                         <FadeIn direction="up" delay={0.16}>
                             <div className="bg-[#FFFBF8] border border-[#FDE8DC] rounded-2xl p-4 sm:p-5 flex flex-col items-center text-center h-full shadow-2xs">
-                                <div className="w-11 h-11 rounded-full bg-[#FFEFE5] text-[#F37021] flex items-center justify-center mb-3 shrink-0">
-                                    <TimingsIcon className="w-5 h-5" />
+                                <div className="w-12 h-12 rounded-full bg-[#FFEFE5] text-[#F37021] flex items-center justify-center mb-3 shrink-0">
+                                    <TimingsIcon className="w-8 h-8" />
                                 </div>
-                                <span className="text-xs font-bold text-[#3E1408] block mb-1">
+                                <span className="text-sm md:text-[16px] font-bold text-[#3E1408] block mb-1">
                                     {data.contacts.timings.title}
                                 </span>
-                                <p className="text-[11px] sm:text-xs text-[#7A6B62] font-medium leading-tight">
+                                <p className="text-sm text-[#7A6B62] font-medium leading-tight">
                                     {data.contacts.timings.text}
                                 </p>
                                 {data.contacts.timings.subtext && (
-                                    <p className="text-[11px] sm:text-xs text-[#7A6B62] font-bold leading-tight mt-0.5">
+                                    <p className="text-sm text-[#7A6B62] font-bold leading-tight mt-0.5">
                                         {data.contacts.timings.subtext}
                                     </p>
                                 )}
@@ -173,7 +173,7 @@ export default function LocationDetails({ data }: LocationDetailsProps) {
                             </h2>
                             <div className="w-10 h-[2.5px] bg-[#F37021] rounded-full mb-4" />
 
-                            <p className="text-xs sm:text-sm text-[#6C5C52] leading-relaxed mb-6">
+                            <p className="text-[#6C5C52] leading-relaxed mb-6">
                                 {data.aboutSection.description}
                             </p>
 
@@ -185,7 +185,7 @@ export default function LocationDetails({ data }: LocationDetailsProps) {
                                             <div className="w-5 h-5 rounded-full bg-[#F37021] text-white flex items-center justify-center shrink-0">
                                                 <FaCheck className="w-3 h-3 stroke-[3]" />
                                             </div>
-                                            <span className="text-xs sm:text-sm font-bold text-[#3E1408]">
+                                            <span className="font-bold text-[#3E1408]">
                                                 {pt}
                                             </span>
                                         </div>
@@ -196,9 +196,9 @@ export default function LocationDetails({ data }: LocationDetailsProps) {
                             {/* Appointment CTA Button */}
                             <Link
                                 href={data.aboutSection.btnLink || "/appointment"}
-                                className="inline-flex items-center justify-center gap-2.5 px-6 py-3.5 bg-[#F37021] hover:bg-[#d95e14] text-white font-bold text-sm rounded-2xl transition shadow-xs cursor-pointer w-fit"
+                                className="inline-flex items-center justify-center gap-2.5 px-8 py-3.5 bg-[#F37021] hover:bg-[#d95e14] text-white font-bold text-sm rounded-lg transition shadow-xs cursor-pointer w-fit"
                             >
-                                <span>{data.aboutSection.btnText}</span>
+                                <span className="text-[15px]">{data.aboutSection.btnText}</span>
                                 <FaPaw className="w-4 h-4 text-white" />
                             </Link>
                         </div>
