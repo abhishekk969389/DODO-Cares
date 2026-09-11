@@ -3,8 +3,8 @@
 import React, { useState } from "react";
 import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
-import petDataJson from "@/data/pet.json";
-import type { PetData, FaqSecData } from "@/types/pet";
+import { site as petData } from "@/data/index";
+import type { DodoFaqData as FaqSecData } from "@/data/index";
 import { FadeIn } from "@/app/components/ui/animations";
 import {
     FaPaw,
@@ -17,7 +17,7 @@ import {
     FaClock,
 } from "react-icons/fa";
 
-const petData: PetData = petDataJson as unknown as PetData;
+
 const faqData: FaqSecData | undefined = petData.faqSec;
 
 export default function FaqSec() {

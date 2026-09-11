@@ -2,8 +2,8 @@
 
 import React from "react";
 import Link from "next/link";
-import petDataJson from "@/data/pet.json";
-import type { PartnerCtaData, PetData } from "@/types/pet";
+import { site as petData } from "@/data/index";
+import type { DodoPartnersCtaData as PartnerCtaData } from "@/data/index";
 import { FadeIn } from "@/app/components/ui/animations";
 import {
     FaHandshake,
@@ -15,7 +15,7 @@ const reactIconMap: Record<string, React.ElementType> = {
     FaHandshake: FaHandshake,
 };
 
-const petData: PetData = petDataJson as unknown as PetData;
+
 const ctaData: PartnerCtaData = petData.partnerCta as PartnerCtaData;
 
 export default function PartnerCTA() {

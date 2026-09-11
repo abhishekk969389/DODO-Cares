@@ -3,8 +3,8 @@
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
-import petDataJson from "@/data/pet.json";
-import type { OurServicesData, PetData } from "@/types/pet";
+import { site as petData } from "@/data/index";
+import type { DodoServicesData as OurServicesData } from "@/data/index";
 import {
     FadeIn,
     StaggerContainer,
@@ -15,7 +15,7 @@ import { ArrowRight, ArrowUpRight, Star, Dog } from "lucide-react";
 import { PiBoneLight } from "react-icons/pi";
 import { FaPaw } from "react-icons/fa";
 
-const petData: PetData = petDataJson as unknown as PetData;
+
 const ourServicesData: OurServicesData = petData.ourServices as OurServicesData;
 
 // Dot Matrix Background Grid Graphic

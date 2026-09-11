@@ -1,8 +1,8 @@
 "use client";
 
 import React from "react";
-import petDataJson from "@/data/pet.json";
-import type { PetData, MissionCtaSecData } from "@/types/pet";
+import { site as petData } from "@/data/index";
+import type { DodoMissionCtaData as MissionCtaSecData } from "@/data/index";
 import { FadeIn, StaggerContainer, StaggerItem } from "@/app/components/ui/animations";
 import {
     FaHeart,
@@ -21,7 +21,7 @@ const reactIconMap: Record<string, React.ElementType> = {
     FaPaw,
 };
 
-const petData: PetData = petDataJson as unknown as PetData;
+
 const ctaData: MissionCtaSecData | undefined = petData.missionCtaSec;
 
 export default function MissionCta() {

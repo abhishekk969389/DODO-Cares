@@ -1,11 +1,10 @@
 import React from "react";
 import { notFound } from "next/navigation";
-import petDataJson from "@/data/pet.json";
-import type { PetData } from "@/types/pet";
+import { site as petData, getTeamMemberDetailBySlug, getTeamDetailSlugs } from "@/data/index";
+
 import SubBanner from "@/app/components/ui/subbanner";
 import TeamDetails from "@/app/components/layout/teamdetails/teamdetails";
 
-const petData: PetData = petDataJson as unknown as PetData;
 
 interface PageProps {
   params: Promise<{
@@ -14,14 +13,14 @@ interface PageProps {
 }
 
 export function generateStaticParams() {
-  return (petData.teamDetails || []).map((member) => ({
+  return (getTeamDetailSlugs() || []).map((member) => ({
     slug: member.slug,
   }));
 }
 
 export async function generateMetadata({ params }: PageProps) {
   const { slug } = await params;
-  const member = petData.teamDetails?.find((m) => m.slug === slug);
+  const member = getTeamMemberDetailBySlug(slug);
 
   if (!member) {
     return {
@@ -38,7 +37,7 @@ export async function generateMetadata({ params }: PageProps) {
 export default async function TeamDetailPage({ params }: PageProps) {
   const { slug } = await params;
 
-  const member = petData.teamDetails?.find((m) => m.slug === slug);
+  const member = getTeamMemberDetailBySlug(slug);
 
   if (!member) {
     notFound();

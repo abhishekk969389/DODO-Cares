@@ -3,13 +3,13 @@
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
-import petDataJson from "@/data/pet.json";
-import type { PetData, MissionSecData } from "@/types/pet";
+import { site as petData } from "@/data/index";
+import type { DodoMissionData as MissionSecData } from "@/data/index";
 import { FadeIn } from "@/app/components/ui/animations";
 import { FaPaw, FaArrowRight, FaCheck } from "react-icons/fa";
 import { Eye, Target } from "lucide-react";
 
-const petData: PetData = petDataJson as unknown as PetData;
+
 const missionData: MissionSecData = petData.missionSec as MissionSecData;
 
 export default function MissionSec() {

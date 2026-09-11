@@ -3,14 +3,14 @@
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
-import petDataJson from "@/data/pet.json";
-import type { PetData, ServiceAreasData } from "@/types/pet";
+import { site as petData } from "@/data/index";
+import type { DodoServiceAreasData as ServiceAreasData } from "@/data/index";
 import { FadeIn, MotionCard } from "@/app/components/ui/animations";
 import { MapPin } from "lucide-react";
 import { FaPaw } from "react-icons/fa";
 import Statistics from "@/app/components/ui/statistics";
 
-const petData: PetData = petDataJson as unknown as PetData;
+
 const serviceData: ServiceAreasData = petData.serviceAreas as ServiceAreasData;
 
 export default function LocationSec() {

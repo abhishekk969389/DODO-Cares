@@ -3,7 +3,7 @@
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
-import type { TeamDetailItem } from "@/types/pet";
+import type { PetTeamMemberDetail as TeamDetailItem } from "@/data/index";
 import { FadeIn } from "@/app/components/ui/animations";
 import {
     FaPaw,

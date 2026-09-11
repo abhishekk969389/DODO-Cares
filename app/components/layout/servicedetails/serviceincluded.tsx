@@ -2,7 +2,7 @@
 
 import React, { useState } from "react";
 import Image from "next/image";
-import type { ServiceDetailItem } from "@/types/pet";
+import type { ServiceDetailsItem as ServiceDetailItem } from "@/data/index";
 import {
     FaPaw,
     FaShower,

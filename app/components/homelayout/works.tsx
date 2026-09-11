@@ -2,8 +2,8 @@
 
 import React from "react";
 import Image from "next/image";
-import petDataJson from "@/data/pet.json";
-import type { HowItWorksData, PetData } from "@/types/pet";
+import { site as petData } from "@/data/index";
+import type { DodoHowItWorksData as HowItWorksData } from "@/data/index";
 import {
     FadeIn,
     StaggerContainer,
@@ -20,7 +20,7 @@ const iconMap: Record<string, React.ElementType> = {
     Utensils,
 };
 
-const petData: PetData = petDataJson as unknown as PetData;
+
 const worksData: HowItWorksData = petData.howItWorks as HowItWorksData;
 
 // Dashed Arrow SVG for desktop connectors

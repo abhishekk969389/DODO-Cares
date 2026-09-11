@@ -1,8 +1,8 @@
 "use client";
 
 import React, { useState } from "react";
-import petDataJson from "@/data/pet.json";
-import type { ContactSecData, PetData } from "@/types/pet";
+import { site as petData } from "@/data/index";
+import type { DodoContactPageData as ContactSecData } from "@/data/index";
 import { FadeIn, StaggerContainer, StaggerItem } from "@/app/components/ui/animations";
 import {
   FaPhoneAlt,
@@ -23,7 +23,7 @@ const iconMap: Record<string, React.ElementType> = {
   paw: FaPaw,
 };
 
-const petData: PetData = petDataJson as unknown as PetData;
+
 const contactData: ContactSecData = petData.contactSec as ContactSecData;
 
 export default function ContactSec() {

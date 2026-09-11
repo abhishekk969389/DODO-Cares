@@ -3,8 +3,8 @@
 import React from "react";
 import Link from "next/link";
 import { motion } from "framer-motion";
-import petDataJson from "@/data/pet.json";
-import type { PricingSecData, PetData } from "@/types/pet";
+import { site as petData } from "@/data/index";
+import type { DodoPricingPageData as PricingSecData } from "@/data/index";
 import { FadeIn, StaggerContainer, StaggerItem, MotionCard } from "@/app/components/ui/animations";
 import {
     FaShower,
@@ -34,7 +34,7 @@ const reactIconMap: Record<string, React.ElementType> = {
     FaClock,
 };
 
-const petData: PetData = petDataJson as unknown as PetData;
+
 const pricingData: PricingSecData = petData.pricingSec as PricingSecData;
 
 export default function PriceSec() {

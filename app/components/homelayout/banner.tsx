@@ -4,8 +4,8 @@ import React, { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
-import petDataJson from "@/data/pet.json";
-import type { BannerData, PetData } from "@/types/pet";
+import { site as petData } from "@/data/index";
+import type { DodoBannerData as BannerData } from "@/data/index";
 import { FadeIn } from "@/app/components/ui/animations";
 import {
   Heart,
@@ -29,7 +29,7 @@ const iconMap: Record<string, React.ElementType> = {
   PawPrint: FaPaw,
 };
 
-const petData: PetData = petDataJson as unknown as PetData;
+
 const bannerData: BannerData = petData.banner;
 
 // Decorative wavy line with heart SVG (~ ♡)

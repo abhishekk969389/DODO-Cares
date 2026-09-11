@@ -3,7 +3,8 @@
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
-import type { BlogSidebarData, BlogPostItem, BlogDetailItem } from "@/types/pet";
+import type { DodoBlogSidebarData as BlogSidebarData, PetBlogDetailPost as BlogDetailItem } from "@/data/index";
+import type { BlogPostItem } from "@/types/pet";
 import { FaPaw, FaRegCalendarAlt } from "react-icons/fa";
 import { ArrowRight } from "lucide-react";
 

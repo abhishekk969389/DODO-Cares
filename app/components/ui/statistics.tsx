@@ -2,8 +2,8 @@
 
 import React from "react";
 import { motion } from "framer-motion";
-import petDataJson from "@/data/pet.json";
-import type { PetData, StatisticItem, StatisticsProps } from "@/types/pet";
+import { site as petData } from "@/data/index";
+import type { StatisticItem, StatisticsProps } from "@/types/pet";
 import { FadeIn } from "@/app/components/ui/animations";
 import {
   MapPin,
@@ -34,7 +34,7 @@ const statIconMap: Record<string, React.ElementType> = {
   FaPaw,
 };
 
-const petData: PetData = petDataJson as unknown as PetData;
+
 
 export default function Statistics({ stats: propsStats, className = "" }: StatisticsProps) {
   const statsList: StatisticItem[] = propsStats || petData.serviceAreas?.stats || [];

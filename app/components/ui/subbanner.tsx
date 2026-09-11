@@ -4,11 +4,12 @@ import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
-import petDataJson from "@/data/pet.json";
-import type { PetData, SubBannerData, BreadcrumbItem } from "@/types/pet";
+import { site as petData } from "@/data/index";
+import type { DodoSubBannersData as SubBannerData } from "@/data/index";
+import type { BreadcrumbItem } from "@/types/pet";
 import { FadeIn } from "@/app/components/ui/animations";
 
-const petData: PetData = petDataJson as unknown as PetData;
+
 
 interface SubBannerProps {
     pageKey?: string;
@@ -23,7 +24,7 @@ export default function SubBanner({
     bgImage,
     breadcrumbs,
 }: SubBannerProps) {
-    const subBannerData: SubBannerData | undefined = petData.subBanners?.[pageKey];
+    const subBannerData: any = petData.subBanners?.[pageKey as keyof typeof petData.subBanners];
 
     const displayTitle = title || subBannerData?.title || "About Us";
     const displayBgImage = bgImage || subBannerData?.bgImage || "/subbanner.jpg";
@@ -76,7 +77,7 @@ export default function SubBanner({
                         </div>
 
                         {/* BREADCRUMB CONTENT */}
-                        {displayBreadcrumbs.map((item, idx) => (
+                        {displayBreadcrumbs.map((item: any, idx: number) => (
                             <React.Fragment key={idx}>
                                 {idx > 0 && (
                                     <span className="text-[#2C1810] font-bold text-sm sm:text-base md:text-lg mx-0.5">

@@ -1,8 +1,8 @@
 "use client";
 
 import React, { useState } from "react";
-import petDataJson from "@/data/pet.json";
-import type { PetData, AppointmentSecData } from "@/types/pet";
+import { site as petData } from "@/data/index";
+import type { DodoAppointmentPageData as AppointmentSecData } from "@/data/index";
 import { FadeIn } from "@/app/components/ui/animations";
 import {
   Phone,
@@ -15,7 +15,7 @@ import {
 } from "lucide-react";
 import { FaPaw } from "react-icons/fa";
 
-const petData: PetData = petDataJson as unknown as PetData;
+
 const appointmentData: AppointmentSecData = petData.appointmentSec as AppointmentSecData;
 
 const contactIconMap: Record<string, React.ElementType> = {

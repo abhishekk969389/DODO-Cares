@@ -2,12 +2,13 @@
 
 import React from "react";
 import Link from "next/link";
-import petDataJson from "@/data/pet.json";
-import type { SitemapSecData, SitemapItem, PetData } from "@/types/pet";
+import { site as petData } from "@/data/index";
+import type { DodoSitemapPageData as SitemapSecData } from "@/data/index";
+import type { SitemapItem } from "@/types/pet";
 import { FadeIn } from "@/app/components/ui/animations";
 import { FaChevronRight } from "react-icons/fa";
 
-const petData: PetData = petDataJson as unknown as PetData;
+
 const sitemapSecData: SitemapSecData = petData.sitemapSec as SitemapSecData;
 
 export default function SitemapSec() {

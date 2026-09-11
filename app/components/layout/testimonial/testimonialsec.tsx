@@ -2,13 +2,13 @@
 
 import React from "react";
 import Image from "next/image";
-import petDataJson from "@/data/pet.json";
-import type { PetData, TestimonialSecData } from "@/types/pet";
+import { site as petData } from "@/data/index";
+import type { DodoTestimonialData as TestimonialSecData } from "@/data/index";
 import { FadeIn, MotionCard } from "@/app/components/ui/animations";
 import { FaPaw, FaStar } from "react-icons/fa";
 import { ImQuotesLeft } from "react-icons/im";
 
-const petData: PetData = petDataJson as unknown as PetData;
+
 const testimonialData: TestimonialSecData | undefined = petData.testimonialSec;
 
 export default function TestimonialSec() {
@@ -104,7 +104,7 @@ export default function TestimonialSec() {
                                                 {item.name}
                                             </h3>
                                             <span className="text-xs sm:text-sm text-[#615147] font-medium block mt-0.5">
-                                                {item.role || item.petName}
+                                                {item.role || (item as any).petName}
                                             </span>
                                         </div>
                                     </div>

@@ -4,10 +4,9 @@ import SubBanner from "@/app/components/ui/subbanner";
 import ServiceHero from "@/app/components/layout/servicedetails/servicehero";
 import ServiceIncluded from "@/app/components/layout/servicedetails/serviceincluded";
 import ServiceProcess from "@/app/components/layout/servicedetails/serviceprocess";
-import petDataJson from "@/data/pet.json";
-import type { PetData, ServiceDetailItem } from "@/types/pet";
+import { getServiceBySlug, getServiceSlugs } from "@/data/index";
+import type { ServiceDetailsItem as ServiceDetailItem } from "@/data/index";
 
-const petData: PetData = petDataJson as unknown as PetData;
 
 interface ServiceDetailPageProps {
     params: Promise<{
@@ -16,7 +15,7 @@ interface ServiceDetailPageProps {
 }
 
 export async function generateStaticParams() {
-    const serviceDetails = petData.serviceDetails || [];
+    const serviceDetails = getServiceSlugs() || [];
     return serviceDetails.map((service) => ({
         slug: service.slug,
     }));
@@ -24,7 +23,7 @@ export async function generateStaticParams() {
 
 export async function generateMetadata({ params }: ServiceDetailPageProps) {
     const { slug } = await params;
-    const service = petData.serviceDetails?.find((item) => item.slug === slug);
+    const service = getServiceBySlug(slug);
 
     if (!service) {
         return {
@@ -40,8 +39,8 @@ export async function generateMetadata({ params }: ServiceDetailPageProps) {
 
 export default async function ServiceDetailPage({ params }: ServiceDetailPageProps) {
     const { slug } = await params;
-    const serviceDetails: ServiceDetailItem[] = petData.serviceDetails || [];
-    const service = serviceDetails.find((item) => item.slug === slug) || serviceDetails[0];
+    const serviceDetails = getServiceSlugs() || [];
+    const service = getServiceBySlug(slug) || serviceDetails[0];
 
     if (!service) {
         notFound();

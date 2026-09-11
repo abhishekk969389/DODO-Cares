@@ -14,10 +14,10 @@ import {
     Shield,
 } from "lucide-react";
 import { FaPaw } from "react-icons/fa";
-import petDataJson from "@/data/pet.json";
-import type { PetData, FooterLink } from "@/types/pet";
+import { site as petData } from "@/data/index";
+import type { FooterLink } from "@/types/pet";
 
-const petData: PetData = petDataJson as PetData;
+
 
 const FacebookIcon = ({ className = "w-4 h-4" }: { className?: string }) => (
     <svg className={className} viewBox="0 0 24 24" fill="currentColor">

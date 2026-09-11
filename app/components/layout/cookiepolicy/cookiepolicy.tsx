@@ -1,12 +1,12 @@
 "use client";
 
 import React from "react";
-import petDataJson from "@/data/pet.json";
-import type { CookiePolicySecData, PetData } from "@/types/pet";
+import { site as petData } from "@/data/index";
+import type { DodoCookiePolicyPageData as CookiePolicySecData } from "@/data/index";
 import { FadeIn } from "@/app/components/ui/animations";
 import { FaPaw } from "react-icons/fa";
 
-const petData: PetData = petDataJson as unknown as PetData;
+
 const cookiePolicySecData: CookiePolicySecData = (petData.cookiePolicySec || {
     titlePrefix: "Cookie",
     titleHighlight: "Policy",

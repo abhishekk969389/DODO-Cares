@@ -3,10 +3,10 @@ import { notFound } from "next/navigation";
 import SubBanner from "@/app/components/ui/subbanner";
 import BlogContent from "@/app/components/layout/blogdetails/blogcontent";
 import BlogSidebar from "@/app/components/layout/blogdetails/blogsidebar";
-import petDataJson from "@/data/pet.json";
-import type { PetData, BlogDetailItem, BlogSidebarData, BlogPostItem } from "@/types/pet";
+import { site as petData, getBlogDetailBySlug, getBlogDetailSlugs } from "@/data/index";
+import type { PetBlogDetailPost as BlogDetailItem, DodoBlogSidebarData as BlogSidebarData } from "@/data/index";
+import type { BlogPostItem } from "@/types/pet";
 
-const petData: PetData = petDataJson as unknown as PetData;
 
 interface BlogDetailPageProps {
     params: Promise<{
@@ -15,7 +15,7 @@ interface BlogDetailPageProps {
 }
 
 export async function generateStaticParams() {
-    const blogDetails = petData.blogDetails || [];
+    const blogDetails = getBlogDetailSlugs() || [];
     return blogDetails.map((post) => ({
         slug: post.slug,
     }));
@@ -23,7 +23,7 @@ export async function generateStaticParams() {
 
 export async function generateMetadata({ params }: BlogDetailPageProps) {
     const { slug } = await params;
-    const blogPost = petData.blogDetails?.find((item) => item.slug === slug);
+    const blogPost = getBlogDetailBySlug(slug);
 
     if (!blogPost) {
         return {
@@ -39,8 +39,8 @@ export async function generateMetadata({ params }: BlogDetailPageProps) {
 
 export default async function BlogDetailPage({ params }: BlogDetailPageProps) {
     const { slug } = await params;
-    const blogDetails: BlogDetailItem[] = petData.blogDetails || [];
-    const blogPost = blogDetails.find((item) => item.slug === slug) || blogDetails[0];
+    const blogDetails: any[] = getBlogDetailSlugs() || [];
+    const blogPost = getBlogDetailBySlug(slug) || blogDetails[0];
 
     if (!blogPost) {
         notFound();

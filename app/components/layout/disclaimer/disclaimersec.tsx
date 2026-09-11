@@ -1,12 +1,12 @@
 "use client";
 
 import React from "react";
-import petDataJson from "@/data/pet.json";
-import type { DisclaimerSecData, PetData } from "@/types/pet";
+import { site as petData } from "@/data/index";
+import type { DodoDisclaimerPageData as DisclaimerSecData } from "@/data/index";
 import { FadeIn } from "@/app/components/ui/animations";
 import { FaPaw } from "react-icons/fa";
 
-const petData: PetData = petDataJson as unknown as PetData;
+
 const disclaimerSecData: DisclaimerSecData = (petData.disclaimerSec || {
     titlePrefix: "Terms and",
     titleHighlight: "Conditions",

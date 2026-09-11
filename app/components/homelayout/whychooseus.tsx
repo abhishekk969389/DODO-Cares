@@ -4,8 +4,8 @@ import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
-import petDataJson from "@/data/pet.json";
-import type { PetData, WhyChooseUsData } from "@/types/pet";
+import { site as petData } from "@/data/index";
+import type { DodoWhyChooseUsData as WhyChooseUsData } from "@/data/index";
 import {
     FadeIn,
     ScaleIn,
@@ -36,7 +36,7 @@ const reactIconMap: Record<string, React.ElementType> = {
     FaPaw,
 };
 
-const petData: PetData = petDataJson as unknown as PetData;
+
 const whyData: WhyChooseUsData = petData.whyChooseUs as WhyChooseUsData;
 
 // Decorative Wavy Line with Paw SVG (~ 🐾)

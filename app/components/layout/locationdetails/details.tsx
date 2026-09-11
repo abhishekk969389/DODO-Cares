@@ -3,7 +3,7 @@
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
-import type { LocationDetailItem } from "@/types/pet";
+import type { PetServiceAreaDetail as LocationDetailItem } from "@/data/index";
 import { FadeIn } from "@/app/components/ui/animations";
 import Facility from "./facility";
 import {

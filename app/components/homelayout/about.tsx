@@ -4,13 +4,13 @@ import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
-import petDataJson from "@/data/pet.json";
-import type { AboutData, PetData } from "@/types/pet";
+import { site as petData } from "@/data/index";
+import type { DodoAboutSectionData as AboutData } from "@/data/index";
 import { FadeIn, ScaleIn } from "@/app/components/ui/animations";
 import { ArrowRight } from "lucide-react";
 import { FaPaw } from "react-icons/fa";
 
-const petData: PetData = petDataJson as unknown as PetData;
+
 const aboutData: AboutData = petData.about;
 
 export default function About() {

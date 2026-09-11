@@ -2,8 +2,8 @@
 
 import React from "react";
 import Image from "next/image";
-import petDataJson from "@/data/pet.json";
-import type { PartnerSecData, PetData } from "@/types/pet";
+import { site as petData } from "@/data/index";
+import type { DodoPartnersPageData as PartnerSecData } from "@/data/index";
 import {
     FadeIn,
     StaggerContainer,
@@ -12,7 +12,7 @@ import {
 } from "@/app/components/ui/animations";
 import { FaPaw } from "react-icons/fa";
 
-const petData: PetData = petDataJson as unknown as PetData;
+
 const partnerSecData: PartnerSecData = petData.partnerSec as PartnerSecData;
 
 export default function PartnerSec() {

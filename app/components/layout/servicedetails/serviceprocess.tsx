@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import type { ServiceDetailItem } from "@/types/pet";
+import type { ServiceDetailsItem as ServiceDetailItem } from "@/data/index";
 import {
     FaPaw,
     FaSearch,

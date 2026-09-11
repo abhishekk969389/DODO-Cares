@@ -4,8 +4,8 @@ import React, { useState, useRef } from "react";
 import Image from "next/image";
 import { motion } from "framer-motion";
 import Link from "next/link";
-import petDataJson from "@/data/pet.json";
-import type { PetData, ServiceAreasData } from "@/types/pet";
+import { site as petData } from "@/data/index";
+import type { DodoServiceAreasData as ServiceAreasData } from "@/data/index";
 import {
     FadeIn,
     MotionCard,
@@ -18,7 +18,7 @@ import {
 import { FaPaw } from "react-icons/fa";
 import Statistics from "@/app/components/ui/statistics";
 
-const petData: PetData = petDataJson as unknown as PetData;
+
 const serviceData: ServiceAreasData = petData.serviceAreas as ServiceAreasData;
 
 export default function Services() {

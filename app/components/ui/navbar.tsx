@@ -6,10 +6,10 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { ArrowRight, Menu, X } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
-import petDataJson from "@/data/pet.json";
-import type { PetData, NavLink } from "@/types/pet";
+import { site as petData } from "@/data/index";
+import type { NavLink } from "@/types/pet";
 
-const petData: PetData = petDataJson as PetData;
+
 
 export default function Navbar() {
     const { navbar } = petData;

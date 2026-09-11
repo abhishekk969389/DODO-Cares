@@ -3,13 +3,13 @@
 import React, { useState, useEffect, useCallback } from "react";
 import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
-import petDataJson from "@/data/pet.json";
-import type { PetData, VideoGalleryData } from "@/types/pet";
+import { site as petData } from "@/data/index";
+import type { DodoVideoGalleryData as VideoGalleryData } from "@/data/index";
 import { FadeIn, MotionCard } from "@/app/components/ui/animations";
 import { FaPaw, FaPlay, FaChevronLeft, FaChevronRight, FaTimes } from "react-icons/fa";
 import { Clock } from "lucide-react";
 
-const petData: PetData = petDataJson as unknown as PetData;
+
 const videoData: VideoGalleryData = petData.videoGallery as VideoGalleryData;
 
 export default function VideoGallery() {

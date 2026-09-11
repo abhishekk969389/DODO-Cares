@@ -1,11 +1,10 @@
 import React from "react";
 import { notFound } from "next/navigation";
-import petDataJson from "@/data/pet.json";
-import type { PetData } from "@/types/pet";
+import { site as petData, getServiceAreaDetailBySlug, getServiceAreaDetailSlugs } from "@/data/index";
+
 import SubBanner from "@/app/components/ui/subbanner";
 import LocationDetails from "@/app/components/layout/locationdetails/details";
 
-const petData: PetData = petDataJson as unknown as PetData;
 
 interface PageProps {
   params: Promise<{
@@ -14,14 +13,14 @@ interface PageProps {
 }
 
 export function generateStaticParams() {
-  return (petData.locationDetails || []).map((loc) => ({
+  return (getServiceAreaDetailSlugs() || []).map((loc) => ({
     slug: loc.slug,
   }));
 }
 
 export async function generateMetadata({ params }: PageProps) {
   const { slug } = await params;
-  const location = petData.locationDetails?.find((l) => l.slug === slug);
+  const location = getServiceAreaDetailBySlug(slug);
 
   if (!location) {
     return {
@@ -38,7 +37,7 @@ export async function generateMetadata({ params }: PageProps) {
 export default async function LocationDetailPage({ params }: PageProps) {
   const { slug } = await params;
 
-  const location = petData.locationDetails?.find((l) => l.slug === slug);
+  const location = getServiceAreaDetailBySlug(slug);
 
   if (!location) {
     notFound();

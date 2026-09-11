@@ -2,7 +2,7 @@
 
 import React from "react";
 import Image from "next/image";
-import type { BlogDetailItem } from "@/types/pet";
+import type { PetBlogDetailPost as BlogDetailItem } from "@/data/index";
 import { FaPaw, FaRegCalendarAlt, FaRegUser, FaRegClock } from "react-icons/fa";
 
 interface BlogContentProps {

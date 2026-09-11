@@ -3,8 +3,8 @@
 import React, { useState, useEffect, useCallback } from "react";
 import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
-import petDataJson from "@/data/pet.json";
-import type { PetData, GallerySecData } from "@/types/pet";
+import { site as petData } from "@/data/index";
+import type { DodoGalleryData as GallerySecData } from "@/data/index";
 import { FadeIn, MotionCard } from "@/app/components/ui/animations";
 import {
     FaCut as FaScissors,
@@ -28,7 +28,7 @@ const categoryIconMap: Record<string, React.ElementType> = {
     calendar: FaCalendarAlt,
 };
 
-const petData: PetData = petDataJson as unknown as PetData;
+
 const galleryData: GallerySecData = petData.gallerySec as GallerySecData;
 
 export default function ImageGallery() {

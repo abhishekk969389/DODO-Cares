@@ -3,8 +3,8 @@
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
-import petDataJson from "@/data/pet.json";
-import type { OurTeamData, PetData } from "@/types/pet";
+import { site as petData } from "@/data/index";
+import type { DodoTeamData as OurTeamData } from "@/data/index";
 import {
     FadeIn,
     StaggerContainer,
@@ -14,7 +14,7 @@ import {
 import { ArrowRight } from "lucide-react";
 import { FaPaw } from "react-icons/fa";
 
-const petData: PetData = petDataJson as unknown as PetData;
+
 const teamData: OurTeamData = petData.ourTeam as OurTeamData;
 
 export default function Teams() {
