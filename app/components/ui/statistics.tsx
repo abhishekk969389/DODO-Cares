@@ -43,8 +43,8 @@ export default function Statistics({ stats: propsStats, className = "" }: Statis
 
   return (
     <FadeIn direction="up" delay={0.1}>
-      <div className={`bg-white mx-auto max-w-[1320px] rounded-xl shadow-md shadow-neutral-200/60 border border-gray-100 px-6 sm:px-10 lg:px-12 py-5 sm:py-6 mt-8 w-full ${className}`}>
-        <div className="flex flex-col sm:grid sm:grid-cols-2 lg:flex lg:flex-row items-center justify-between gap-6 lg:gap-0">
+      <div className={`bg-white mx-auto max-w-[1320px] rounded-xl shadow-md shadow-neutral-200/60 border border-gray-100 px-6 sm:px-8 md:px-12 lg:px-12 py-5 sm:py-6 mt-8 w-full ${className}`}>
+        <div className="flex flex-col sm:grid sm:grid-cols-2 lg:flex lg:flex-row items-center justify-between gap-6 sm:gap-y-6 sm:gap-x-8 lg:gap-0">
           {statsList.map((stat, idx) => {
             const IconComponent = statIconMap[stat.icon] || MapPin;
 
@@ -57,7 +57,7 @@ export default function Statistics({ stats: propsStats, className = "" }: Statis
                   whileHover={{ scale: 1.02 }}
                   whileTap={{ scale: 0.98 }}
                   transition={{ duration: 0.2, ease: "easeInOut" }}
-                  className="flex items-center gap-4 sm:gap-5 justify-center flex-1 px-2 sm:px-4 cursor-pointer"
+                  className="flex items-center gap-4 sm:gap-5 justify-start lg:justify-center w-full flex-1 px-1 sm:px-2 md:px-6 lg:px-4 cursor-pointer"
                 >
                   {/* Orange Circle Icon Badge */}
                   <div className="w-13 h-13 sm:w-14 sm:h-14 rounded-full bg-[#F37021] text-white flex items-center justify-center shrink-0 shadow-2xs">

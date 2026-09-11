@@ -191,18 +191,18 @@ export default function WhyChooseUs() {
                 {/* Bottom Callout Promise Banner */}
                 {whyData.bottomBanner && (
                     <FadeIn direction="up" delay={0.1}>
-                        <div className="bg-gradient-to-r from-[#FFF6F0] via-[#FFF3EB] to-[#FFF6F0] sm:rounded-xl p-5 sm:px-8 lg:px-10 sm:py-5 border border-[#F37021]/15 flex flex-col sm:flex-row items-center justify-between gap-6 shadow-2xs relative overflow-hidden mt-6">
+                        <div className="bg-gradient-to-r from-[#FFF6F0] via-[#FFF3EB] to-[#FFF6F0] rounded-2xl p-5 sm:p-6 md:p-6 lg:px-9 lg:py-6 border border-[#F37021]/15 flex flex-col md:flex-row items-center justify-between gap-5 md:gap-6 shadow-2xs relative overflow-hidden mt-8 md:mt-10">
 
                             {/* Left Info */}
-                            <div className="flex items-center gap-4 sm:gap-5 text-left">
-                                <div className="w-16 h-16 sm:w-20 sm:h-20 rounded-full bg-[#F37021] text-white flex items-center justify-center shrink-0 shadow-2xs border-4 border-white">
-                                    <FaDog className="w-10 h-10 sm:w-12 sm:h-12 text-white" />
+                            <div className="flex flex-col sm:flex-row items-center gap-3.5 sm:gap-5 text-center sm:text-left min-w-0">
+                                <div className="w-14 h-14 sm:w-16 sm:h-16 md:w-16 md:h-16 lg:w-18 lg:h-18 rounded-full bg-[#F37021] text-white flex items-center justify-center shrink-0 shadow-2xs border-4 border-white">
+                                    <FaDog className="w-8 h-8 sm:w-9 sm:h-9 md:w-9 md:h-9 lg:w-10 lg:h-10 text-white" />
                                 </div>
-                                <div className="flex flex-col">
-                                    <h4 className="text-base sm:text-lg md:text-[20px] font-extrabold text-[#1E1B26] mb-0.5">
+                                <div className="flex flex-col min-w-0">
+                                    <h4 className="text-base sm:text-lg md:text-xl lg:text-[22px] font-extrabold text-[#1E1B26] mb-1 leading-snug">
                                         {whyData.bottomBanner.title}
                                     </h4>
-                                    <p className="text-sm sm:text-sm md:text-lg text-[#615147] font-medium">
+                                    <p className="text-xs sm:text-sm md:text-sm lg:text-base text-[#615147] font-medium leading-relaxed">
                                         {whyData.bottomBanner.subtitle}
                                     </p>
                                 </div>
@@ -213,10 +213,11 @@ export default function WhyChooseUs() {
                                 whileHover={{ scale: 1.03 }}
                                 whileTap={{ scale: 0.97 }}
                                 transition={{ duration: 0.2, ease: "easeInOut" }}
+                                className="shrink-0 w-full sm:w-auto"
                             >
                                 <Link
                                     href={whyData.bottomBanner.btnLink}
-                                    className="bg-[#F37021] hover:bg-[#d95c0e] text-white font-bold text-sm sm:text-base px-7 py-3.5 rounded-full inline-flex items-center gap-2 shadow-md hover:shadow-lg transition-colors shrink-0 group cursor-pointer"
+                                    className="bg-[#F37021] hover:bg-[#d95c0e] text-white font-bold text-sm sm:text-base px-6 py-3 sm:px-7 sm:py-3.5 rounded-full inline-flex items-center justify-center gap-2 shadow-md hover:shadow-lg transition-colors w-full sm:w-auto shrink-0 group cursor-pointer whitespace-nowrap"
                                 >
                                     <span>{whyData.bottomBanner.btnText}</span>
                                     <ArrowRight className="w-4.5 h-4.5 text-white transition-transform duration-300 group-hover:translate-x-1" />

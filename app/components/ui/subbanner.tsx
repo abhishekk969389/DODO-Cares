@@ -60,7 +60,7 @@ export default function SubBanner({
             </div>
 
             {/* BOTTOM BREADCRUMB TAB LIKE SCREENSHOT */}
-            <div className="absolute  w-60 md:w-140 bottom-0 left-1/2 -translate-x-1/2 z-20">
+            <div className="absolute  w-60 sm:w-120 md:w-140 bottom-0 left-1/2 -translate-x-1/2 z-20">
                 <FadeIn direction="up" delay={0.15}>
                     <div className="relative bg-white rounded-t-[28px] sm:rounded-t-[36px] px-8 sm:px-14 py-3 sm:py-4 flex items-center justify-center gap-2.5">
                         

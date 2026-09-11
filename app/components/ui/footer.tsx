@@ -95,9 +95,9 @@ export default function Footer() {
             <FadeIn direction="up" delay={0.05}>
                 <div className="w-full max-w-[1320px] mx-auto px-4 sm:px-6 lg:px-8 pb-10 mt-2 sm:mt-4 md:mt-6 lg:mt-8 sm:pb-12 lg:pb-14">
                     <div className="px-0">
-                        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-6 lg:grid-cols-12 gap-8 sm:gap-6 lg:gap-5 xl:gap-8">
+                        <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-6 lg:grid-cols-12 gap-x-4 gap-y-6 sm:gap-6 lg:gap-5 xl:gap-8">
                             {/* Column 1: Brand Info */}
-                            <div className="col-span-1 sm:col-span-2 md:col-span-6 lg:col-span-3 xl:col-span-3 flex flex-col justify-between">
+                            <div className="col-span-2 sm:col-span-2 md:col-span-6 lg:col-span-3 xl:col-span-3 flex flex-col justify-between">
                                 <div>
                                     <Link href="/" className="inline-block ">
                                         <motion.div
@@ -115,7 +115,7 @@ export default function Footer() {
                                             />
                                         </motion.div>
                                     </Link>
-                                    <p className="text-[#2C1810] text-sm sm:text-base lg:text-[14px] xl:text-base text-left max-w-xl lg:max-w-none leading-relaxed">
+                                    <p className="text-[#2C1810] text-sm sm:text-base lg:text-[14px] xl:text-base text-left max-w-xl lg:max-w-none leading-relaxed mb-4">
                                         {footer.brand.description}
                                     </p>
                                 </div>
@@ -123,28 +123,28 @@ export default function Footer() {
                                 {/* Feature Highlights */}
                                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-1 gap-4 sm:gap-5 lg:gap-3.5 xl:gap-5 space-y-0">
                                     <div className="flex items-center gap-3 sm:gap-3.5 lg:gap-3 xl:gap-4">
-                                        <div className="w-11 h-11 sm:w-12 sm:h-12 lg:w-10 lg:h-10 xl:w-12 xl:h-12 rounded-full bg-[#FFF3EB] flex items-center justify-center shrink-0 text-[#F37021]">
-                                            <FaPaw className="w-5 h-5 lg:w-4.5 lg:h-4.5 xl:w-5 xl:h-5 text-[#F37021]" />
+                                        <div className="w-10 h-10 sm:w-12 sm:h-12 lg:w-10 lg:h-10 xl:w-12 xl:h-12 rounded-full bg-[#FFF3EB] flex items-center justify-center shrink-0 text-[#F37021]">
+                                            <FaPaw className="w-4.5 h-4.5 lg:w-4.5 lg:h-4.5 xl:w-5 xl:h-5 text-[#F37021]" />
                                         </div>
                                         <div>
-                                            <h4 className="text-[#2C1810] font-bold text-sm sm:text-base lg:text-[14px] xl:text-[17px] leading-snug">
+                                            <h4 className="text-[#2C1810] font-bold text-xs sm:text-base lg:text-[14px] xl:text-[17px] leading-snug">
                                                 {footer.brand.features[0]?.title}
                                             </h4>
-                                            <p className="text-neutral-500 text-xs sm:text-sm lg:text-[12px] xl:text-sm mt-0.5 font-medium leading-tight">
+                                            <p className="text-neutral-500 text-[11px] sm:text-sm lg:text-[12px] xl:text-sm mt-0.5 font-medium leading-tight">
                                                 {footer.brand.features[0]?.subtitle}
                                             </p>
                                         </div>
                                     </div>
 
                                     <div className="flex items-center gap-3 sm:gap-3.5 lg:gap-3 xl:gap-4">
-                                        <div className="w-11 h-11 sm:w-12 sm:h-12 lg:w-10 lg:h-10 xl:w-12 xl:h-12 rounded-full bg-[#FFF3EB] flex items-center justify-center shrink-0 text-[#F37021]">
-                                            <Shield className="w-5 h-5 lg:w-4.5 lg:h-4.5 xl:w-5 xl:h-5 text-[#F37021]" />
+                                        <div className="w-10 h-10 sm:w-12 sm:h-12 lg:w-10 lg:h-10 xl:w-12 xl:h-12 rounded-full bg-[#FFF3EB] flex items-center justify-center shrink-0 text-[#F37021]">
+                                            <Shield className="w-4.5 h-4.5 lg:w-4.5 lg:h-4.5 xl:w-5 xl:h-5 text-[#F37021]" />
                                         </div>
                                         <div>
-                                            <h4 className="text-[#2C1810] font-bold text-sm sm:text-base lg:text-[14px] xl:text-[17px] leading-snug">
+                                            <h4 className="text-[#2C1810] font-bold text-xs sm:text-base lg:text-[14px] xl:text-[17px] leading-snug">
                                                 {footer.brand.features[1]?.title}
                                             </h4>
-                                            <p className="text-neutral-500 text-xs sm:text-sm lg:text-[12px] xl:text-sm mt-0.5 font-medium leading-tight">
+                                            <p className="text-neutral-500 text-[11px] sm:text-sm lg:text-[12px] xl:text-sm mt-0.5 font-medium leading-tight">
                                                 {footer.brand.features[1]?.subtitle}
                                             </p>
                                         </div>
@@ -154,18 +154,18 @@ export default function Footer() {
 
                             {/* Column 2: Quick Links */}
                             <div className="col-span-1 sm:col-span-1 md:col-span-2 lg:col-span-2 xl:col-span-2 mt-2 sm:mt-4 md:mt-8 lg:mt-10 xl:mt-12">
-                                <h3 className="text-lg sm:text-xl lg:text-xl xl:text-2xl font-bold text-[#2C1810] mb-2">
+                                <h3 className="text-base sm:text-xl lg:text-xl xl:text-2xl font-bold text-[#2C1810] mb-1.5 sm:mb-2">
                                     {footer.quickLinks.title}
                                 </h3>
-                                <div className="w-10 h-[3px] bg-[#F37021] rounded-full mb-4 sm:mb-6" />
-                                <ul className="space-y-4">
+                                <div className="w-8 sm:w-10 h-[3px] bg-[#F37021] rounded-full mb-3 sm:mb-6" />
+                                <ul className="space-y-2.5 sm:space-y-4">
                                     {footer.quickLinks.links.map((link: FooterLink, index: number) => (
                                         <li key={index}>
                                             <Link
                                                 href={link.href}
-                                                className="flex items-center text-sm sm:text-base lg:text-[16px] xl:text-[17px] text-[#2C1810] hover:text-[#F37021] transition-colors group"
+                                                className="flex items-center text-xs sm:text-base lg:text-[16px] xl:text-[17px] text-[#2C1810] hover:text-[#F37021] transition-colors group"
                                             >
-                                                <ChevronRight className="w-5 h-5 mr-1.5 sm:mr-2 text-[#F37021] transition-transform group-hover:translate-x-1 shrink-0" />
+                                                <ChevronRight className="w-4 h-4 sm:w-5 sm:h-5 mr-1 sm:mr-2 text-[#F37021] transition-transform group-hover:translate-x-1 shrink-0" />
                                                 <span className="truncate">{link.label}</span>
                                             </Link>
                                         </li>
@@ -175,18 +175,18 @@ export default function Footer() {
 
                             {/* Column 3: Our Services */}
                             <div className="col-span-1 sm:col-span-1 md:col-span-2 lg:col-span-2 xl:col-span-2 mt-2 sm:mt-4 md:mt-8 lg:mt-10 xl:mt-12">
-                                <h3 className="text-lg sm:text-xl lg:text-xl xl:text-2xl font-bold text-[#2C1810] mb-2">
+                                <h3 className="text-base sm:text-xl lg:text-xl xl:text-2xl font-bold text-[#2C1810] mb-1.5 sm:mb-2">
                                     {footer.ourCauses.title}
                                 </h3>
-                                <div className="w-10 h-[3px] bg-[#F37021] rounded-full mb-4 sm:mb-6" />
-                                <ul className="space-y-4">
+                                <div className="w-8 sm:w-10 h-[3px] bg-[#F37021] rounded-full mb-3 sm:mb-6" />
+                                <ul className="space-y-2.5 sm:space-y-4">
                                     {footer.ourCauses.links.map((link: FooterLink, index: number) => (
                                         <li key={index}>
                                             <Link
                                                 href={link.href}
-                                                className="flex items-center text-sm sm:text-base lg:text-[16px] xl:text-[17px] text-[#2C1810] hover:text-[#F37021] transition-colors group"
+                                                className="flex items-center text-xs sm:text-base lg:text-[16px] xl:text-[17px] text-[#2C1810] hover:text-[#F37021] transition-colors group"
                                             >
-                                                <ChevronRight className="w-5 h-5 mr-1.5 sm:mr-2 text-[#F37021] transition-transform group-hover:translate-x-1 shrink-0" />
+                                                <ChevronRight className="w-4 h-4 sm:w-5 sm:h-5 mr-1 sm:mr-2 text-[#F37021] transition-transform group-hover:translate-x-1 shrink-0" />
                                                 <span className="truncate">{link.label}</span>
                                             </Link>
                                         </li>
@@ -194,20 +194,20 @@ export default function Footer() {
                                 </ul>
                             </div>
 
-                            {/* Column 4: Resources */}
-                            <div className="col-span-1 sm:col-span-1 md:col-span-2 lg:col-span-2 xl:col-span-2 mt-2 sm:mt-4 md:mt-8 lg:mt-10 xl:mt-12">
-                                <h3 className="text-lg sm:text-xl lg:text-xl xl:text-2xl font-bold text-[#2C1810] mb-2">
+                            {/* Column 4: Useful Links */}
+                            <div className="col-span-2 sm:col-span-1 md:col-span-2 lg:col-span-2 xl:col-span-2 mt-2 sm:mt-4 md:mt-8 lg:mt-10 xl:mt-12">
+                                <h3 className="text-base sm:text-xl lg:text-xl xl:text-2xl font-bold text-[#2C1810] mb-1.5 sm:mb-2">
                                     {footer.usefullinks.title}
                                 </h3>
-                                <div className="w-10 h-[3px] bg-[#F37021] rounded-full mb-4 sm:mb-6" />
-                                <ul className="space-y-4">
+                                <div className="w-8 sm:w-10 h-[3px] bg-[#F37021] rounded-full mb-3 sm:mb-6" />
+                                <ul className="grid grid-cols-2 sm:block gap-2.5 sm:space-y-4">
                                     {footer.usefullinks.links.map((link: FooterLink, index: number) => (
                                         <li key={index}>
                                             <Link
                                                 href={link.href}
-                                                className="flex items-center text-sm sm:text-base lg:text-[16px] xl:text-[17px] text-[#2C1810] hover:text-[#F37021] transition-colors group"
+                                                className="flex items-center text-xs sm:text-base lg:text-[16px] xl:text-[17px] text-[#2C1810] hover:text-[#F37021] transition-colors group"
                                             >
-                                                <ChevronRight className="w-5 h-5 mr-1.5 sm:mr-2 text-[#F37021] transition-transform group-hover:translate-x-1 shrink-0" />
+                                                <ChevronRight className="w-4 h-4 sm:w-5 sm:h-5 mr-1 sm:mr-2 text-[#F37021] transition-transform group-hover:translate-x-1 shrink-0" />
                                                 <span className="truncate">{link.label}</span>
                                             </Link>
                                         </li>
@@ -215,21 +215,21 @@ export default function Footer() {
                                 </ul>
                             </div>
 
-                            {/* Column 5: Contact Info */}
-                            <div className="col-span-1 sm:col-span-2 md:col-span-6 lg:col-span-3 xl:col-span-3 mt-2 sm:mt-4 md:mt-8 lg:mt-10 xl:mt-12">
-                                <h3 className="text-lg sm:text-xl lg:text-xl xl:text-2xl font-bold text-[#2C1810] mb-2">
+                            {/* Column 5: Contact Info - Full width at bottom on mobile */}
+                            <div className="col-span-2 sm:col-span-2 md:col-span-6 lg:col-span-3 xl:col-span-3 mt-3 sm:mt-4 md:mt-8 lg:mt-10 xl:mt-12">
+                                <h3 className="text-base sm:text-xl lg:text-xl xl:text-2xl font-bold text-[#2C1810] mb-1.5 sm:mb-2">
                                     {footer.contactInfo.title}
                                 </h3>
-                                <div className="w-10 h-[3px] bg-[#F37021] rounded-full mb-4 sm:mb-6" />
+                                <div className="w-8 sm:w-10 h-[3px] bg-[#F37021] rounded-full mb-3 sm:mb-6" />
 
-                                <div className="flex flex-col">
+                                <div className="flex flex-col gap-2.5 sm:gap-0">
                                     {/* Address */}
-                                    <div className="flex items-start gap-3 sm:gap-3.5 lg:gap-3 xl:gap-4">
-                                        <div className="w-10 h-10 sm:w-11 sm:h-11 lg:w-10 lg:h-10 xl:w-12 xl:h-12 rounded-full bg-[#FFF3EB] flex items-center justify-center shrink-0 text-[#F37021] mt-0.5">
-                                            <MapPin className="w-4.5 h-4.5 sm:w-5 sm:h-5 lg:w-4.5 lg:h-4.5 xl:w-5 xl:h-5 fill-[#F37021] text-white" />
+                                    <div className="flex items-start gap-2.5 sm:gap-3.5 lg:gap-3 xl:gap-4">
+                                        <div className="w-9 h-9 sm:w-11 sm:h-11 lg:w-10 lg:h-10 xl:w-12 xl:h-12 rounded-full bg-[#FFF3EB] flex items-center justify-center shrink-0 text-[#F37021] mt-0.5">
+                                            <MapPin className="w-4 h-4 sm:w-5 sm:h-5 lg:w-4.5 lg:h-4.5 xl:w-5 xl:h-5 fill-[#F37021] text-white" />
                                         </div>
-                                        <div>
-                                            <h4 className="text-[#2C1810] font-bold text-sm sm:text-base lg:text-[15px] xl:text-lg mb-0.5 sm:mb-1">
+                                        <div className="min-w-0 flex-1">
+                                            <h4 className="text-[#2C1810] font-bold text-xs sm:text-base lg:text-[15px] xl:text-lg mb-0.5">
                                                 {footer.contactInfo.address.title}
                                             </h4>
                                             {footer.contactInfo.address.lines.map((line: string, i: number) => (
@@ -240,38 +240,38 @@ export default function Footer() {
                                         </div>
                                     </div>
 
-                                    <hr className="border-neutral-100 my-3.5" />
+                                    <hr className="border-neutral-100 my-2 sm:my-3.5" />
 
                                     {/* Phone */}
-                                    <div className="flex items-start gap-3 sm:gap-3.5 lg:gap-3 xl:gap-4">
-                                        <div className="w-10 h-10 sm:w-11 sm:h-11 lg:w-10 lg:h-10 xl:w-12 xl:h-12 rounded-full bg-[#FFF3EB] flex items-center justify-center shrink-0 text-[#F37021] mt-0.5">
+                                    <div className="flex items-start gap-2.5 sm:gap-3.5 lg:gap-3 xl:gap-4">
+                                        <div className="w-9 h-9 sm:w-11 sm:h-11 lg:w-10 lg:h-10 xl:w-12 xl:h-12 rounded-full bg-[#FFF3EB] flex items-center justify-center shrink-0 text-[#F37021] mt-0.5">
                                             <Phone className="w-4 h-4 sm:w-4.5 sm:h-4.5 lg:w-4 lg:h-4 xl:w-5 xl:h-5 fill-[#F37021] text-[#F37021]" />
                                         </div>
-                                        <div>
-                                            <h4 className="text-[#2C1810] font-bold text-sm sm:text-base lg:text-[15px] xl:text-lg mb-0.5 sm:mb-1">
+                                        <div className="min-w-0 flex-1">
+                                            <h4 className="text-[#2C1810] font-bold text-xs sm:text-base lg:text-[15px] xl:text-lg mb-0.5">
                                                 {footer.contactInfo.phone.title}
                                             </h4>
                                             {footer.contactInfo.phone.numbers.map((num: string, i: number) => (
-                                                <p key={i} className="text-neutral-600 text-xs sm:text-sm lg:text-[13px] xl:text-[15px] font-medium leading-relaxed whitespace-nowrap">
+                                                <p key={i} className="text-neutral-600 text-xs sm:text-sm lg:text-[13px] xl:text-[15px] font-medium leading-relaxed">
                                                     {num}
                                                 </p>
                                             ))}
                                         </div>
                                     </div>
 
-                                    <hr className="border-neutral-100 my-3.5" />
+                                    <hr className="border-neutral-100 my-2 sm:my-3.5" />
 
                                     {/* Email */}
-                                    <div className="flex items-start gap-3 sm:gap-3.5 lg:gap-3 xl:gap-4">
-                                        <div className="w-10 h-10 sm:w-11 sm:h-11 lg:w-10 lg:h-10 xl:w-12 xl:h-12 rounded-full bg-[#FFF3EB] flex items-center justify-center shrink-0 text-[#F37021] mt-0.5">
+                                    <div className="flex items-start gap-2.5 sm:gap-3.5 lg:gap-3 xl:gap-4">
+                                        <div className="w-9 h-9 sm:w-11 sm:h-11 lg:w-10 lg:h-10 xl:w-12 xl:h-12 rounded-full bg-[#FFF3EB] flex items-center justify-center shrink-0 text-[#F37021] mt-0.5">
                                             <Mail className="w-4 h-4 sm:w-4.5 sm:h-4.5 lg:w-4 lg:h-4 xl:w-5 xl:h-5 text-[#F37021]" />
                                         </div>
                                         <div className="min-w-0 flex-1">
-                                            <h4 className="text-[#2C1810] font-bold text-sm sm:text-base lg:text-[15px] xl:text-lg mb-0.5 sm:mb-1">
+                                            <h4 className="text-[#2C1810] font-bold text-xs sm:text-base lg:text-[15px] xl:text-lg mb-0.5">
                                                 {footer.contactInfo.email.title}
                                             </h4>
                                             {footer.contactInfo.email.emails.map((email: string, i: number) => (
-                                                <p key={i} className="text-neutral-600 text-xs sm:text-sm lg:text-[13px] xl:text-[15px] font-medium leading-relaxed truncate">
+                                                <p key={i} className="text-neutral-600 text-xs sm:text-sm lg:text-[13px] xl:text-[15px] font-medium leading-relaxed break-all sm:break-normal">
                                                     {email}
                                                 </p>
                                             ))}

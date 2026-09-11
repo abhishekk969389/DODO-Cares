@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
@@ -71,6 +71,15 @@ export default function Banner() {
 
   const totalSlides = slides.length;
 
+  // Auto slide background images every 2 seconds
+  useEffect(() => {
+    if (totalSlides <= 1) return;
+    const interval = setInterval(() => {
+      setCurrentSlide((prev) => (prev === totalSlides - 1 ? 0 : prev + 1));
+    }, 4000);
+    return () => clearInterval(interval);
+  }, [totalSlides]);
+
   const handlePrev = () => {
     setCurrentSlide((prev) => (prev === 0 ? totalSlides - 1 : prev - 1));
   };
@@ -80,7 +89,7 @@ export default function Banner() {
   };
 
   return (
-    <section className="relative w-full min-h-[660px] sm:min-h-[720px] lg:min-h-[760px] pt-36 sm:pt-40 lg:pt-44 pb-36 sm:pb-44 lg:pb-56 bg-[#FDF8F3] overflow-hidden flex flex-col justify-center">
+    <section className="relative w-full min-h-[auto] sm:min-h-[720px] lg:min-h-[760px] pt-28 sm:pt-40 lg:pt-44 pb-14 sm:pb-44 lg:pb-56 bg-[#FDF8F3] overflow-hidden flex flex-col justify-center">
       
       {/* FULL BACKGROUND IMAGE SLIDER */}
       <div className="absolute inset-0 w-full h-full pointer-events-none z-0">
@@ -105,7 +114,7 @@ export default function Banner() {
         {/* FROSTED BLUR + CREAM GRADIENT OVERLAY (HALF BANNER BLUR) */}
         {/* Desktop View: Left 50% Blurred & Cream Masked, fades to 75% */}
         <div 
-          className="absolute  inset-y-0 left-0 w-full lg:w-[65%] backdrop-blur-[6px] hidden lg:block z-15 pointer-events-none"
+          className="absolute inset-y-0 left-0 w-full lg:w-[65%] backdrop-blur-[6px] hidden lg:block z-15 pointer-events-none"
           style={{
             maskImage: "linear-gradient(to right, black 0%, black 65%, transparent 100%)",
             WebkitMaskImage: "linear-gradient(to right, black 0%, black 65%, transparent 100%)",
@@ -120,40 +129,40 @@ export default function Banner() {
       {/* ALIGNED WRAPPER CONTAINER */}
       <div className="relative z-20 max-w-[1320px] mx-auto px-4 sm:px-6 lg:px-8 w-full">
 
-        {/* Left Slider Arrow Button */}
+        {/* Left Slider Arrow Button - Hidden on Mobile */}
         <motion.button
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
           transition={{ duration: 0.2, ease: "easeInOut" }}
           onClick={handlePrev}
           aria-label="Previous Slide"
-          className="absolute left-2 sm:left-6 lg:left-8 top-1/2 -translate-y-1/2 z-30 w-10 h-10 sm:w-11 sm:h-11 rounded-full bg-[#2C1810] hover:bg-[#3D2217] text-white flex items-center justify-center shadow-lg transition-colors duration-200 cursor-pointer"
+          className="hidden md:flex absolute left-2 sm:left-6 lg:left-8 top-1/2 -translate-y-1/2 z-30 w-10 h-10 sm:w-11 sm:h-11 rounded-full bg-[#2C1810] hover:bg-[#3D2217] text-white items-center justify-center shadow-lg transition-colors duration-200 cursor-pointer"
         >
           <ChevronLeft className="w-5.5 h-5.5 text-white" />
         </motion.button>
 
-        {/* Right Slider Arrow Button */}
+        {/* Right Slider Arrow Button - Hidden on Mobile */}
         <motion.button
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
           transition={{ duration: 0.2, ease: "easeInOut" }}
           onClick={handleNext}
           aria-label="Next Slide"
-          className="absolute right-2 sm:right-6 lg:right-8 top-1/2 -translate-y-1/2 z-30 w-10 h-10 sm:w-11 sm:h-11 rounded-full bg-[#2C1810] hover:bg-[#3D2217] text-white flex items-center justify-center shadow-lg transition-colors duration-200 cursor-pointer"
+          className="hidden md:flex absolute right-2 sm:right-6 lg:right-8 top-1/2 -translate-y-1/2 z-30 w-10 h-10 sm:w-11 sm:h-11 rounded-full bg-[#2C1810] hover:bg-[#3D2217] text-white items-center justify-center shadow-lg transition-colors duration-200 cursor-pointer"
         >
           <ChevronRight className="w-5.5 h-5.5 text-white" />
         </motion.button>
 
         {/* Inner Content Grid */}
-        <div className="grid mx-6 sm:mx-10 lg:mx-12 grid-cols-1 lg:grid-cols-12 gap-8 items-center px-2 sm:px-4 lg:px-6">
+        <div className="grid mx-1 sm:mx-10 lg:mx-12 grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-8 items-center px-1 sm:px-4 lg:px-6">
 
           {/* Left Text Column */}
           <div className="lg:col-span-7 flex flex-col justify-center">
 
             {/* Top Tagline / Badge */}
             <FadeIn direction="up" delay={0.05}>
-              <div className="inline-flex items-center gap-1.5 mb-3 sm:mb-4 mt-8">
-                <span className="text-[#F37021] font-semibold text-lg sm:text-xl tracking-tight">
+              <div className="inline-flex items-center gap-1.5 mb-2.5 sm:mb-4 mt-2 sm:mt-8">
+                <span className="text-[#F37021] font-semibold text-base sm:text-xl tracking-tight">
                   {bannerData.badge}
                 </span>
                 <DecorativeScribbleHeart />
@@ -162,7 +171,7 @@ export default function Banner() {
 
             {/* Main Title */}
             <FadeIn direction="up" delay={0.1}>
-              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-semibold text-[#2C1810] tracking-tight leading-[1.12] mb-5 sm:mb-6 max-w-2xl">
+              <h1 className="text-3xl sm:text-5xl lg:text-6xl font-semibold text-[#2C1810] tracking-tight leading-[1.15] mb-4 sm:mb-6 max-w-2xl">
                 {bannerData.titlePrefix}{" "}
                 <span className="text-[#F37021] font-semibold">
                   {bannerData.titleHighlight}
@@ -173,13 +182,13 @@ export default function Banner() {
 
             {/* Description */}
             <FadeIn direction="up" delay={0.15}>
-              <p className="text-base sm:text-lg text-[#615147] leading-relaxed max-w-lg mb-8 font-normal">
+              <p className="text-sm sm:text-lg text-[#615147] leading-relaxed max-w-lg mb-6 sm:mb-8 font-normal">
                 {bannerData.description}
               </p>
             </FadeIn>
 
             {/* 4 Feature Badges Row */}
-            <div className="flex flex-wrap sm:flex-nowrap items-center gap-4 sm:gap-0 mb-9 sm:mb-11 max-w-4xl">
+            <div className="grid grid-cols-2 sm:flex sm:flex-nowrap items-center gap-3 sm:gap-0 mb-6 sm:mb-11 max-w-4xl">
               {bannerData.features?.map((feature, idx) => {
                 const IconComponent = iconMap[feature.icon] || FaPaw;
 
@@ -213,10 +222,10 @@ export default function Banner() {
                         whileHover={{ scale: 1.03 }}
                         whileTap={{ scale: 0.97 }}
                         transition={{ duration: 0.2, ease: "easeInOut" }}
-                        className="flex items-center gap-2.5 sm:gap-3 cursor-pointer"
+                        className="flex items-center gap-2 sm:gap-3 cursor-pointer"
                       >
-                        <div className="w-11 h-11 sm:w-12 sm:h-12 rounded-full border-2 border-[#F37021] bg-white flex items-center justify-center shrink-0 shadow-2xs">
-                          <IconComponent className="w-5 h-5 sm:w-5.5 sm:h-5.5 text-[#F37021]" strokeWidth={2.2} />
+                        <div className="w-9 h-9 sm:w-12 sm:h-12 rounded-full border-2 border-[#F37021] bg-white flex items-center justify-center shrink-0 shadow-2xs">
+                          <IconComponent className="w-4 h-4 sm:w-5.5 sm:h-5.5 text-[#F37021]" strokeWidth={2.2} />
                         </div>
                         <div className="flex flex-col text-xs sm:text-sm lg:text-[15px] font-bold text-[#2C1810] leading-tight">
                           <span>{line1}</span>
@@ -230,7 +239,7 @@ export default function Banner() {
             </div>
 
             {/* Action Buttons Row */}
-            <div className="flex flex-wrap items-center gap-6 sm:gap-8">
+            <div className="flex flex-wrap items-center gap-4 sm:gap-8">
               <motion.div
                 whileHover={{ scale: 1.03 }}
                 whileTap={{ scale: 0.97 }}
@@ -238,10 +247,10 @@ export default function Banner() {
               >
                 <Link
                   href={bannerData.primaryBtnLink}
-                  className="group inline-flex items-center justify-center bg-[#2A1810] hover:bg-[#3D2217] text-white px-7 py-3.5 sm:px-8 sm:py-4 rounded-full text-base sm:text-lg font-semibold transition-colors duration-200 shadow-md hover:shadow-lg"
+                  className="group inline-flex items-center justify-center bg-[#2A1810] hover:bg-[#3D2217] text-white px-5 py-3 sm:px-8 sm:py-4 rounded-full text-sm sm:text-lg font-semibold transition-colors duration-200 shadow-md hover:shadow-lg"
                 >
                   <span>{bannerData.primaryBtnText}</span>
-                  <ArrowRight className="w-5 h-5 ml-3 text-white transition-transform duration-300 group-hover:translate-x-1" />
+                  <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5 ml-2 sm:ml-3 text-white transition-transform duration-300 group-hover:translate-x-1" />
                 </Link>
               </motion.div>
 
@@ -252,20 +261,20 @@ export default function Banner() {
               >
                 <Link
                   href={bannerData.secondaryBtnLink}
-                  className="group inline-flex items-center gap-2.5 text-[#2A1810] hover:text-[#3D2217] font-semibold text-base sm:text-lg transition-colors py-2"
+                  className="group inline-flex items-center gap-2 text-[#2A1810] hover:text-[#3D2217] font-semibold text-sm sm:text-lg transition-colors py-2"
                 >
                   <span className="border-b-2 border-[#F37021] pb-0.5">
                     {bannerData.secondaryBtnText}
                   </span>
-                  <ArrowRight className="w-5 h-5 text-[#F37021] transition-transform duration-300 group-hover:translate-x-1" />
+                  <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5 text-[#F37021] transition-transform duration-300 group-hover:translate-x-1" />
                 </Link>
               </motion.div>
             </div>
 
           </div>
 
-          {/* Right Column Spacer for Background Image */}
-          <div className="lg:col-span-5 min-h-[280px] sm:min-h-[340px] lg:min-h-0 pointer-events-none" />
+          {/* Right Column Spacer for Background Image - Hidden on Mobile */}
+          <div className="hidden lg:block lg:col-span-5 pointer-events-none" />
 
         </div>
       </div>
@@ -273,7 +282,7 @@ export default function Banner() {
       {/* Curved Bottom Band */}
       <div className="absolute bottom-0 left-0 right-0 w-full overflow-hidden leading-none pointer-events-none z-20">
         <svg
-          className="relative block w-full h-[90px] sm:h-[130px] md:h-[170px] lg:h-[200px]"
+          className="relative block w-full h-[60px] sm:h-[130px] md:h-[170px] lg:h-[200px]"
           viewBox="0 0 1440 200"
           fill="none"
           preserveAspectRatio="none"
@@ -290,13 +299,13 @@ export default function Banner() {
         </svg>
 
         <FaPaw
-          className="absolute right-[5%] bottom-4 sm:bottom-5 lg:bottom-6 w-14 h-14 sm:w-20 sm:h-20 lg:w-28 lg:h-28 text-white/20 rotate-[18deg]"
+          className="absolute right-[5%] bottom-2 sm:bottom-5 lg:bottom-6 w-10 h-10 sm:w-20 sm:h-20 lg:w-28 lg:h-28 text-white/20 rotate-[18deg]"
           aria-hidden="true"
         />
       </div>
 
       {/* Slider Pagination Dots */}
-      <div className="absolute bottom-14 sm:bottom-20 lg:bottom-24 left-0 right-0 z-30 flex items-center justify-center gap-2.5">
+      <div className="absolute bottom-8 sm:bottom-20 lg:bottom-24 left-0 right-0 z-30 flex items-center justify-center gap-2.5">
         {Array.from({ length: totalSlides }).map((_, index) => (
           <motion.button
             key={index}
