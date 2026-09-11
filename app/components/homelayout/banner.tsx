@@ -299,7 +299,7 @@ export default function Banner() {
         </svg>
 
         <FaPaw
-          className="absolute right-[5%] bottom-2 sm:bottom-5 lg:bottom-6 w-10 h-10 sm:w-20 sm:h-20 lg:w-28 lg:h-28 text-white/20 rotate-[18deg]"
+          className="absolute right-[5%] -bottom-1 sm:bottom-1 lg:-bottom-0 w-10 h-10 sm:w-20 sm:h-20 lg:w-28 lg:h-28 text-white/20 rotate-[18deg]"
           aria-hidden="true"
         />
       </div>
