@@ -89,7 +89,7 @@ export default function Banner() {
   };
 
   return (
-    <section className="relative w-full min-h-[auto] sm:min-h-[720px] lg:min-h-[760px] pt-28 sm:pt-40 lg:pt-44 pb-14 sm:pb-44 lg:pb-56 bg-[#FDF8F3] overflow-hidden flex flex-col justify-center">
+    <section className="relative w-full min-h-[680px] sm:min-h-[720px] lg:min-h-[760px] pt-28 sm:pt-40 lg:pt-44 pb-14 sm:pb-44 lg:pb-56 bg-[#FDF8F3] overflow-hidden flex flex-col justify-center">
       
       {/* FULL BACKGROUND IMAGE SLIDER */}
       <div className="absolute inset-0 w-full h-full pointer-events-none z-0">
@@ -305,7 +305,7 @@ export default function Banner() {
       </div>
 
       {/* Slider Pagination Dots */}
-      <div className="absolute bottom-8 sm:bottom-20 lg:bottom-24 left-0 right-0 z-30 flex items-center justify-center gap-2.5">
+      <div className="absolute bottom-10 sm:bottom-20 lg:bottom-24 left-0 right-0 z-30 flex items-center justify-center gap-2.5">
         {Array.from({ length: totalSlides }).map((_, index) => (
           <motion.button
             key={index}
