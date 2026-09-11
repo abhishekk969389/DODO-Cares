@@ -170,7 +170,7 @@ export default function Services() {
                 </div>
 
                 {/* Pagination Dots */}
-                <div className="flex items-center justify-center gap-2 mt-8 sm:mt-10">
+                <div className="flex items-center justify-center gap-2 mt-6">
                     {[0, 1, 2].map((dotIndex) => (
                         <motion.button
                             key={dotIndex}
