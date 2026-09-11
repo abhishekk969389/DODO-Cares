@@ -15,7 +15,7 @@ import {
     ChevronRight,
     MapPin,
 } from "lucide-react";
-import { FaPaw } from "react-icons/fa";
+import { FaMapMarkerAlt, FaPaw } from "react-icons/fa";
 import Statistics from "@/app/components/ui/statistics";
 
 
@@ -140,7 +140,7 @@ export default function Services() {
 
                                     {/* Overlapping Location Pin Badge */}
                                     <div className="relative z-10 w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-white shadow-md border border-neutral-100 flex items-center justify-center -mt-5 mb-2 shrink-0">
-                                        <MapPin className="w-5 h-5 text-[#F37021] fill-[#F37021]" strokeWidth={1.5} />
+                                        <FaMapMarkerAlt className="w-5 h-5 text-[#F37021] fill-[#F37021]" strokeWidth={1.5} />
                                     </div>
 
                                     {/* Location Details */}

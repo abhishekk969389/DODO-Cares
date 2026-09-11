@@ -7,7 +7,7 @@ import { site as petData } from "@/data/index";
 import type { DodoServiceAreasData as ServiceAreasData } from "@/data/index";
 import { FadeIn, MotionCard } from "@/app/components/ui/animations";
 import { MapPin } from "lucide-react";
-import { FaPaw } from "react-icons/fa";
+import { FaMapMarkerAlt, FaPaw } from "react-icons/fa";
 import Statistics from "@/app/components/ui/statistics";
 
 
@@ -21,7 +21,7 @@ export default function LocationSec() {
       <div className="max-w-[1320px] mx-auto px-4 sm:px-6 lg:px-8 w-full">
 
         {/* Section Header */}
-        <div className="flex flex-col items-center text-center mb-10 sm:mb-14">
+        <div className="flex flex-col items-center text-center mb-6">
           {/* Top Badge */}
           <FadeIn direction="up" delay={0.05}>
             <div className="inline-flex items-center gap-2 text-[#F37021] font-extrabold text-xs sm:text-sm tracking-widest uppercase mb-3">
@@ -72,7 +72,7 @@ export default function LocationSec() {
 
                   {/* Overlapping Map Pin Badge */}
                   <div className="relative z-10 w-10 h-10 rounded-full bg-white shadow-md border border-neutral-100 flex items-center justify-center -mt-5 mb-2.5 shrink-0">
-                    <MapPin className="w-5 h-5 text-[#F37021] fill-[#F37021]" strokeWidth={1.5} />
+                    <FaMapMarkerAlt className="w-5 h-5 text-[#F37021] fill-[#F37021]" strokeWidth={1.5} />
                   </div>
 
                   {/* Location Title & Subtitle */}
