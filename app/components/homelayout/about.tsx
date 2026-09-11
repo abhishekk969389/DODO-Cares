@@ -23,57 +23,57 @@ export default function About() {
 
                     {/* Left Column - Overlapping Circles Visual */}
                     <div className="lg:col-span-6 flex justify-center lg:justify-start">
-                        <div className="relative w-full max-w-[480px] sm:max-w-[560px] lg:max-w-[620px] min-h-[370px] sm:min-h-[480px] lg:min-h-[530px] flex items-center justify-end">
+                        <div className="relative w-fit mx-auto lg:mx-0 flex items-center py-2">
 
                             {/* Top Left Badge Circle (25+ Years Experience) */}
-                            <ScaleIn delay={0.1} className="absolute top-0 left-0 sm:top-2 sm:left-2 lg:left-0 z-20">
+                            <ScaleIn delay={0.1} className="absolute top-0 left-0 z-20">
                                 <motion.div
                                     whileHover={{ scale: 1.03 }}
                                     whileTap={{ scale: 0.97 }}
                                     transition={{ duration: 0.2, ease: "easeInOut" }}
-                                    className="w-32 h-32 sm:w-40 sm:h-40 lg:w-48 lg:h-48 rounded-full bg-white flex flex-col items-center justify-center text-center p-3 sm:p-4 shadow-xl border-4 border-white cursor-pointer"
+                                    className="w-26 h-26 min-[380px]:w-32 min-[380px]:h-32 sm:w-40 sm:h-40 md:w-44 md:h-44 lg:w-42 lg:h-42 xl:w-48 xl:h-48 rounded-full bg-white flex flex-col items-center justify-center text-center p-2 min-[380px]:p-3 sm:p-4 shadow-xl border-4 border-white cursor-pointer"
                                 >
-                                    <span className="text-3xl sm:text-4xl lg:text-[46px] font-extrabold text-[#F37021] leading-none mb-1 tracking-tight">
+                                    <span className="text-2xl min-[380px]:text-3xl sm:text-4xl lg:text-4xl xl:text-[46px] font-extrabold text-[#F37021] leading-none mb-1 tracking-tight">
                                         {aboutData.experienceYears}
                                     </span>
-                                    <span className="text-[11px] sm:text-sm lg:text-sm font-bold text-[#F37021] leading-tight px-1 max-w-[135px]">
+                                    <span className="text-[9px] min-[380px]:text-[11px] sm:text-xs md:text-sm lg:text-xs xl:text-sm font-bold text-[#F37021] leading-tight px-1 max-w-[100px] min-[380px]:max-w-[135px]">
                                         {aboutData.experienceTitle}
                                     </span>
                                 </motion.div>
                             </ScaleIn>
 
                             {/* Bottom Left Image Circle */}
-                            <ScaleIn delay={0.2} className="absolute bottom-0 left-0 sm:bottom-2 sm:left-4 lg:left-2 z-20">
+                            <ScaleIn delay={0.2} className="absolute bottom-0 left-0 z-20">
                                 <motion.div
                                     whileHover={{ scale: 1.03 }}
                                     whileTap={{ scale: 0.97 }}
                                     transition={{ duration: 0.2, ease: "easeInOut" }}
-                                    className="w-32 h-32 sm:w-44 sm:h-44 lg:w-52 lg:h-52 rounded-full overflow-hidden border-[5px] sm:border-[6px] border-white shadow-xl cursor-pointer relative"
+                                    className="w-26 h-26 min-[380px]:w-32 min-[380px]:h-32 sm:w-40 sm:h-40 md:w-44 md:h-44 lg:w-42 lg:h-42 xl:w-52 xl:h-52 rounded-full overflow-hidden border-[4px] min-[380px]:border-[5px] sm:border-[6px] border-white shadow-xl cursor-pointer relative"
                                 >
                                     <Image
                                         src={aboutData.secondaryImage || "/about2.jpg"}
                                         alt="Pet grooming detail"
                                         fill
-                                        sizes="(max-width: 640px) 128px, (max-width: 1024px) 176px, 208px"
+                                        sizes="(max-width: 380px) 104px, (max-width: 640px) 128px, (max-width: 1024px) 168px, 208px"
                                         className="object-cover object-center"
                                     />
                                 </motion.div>
                             </ScaleIn>
 
-                            {/* Main Large Image Circle - Expanded Rightwards */}
-                            <ScaleIn delay={0} className="relative z-10 ml-auto mr-0">
+                            {/* Main Large Image Circle */}
+                            <ScaleIn delay={0} className="relative z-10 ml-10 min-[380px]:ml-14 sm:ml-20 md:ml-22 lg:ml-18 xl:ml-24">
                                 <motion.div
                                     whileHover={{ scale: 1.03 }}
                                     whileTap={{ scale: 0.97 }}
                                     transition={{ duration: 0.2, ease: "easeInOut" }}
-                                    className="relative w-[270px] h-[270px] sm:w-[380px] sm:h-[380px] lg:w-[460px] lg:h-[460px] xl:w-[480px] xl:h-[480px] rounded-full overflow-hidden border-[6px] sm:border-[8px] border-white shadow-2xl cursor-pointer"
+                                    className="relative w-[210px] h-[210px] min-[380px]:w-[260px] min-[380px]:h-[260px] sm:w-[350px] sm:h-[350px] md:w-[380px] md:h-[380px] lg:w-[390px] lg:h-[390px] xl:w-[460px] xl:h-[460px] rounded-full overflow-hidden border-[5px] min-[380px]:border-[6px] sm:border-[8px] border-white shadow-2xl cursor-pointer"
                                 >
                                     <Image
                                         src={aboutData.mainImage || "/about1.jpg"}
                                         alt="Expert groomer with pet"
                                         fill
                                         priority
-                                        sizes="(max-width: 640px) 270px, (max-width: 1024px) 380px, 480px"
+                                        sizes="(max-width: 380px) 210px, (max-width: 640px) 260px, (max-width: 1024px) 390px, 460px"
                                         className="object-cover object-center"
                                     />
                                 </motion.div>

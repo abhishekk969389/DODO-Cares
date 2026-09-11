@@ -67,9 +67,10 @@ export default function Navbar() {
                                 </motion.span>
                                 {isActive && (
                                     <motion.span
-                                        layoutId="activeTabUnderline"
-                                        className="absolute bottom-0 left-0 w-full h-[3px] bg-[#F37021] rounded-full"
-                                        transition={{ type: "spring", stiffness: 380, damping: 30 }}
+                                        initial={{ opacity: 0, scaleX: 0.8 }}
+                                        animate={{ opacity: 1, scaleX: 1 }}
+                                        transition={{ duration: 0.2, ease: "easeInOut" }}
+                                        className="absolute bottom-0 left-0 w-full h-[3px] bg-[#F37021] rounded-full origin-center"
                                     />
                                 )}
                             </Link>

@@ -3,10 +3,8 @@
 import React, { useState, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { motion } from "framer-motion";
 import { site as petData } from "@/data/index";
-import type { DodoBannerData as BannerData } from "@/data/index";
-import { FadeIn } from "@/app/components/ui/animations";
+import type { DodoBannerData as BannerData, BannerSlideItem } from "@/data/index";
 import {
   Heart,
   ShieldCheck,
@@ -28,7 +26,6 @@ const iconMap: Record<string, React.ElementType> = {
   Home,
   PawPrint: FaPaw,
 };
-
 
 const bannerData: BannerData = petData.banner;
 
@@ -60,223 +57,243 @@ const DecorativeScribbleHeart = () => (
 );
 
 export default function Banner() {
-  const [currentSlide, setCurrentSlide] = useState(0);
+  const [virtualIndex, setVirtualIndex] = useState(0);
+  const [isTransitioning, setIsTransitioning] = useState(true);
 
   if (!bannerData) return null;
 
-  const slides =
-    bannerData.bgImages && bannerData.bgImages.length > 0
-      ? bannerData.bgImages
-      : [bannerData.bgImage || "/homebanner.jpg"];
+  const slides: BannerSlideItem[] =
+    bannerData.slides && bannerData.slides.length > 0
+      ? (bannerData.slides as BannerSlideItem[])
+      : [
+          {
+            id: "1",
+            badge: bannerData.badge,
+            titlePrefix: bannerData.titlePrefix,
+            titleHighlight: bannerData.titleHighlight,
+            titleSuffix: bannerData.titleSuffix,
+            description: bannerData.description,
+            bgImage: bannerData.bgImage || "/img2.png",
+            primaryBtnText: bannerData.primaryBtnText,
+            primaryBtnLink: bannerData.primaryBtnLink,
+            secondaryBtnText: bannerData.secondaryBtnText,
+            secondaryBtnLink: bannerData.secondaryBtnLink,
+          },
+        ];
 
   const totalSlides = slides.length;
 
-  // Auto slide background images every 2 seconds
-  useEffect(() => {
-    if (totalSlides <= 1) return;
-    const interval = setInterval(() => {
-      setCurrentSlide((prev) => (prev === totalSlides - 1 ? 0 : prev + 1));
-    }, 4000);
-    return () => clearInterval(interval);
-  }, [totalSlides]);
+  // Create repeated slide list for continuous infinite right-to-left scrolling
+  const displaySlides = Array.from({ length: 20 }).flatMap(() => slides);
 
   const handlePrev = () => {
-    setCurrentSlide((prev) => (prev === 0 ? totalSlides - 1 : prev - 1));
+    setIsTransitioning(true);
+    setVirtualIndex((prev) => (prev > 0 ? prev - 1 : totalSlides * 10 - 1));
   };
 
   const handleNext = () => {
-    setCurrentSlide((prev) => (prev === totalSlides - 1 ? 0 : prev + 1));
+    setIsTransitioning(true);
+    setVirtualIndex((prev) => prev + 1);
   };
 
+  const goToSlide = (dotIndex: number) => {
+    setIsTransitioning(true);
+    setVirtualIndex((prev) => {
+      const currentModulo = prev % totalSlides;
+      const diff = (dotIndex - currentModulo + totalSlides) % totalSlides;
+      return prev + (diff === 0 ? 0 : diff);
+    });
+  };
+
+  // Auto slide whole banner infinitely from right toward left every 4.5 seconds
+  useEffect(() => {
+    if (totalSlides <= 1) return;
+    const interval = setInterval(() => {
+      setIsTransitioning(true);
+      setVirtualIndex((prev) => prev + 1);
+    }, 4500);
+    return () => clearInterval(interval);
+  }, [totalSlides]);
+
+  // Silent reset of virtual index when reaching high loop threshold
+  useEffect(() => {
+    if (virtualIndex >= totalSlides * 12) {
+      const timer = setTimeout(() => {
+        setIsTransitioning(false);
+        setVirtualIndex(virtualIndex % totalSlides);
+      }, 1050);
+      return () => clearTimeout(timer);
+    }
+  }, [virtualIndex, totalSlides]);
+
+  const activeDotIndex = virtualIndex % totalSlides;
+
   return (
-    <section className="relative w-full min-h-[680px] sm:min-h-[720px] lg:min-h-[760px] pt-28 sm:pt-40 lg:pt-44 pb-14 sm:pb-44 lg:pb-56 bg-[#FDF8F3] overflow-hidden flex flex-col justify-center">
+    <section className="relative w-full min-h-[580px] sm:min-h-[720px] lg:min-h-[760px] bg-[#FDF8F3] overflow-hidden flex flex-col justify-center">
 
-      {/* FULL BACKGROUND IMAGE SLIDER */}
-      <div className="absolute inset-0 w-full h-full pointer-events-none z-0">
-        {slides.map((imgSrc, index) => (
-          <div
-            key={index}
-            className={`absolute inset-0 w-full h-full transition-opacity duration-700 ease-in-out ${index === currentSlide ? "opacity-100 z-10" : "opacity-0 z-0"
-              }`}
-          >
-            <Image
-              src={imgSrc}
-              alt={`Pet Banner Slide ${index + 1}`}
-              fill
-              priority={index === 0}
-              sizes="100vw"
-              className="object-cover object-right sm:object-[88%_bottom] lg:object-right-bottom"
-            />
-          </div>
-        ))}
+      {/* INFINITE WHOLE BANNER SLIDER TRACK (Never Rewinds Backward, Infinite Right-to-Left) */}
+      <div
+        style={{
+          transform: `translateX(-${virtualIndex * 100}%)`,
+          transition: isTransitioning ? "transform 1.0s cubic-bezier(0.16, 1, 0.3, 1)" : "none",
+          willChange: "transform",
+        }}
+        className="w-full flex shrink-0"
+      >
+        {displaySlides.map((slide, index) => {
+          const slideFeatures = slide?.features || bannerData.features;
 
-        {/* FROSTED BLUR + CREAM GRADIENT OVERLAY (HALF BANNER BLUR) */}
-        {/* Desktop View: Left 50% Blurred & Cream Masked, fades to 75% */}
-        <div
-          className="absolute inset-y-0 left-0 w-full lg:w-[65%] backdrop-blur-[6px] hidden lg:block z-15 pointer-events-none"
-          style={{
-            maskImage: "linear-gradient(to right, black 0%, black 65%, transparent 100%)",
-            WebkitMaskImage: "linear-gradient(to right, black 0%, black 65%, transparent 100%)",
-          }}
-        />
-        <div className="absolute inset-0 bg-gradient-to-r from-[#FDF8F3] via-[#FDF8F3]/95 via-45% to-transparent to-72% hidden lg:block z-20 pointer-events-none" />
+          return (
+            <div
+              key={index}
+              className="relative w-full shrink-0 flex flex-col justify-center pt-20 sm:pt-40 lg:pt-44 pb-10 sm:pb-44 lg:pb-56 min-h-[540px] sm:min-h-[720px] lg:min-h-[760px]"
+            >
+              {/* BACKGROUND IMAGE FOR THIS SLIDE */}
+              <div className="absolute inset-0 w-full h-full pointer-events-none z-0 overflow-hidden bg-[#FDF8F3]">
+                <Image
+                  src={slide.bgImage}
+                  alt={slide.titleHighlight || `Pet Banner Slide ${(index % totalSlides) + 1}`}
+                  fill
+                  priority={index < totalSlides}
+                  sizes="100vw"
+                  className="object-cover object-right sm:object-[88%_bottom] lg:object-right-bottom"
+                />
 
-        {/* Mobile View: Top-to-Bottom Soft Mask */}
-        <div className="absolute inset-0 backdrop-blur-[5px] bg-gradient-to-b from-[#FDF8F3] via-[#FDF8F3]/90 via-55% to-[#FDF8F3]/30 lg:hidden z-20 pointer-events-none" />
-      </div>
+                {/* HIGH VISIBILITY CLEAN GRADIENT OVERLAYS */}
+                <div className="absolute inset-0 bg-gradient-to-r from-[#FDF8F3] via-[#FDF8F3]/95 via-45% to-transparent to-75% hidden lg:block z-20 pointer-events-none" />
 
-      {/* ALIGNED WRAPPER CONTAINER */}
-      <div className="relative z-20 max-w-[1320px] mx-auto px-4 sm:px-6 lg:px-8 w-full">
-
-        {/* Left Slider Arrow Button - Hidden on Mobile */}
-        <motion.button
-          whileHover={{ scale: 1.05 }}
-          whileTap={{ scale: 0.95 }}
-          transition={{ duration: 0.2, ease: "easeInOut" }}
-          onClick={handlePrev}
-          aria-label="Previous Slide"
-          className="hidden md:flex absolute left-2 sm:left-6 lg:left-8 top-1/2 -translate-y-1/2 z-30 w-10 h-10 sm:w-11 sm:h-11 rounded-full bg-[#2C1810] hover:bg-[#3D2217] text-white items-center justify-center shadow-lg transition-colors duration-200 cursor-pointer"
-        >
-          <ChevronLeft className="w-5.5 h-5.5 text-white" />
-        </motion.button>
-
-        {/* Right Slider Arrow Button - Hidden on Mobile */}
-        <motion.button
-          whileHover={{ scale: 1.05 }}
-          whileTap={{ scale: 0.95 }}
-          transition={{ duration: 0.2, ease: "easeInOut" }}
-          onClick={handleNext}
-          aria-label="Next Slide"
-          className="hidden md:flex absolute right-2 sm:right-6 lg:right-8 top-1/2 -translate-y-1/2 z-30 w-10 h-10 sm:w-11 sm:h-11 rounded-full bg-[#2C1810] hover:bg-[#3D2217] text-white items-center justify-center shadow-lg transition-colors duration-200 cursor-pointer"
-        >
-          <ChevronRight className="w-5.5 h-5.5 text-white" />
-        </motion.button>
-
-        {/* Inner Content Grid */}
-        <div className="grid mx-1 sm:mx-10 lg:mx-12 grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-8 items-center px-1 sm:px-4 lg:px-6">
-
-          {/* Left Text Column */}
-          <div className="lg:col-span-7 flex flex-col justify-center">
-
-            {/* Top Tagline / Badge */}
-            <FadeIn direction="up" delay={0.05}>
-              <div className="inline-flex items-center gap-1.5 mb-2.5 sm:mb-4 mt-2 sm:mt-8">
-                <span className="text-[#F37021] font-semibold text-base sm:text-xl tracking-tight">
-                  {bannerData.badge}
-                </span>
-                <DecorativeScribbleHeart />
+                {/* Mobile View: High Visibility Gradient Overlay */}
+                <div className="absolute inset-0 bg-gradient-to-b from-[#FDF8F3] via-[#FDF8F3]/90 via-55% to-[#FDF8F3]/30 lg:hidden z-20 pointer-events-none" />
               </div>
-            </FadeIn>
 
-            {/* Main Title */}
-            <FadeIn direction="up" delay={0.1}>
-              <h1 className="text-3xl sm:text-5xl lg:text-6xl font-semibold text-[#2C1810] tracking-tight leading-[1.15] mb-4 sm:mb-6 max-w-2xl">
-                {bannerData.titlePrefix}{" "}
-                <span className="text-[#F37021] font-semibold">
-                  {bannerData.titleHighlight}
-                </span>{" "}
-                {bannerData.titleSuffix}
-              </h1>
-            </FadeIn>
+              {/* ALIGNED CONTENT CONTAINER FOR THIS SLIDE */}
+              <div className="relative z-20 max-w-[1320px] mx-auto px-4 sm:px-6 lg:px-8 w-full">
+                <div className="grid mx-1 sm:mx-10 lg:mx-12 grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-8 items-center px-1 sm:px-4 lg:px-6">
 
-            {/* Description */}
-            <FadeIn direction="up" delay={0.15}>
-              <p className="text-sm sm:text-lg text-[#615147] leading-relaxed max-w-lg mb-6 sm:mb-8 font-normal">
-                {bannerData.description}
-              </p>
-            </FadeIn>
+                  {/* Left Text Column */}
+                  <div className="lg:col-span-7 flex flex-col justify-center min-h-0 sm:min-h-[400px]">
+                    <div className="flex flex-col justify-center items-center sm:items-start text-center sm:text-left">
+                      {/* Top Tagline / Badge */}
+                      <div className="inline-flex items-center justify-center gap-1.5 mb-2.5 sm:mb-4 mt-8 sm:mt-10 mx-auto sm:mx-0">
+                        <span className="text-[#F37021] font-semibold text-base sm:text-xl tracking-tight">
+                          {slide.badge}
+                        </span>
+                        <DecorativeScribbleHeart />
+                      </div>
 
-            {/* 4 Feature Badges Row */}
-            <div className="grid grid-cols-2 sm:flex sm:flex-nowrap items-center gap-3 sm:gap-0 mb-6 sm:mb-11 max-w-4xl">
-              {bannerData.features?.map((feature, idx) => {
-                const IconComponent = iconMap[feature.icon] || FaPaw;
+                      {/* Main Title */}
+                      <h1 className="text-3xl sm:text-5xl lg:text-6xl font-semibold text-[#2C1810] tracking-tight leading-[1.15] mb-4 sm:mb-6 max-w-2xl text-center sm:text-left mx-auto sm:mx-0">
+                        {slide.titlePrefix}{" "}
+                        <span className="text-[#F37021] font-semibold">
+                          {slide.titleHighlight}
+                        </span>{" "}
+                        {slide.titleSuffix}
+                      </h1>
 
-                let line1 = feature.title;
-                let line2 = "";
-                if (feature.title === "Loving Care") {
-                  line1 = "Loving";
-                  line2 = "Care";
-                } else if (feature.title === "Safe & Reliable") {
-                  line1 = "Safe &";
-                  line2 = "Reliable";
-                } else if (feature.title === "Expert Team") {
-                  line1 = "Expert";
-                  line2 = "Team";
-                } else if (feature.title === "Home Like Comfort") {
-                  line1 = "Home Like";
-                  line2 = "Comfort";
-                } else {
-                  const parts = feature.title.split(" ");
-                  line1 = parts.slice(0, Math.ceil(parts.length / 2)).join(" ");
-                  line2 = parts.slice(Math.ceil(parts.length / 2)).join(" ");
-                }
+                      {/* Description */}
+                      <p className="text-sm sm:text-lg text-[#615147] leading-relaxed max-w-lg mb-6 sm:mb-8 font-normal text-center sm:text-left mx-auto sm:mx-0">
+                        {slide.description}
+                      </p>
 
-                return (
-                  <React.Fragment key={feature.id}>
-                    {idx > 0 && (
-                      <div className="hidden sm:block h-8 sm:h-9 w-[1.5px] bg-[#2C1810]/20 mx-3 sm:mx-4 lg:mx-5 shrink-0" />
-                    )}
-                    <FadeIn direction="up" delay={0.2 + idx * 0.05}>
-                      <motion.div
-                        whileHover={{ scale: 1.03 }}
-                        whileTap={{ scale: 0.97 }}
-                        transition={{ duration: 0.2, ease: "easeInOut" }}
-                        className="flex items-center gap-2 sm:gap-3 cursor-pointer"
-                      >
-                        <div className="w-9 h-9 sm:w-12 sm:h-12 rounded-full border-2 border-[#F37021] bg-white flex items-center justify-center shrink-0 shadow-2xs">
-                          <IconComponent className="w-4 h-4 sm:w-5.5 sm:h-5.5 text-[#F37021]" strokeWidth={2.2} />
+                      {/* 4 Feature Badges Row */}
+                      <div className="grid grid-cols-2 sm:flex sm:flex-nowrap items-center justify-center gap-3 sm:gap-0 mb-6 sm:mb-11 max-w-4xl mx-auto sm:mx-0">
+                        {slideFeatures?.map((feature: { id: string; title: string; icon: string }, idx: number) => {
+                          const IconComponent = iconMap[feature.icon] || FaPaw;
+
+                          let line1 = feature.title;
+                          let line2 = "";
+                          if (feature.title === "Loving Care") {
+                            line1 = "Loving";
+                            line2 = "Care";
+                          } else if (feature.title === "Safe & Reliable") {
+                            line1 = "Safe &";
+                            line2 = "Reliable";
+                          } else if (feature.title === "Expert Team") {
+                            line1 = "Expert";
+                            line2 = "Team";
+                          } else if (feature.title === "Home Like Comfort") {
+                            line1 = "Home Like";
+                            line2 = "Comfort";
+                          } else {
+                            const parts = feature.title.split(" ");
+                            line1 = parts.slice(0, Math.ceil(parts.length / 2)).join(" ");
+                            line2 = parts.slice(Math.ceil(parts.length / 2)).join(" ");
+                          }
+
+                          return (
+                            <React.Fragment key={feature.id}>
+                              {idx > 0 && (
+                                <div className="hidden sm:block h-8 sm:h-9 w-[1.5px] bg-[#2C1810]/20 mx-3 sm:mx-4 lg:mx-5 shrink-0" />
+                              )}
+                              <div className="flex items-center justify-center sm:justify-start gap-2 sm:gap-3">
+                                <div className="w-9 h-9 sm:w-12 sm:h-12 rounded-full border-2 border-[#F37021] bg-white flex items-center justify-center shrink-0 shadow-2xs">
+                                  <IconComponent className="w-4 h-4 sm:w-5.5 sm:h-5.5 text-[#F37021]" strokeWidth={2.2} />
+                                </div>
+                                <div className="flex flex-col text-sm sm:text-sm lg:text-[15px] font-bold text-[#2C1810] leading-tight text-left">
+                                  <span>{line1}</span>
+                                  {line2 && <span>{line2}</span>}
+                                </div>
+                              </div>
+                            </React.Fragment>
+                          );
+                        })}
+                      </div>
+
+                      {/* Action Buttons Row */}
+                      <div className="flex flex-wrap items-center justify-center sm:justify-start gap-4 sm:gap-8 mx-auto sm:mx-0">
+                        <div>
+                          <Link
+                            href={slide.primaryBtnLink}
+                            className="group inline-flex items-center justify-center bg-[#2A1810] hover:bg-[#3D2217] text-white px-5 py-3 sm:px-8 sm:py-4 rounded-full text-sm sm:text-lg font-semibold transition-colors duration-200 shadow-md hover:shadow-lg"
+                          >
+                            <span>{slide.primaryBtnText}</span>
+                            <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5 ml-2 sm:ml-3 text-white transition-transform duration-300 group-hover:translate-x-1" />
+                          </Link>
                         </div>
-                        <div className="flex flex-col text-sm sm:text-sm lg:text-[15px] font-bold text-[#2C1810] leading-tight">
-                          <span>{line1}</span>
-                          {line2 && <span>{line2}</span>}
+
+                        <div>
+                          <Link
+                            href={slide.secondaryBtnLink}
+                            className="group inline-flex items-center gap-2 text-[#2A1810] hover:text-[#3D2217] font-semibold text-sm sm:text-lg transition-colors py-2"
+                          >
+                            <span className="border-b-2 border-[#F37021] pb-0.5">
+                              {slide.secondaryBtnText}
+                            </span>
+                            <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5 text-[#F37021] transition-transform duration-300 group-hover:translate-x-1" />
+                          </Link>
                         </div>
-                      </motion.div>
-                    </FadeIn>
-                  </React.Fragment>
-                );
-              })}
+                      </div>
+
+                    </div>
+                  </div>
+
+                  {/* Right Column Spacer for Background Image */}
+                  <div className="hidden lg:block lg:col-span-5 pointer-events-none" />
+
+                </div>
+              </div>
             </div>
-
-            {/* Action Buttons Row */}
-            <div className="flex flex-wrap items-center gap-4 sm:gap-8">
-              <motion.div
-                whileHover={{ scale: 1.03 }}
-                whileTap={{ scale: 0.97 }}
-                transition={{ duration: 0.2, ease: "easeInOut" }}
-              >
-                <Link
-                  href={bannerData.primaryBtnLink}
-                  className="group inline-flex items-center justify-center bg-[#2A1810] hover:bg-[#3D2217] text-white px-5 py-3 sm:px-8 sm:py-4 rounded-full text-sm sm:text-lg font-semibold transition-colors duration-200 shadow-md hover:shadow-lg"
-                >
-                  <span>{bannerData.primaryBtnText}</span>
-                  <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5 ml-2 sm:ml-3 text-white transition-transform duration-300 group-hover:translate-x-1" />
-                </Link>
-              </motion.div>
-
-              <motion.div
-                whileHover={{ scale: 1.03 }}
-                whileTap={{ scale: 0.97 }}
-                transition={{ duration: 0.2, ease: "easeInOut" }}
-              >
-                <Link
-                  href={bannerData.secondaryBtnLink}
-                  className="group inline-flex items-center gap-2 text-[#2A1810] hover:text-[#3D2217] font-semibold text-sm sm:text-lg transition-colors py-2"
-                >
-                  <span className="border-b-2 border-[#F37021] pb-0.5">
-                    {bannerData.secondaryBtnText}
-                  </span>
-                  <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5 text-[#F37021] transition-transform duration-300 group-hover:translate-x-1" />
-                </Link>
-              </motion.div>
-            </div>
-
-          </div>
-
-          {/* Right Column Spacer for Background Image - Hidden on Mobile */}
-          <div className="hidden lg:block lg:col-span-5 pointer-events-none" />
-
-        </div>
+          );
+        })}
       </div>
+
+      {/* Left Slider Arrow Button - REMOVED ON PHONE / MOBILE (hidden md:flex) */}
+      <button
+        onClick={handlePrev}
+        aria-label="Previous Slide"
+        className="hidden md:flex absolute left-4 sm:left-6 lg:left-8 top-1/2 -translate-y-1/2 z-30 w-10 h-10 sm:w-11 sm:h-11 rounded-full bg-[#2C1810] hover:bg-[#3D2217] text-white items-center justify-center shadow-lg transition-colors duration-200 cursor-pointer"
+      >
+        <ChevronLeft className="w-5.5 h-5.5 text-white" />
+      </button>
+
+      {/* Right Slider Arrow Button - REMOVED ON PHONE / MOBILE (hidden md:flex) */}
+      <button
+        onClick={handleNext}
+        aria-label="Next Slide"
+        className="hidden md:flex absolute right-4 sm:right-6 lg:right-8 top-1/2 -translate-y-1/2 z-30 w-10 h-10 sm:w-11 sm:h-11 rounded-full bg-[#2C1810] hover:bg-[#3D2217] text-white items-center justify-center shadow-lg transition-colors duration-200 cursor-pointer"
+      >
+        <ChevronRight className="w-5.5 h-5.5 text-white" />
+      </button>
 
       {/* Curved Bottom Band */}
       <div className="absolute bottom-0 left-0 right-0 w-full overflow-hidden leading-none pointer-events-none z-20">
@@ -303,21 +320,19 @@ export default function Banner() {
         />
       </div>
 
-      {/* Slider Pagination Dots */}
-      <div className="absolute bottom-10 sm:bottom-20 lg:bottom-24 left-0 right-0 z-30 flex items-center justify-center gap-2.5">
+      {/* Slider Pagination Dots representing the current page (VISIBLE FOR MOBILE & DESKTOP) */}
+      <div className="absolute bottom-9 sm:bottom-20 lg:bottom-24 left-0 right-0 z-30 flex items-center justify-center gap-2.5">
         {Array.from({ length: totalSlides }).map((_, index) => (
-          <motion.button
+          <button
             key={index}
-            whileHover={{ scale: 1.03 }}
-            whileTap={{ scale: 0.97 }}
-            transition={{ duration: 0.2, ease: "easeInOut" }}
-            onClick={() => setCurrentSlide(index)}
+            onClick={() => goToSlide(index)}
             aria-label={`Go to slide ${index + 1}`}
-            aria-current={index === currentSlide}
-            className={`w-2.5 h-2.5 rounded-full transition-colors duration-300 cursor-pointer shadow-2xs ${index === currentSlide
-                ? "bg-[#F37021] scale-110"
-                : "bg-white ring-1 ring-black/5 hover:bg-white/90"
-              }`}
+            aria-current={index === activeDotIndex}
+            className={`h-2.5 rounded-full transition-all duration-300 cursor-pointer shadow-2xs ${
+              index === activeDotIndex
+                ? "bg-[#F37021] w-7"
+                : "bg-white/90 w-2.5 ring-1 ring-black/10 hover:bg-white"
+            }`}
           />
         ))}
       </div>

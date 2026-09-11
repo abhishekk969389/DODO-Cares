@@ -16,6 +16,7 @@ import {
 import { FaPaw } from "react-icons/fa";
 import { site as petData } from "@/data/index";
 import type { FooterLink } from "@/types/pet";
+import { MdEmail } from "react-icons/md";
 
 
 
@@ -124,7 +125,7 @@ export default function Footer() {
                                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-1 gap-4 sm:gap-5 lg:gap-3.5 xl:gap-5 space-y-0">
                                     <div className="flex items-center gap-3 sm:gap-3.5 lg:gap-3 xl:gap-4">
                                         <div className="w-10 h-10 sm:w-12 sm:h-12 lg:w-10 lg:h-10 xl:w-12 xl:h-12 rounded-full bg-[#FFF3EB] flex items-center justify-center shrink-0 text-[#F37021]">
-                                            <FaPaw className="w-4.5 h-4.5 lg:w-4.5 lg:h-4.5 xl:w-5 xl:h-5 text-[#F37021]" />
+                                            <FaPaw className="w-6 h-6 text-[#F37021]" />
                                         </div>
                                         <div>
                                             <h4 className="text-[#2C1810] font-bold text-sm sm:text-base lg:text-[14px] xl:text-[17px] leading-snug">
@@ -138,7 +139,7 @@ export default function Footer() {
 
                                     <div className="flex items-center gap-3 sm:gap-3.5 lg:gap-3 xl:gap-4">
                                         <div className="w-10 h-10 sm:w-12 sm:h-12 lg:w-10 lg:h-10 xl:w-12 xl:h-12 rounded-full bg-[#FFF3EB] flex items-center justify-center shrink-0 text-[#F37021]">
-                                            <Shield className="w-4.5 h-4.5 lg:w-4.5 lg:h-4.5 xl:w-5 xl:h-5 text-[#F37021]" />
+                                            <Shield className="w-6 h-6 text-[#F37021]" />
                                         </div>
                                         <div>
                                             <h4 className="text-[#2C1810] font-bold text-sm sm:text-base lg:text-[14px] xl:text-[17px] leading-snug">
@@ -226,7 +227,7 @@ export default function Footer() {
                                     {/* Address */}
                                     <div className="flex items-start gap-2.5 sm:gap-3.5 lg:gap-3 xl:gap-4">
                                         <div className="w-9 h-9 sm:w-11 sm:h-11 lg:w-10 lg:h-10 xl:w-12 xl:h-12 rounded-full bg-[#FFF3EB] flex items-center justify-center shrink-0 text-[#F37021] mt-0.5">
-                                            <MapPin className="w-4 h-4 sm:w-5 sm:h-5 lg:w-4.5 lg:h-4.5 xl:w-5 xl:h-5 fill-[#F37021] text-white" />
+                                            <MapPin className="w-8 h-8 fill-[#F37021] text-white" />
                                         </div>
                                         <div className="min-w-0 flex-1">
                                             <h4 className="text-[#2C1810] font-bold text-sm sm:text-base lg:text-[15px] xl:text-lg mb-0.5">
@@ -245,7 +246,7 @@ export default function Footer() {
                                     {/* Phone */}
                                     <div className="flex items-start gap-2.5 sm:gap-3.5 lg:gap-3 xl:gap-4">
                                         <div className="w-9 h-9 sm:w-11 sm:h-11 lg:w-10 lg:h-10 xl:w-12 xl:h-12 rounded-full bg-[#FFF3EB] flex items-center justify-center shrink-0 text-[#F37021] mt-0.5">
-                                            <Phone className="w-4 h-4 sm:w-4.5 sm:h-4.5 lg:w-4 lg:h-4 xl:w-5 xl:h-5 fill-[#F37021] text-[#F37021]" />
+                                            <Phone className="w-6 h-6 fill-[#F37021] text-[#F37021]" />
                                         </div>
                                         <div className="min-w-0 flex-1">
                                             <h4 className="text-[#2C1810] font-bold text-sm sm:text-base lg:text-[15px] xl:text-lg mb-0.5">
@@ -264,7 +265,7 @@ export default function Footer() {
                                     {/* Email */}
                                     <div className="flex items-start gap-2.5 sm:gap-3.5 lg:gap-3 xl:gap-4">
                                         <div className="w-9 h-9 sm:w-11 sm:h-11 lg:w-10 lg:h-10 xl:w-12 xl:h-12 rounded-full bg-[#FFF3EB] flex items-center justify-center shrink-0 text-[#F37021] mt-0.5">
-                                            <Mail className="w-4 h-4 sm:w-4.5 sm:h-4.5 lg:w-4 lg:h-4 xl:w-5 xl:h-5 text-[#F37021]" />
+                                            <MdEmail className="w-6 h-6 text-[#F37021]" />
                                         </div>
                                         <div className="min-w-0 flex-1">
                                             <h4 className="text-[#2C1810] font-bold text-sm sm:text-base lg:text-[15px] xl:text-lg mb-0.5">

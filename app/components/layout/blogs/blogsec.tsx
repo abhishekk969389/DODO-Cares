@@ -1,6 +1,6 @@
 "use client";
 
-import React from "react";
+import React, { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { site as petData } from "@/data/index";
@@ -11,6 +11,7 @@ import {
     StaggerItem,
     MotionCard,
 } from "@/app/components/ui/animations";
+import Pagination from "@/app/components/ui/pagination";
 import { ArrowRight, Calendar } from "lucide-react";
 import { FaPaw } from "react-icons/fa";
 
@@ -18,14 +19,30 @@ import { FaPaw } from "react-icons/fa";
 const blogSecData: BlogSecData = (petData.blogSec || petData.ourBlogs) as BlogSecData;
 
 export default function BlogSec() {
+    const [currentPage, setCurrentPage] = useState<number>(1);
+    const itemsPerPage = 3;
+
     if (!blogSecData) return null;
 
+    const posts = blogSecData.posts || [];
+    const totalPages = Math.ceil(posts.length / itemsPerPage);
+    const startIndex = (currentPage - 1) * itemsPerPage;
+    const currentPosts = posts.slice(startIndex, startIndex + itemsPerPage);
+
+    const handlePageChange = (page: number) => {
+        setCurrentPage(page);
+        const sectionElement = document.getElementById("blog-section");
+        if (sectionElement) {
+            sectionElement.scrollIntoView({ behavior: "smooth" });
+        }
+    };
+
     return (
-        <section className="relative max-w-[1320px] mt-4 sm:mt-6 md:mt-8 lg:mt-10 mx-auto w-full overflow-hidden">
+        <section id="blog-section" className="relative max-w-[1320px] mt-4 sm:mt-6 md:mt-8 lg:mt-10 mx-auto w-full overflow-hidden">
             <div className="px-4 sm:px-6 lg:px-8 w-full relative z-10">
 
                 {/* Section Header */}
-                <div className="flex flex-col items-center text-center mb-6">
+                <div className="flex flex-col items-center text-center mb-6 sm:mb-8">
 
                     {/* Main Title */}
                     <FadeIn direction="up" delay={0.05}>
@@ -55,9 +72,9 @@ export default function BlogSec() {
 
                 </div>
 
-                {/* 6 Blog Cards Grid */}
-                <StaggerContainer className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8 w-full">
-                    {blogSecData.posts?.map((post) => (
+                {/* 3 Blog Cards Grid Per Page */}
+                <StaggerContainer key={currentPage} className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8 w-full">
+                    {currentPosts.map((post) => (
                         <StaggerItem key={post.id} direction="up">
                             <MotionCard hoverY={-6} hoverScale={1.01} className="h-full">
                                 <div className="bg-white rounded-[24px] sm:rounded-[28px] overflow-hidden p-4 sm:p-4.5 border border-amber-900/10 shadow-xs flex flex-col justify-between group cursor-pointer h-full">
@@ -113,6 +130,13 @@ export default function BlogSec() {
                         </StaggerItem>
                     ))}
                 </StaggerContainer>
+
+                {/* Pagination Controls */}
+                <Pagination
+                    currentPage={currentPage}
+                    totalPages={totalPages}
+                    onPageChange={handlePageChange}
+                />
 
             </div>
         </section>

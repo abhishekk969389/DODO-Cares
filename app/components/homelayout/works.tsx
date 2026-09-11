@@ -111,7 +111,7 @@ export default function Works() {
                                 <MotionCard
                                     hoverY={-6}
                                     hoverScale={1.01}
-                                    className="bg-white rounded-[28px] sm:rounded-[32px] p-6 flex flex-col items-center text-center shadow-sm border border-neutral-100/90 hover:shadow-xl transition-all duration-300 relative group cursor-pointer h-full"
+                                    className="bg-white rounded-[28px] sm:rounded-[32px] p-6 flex flex-col items-center text-center shadow-sm border border-neutral-100/90 hover:shadow-xl transition-all duration-300 relative group h-full"
                                 >
                                     {/* Top Left Step Number Badge */}
                                     <div className="absolute top-4 left-4 z-20 w-9 h-9 rounded-full border-2 border-[#F37021] text-[#F37021] font-extrabold text-sm sm:text-sm bg-white flex items-center justify-center shadow-2xs">

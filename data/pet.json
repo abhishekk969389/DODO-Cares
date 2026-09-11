@@ -622,11 +622,11 @@
             "titleHighlight": "Deserves",
             "titleSuffix": "the Best Care",
             "description": "From daily walks to expert grooming and personalized care, we're here to keep your furry family happy and healthy.",
-            "bgImage": "/homebanner.jpg",
+            "bgImage": "/img2.png",
             "bgImages": [
-              "/homebanner.jpg",
-              "/homebanner.jpg",
-              "/homebanner.jpg"
+              "/img2.png",
+              "/img.png",
+              "/img2.png"
             ],
             "features": [
               {
@@ -653,7 +653,48 @@
             "primaryBtnText": "Our Services",
             "primaryBtnLink": "/services",
             "secondaryBtnText": "Learn More",
-            "secondaryBtnLink": "/about"
+            "secondaryBtnLink": "/about",
+            "slides": [
+              {
+                "id": "1",
+                "badge": "Trusted Care, Happy Pets",
+                "titlePrefix": "Because Every Pet",
+                "titleHighlight": "Deserves",
+                "titleSuffix": "the Care",
+                "description": "From daily walks to expert grooming and personalized care, we're here to keep your furry family happy and healthy.",
+                "bgImage": "/img2.png",
+                "primaryBtnText": "Our Services",
+                "primaryBtnLink": "/services",
+                "secondaryBtnText": "Learn More",
+                "secondaryBtnLink": "/about"
+              },
+              {
+                "id": "2",
+                "badge": "Professional Pet Care",
+                "titlePrefix": "Loving & Expert",
+                "titleHighlight": "Grooming",
+                "titleSuffix": "For Pets",
+                "description": "Premium pet shower, haircuts, and hygiene care tailored to keep your pets looking and feeling their absolute best.",
+                "bgImage": "/img.png",
+                "primaryBtnText": "Appointment",
+                "primaryBtnLink": "/appointment",
+                "secondaryBtnText": "Services",
+                "secondaryBtnLink": "/services"
+              },
+              {
+                "id": "3",
+                "badge": "24/7 Dedicated Support",
+                "titlePrefix": "Your Pet",
+                "titleHighlight": "Deserve",
+                "titleSuffix": "Pure Comfort",
+                "description": "Safe home-like boarding, expert veterinary guidance, and daily walking routines for complete peace of mind.",
+                "bgImage": "/img2.png",
+                "primaryBtnText": "Our Services",
+                "primaryBtnLink": "/services",
+                "secondaryBtnText": "Contact Us",
+                "secondaryBtnLink": "/contactus"
+              }
+            ]
           }
         }
       },
@@ -860,7 +901,7 @@
               "subtitle": "We are dedicated to providing the best care and love for your furry family members.",
               "icon": "FaDog",
               "btnText": "Book an Appointment",
-              "btnLink": "/contact"
+              "btnLink": "/appointment"
             }
           }
         }
@@ -933,7 +974,7 @@
                 ],
                 "duration": "30 - 45 mins",
                 "btnText": "Book Now",
-                "btnLink": "/contact"
+                "btnLink": "/appointment"
               },
               {
                 "id": "2",
@@ -952,7 +993,7 @@
                 ],
                 "duration": "45 - 60 mins",
                 "btnText": "Book Now",
-                "btnLink": "/contact"
+                "btnLink": "/appointment"
               },
               {
                 "id": "3",
@@ -973,7 +1014,7 @@
                 ],
                 "duration": "60 - 75 mins",
                 "btnText": "Book Now",
-                "btnLink": "/contact"
+                "btnLink": "/appointment"
               },
               {
                 "id": "4",
@@ -992,7 +1033,7 @@
                 ],
                 "duration": "75 - 90 mins",
                 "btnText": "Book Now",
-                "btnLink": "/contact"
+                "btnLink": "/appointment"
               }
             ],
             "trustFeatures": [
@@ -1737,7 +1778,7 @@
               {
                 "id": "3",
                 "number": "03.",
-                "title": "MISSION & VISION",
+                "title": "MISSION &\nVISION",
                 "links": [
                   {
                     "label": "Mission & Vision",
@@ -1748,7 +1789,7 @@
               {
                 "id": "4",
                 "number": "04.",
-                "title": "WHY CHOOSE US",
+                "title": "WHY CHOOSE\nUS",
                 "links": [
                   {
                     "label": "Why Choose Us",
@@ -1774,7 +1815,7 @@
                 "links": [
                   {
                     "label": "Service Detail",
-                    "href": "/services"
+                    "href": "/services/puppy-training"
                   }
                 ]
               },
@@ -1796,14 +1837,14 @@
                 "links": [
                   {
                     "label": "Team Detail",
-                    "href": "/teams"
+                    "href": "/teams/sarah-johnson"
                   }
                 ]
               },
               {
                 "id": "9",
                 "number": "09.",
-                "title": "PRICING / PACKAGES",
+                "title": "PRICING /\nPACKAGES",
                 "links": [
                   {
                     "label": "Pricing / Packages",
@@ -1814,7 +1855,7 @@
               {
                 "id": "10",
                 "number": "10.",
-                "title": "SERVICE AREAS / LOCATIONS",
+                "title": "SERVICE AREAS /\nLOCATIONS",
                 "links": [
                   {
                     "label": "Service Areas / Locations",
@@ -1829,7 +1870,7 @@
                 "links": [
                   {
                     "label": "Location Detail",
-                    "href": "/servicelocation"
+                    "href": "/servicelocation/delhi"
                   }
                 ]
               },
@@ -3842,7 +3883,7 @@
                 "titleHighlight": "Training",
                 "badge": "OUR SERVICE",
                 "description": "Build a strong foundation for your young pup with early socialization, house training, basic commands, and positive reinforcement habits Build a strong foundation for your young pup with early socialization, house training, basic commands, and positive reinforcement habits Build a strong foundation for your young pup with early socialization, house training, basic commands, and positive reinforcement habits.",
-                "heroImage": "/works/works1.jpg",
+                "heroImage": "/blogs/blog1.jpg",
                 "bgImage": "/subbanner.jpg",
                 "breadcrumbs": [
                   {
@@ -3885,7 +3926,7 @@
                       "title": "Puppy Socialization & Manners",
                       "shortDesc": "Introduce your pup to new sounds, environments, and friendly dogs.",
                       "icon": "FaDog",
-                      "image": "/works/works1.jpg",
+                      "image": "/blogs/blog1.jpg",
                       "fullDesc": "Early socialization helps puppies grow into confident, friendly adult dogs.",
                       "bulletPoints": [
                         "Controlled exposure to sights & sounds",
@@ -3899,7 +3940,7 @@
                       "title": "House Training & Routine",
                       "shortDesc": "Fast-track potty training and crate routines.",
                       "icon": "FaHome",
-                      "image": "/works/works2.jpg",
+                      "image": "/blogs/blog2.jpg",
                       "fullDesc": "Establish structured eating, potty, and nap schedules for stress-free living.",
                       "bulletPoints": [
                         "Effective potty schedule setup",
@@ -3913,7 +3954,7 @@
                       "title": "Bite Inhibition & Chewing",
                       "shortDesc": "Stop puppy nipping, mouthiness, and destructive chewing.",
                       "icon": "FaShieldAlt",
-                      "image": "/works/works3.jpg",
+                      "image": "/blogs/blog3.jpg",
                       "fullDesc": "Teach gentle mouth manners and redirect sharp puppy teeth to safe chew toys.",
                       "bulletPoints": [
                         "Soft mouth control exercises",
@@ -3927,7 +3968,7 @@
                       "title": "Basic Verbal Cues",
                       "shortDesc": "Master Sit, Stay, Come, Down, and Name Response.",
                       "icon": "FaAward",
-                      "image": "/works/works4.jpg",
+                      "image": "/blogs/blog4.jpg",
                       "fullDesc": "Fun clicker and treat reward drills to teach essential beginner commands.",
                       "bulletPoints": [
                         "Instant focus on name call",
@@ -3941,7 +3982,7 @@
                       "title": "Leash & Collar Comfort",
                       "shortDesc": "Gentle intro to walking calmly without pulling on leash.",
                       "icon": "FaWalking",
-                      "image": "/works/works1.jpg",
+                      "image": "/blogs/blog5.jpg",
                       "fullDesc": "Familiarize your pup with harness and leash without fear or stubborn resistance.",
                       "bulletPoints": [
                         "Positive harness fitting",
@@ -4037,7 +4078,7 @@
                 "titleHighlight": "Training",
                 "badge": "OUR SERVICE",
                 "description": "Teach essential commands and good manners for a well-behaved, confident, and obedient pet in any environment Build a strong foundation for your young pup with early socialization, house training, basic commands, and positive reinforcement habits Teach essential commands and good manners for a well-behaved, confident, and obedient pet in any environment Build a strong foundation.",
-                "heroImage": "/works/works2.jpg",
+                "heroImage": "/blogs/blog2.jpg",
                 "bgImage": "/subbanner.jpg",
                 "breadcrumbs": [
                   {
@@ -4080,7 +4121,7 @@
                       "title": "Basic Command Mastery",
                       "shortDesc": "Sit, stay, come, heel, and down commands.",
                       "icon": "FaDog",
-                      "image": "/works/works2.jpg",
+                      "image": "/blogs/blog2.jpg",
                       "fullDesc": "Our basic command module builds immediate response habits using gentle positive reinforcement.",
                       "bulletPoints": [
                         "Clear verbal and gesture cues",
@@ -4094,7 +4135,7 @@
                       "title": "Loose Leash Walking",
                       "shortDesc": "Walking calmly without pulling or lunging.",
                       "icon": "FaWalking",
-                      "image": "/works/works3.jpg",
+                      "image": "/blogs/blog3.jpg",
                       "fullDesc": "Say goodbye to pulled shoulders. We teach your dog to walk loosely beside you in public spaces.",
                       "bulletPoints": [
                         "Loose leash technique",
@@ -4108,7 +4149,7 @@
                       "title": "Distraction Proofing",
                       "shortDesc": "Reliable compliance in busy parks and street settings.",
                       "icon": "FaShieldAlt",
-                      "image": "/works/works4.jpg",
+                      "image": "/blogs/blog4.jpg",
                       "fullDesc": "Train your dog to ignore passing joggers, bikes, and other dogs while keeping focus on you.",
                       "bulletPoints": [
                         "High-distraction recall",
@@ -4122,7 +4163,7 @@
                       "title": "Impulse & Door Control",
                       "shortDesc": "Wait patiently at open doors, gates, and meal times.",
                       "icon": "FaHome",
-                      "image": "/works/works1.jpg",
+                      "image": "/blogs/blog5.jpg",
                       "fullDesc": "Prevent dangerous bolting out of front doors and teach patience during food preparation.",
                       "bulletPoints": [
                         "Wait at threshold command",
@@ -4136,7 +4177,7 @@
                       "title": "Emergency Recall Cues",
                       "shortDesc": "High-speed return to handler when called in any situation.",
                       "icon": "FaAward",
-                      "image": "/works/works2.jpg",
+                      "image": "/blogs/blog6.jpg",
                       "fullDesc": "A life-saving command that brings your dog rushing back to you regardless of what they are pursuing.",
                       "bulletPoints": [
                         "High-value reward conditioning",
@@ -4232,7 +4273,7 @@
                 "titleHighlight": "Walking",
                 "badge": "OUR SERVICE",
                 "description": "We address unwanted behaviors with proven techniques and positive reinforcement while ensuring daily active exercise Teach essential commands and good manners for a well-behaved, confident, and obedient pet in any environment Build a strong foundation Build a strong foundation for your young pup with early socialization, house training, basic commands, and positive reinforcement habits.",
-                "heroImage": "/works/works3.jpg",
+                "heroImage": "/blogs/blog3.jpg",
                 "bgImage": "/subbanner.jpg",
                 "breadcrumbs": [
                   {
@@ -4275,7 +4316,7 @@
                       "title": "Solo & Group Walks",
                       "shortDesc": "Tailored walking schedules to match your pet's energy level.",
                       "icon": "FaWalking",
-                      "image": "/works/works3.jpg",
+                      "image": "/blogs/blog3.jpg",
                       "fullDesc": "Regular outdoor walks improve cardiovascular health, reduce anxiety, and keep pets happy.",
                       "bulletPoints": [
                         "Paced exercise sessions",
@@ -4289,7 +4330,7 @@
                       "title": "Paced Exercise Sessions",
                       "shortDesc": "Cardiovascular exercise suited to breed and age.",
                       "icon": "FaHeart",
-                      "image": "/works/works4.jpg",
+                      "image": "/blogs/blog4.jpg",
                       "fullDesc": "Custom workout intensity ensuring senior dogs stroll comfortably and active breeds burn full energy.",
                       "bulletPoints": [
                         "Speed adjustment to pet stamina",
@@ -4303,7 +4344,7 @@
                       "title": "Route Exploration",
                       "shortDesc": "Fresh sniffing routes to stimulate your dog's mind.",
                       "icon": "FaSearch",
-                      "image": "/works/works1.jpg",
+                      "image": "/blogs/blog5.jpg",
                       "fullDesc": "Changing daily walking paths provides mental stimulation through new scents and sights.",
                       "bulletPoints": [
                         "Safe park pathways",
@@ -4317,7 +4358,7 @@
                       "title": "Post-Walk Hydration",
                       "shortDesc": "Fresh clean water and paw wiping after every walk.",
                       "icon": "FaShower",
-                      "image": "/works/works2.jpg",
+                      "image": "/blogs/blog6.jpg",
                       "fullDesc": "We ensure your pet is refreshed, clean, and calm before re-entering your home.",
                       "bulletPoints": [
                         "Fresh electrolyte water break",
@@ -4331,7 +4372,7 @@
                       "title": "Leash Manner Training",
                       "shortDesc": "Gentle reinforcement of non-pulling leash walking.",
                       "icon": "FaShieldAlt",
-                      "image": "/works/works3.jpg",
+                      "image": "/blogs/blog1.jpg",
                       "fullDesc": "Our walkers use positive techniques to discourage pulling and keep walks pleasant.",
                       "bulletPoints": [
                         "Stop-and-go pulling fixes",
@@ -4427,7 +4468,7 @@
                 "titleHighlight": "Correction",
                 "badge": "OUR SERVICE",
                 "description": "We address unwanted behaviors with proven techniques and positive reinforcement while ensuring daily active exercise.",
-                "heroImage": "/works/works3.jpg",
+                "heroImage": "/blogs/blog4.jpg",
                 "bgImage": "/subbanner.jpg",
                 "breadcrumbs": [
                   {
@@ -4470,7 +4511,7 @@
                       "title": "Reactivity Management",
                       "shortDesc": "Reduce barking and lunging at dogs or cars.",
                       "icon": "FaShieldAlt",
-                      "image": "/works/works3.jpg",
+                      "image": "/blogs/blog4.jpg",
                       "fullDesc": "Counter-conditioning techniques to lower emotional reactivity to external triggers.",
                       "bulletPoints": [
                         "Trigger distance threshold training",
@@ -4484,7 +4525,7 @@
                       "title": "Separation Anxiety Relief",
                       "shortDesc": "Calm desensitization routines for when left alone.",
                       "icon": "FaHome",
-                      "image": "/works/works4.jpg",
+                      "image": "/blogs/blog5.jpg",
                       "fullDesc": "Gradual departure cue desensitization to make home alone time peaceful.",
                       "bulletPoints": [
                         "Short departure intervals",
@@ -4498,7 +4539,7 @@
                       "title": "Aggression De-escalation",
                       "shortDesc": "Safe positive counter-conditioning for triggers.",
                       "icon": "FaHeart",
-                      "image": "/works/works1.jpg",
+                      "image": "/blogs/blog6.jpg",
                       "fullDesc": "Root cause analysis to turn fear or defensive aggression into trust.",
                       "bulletPoints": [
                         "Muzzle desensitization if needed",
@@ -4512,7 +4553,7 @@
                       "title": "Resource Guarding Fix",
                       "shortDesc": "Prevent territorial guarding of food, toys, or beds.",
                       "icon": "FaDog",
-                      "image": "/works/works2.jpg",
+                      "image": "/blogs/blog1.jpg",
                       "fullDesc": "Teach your dog that trade-offs mean good things rather than loss of valuable items.",
                       "bulletPoints": [
                         "Trade-up reward protocol",
@@ -4526,7 +4567,7 @@
                       "title": "Impulse Control Drills",
                       "shortDesc": "Teach patience, self-regulation, and calm focus.",
                       "icon": "FaAward",
-                      "image": "/works/works3.jpg",
+                      "image": "/blogs/blog2.jpg",
                       "fullDesc": "Build emotional self-control when high value food or play triggers are nearby.",
                       "bulletPoints": [
                         "Leave-it command mastery",
@@ -4622,7 +4663,7 @@
                 "titleHighlight": "Sitting",
                 "badge": "OUR SERVICE",
                 "description": "Take your dog's abilities to the next level with advanced tricks, skill training, and dedicated in-home pet sitting care Build a strong foundation for your young pup with early socialization, house training, basic commands, and positive reinforcement habitsBuild a strong foundation for your young pup with early socialization, house training, basic commands, and positive reinforcement habits .",
-                "heroImage": "/works/works4.jpg",
+                "heroImage": "/blogs/blog5.jpg",
                 "bgImage": "/subbanner.jpg",
                 "breadcrumbs": [
                   {
@@ -4665,7 +4706,7 @@
                       "title": "Dedicated Pet Sitting",
                       "shortDesc": "Loving, stress-free care in the comfort of home.",
                       "icon": "FaHome",
-                      "image": "/works/works4.jpg",
+                      "image": "/blogs/blog5.jpg",
                       "fullDesc": "Our reliable pet sitters provide companionship, feeding, playtime, and medication management.",
                       "bulletPoints": [
                         "Personalized feeding and medication",
@@ -4679,7 +4720,7 @@
                       "title": "Custom Meal & Medication",
                       "shortDesc": "Strict adherence to feeding schedules and prescriptions.",
                       "icon": "FaHeart",
-                      "image": "/works/works1.jpg",
+                      "image": "/blogs/blog6.jpg",
                       "fullDesc": "Exact food measurements, dietary restrictions, and timely oral medication administration.",
                       "bulletPoints": [
                         "Strict portion control",
@@ -4693,7 +4734,7 @@
                       "title": "Interactive Playtime",
                       "shortDesc": "Tailored games, cuddle sessions, and mental enrichment.",
                       "icon": "FaSmile",
-                      "image": "/works/works2.jpg",
+                      "image": "/blogs/blog1.jpg",
                       "fullDesc": "Engaging fetch games, belly rubs, and puzzle toys to keep your pet cheerful while away.",
                       "bulletPoints": [
                         "Favorite toy games",
@@ -4707,7 +4748,7 @@
                       "title": "Daily Walking Routine",
                       "shortDesc": "Outdoor exercise and bathroom breaks on regular schedule.",
                       "icon": "FaWalking",
-                      "image": "/works/works3.jpg",
+                      "image": "/blogs/blog2.jpg",
                       "fullDesc": "Routine neighborhood walks to ensure comfort, bladder relief, and exercise.",
                       "bulletPoints": [
                         "Timed bathroom trips",
@@ -4721,7 +4762,7 @@
                       "title": "Home Security & Care",
                       "shortDesc": "Plant watering, mail collection, and secure lockup.",
                       "icon": "FaShieldAlt",
-                      "image": "/works/works4.jpg",
+                      "image": "/blogs/blog3.jpg",
                       "fullDesc": "We keep your home looking lived-in and safe by bringing in packages and rotating lights.",
                       "bulletPoints": [
                         "Mail & package intake",
@@ -4817,7 +4858,7 @@
                 "titleHighlight": "Skills",
                 "badge": "OUR SERVICE",
                 "description": "Take your dog's abilities to the next level with advanced tricks, skill training, and dedicated in-home pet sitting care.",
-                "heroImage": "/works/works4.jpg",
+                "heroImage": "/blogs/blog6.jpg",
                 "bgImage": "/subbanner.jpg",
                 "breadcrumbs": [
                   {
@@ -4860,7 +4901,7 @@
                       "title": "Off-Leash Heel Mastery",
                       "shortDesc": "Flawless heel walking in high-distraction open parks.",
                       "icon": "FaWalking",
-                      "image": "/works/works4.jpg",
+                      "image": "/blogs/blog6.jpg",
                       "fullDesc": "Off-leash responsiveness giving your dog freedom while ensuring total safety.",
                       "bulletPoints": [
                         "Off-leash heel work",
@@ -4874,7 +4915,7 @@
                       "title": "Agility Obstacle Course",
                       "shortDesc": "Navigate hurdles, weave poles, and tunnels with ease.",
                       "icon": "FaAward",
-                      "image": "/works/works1.jpg",
+                      "image": "/blogs/blog1.jpg",
                       "fullDesc": "Fun physical course work that improves body awareness, stamina, and confidence.",
                       "bulletPoints": [
                         "Hurdle jump technique",
@@ -4888,7 +4929,7 @@
                       "title": "Advanced Trick Training",
                       "shortDesc": "Spin, play dead, fetch specific items, and bow.",
                       "icon": "FaStar",
-                      "image": "/works/works2.jpg",
+                      "image": "/blogs/blog2.jpg",
                       "fullDesc": "Enriching trick repertoire designed to challenge and entertain smart dogs.",
                       "bulletPoints": [
                         "Item name identification",
@@ -4902,7 +4943,7 @@
                       "title": "Distance & Motion Cues",
                       "shortDesc": "Respond to hand signals and voice from 50 feet away.",
                       "icon": "FaSearch",
-                      "image": "/works/works3.jpg",
+                      "image": "/blogs/blog3.jpg",
                       "fullDesc": "Execute commands accurately when handler is at a significant distance.",
                       "bulletPoints": [
                         "Silent hand signal cues",
@@ -4916,7 +4957,7 @@
                       "title": "Mental Puzzle Challenges",
                       "shortDesc": "Complex problem-solving games for high-intelligence dogs.",
                       "icon": "FaSmile",
-                      "image": "/works/works4.jpg",
+                      "image": "/blogs/blog4.jpg",
                       "fullDesc": "Scent tracking, shell games, and toy retrieval challenges that tire out active minds.",
                       "bulletPoints": [
                         "Scent work games",
@@ -5011,8 +5052,8 @@
                 "titlePrefix": "Medical",
                 "titleHighlight": "Services",
                 "badge": "OUR SERVICE",
-                "description": "Comprehensive healthcare to keep your pets healthy, from checkups to treatments.",
-                "heroImage": "/service/service1.jpg",
+                "description": "Comprehensive healthcare to keep your pets healthy, from checkups to treatments Comprehensive healthcare to keep your pets healthy, from checkups to treatments Comprehensive healthcare to keep your pets healthy, from checkups to treatments Comprehensive healthcare to keep your pets healthy, from checkups to treatments.",
+                "heroImage": "/blogs/blog1.jpg",
                 "bgImage": "/subbanner.jpg",
                 "breadcrumbs": [
                   {
@@ -5055,7 +5096,7 @@
                       "title": "Nose-to-Tail Physical Exam",
                       "shortDesc": "Thorough physical assessment of eyes, ears, teeth, & skin.",
                       "icon": "FaStethoscope",
-                      "image": "/service/service1.jpg",
+                      "image": "/blogs/blog1.jpg",
                       "fullDesc": "Early detection of health issues through regular medical evaluations and vital tracking.",
                       "bulletPoints": [
                         "Cardiovascular & pulmonary examination",
@@ -5069,7 +5110,7 @@
                       "title": "Diagnostic Blood Work",
                       "shortDesc": "Lab analysis for liver, kidney, blood count, and organ health.",
                       "icon": "FaSearch",
-                      "image": "/service/service2.jpg",
+                      "image": "/blogs/blog2.jpg",
                       "fullDesc": "Detailed laboratory pathology tests to detect organ dysfunction or infections early.",
                       "bulletPoints": [
                         "Complete Blood Count (CBC)",
@@ -5083,7 +5124,7 @@
                       "title": "Vaccination Protection",
                       "shortDesc": "Core vaccines against rabies, parvovirus, and infections.",
                       "icon": "FaShieldAlt",
-                      "image": "/service/service3.jpg",
+                      "image": "/blogs/blog3.jpg",
                       "fullDesc": "Timely immunization schedules to safeguard your pet against contagious illnesses.",
                       "bulletPoints": [
                         "Rabies booster vaccines",
@@ -5097,7 +5138,7 @@
                       "title": "Parasite Control",
                       "shortDesc": "Deworming treatments and tick/flea preventative care.",
                       "icon": "FaShower",
-                      "image": "/service/service4.jpg",
+                      "image": "/blogs/blog4.jpg",
                       "fullDesc": "Comprehensive external and internal parasite eradication programs.",
                       "bulletPoints": [
                         "Broad-spectrum dewormers",
@@ -5111,7 +5152,7 @@
                       "title": "Nutritional Health Consult",
                       "shortDesc": "Custom diet, weight management, and supplement plan.",
                       "icon": "FaHeart",
-                      "image": "/service/service5.jpg",
+                      "image": "/blogs/blog5.jpg",
                       "fullDesc": "Tailored meal recommendations suited to your pet's age, breed, and health condition.",
                       "bulletPoints": [
                         "Obesity prevention diet",
@@ -5206,8 +5247,8 @@
                 "titlePrefix": "Pet",
                 "titleHighlight": "Shower",
                 "badge": "OUR SERVICE",
-                "description": "Hygienic and relaxing baths that keep your pet fresh, clean, and happy.",
-                "heroImage": "/service/service2.jpg",
+                "description": "Hygienic and relaxing baths that keep your pet fresh, clean, and happy Comprehensive healthcare to keep your pets healthy, from checkups to treatments Comprehensive healthcare to keep your pets Hygienic and relaxing baths that keep your pet fresh, clean, and happy Comprehensive healthcare to keep your pets healthy, from checkups to treatments Comprehensive healthcare to keep your pets healthy.",
+                "heroImage": "/blogs/blog2.jpg",
                 "bgImage": "/subbanner.jpg",
                 "breadcrumbs": [
                   {
@@ -5250,7 +5291,7 @@
                       "title": "Hydro-Therapy Wash",
                       "shortDesc": "Gentle water massage using natural organic shampoos.",
                       "icon": "FaShower",
-                      "image": "/service/service2.jpg",
+                      "image": "/blogs/blog2.jpg",
                       "fullDesc": "Our soothing hydro-bath removes deep coat dirt, calms irritated skin, and leaves coats shiny.",
                       "bulletPoints": [
                         "Therapeutic warm water rinse",
@@ -5264,7 +5305,7 @@
                       "title": "Coat Hydration Mask",
                       "shortDesc": "Deep conditioning treatment to restore coat moisture.",
                       "icon": "FaSparkles",
-                      "image": "/service/service3.jpg",
+                      "image": "/blogs/blog3.jpg",
                       "fullDesc": "Nourishing coat conditioner infused with Argan and Coconut oils to soften dry fur.",
                       "bulletPoints": [
                         "Moisture lock formula",
@@ -5278,7 +5319,7 @@
                       "title": "Gentle Warm Blow Dry",
                       "shortDesc": "High-velocity fluff dry that removes dead loose coat.",
                       "icon": "FaShower",
-                      "image": "/service/service4.jpg",
+                      "image": "/blogs/blog4.jpg",
                       "fullDesc": "Temperature-controlled hand blower to dry thick undercoats safely without cage dryers.",
                       "bulletPoints": [
                         "100% cage-free hand drying",
@@ -5292,7 +5333,7 @@
                       "title": "Ear Flush & Cleansing",
                       "shortDesc": "Gentle removal of wax, dirt, and excess moisture.",
                       "icon": "FaSearch",
-                      "image": "/service/service5.jpg",
+                      "image": "/blogs/blog5.jpg",
                       "fullDesc": "Cleaning sensitive ear canals with vet-approved antiseptic ear rinse to prevent infections.",
                       "bulletPoints": [
                         "Antiseptic ear wipe down",
@@ -5306,7 +5347,7 @@
                       "title": "Tear Stain & Face Clean",
                       "shortDesc": "Delicate facial wash removing tear stains and dirt.",
                       "icon": "FaSmile",
-                      "image": "/service/service1.jpg",
+                      "image": "/blogs/blog6.jpg",
                       "fullDesc": "No-tear gentle blueberry foam wash to remove food particles and tear stains around eyes.",
                       "bulletPoints": [
                         "No-sting eye safe formula",
@@ -5401,8 +5442,8 @@
                 "titlePrefix": "Pets Hair",
                 "titleHighlight": "Trimmer",
                 "badge": "OUR SERVICE",
-                "description": "Professional grooming and coat care for a neat, healthy, and comfortable pet.",
-                "heroImage": "/service/service3.jpg",
+                "description": "Professional grooming and coat care for a neat, healthy, and comfortable pet Hygienic and relaxing baths that keep your pet fresh, clean, and happy Comprehensive healthcare to keep your pets healthy, from checkups to treatments Comprehensive healthcare to keep your pets healthy, from checkups to treatments Comprehensive healthcare to keep your pets healthy, from checkups to treatments.",
+                "heroImage": "/blogs/blog3.jpg",
                 "bgImage": "/subbanner.jpg",
                 "breadcrumbs": [
                   {
@@ -5445,7 +5486,7 @@
                       "title": "Breed-Specific Haircut",
                       "shortDesc": "Custom hair clipping, styling, and mat removal.",
                       "icon": "FaScissors",
-                      "image": "/service/service3.jpg",
+                      "image": "/blogs/blog3.jpg",
                       "fullDesc": "Our certified pet groomers handle scissors and clippers with utmost precision and safety.",
                       "bulletPoints": [
                         "Full body scissor trim or clip",
@@ -5459,7 +5500,7 @@
                       "title": "De-Matting & Brushing",
                       "shortDesc": "Pain-free removal of tangles, knots, and thick undercoat.",
                       "icon": "FaBroom",
-                      "image": "/service/service4.jpg",
+                      "image": "/blogs/blog4.jpg",
                       "fullDesc": "Gentle slicker brushing and comb-through techniques to break up knots without skin discomfort.",
                       "bulletPoints": [
                         "Undercoat rake removal",
@@ -5473,7 +5514,7 @@
                       "title": "Sanitary Area Trimming",
                       "shortDesc": "Hygiene hair clipping around delicate belly and tail areas.",
                       "icon": "FaShieldAlt",
-                      "image": "/service/service5.jpg",
+                      "image": "/blogs/blog5.jpg",
                       "fullDesc": "Clearing overgrown fur around private areas to prevent dirt build-up and maintain daily hygiene.",
                       "bulletPoints": [
                         "Sanitary region clearing",
@@ -5487,7 +5528,7 @@
                       "title": "Nail Clipping & Filing",
                       "shortDesc": "Precision nail shortening and smooth edge grinding.",
                       "icon": "FaSearch",
-                      "image": "/service/service1.jpg",
+                      "image": "/blogs/blog6.jpg",
                       "fullDesc": "Safe nail trimming avoiding the quick, followed by Dremel grinding for smooth snag-free claws.",
                       "bulletPoints": [
                         "Quick-safe claw clipping",
@@ -5501,7 +5542,7 @@
                       "title": "Paw Pad Clearing",
                       "shortDesc": "Trimming overgrown fur between paw pads for traction.",
                       "icon": "FaWalking",
-                      "image": "/service/service2.jpg",
+                      "image": "/blogs/blog1.jpg",
                       "fullDesc": "Clipping excess hair underneath paws to prevent slipping on smooth home floor surfaces.",
                       "bulletPoints": [
                         "Under-paw hair clip",
@@ -5596,8 +5637,8 @@
                 "titlePrefix": "Surgical",
                 "titleHighlight": "Care",
                 "badge": "OUR SERVICE",
-                "description": "Safe and advanced surgical services for your pet's specialized health needs.",
-                "heroImage": "/service/service4.jpg",
+                "description": "Safe and advanced surgical services for your pet's specialized health needs Hygienic and relaxing baths that keep your pet fresh, clean, and happy Comprehensive healthcare to keep your pets healthy, from checkups to treatments Comprehensive healthcare to keep your pets healthy, from checkups to treatments Comprehensive healthcare to keep your pets healthy, from checkups to treatments.",
+                "heroImage": "/blogs/blog4.jpg",
                 "bgImage": "/subbanner.jpg",
                 "breadcrumbs": [
                   {
@@ -5640,7 +5681,7 @@
                       "title": "Pre-Anesthetic Diagnostics",
                       "shortDesc": "Blood test & ECG to ensure surgical safety.",
                       "icon": "FaStethoscope",
-                      "image": "/service/service4.jpg",
+                      "image": "/blogs/blog4.jpg",
                       "fullDesc": "We prioritize safety with pre-anesthetic blood screening and continuous vital monitoring.",
                       "bulletPoints": [
                         "Pre-surgery blood panel & cardiac evaluation",
@@ -5654,7 +5695,7 @@
                       "title": "Sterile Operating Theatre",
                       "shortDesc": "Fully sanitized surgical suite with modern instruments.",
                       "icon": "FaShieldAlt",
-                      "image": "/service/service5.jpg",
+                      "image": "/blogs/blog5.jpg",
                       "fullDesc": "Hepa-filtered sterile operating room adhering to strict veterinary surgical protocol.",
                       "bulletPoints": [
                         "Autoclaved surgical tools",
@@ -5668,7 +5709,7 @@
                       "title": "Monitored Anesthesia",
                       "shortDesc": "Gas anesthesia with real-time heart & oxygen tracking.",
                       "icon": "FaSearch",
-                      "image": "/service/service1.jpg",
+                      "image": "/blogs/blog6.jpg",
                       "fullDesc": "Isoflurane gas anesthesia continuously monitored by a dedicated veterinary nurse.",
                       "bulletPoints": [
                         "Continuous ECG tracking",
@@ -5682,7 +5723,7 @@
                       "title": "Precision Surgical Procedure",
                       "shortDesc": "Spay/neuter, soft tissue, or orthopedic surgeries.",
                       "icon": "FaHeart",
-                      "image": "/service/service2.jpg",
+                      "image": "/blogs/blog1.jpg",
                       "fullDesc": "Expert surgical execution by senior surgeons specializing in abdominal and orthopedic procedures.",
                       "bulletPoints": [
                         "Routine spay & neuter",
@@ -5696,7 +5737,7 @@
                       "title": "Post-Op ICU Recovery",
                       "shortDesc": "Warm, padded recovery suite under veterinary supervision.",
                       "icon": "FaSmile",
-                      "image": "/service/service3.jpg",
+                      "image": "/blogs/blog2.jpg",
                       "fullDesc": "Gentle post-operative awakening in oxygen-supplemented, temperature-regulated ICU incubators.",
                       "bulletPoints": [
                         "Padded heating blanket",
@@ -5791,8 +5832,8 @@
                 "titlePrefix": "Senior Pet",
                 "titleHighlight": "Wellness",
                 "badge": "OUR SERVICE",
-                "description": "Special care and regular checkups to ensure a healthy and active senior life.",
-                "heroImage": "/service/service5.jpg",
+                "description": "Special care and regular checkups to ensure a healthy and active senior life Hygienic and relaxing baths that keep your pet fresh, clean, and happy Comprehensive healthcare to keep your pets healthy, from checkups to treatments Comprehensive healthcare to keep your pets healthy, from checkups to treatments Comprehensive healthcare to keep your pets healthy, from checkups to treatments.",
+                "heroImage": "/blogs/blog5.jpg",
                 "bgImage": "/subbanner.jpg",
                 "breadcrumbs": [
                   {
@@ -5835,7 +5876,7 @@
                       "title": "Geriatric Blood & Organ Panel",
                       "shortDesc": "Lab testing for kidney, liver, thyroid, & blood sugar.",
                       "icon": "FaSearch",
-                      "image": "/service/service5.jpg",
+                      "image": "/blogs/blog5.jpg",
                       "fullDesc": "Senior pets have unique health needs. We provide tailored care to keep senior dogs and cats happy.",
                       "bulletPoints": [
                         "Kidney, liver, & thyroid blood screening",
@@ -5849,7 +5890,7 @@
                       "title": "Joint & Mobility Assessment",
                       "shortDesc": "Arthritis evaluation, spine checks, & mobility testing.",
                       "icon": "FaWalking",
-                      "image": "/service/service1.jpg",
+                      "image": "/blogs/blog6.jpg",
                       "fullDesc": "Checking limb flex, hip stiffness, and spinal health to relieve arthritis discomfort.",
                       "bulletPoints": [
                         "Gait & limp analysis",
@@ -5863,7 +5904,7 @@
                       "title": "Cardio & Dental Checkup",
                       "shortDesc": "Heart sound evaluation & gentle tartar assessment.",
                       "icon": "FaStethoscope",
-                      "image": "/service/service2.jpg",
+                      "image": "/blogs/blog1.jpg",
                       "fullDesc": "Listening for heart murmurs and examining gums to prevent bacteria entering bloodstream.",
                       "bulletPoints": [
                         "Cardiac rhythm check",
@@ -5877,7 +5918,7 @@
                       "title": "Senior Diet & Supplements",
                       "shortDesc": "Customized nutrition plans with Omega-3 & glucosamine.",
                       "icon": "FaHeart",
-                      "image": "/service/service3.jpg",
+                      "image": "/blogs/blog2.jpg",
                       "fullDesc": "Easy-to-digest low-sodium meals fortified with joint and cognitive supplements.",
                       "bulletPoints": [
                         "High quality digestible protein",
@@ -5891,7 +5932,7 @@
                       "title": "Laser & Massage Therapy",
                       "shortDesc": "Non-invasive therapy to ease stiff joints & muscles.",
                       "icon": "FaShower",
-                      "image": "/service/service4.jpg",
+                      "image": "/blogs/blog3.jpg",
                       "fullDesc": "Cold laser light therapy and gentle warmth massage to reduce joint swelling.",
                       "bulletPoints": [
                         "Cold laser pain relief",
@@ -5986,8 +6027,8 @@
                 "titlePrefix": "Wellness",
                 "titleHighlight": "Approach",
                 "badge": "OUR SERVICE",
-                "description": "Preventive care and wellness plans for long-term health and happiness.",
-                "heroImage": "/service/service1.jpg",
+                "description": "Preventive care and wellness plans for long-term health and happiness Hygienic and relaxing baths that keep your pet fresh, clean, and happy Comprehensive healthcare to keep your pets healthy, from checkups to treatments Comprehensive healthcare to keep your pets healthy, from checkups to treatments Comprehensive healthcare to keep your pets healthy, from checkups to treatments.",
+                "heroImage": "/blogs/blog6.jpg",
                 "bgImage": "/subbanner.jpg",
                 "breadcrumbs": [
                   {
@@ -6030,7 +6071,7 @@
                       "title": "Comprehensive Health Audit",
                       "shortDesc": "In-depth evaluation of lifestyle, diet, & routine.",
                       "icon": "FaSearch",
-                      "image": "/service/service1.jpg",
+                      "image": "/blogs/blog6.jpg",
                       "fullDesc": "Our wellness approach focuses on preventing health issues before they begin with proactive lifestyle habits.",
                       "bulletPoints": [
                         "Personalized daily nutrition & meal plans",
@@ -6044,7 +6085,7 @@
                       "title": "Custom Nutrition Blueprint",
                       "shortDesc": "Tailored whole-food or specialized dietary regimen.",
                       "icon": "FaHeart",
-                      "image": "/service/service2.jpg",
+                      "image": "/blogs/blog1.jpg",
                       "fullDesc": "Formulating nutrient-rich diet plans matching breed metabolic rate and coat needs.",
                       "bulletPoints": [
                         "Calorie count calculation",
@@ -6058,7 +6099,7 @@
                       "title": "Immunity & Parasite Shield",
                       "shortDesc": "Scheduled vaccinations, deworming, & flea defense.",
                       "icon": "FaShieldAlt",
-                      "image": "/service/service3.jpg",
+                      "image": "/blogs/blog2.jpg",
                       "fullDesc": "Year-round preventive treatment program guarding against worms, fleas, and viruses.",
                       "bulletPoints": [
                         "Timely booster alerts",
@@ -6072,7 +6113,7 @@
                       "title": "Mental & Physical Fitness Plan",
                       "shortDesc": "Activity routines and puzzle toys for brain health.",
                       "icon": "FaWalking",
-                      "image": "/service/service4.jpg",
+                      "image": "/blogs/blog3.jpg",
                       "fullDesc": "Combining physical exercise with brain games to prevent anxiety and behavioral issues.",
                       "bulletPoints": [
                         "Daily exercise target goals",
@@ -6086,7 +6127,7 @@
                       "title": "Skin & Coat Vitality Check",
                       "shortDesc": "Natural oil supplements for healthy skin & fur.",
                       "icon": "FaShower",
-                      "image": "/service/service5.jpg",
+                      "image": "/blogs/blog4.jpg",
                       "fullDesc": "Restoring skin barrier health through Omega fatty acids and hypoallergenic grooming.",
                       "bulletPoints": [
                         "Skin barrier pH test",

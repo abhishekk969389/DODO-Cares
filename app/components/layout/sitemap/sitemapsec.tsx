@@ -17,9 +17,9 @@ export default function SitemapSec() {
   const items = sitemapSecData.items;
 
   return (
-    <section className="relative max-w-[1320px] mt-8 sm:mt-10 md:mt-12 lg:mt-14  mx-auto w-full px-4 sm:px-6 lg:px-8">
+    <section className="relative max-w-[1320px] mt-8 sm:mt-10 md:mt-12 lg:mt-14 mx-auto w-full px-4 sm:px-6 lg:px-8">
       <FadeIn direction="up" delay={0.05}>
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 border-t border-[#FCE3D3]">
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 border-t border-[#FCE3D3]">
           {items.map((item: SitemapItem, index: number) => {
             const isLastInRowLg = (index + 1) % 5 === 0 || index === items.length - 1;
             const isLastInRowMd = (index + 1) % 3 === 0 || index === items.length - 1;
@@ -28,24 +28,28 @@ export default function SitemapSec() {
             return (
               <div
                 key={item.id || index}
-                className="relative flex flex-col justify-start p-6 sm:p-7 md:p-8 border-b border-[#FCE3D3] transition-colors duration-200 hover:bg-[#FFFDFC]"
+                className="relative flex flex-col justify-start p-5 sm:p-6 md:p-7 lg:p-8 border-b border-[#FCE3D3] transition-colors duration-200 hover:bg-[#FFFDFC]"
               >
- 
                 {!isLastInRowLg && (
                   <div className="hidden lg:block absolute right-10 top-6 bottom-6 w-[1px] bg-[#FCE3D3]" />
                 )}
                 {!isLastInRowMd && (
-                  <div className="hidden md:block lg:hidden absolute right-0 top-6 bottom-6 w-[1px] bg-[#FCE3D3]" />
+                  <div className="hidden md:block lg:hidden absolute right-0 top-5 bottom-5 w-[1px] bg-[#FCE3D3]" />
                 )}
                 {!isLastInRowSm && (
-                  <div className="hidden sm:block md:hidden absolute right-0 top-6 bottom-6 w-[1px] bg-[#FCE3D3]" />
+                  <div className="block md:hidden absolute right-0 top-5 bottom-5 w-[1px] bg-[#FCE3D3]" />
                 )}
-                <span className="text-xl sm:text-2xl md:text-3xl font-black text-[#F37021] tracking-tight">
+
+                <span className="text-lg sm:text-2xl md:text-3xl font-black text-[#F37021] tracking-tight">
                   {item.number}
                 </span>
-                <h3 className="text-sm sm:text-sm md:text-lg font-extrabold text-[#3E1408] tracking-wider uppercase mt-1.5  min-h-[36px] flex items-start leading-snug">
-                  {item.title}
+
+                <h3 className="text-sm sm:text-sm md:text-lg font-extrabold text-[#3E1408] tracking-wider uppercase mt-1.5 min-h-[48px] flex flex-col justify-start leading-tight">
+                  {item.title.split("\n").map((line: string, idx: number) => (
+                    <span key={idx} className="block">{line}</span>
+                  ))}
                 </h3>
+
                 <div className="w-7 h-[2px] bg-[#F37021] mb-4 shrink-0 rounded-full" />
 
                 <div className="flex flex-col space-y-2">

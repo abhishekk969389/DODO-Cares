@@ -17,6 +17,9 @@ export type DodoBrandData = typeof sec.Brand.variants.DodoBrand1;
 export type DodoHeaderData = typeof sec.Header.variants.DodoHeader1;
 export type DodoSubBannersData = typeof sec.SubBanners.variants.DodoSubBanners1;
 export type DodoBannerData = typeof sec.Banner.variants.DodoBanner1;
+export type BannerSlideItem = NonNullable<DodoBannerData["slides"]>[number] & {
+  features?: typeof sec.Banner.variants.DodoBanner1.features;
+};
 export type DodoAboutSectionData = typeof sec.AboutSection.variants.DodoAboutSection1;
 export type DodoServiceAreasData = typeof sec.ServiceAreas.variants.DodoServiceAreas1;
 export type DodoServicesData = typeof sec.Services.variants.DodoServices1;
