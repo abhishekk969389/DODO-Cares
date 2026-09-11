@@ -68,7 +68,7 @@ export default function Works() {
 
                     {/* Top Tag / Badge */}
                     <FadeIn direction="up" delay={0.05}>
-                        <div className="inline-flex items-center gap-1.5 text-[#F37021] font-bold text-xs sm:text-sm tracking-widest uppercase mb-2 sm:mb-3">
+                        <div className="inline-flex items-center gap-1.5 text-[#F37021] font-bold text-sm sm:text-sm tracking-widest uppercase mb-2 sm:mb-3">
                             <FaPaw className="w-5 h-5 text-[#F37021]" />
                             <span>{worksData.badge}</span>
                         </div>
@@ -114,7 +114,7 @@ export default function Works() {
                                     className="bg-white rounded-[28px] sm:rounded-[32px] p-6 flex flex-col items-center text-center shadow-sm border border-neutral-100/90 hover:shadow-xl transition-all duration-300 relative group cursor-pointer h-full"
                                 >
                                     {/* Top Left Step Number Badge */}
-                                    <div className="absolute top-4 left-4 z-20 w-9 h-9 rounded-full border-2 border-[#F37021] text-[#F37021] font-extrabold text-xs sm:text-sm bg-white flex items-center justify-center shadow-2xs">
+                                    <div className="absolute top-4 left-4 z-20 w-9 h-9 rounded-full border-2 border-[#F37021] text-[#F37021] font-extrabold text-sm sm:text-sm bg-white flex items-center justify-center shadow-2xs">
                                         {step.stepNumber}
                                     </div>
 
@@ -140,7 +140,7 @@ export default function Works() {
                                     </h3>
 
                                     {/* Description */}
-                                    <p className="text-xs sm:text-sm text-[#7A6A60] font-medium leading-relaxed px-1">
+                                    <p className="text-sm sm:text-sm text-[#7A6A60] font-medium leading-relaxed px-1">
                                         {step.description}
                                     </p>
 

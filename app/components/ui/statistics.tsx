@@ -69,7 +69,7 @@ export default function Statistics({ stats: propsStats, className = "" }: Statis
                     <span className="text-xl sm:text-2xl font-extrabold text-[#2C1810] leading-none mb-1 tracking-tight">
                       {stat.value}
                     </span>
-                    <span className="text-xs sm:text-sm font-bold text-[#382219] leading-tight">
+                    <span className="text-sm sm:text-sm font-bold text-[#382219] leading-tight">
                       {stat.label}
                     </span>
                   </div>

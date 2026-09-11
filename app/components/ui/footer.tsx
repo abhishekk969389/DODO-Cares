@@ -127,7 +127,7 @@ export default function Footer() {
                                             <FaPaw className="w-4.5 h-4.5 lg:w-4.5 lg:h-4.5 xl:w-5 xl:h-5 text-[#F37021]" />
                                         </div>
                                         <div>
-                                            <h4 className="text-[#2C1810] font-bold text-xs sm:text-base lg:text-[14px] xl:text-[17px] leading-snug">
+                                            <h4 className="text-[#2C1810] font-bold text-sm sm:text-base lg:text-[14px] xl:text-[17px] leading-snug">
                                                 {footer.brand.features[0]?.title}
                                             </h4>
                                             <p className="text-neutral-500 text-[11px] sm:text-sm lg:text-[12px] xl:text-sm mt-0.5 font-medium leading-tight">
@@ -141,7 +141,7 @@ export default function Footer() {
                                             <Shield className="w-4.5 h-4.5 lg:w-4.5 lg:h-4.5 xl:w-5 xl:h-5 text-[#F37021]" />
                                         </div>
                                         <div>
-                                            <h4 className="text-[#2C1810] font-bold text-xs sm:text-base lg:text-[14px] xl:text-[17px] leading-snug">
+                                            <h4 className="text-[#2C1810] font-bold text-sm sm:text-base lg:text-[14px] xl:text-[17px] leading-snug">
                                                 {footer.brand.features[1]?.title}
                                             </h4>
                                             <p className="text-neutral-500 text-[11px] sm:text-sm lg:text-[12px] xl:text-sm mt-0.5 font-medium leading-tight">
@@ -163,7 +163,7 @@ export default function Footer() {
                                         <li key={index}>
                                             <Link
                                                 href={link.href}
-                                                className="flex items-center text-xs sm:text-base lg:text-[16px] xl:text-[17px] text-[#2C1810] hover:text-[#F37021] transition-colors group"
+                                                className="flex items-center text-sm sm:text-base lg:text-[16px] xl:text-[17px] text-[#2C1810] hover:text-[#F37021] transition-colors group"
                                             >
                                                 <ChevronRight className="w-4 h-4 sm:w-5 sm:h-5 mr-1 sm:mr-2 text-[#F37021] transition-transform group-hover:translate-x-1 shrink-0" />
                                                 <span className="truncate">{link.label}</span>
@@ -184,7 +184,7 @@ export default function Footer() {
                                         <li key={index}>
                                             <Link
                                                 href={link.href}
-                                                className="flex items-center text-xs sm:text-base lg:text-[16px] xl:text-[17px] text-[#2C1810] hover:text-[#F37021] transition-colors group"
+                                                className="flex items-center text-sm sm:text-base lg:text-[16px] xl:text-[17px] text-[#2C1810] hover:text-[#F37021] transition-colors group"
                                             >
                                                 <ChevronRight className="w-4 h-4 sm:w-5 sm:h-5 mr-1 sm:mr-2 text-[#F37021] transition-transform group-hover:translate-x-1 shrink-0" />
                                                 <span className="truncate">{link.label}</span>
@@ -205,7 +205,7 @@ export default function Footer() {
                                         <li key={index}>
                                             <Link
                                                 href={link.href}
-                                                className="flex items-center text-xs sm:text-base lg:text-[16px] xl:text-[17px] text-[#2C1810] hover:text-[#F37021] transition-colors group"
+                                                className="flex items-center text-sm sm:text-base lg:text-[16px] xl:text-[17px] text-[#2C1810] hover:text-[#F37021] transition-colors group"
                                             >
                                                 <ChevronRight className="w-4 h-4 sm:w-5 sm:h-5 mr-1 sm:mr-2 text-[#F37021] transition-transform group-hover:translate-x-1 shrink-0" />
                                                 <span className="truncate">{link.label}</span>
@@ -229,11 +229,11 @@ export default function Footer() {
                                             <MapPin className="w-4 h-4 sm:w-5 sm:h-5 lg:w-4.5 lg:h-4.5 xl:w-5 xl:h-5 fill-[#F37021] text-white" />
                                         </div>
                                         <div className="min-w-0 flex-1">
-                                            <h4 className="text-[#2C1810] font-bold text-xs sm:text-base lg:text-[15px] xl:text-lg mb-0.5">
+                                            <h4 className="text-[#2C1810] font-bold text-sm sm:text-base lg:text-[15px] xl:text-lg mb-0.5">
                                                 {footer.contactInfo.address.title}
                                             </h4>
                                             {footer.contactInfo.address.lines.map((line: string, i: number) => (
-                                                <p key={i} className="text-neutral-600 text-xs sm:text-sm lg:text-[13px] xl:text-[15px] font-medium leading-relaxed">
+                                                <p key={i} className="text-neutral-600 text-sm sm:text-sm lg:text-[13px] xl:text-[15px] font-medium leading-relaxed">
                                                     {line}
                                                 </p>
                                             ))}
@@ -248,11 +248,11 @@ export default function Footer() {
                                             <Phone className="w-4 h-4 sm:w-4.5 sm:h-4.5 lg:w-4 lg:h-4 xl:w-5 xl:h-5 fill-[#F37021] text-[#F37021]" />
                                         </div>
                                         <div className="min-w-0 flex-1">
-                                            <h4 className="text-[#2C1810] font-bold text-xs sm:text-base lg:text-[15px] xl:text-lg mb-0.5">
+                                            <h4 className="text-[#2C1810] font-bold text-sm sm:text-base lg:text-[15px] xl:text-lg mb-0.5">
                                                 {footer.contactInfo.phone.title}
                                             </h4>
                                             {footer.contactInfo.phone.numbers.map((num: string, i: number) => (
-                                                <p key={i} className="text-neutral-600 text-xs sm:text-sm lg:text-[13px] xl:text-[15px] font-medium leading-relaxed">
+                                                <p key={i} className="text-neutral-600 text-sm sm:text-sm lg:text-[13px] xl:text-[15px] font-medium leading-relaxed">
                                                     {num}
                                                 </p>
                                             ))}
@@ -267,11 +267,11 @@ export default function Footer() {
                                             <Mail className="w-4 h-4 sm:w-4.5 sm:h-4.5 lg:w-4 lg:h-4 xl:w-5 xl:h-5 text-[#F37021]" />
                                         </div>
                                         <div className="min-w-0 flex-1">
-                                            <h4 className="text-[#2C1810] font-bold text-xs sm:text-base lg:text-[15px] xl:text-lg mb-0.5">
+                                            <h4 className="text-[#2C1810] font-bold text-sm sm:text-base lg:text-[15px] xl:text-lg mb-0.5">
                                                 {footer.contactInfo.email.title}
                                             </h4>
                                             {footer.contactInfo.email.emails.map((email: string, i: number) => (
-                                                <p key={i} className="text-neutral-600 text-xs sm:text-sm lg:text-[13px] xl:text-[15px] font-medium leading-relaxed break-all sm:break-normal">
+                                                <p key={i} className="text-neutral-600 text-sm sm:text-sm lg:text-[13px] xl:text-[15px] font-medium leading-relaxed break-all sm:break-normal">
                                                     {email}
                                                 </p>
                                             ))}
@@ -290,7 +290,7 @@ export default function Footer() {
                     <div className="px-0 flex flex-col lg:flex-row items-center justify-between gap-4 sm:gap-6 relative z-10 text-center lg:text-left">
 
                         {/* Left: Copyright & Divider & Made with love */}
-                        <div className="flex flex-col sm:flex-row items-center justify-center gap-2.5 sm:gap-4 lg:gap-3 xl:gap-6 text-xs sm:text-sm lg:text-[13px] xl:text-sm font-medium text-neutral-200">
+                        <div className="flex flex-col sm:flex-row items-center justify-center gap-2.5 sm:gap-4 lg:gap-3 xl:gap-6 text-sm sm:text-sm lg:text-[13px] xl:text-sm font-medium text-neutral-200">
                             <div className="whitespace-nowrap">
                                 {renderCopyright(footer.bottomBar.copyright)}
                             </div>
@@ -309,7 +309,7 @@ export default function Footer() {
                         {/* Right: Follow Us & Social Icons & Paw Watermark */}
                         <div className="flex flex-wrap items-center justify-center gap-3 sm:gap-4 lg:gap-4 xl:gap-6">
                             <div className="flex items-center gap-2 sm:gap-3 lg:gap-2.5 xl:gap-3">
-                                <span className="text-xs sm:text-sm lg:text-[13px] xl:text-base font-medium text-neutral-200 mr-1 whitespace-nowrap">
+                                <span className="text-sm sm:text-sm lg:text-[13px] xl:text-base font-medium text-neutral-200 mr-1 whitespace-nowrap">
                                     {footer.bottomBar.followText}
                                 </span>
                                 {footer.bottomBar.socialLinks.map((social, index: number) => (

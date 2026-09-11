@@ -85,7 +85,7 @@ export default function WhyChooseUs() {
 
                         {/* Top Tag / Pill Badge */}
                         <FadeIn direction="up" delay={0.05}>
-                            <div className="bg-white border border-[#F37021]/30 text-[#F37021] text-xs sm:text-sm font-bold tracking-wide rounded-full px-3.5 py-1 inline-flex items-center gap-1.5 w-fit mb-3.5 shadow-2xs">
+                            <div className="bg-white border border-[#F37021]/30 text-[#F37021] text-sm sm:text-sm font-bold tracking-wide rounded-full px-3.5 py-1 inline-flex items-center gap-1.5 w-fit mb-3.5 shadow-2xs">
                                 <FaPaw className="w-5 h-5 text-[#F37021]" />
                                 <span>{whyData.badge}</span>
                             </div>
@@ -172,7 +172,7 @@ export default function WhyChooseUs() {
                                             <h3 className="text-base sm:text-lg font-extrabold text-[#1E1B26] mb-1 group-hover:text-[#F37021] transition-colors leading-tight">
                                                 {feature.title}
                                             </h3>
-                                            <p className="text-xs sm:text-sm md:text-[14px] text-[#615147] font-normal leading-relaxed">
+                                            <p className="text-sm sm:text-sm md:text-[14px] text-[#615147] font-normal leading-relaxed">
                                                 {feature.description}
                                             </p>
                                         </div>
@@ -202,7 +202,7 @@ export default function WhyChooseUs() {
                                     <h4 className="text-base sm:text-lg md:text-xl lg:text-[22px] font-extrabold text-[#1E1B26] mb-1 leading-snug">
                                         {whyData.bottomBanner.title}
                                     </h4>
-                                    <p className="text-xs sm:text-sm md:text-sm lg:text-base text-[#615147] font-medium leading-relaxed">
+                                    <p className="text-sm sm:text-sm md:text-sm lg:text-base text-[#615147] font-medium leading-relaxed">
                                         {whyData.bottomBanner.subtitle}
                                     </p>
                                 </div>

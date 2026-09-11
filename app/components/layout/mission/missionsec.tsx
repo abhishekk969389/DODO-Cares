@@ -21,7 +21,7 @@ export default function MissionSec() {
             <div className="flex flex-col items-center text-center max-w-3xl mx-auto mb-6">
                 {missionData.badge && (
                     <FadeIn direction="up" delay={0.02}>
-                        <div className="flex items-center justify-center gap-2 text-[#F37021] font-bold text-xs sm:text-sm tracking-wider uppercase mb-2">
+                        <div className="flex items-center justify-center gap-2 text-[#F37021] font-bold text-sm sm:text-sm tracking-wider uppercase mb-2">
                             <div className="h-[1.5px] w-7 sm:w-9 bg-[#F37021] rounded-full" />
                             <FaPaw className="w-3.5 h-3.5" />
                             <span>{missionData.badge}</span>
@@ -109,7 +109,7 @@ export default function MissionSec() {
                                     <div>
                                         <Link
                                             href={missionData.vision.btnLink || "/about"}
-                                            className="inline-flex items-center gap-3 px-6 py-2.5 bg-[#F37021] hover:bg-[#d95e14] text-white font-bold text-xs sm:text-sm rounded-full transition shadow-sm group w-fit"
+                                            className="inline-flex items-center gap-3 px-6 py-2.5 bg-[#F37021] hover:bg-[#d95e14] text-white font-bold text-sm sm:text-sm rounded-full transition shadow-sm group w-fit"
                                         >
                                             <span>{missionData.vision.btnText}</span>
                                             <div className="w-6 h-6 rounded-full bg-white text-[#F37021] flex items-center justify-center group-hover:translate-x-0.5 transition-transform shrink-0">
@@ -143,7 +143,7 @@ export default function MissionSec() {
                                     </div>
                                 </div>
 
-                                <p className="text-xs sm:text-sm md:text-[15px]  text-[#6C5C52] leading-relaxed mb-5">
+                                <p className="text-sm sm:text-sm md:text-[15px]  text-[#6C5C52] leading-relaxed mb-5">
                                     {missionData.mission.description}
                                 </p>
 

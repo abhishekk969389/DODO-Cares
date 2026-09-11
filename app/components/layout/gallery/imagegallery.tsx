@@ -117,9 +117,9 @@ export default function ImageGallery() {
                                         setActiveCategory(cat.id);
                                         setSelectedIndex(null);
                                     }}
-                                    className={`rounded-full px-5 py-2.5 sm:px-6 sm:py-3 font-extrabold text-xs sm:text-sm transition-all duration-300 cursor-pointer flex items-center gap-2 border ${isActive
-                                            ? "bg-[#F37021] text-white border-[#F37021] shadow-md shadow-[#F37021]/25 scale-105"
-                                            : "bg-white text-[#2C1810] border-neutral-200/90 hover:border-[#F37021]/60 hover:text-[#F37021] shadow-xs"
+                                    className={`rounded-full px-5 py-2.5 sm:px-6 sm:py-3 font-extrabold text-sm sm:text-sm transition-all duration-300 cursor-pointer flex items-center gap-2 border ${isActive
+                                        ? "bg-[#F37021] text-white border-[#F37021] shadow-md shadow-[#F37021]/25 scale-105"
+                                        : "bg-white text-[#2C1810] border-neutral-200/90 hover:border-[#F37021]/60 hover:text-[#F37021] shadow-xs"
                                         }`}
                                 >
                                     <IconComp className={`w-3.5 h-3.5 sm:w-4 sm:h-4 ${isActive ? "text-white" : "text-[#F37021]"}`} />

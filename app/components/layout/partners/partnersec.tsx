@@ -27,7 +27,7 @@ export default function PartnerSec() {
 
                     {/* Top Tag / Badge */}
                     <FadeIn direction="up" delay={0.05}>
-                        <div className="inline-flex items-center gap-2 text-[#F37021] font-extrabold text-xs sm:text-sm tracking-widest uppercase mb-2.5">
+                        <div className="inline-flex items-center gap-2 text-[#F37021] font-extrabold text-sm sm:text-sm tracking-widest uppercase mb-2.5">
                             <FaPaw className="w-5 h-5 text-[#F37021]" />
                             <span>{partnerSecData.badge || "OUR PARTNERS"}</span>
                         </div>

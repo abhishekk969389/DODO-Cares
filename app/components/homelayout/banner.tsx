@@ -90,15 +90,14 @@ export default function Banner() {
 
   return (
     <section className="relative w-full min-h-[680px] sm:min-h-[720px] lg:min-h-[760px] pt-28 sm:pt-40 lg:pt-44 pb-14 sm:pb-44 lg:pb-56 bg-[#FDF8F3] overflow-hidden flex flex-col justify-center">
-      
+
       {/* FULL BACKGROUND IMAGE SLIDER */}
       <div className="absolute inset-0 w-full h-full pointer-events-none z-0">
         {slides.map((imgSrc, index) => (
           <div
             key={index}
-            className={`absolute inset-0 w-full h-full transition-opacity duration-700 ease-in-out ${
-              index === currentSlide ? "opacity-100 z-10" : "opacity-0 z-0"
-            }`}
+            className={`absolute inset-0 w-full h-full transition-opacity duration-700 ease-in-out ${index === currentSlide ? "opacity-100 z-10" : "opacity-0 z-0"
+              }`}
           >
             <Image
               src={imgSrc}
@@ -113,7 +112,7 @@ export default function Banner() {
 
         {/* FROSTED BLUR + CREAM GRADIENT OVERLAY (HALF BANNER BLUR) */}
         {/* Desktop View: Left 50% Blurred & Cream Masked, fades to 75% */}
-        <div 
+        <div
           className="absolute inset-y-0 left-0 w-full lg:w-[65%] backdrop-blur-[6px] hidden lg:block z-15 pointer-events-none"
           style={{
             maskImage: "linear-gradient(to right, black 0%, black 65%, transparent 100%)",
@@ -227,7 +226,7 @@ export default function Banner() {
                         <div className="w-9 h-9 sm:w-12 sm:h-12 rounded-full border-2 border-[#F37021] bg-white flex items-center justify-center shrink-0 shadow-2xs">
                           <IconComponent className="w-4 h-4 sm:w-5.5 sm:h-5.5 text-[#F37021]" strokeWidth={2.2} />
                         </div>
-                        <div className="flex flex-col text-xs sm:text-sm lg:text-[15px] font-bold text-[#2C1810] leading-tight">
+                        <div className="flex flex-col text-sm sm:text-sm lg:text-[15px] font-bold text-[#2C1810] leading-tight">
                           <span>{line1}</span>
                           {line2 && <span>{line2}</span>}
                         </div>
@@ -315,11 +314,10 @@ export default function Banner() {
             onClick={() => setCurrentSlide(index)}
             aria-label={`Go to slide ${index + 1}`}
             aria-current={index === currentSlide}
-            className={`w-2.5 h-2.5 rounded-full transition-colors duration-300 cursor-pointer shadow-2xs ${
-              index === currentSlide
+            className={`w-2.5 h-2.5 rounded-full transition-colors duration-300 cursor-pointer shadow-2xs ${index === currentSlide
                 ? "bg-[#F37021] scale-110"
                 : "bg-white ring-1 ring-black/5 hover:bg-white/90"
-            }`}
+              }`}
           />
         ))}
       </div>

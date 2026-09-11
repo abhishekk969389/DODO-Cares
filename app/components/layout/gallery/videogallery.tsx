@@ -109,7 +109,7 @@ export default function VideoGallery() {
                   </div>
 
                   {/* Bottom Left Duration Pill */}
-                  <div className="absolute bottom-3 left-3 bg-black/75 backdrop-blur-md text-white font-bold text-xs px-2.5 py-1 rounded-md shadow-sm tracking-wide">
+                  <div className="absolute bottom-3 left-3 bg-black/75 backdrop-blur-md text-white font-bold text-sm px-2.5 py-1 rounded-md shadow-sm tracking-wide">
                     <span>{vid.duration}</span>
                   </div>
                 </div>
@@ -118,7 +118,7 @@ export default function VideoGallery() {
                 <div className="p-5 flex flex-col flex-1 justify-between">
                   <div>
                     {vid.category && (
-                      <span className="text-xs font-bold text-[#F37021] uppercase tracking-wider mb-1 block">
+                      <span className="text-sm font-bold text-[#F37021] uppercase tracking-wider mb-1 block">
                         {vid.category}
                       </span>
                     )}

@@ -110,7 +110,7 @@ export default function FaqSec() {
                                                     {sidebar?.titleHighlight || "Questions?"}
                                                 </span>
                                             </h3>
-                                            <p className="text-xs sm:text-sm text-[#615147] mt-1.5 leading-relaxed">
+                                            <p className="text-sm sm:text-sm text-[#615147] mt-1.5 leading-relaxed">
                                                 {sidebar?.subtitle || "We're here to help! Reach out to our team and we'll be happy to assist you."}
                                             </p>
                                         </div>
@@ -227,7 +227,7 @@ export default function FaqSec() {
                                             <div className="flex items-center gap-3.5">
                                                 {/* Number Badge */}
                                                 <div
-                                                    className={`w-7 h-7 sm:w-8 sm:h-8 rounded-full text-xs font-extrabold flex items-center justify-center shrink-0 transition-colors duration-300 ${isOpen
+                                                    className={`w-7 h-7 sm:w-8 sm:h-8 rounded-full text-sm font-extrabold flex items-center justify-center shrink-0 transition-colors duration-300 ${isOpen
                                                         ? "bg-[#F37021] text-white"
                                                         : "border-2 border-[#F37021] text-[#F37021] bg-white"
                                                         }`}

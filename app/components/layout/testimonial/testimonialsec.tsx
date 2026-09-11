@@ -26,7 +26,7 @@ export default function TestimonialSec() {
                     <FadeIn direction="up" delay={0.05}>
                         <div className="flex items-center gap-2 mb-2">
                             <FaPaw className="w-4 h-4 text-[#F37021]" />
-                            <span className="text-[#F37021] font-bold text-xs sm:text-sm uppercase tracking-widest">
+                            <span className="text-[#F37021] font-bold text-sm sm:text-sm uppercase tracking-widest">
                                 {badge || "TESTIMONIALS"}
                             </span>
                         </div>
@@ -103,7 +103,7 @@ export default function TestimonialSec() {
                                             <h3 className="font-extrabold text-[#2C1810] text-sm sm:text-base leading-tight">
                                                 {item.name}
                                             </h3>
-                                            <span className="text-xs sm:text-sm text-[#615147] font-medium block mt-0.5">
+                                            <span className="text-sm sm:text-sm text-[#615147] font-medium block mt-0.5">
                                                 {item.role || (item as any).petName}
                                             </span>
                                         </div>

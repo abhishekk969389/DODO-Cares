@@ -38,10 +38,10 @@ export default function TeamDetails({ data }: TeamDetailsProps) {
 
     return (
         <section className="relative w-full max-w-[1320px] mt-8 sm:mt-10 md:mt-12 lg:mt-14 mx-auto px-4 sm:px-6 lg:px-8 font-sans">
-            
+
             {/* TOP ROW: Member Photo (4 cols) + Bio Info (4 cols) + Get in Touch Sidebar (4 cols) */}
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-8 items-stretch">
-                
+
                 {/* 1. Left Member Photo */}
                 <div className="lg:col-span-4 relative w-full h-[340px] sm:h-[400px] lg:h-full min-h-[360px] rounded-[28px] overflow-hidden border-4 border-white shadow-lg shrink-0">
                     <Image
@@ -59,7 +59,7 @@ export default function TeamDetails({ data }: TeamDetailsProps) {
                         {/* Badge */}
                         {data.badge && (
                             <FadeIn direction="up" delay={0.02}>
-                                <div className="flex items-center gap-2 text-[#F37021] font-bold text-xs sm:text-sm tracking-wider uppercase mb-2">
+                                <div className="flex items-center gap-2 text-[#F37021] font-bold text-sm sm:text-sm tracking-wider uppercase mb-2">
                                     <FaPaw className="w-4 h-4" />
                                     <span>{data.badge}</span>
                                 </div>
@@ -89,7 +89,7 @@ export default function TeamDetails({ data }: TeamDetailsProps) {
 
                         {/* Short Bio */}
                         <FadeIn direction="up" delay={0.1}>
-                            <p className="text-xs sm:text-sm md:text-base text-[#6C5C52] leading-relaxed mb-6">
+                            <p className="text-sm sm:text-sm md:text-base text-[#6C5C52] leading-relaxed mb-6">
                                 {data.shortBio}
                             </p>
                         </FadeIn>
@@ -140,7 +140,7 @@ export default function TeamDetails({ data }: TeamDetailsProps) {
                                                 <div className="w-9 h-9 rounded-full bg-[#F37021] text-white flex items-center justify-center shrink-0 shadow-xs">
                                                     <FaPhone className="w-4 h-4" />
                                                 </div>
-                                                <span className="text-xs sm:text-sm font-bold text-[#3E1408]">
+                                                <span className="text-sm sm:text-sm font-bold text-[#3E1408]">
                                                     {data.getInTouch.phone}
                                                 </span>
                                             </div>
@@ -151,7 +151,7 @@ export default function TeamDetails({ data }: TeamDetailsProps) {
                                                 <div className="w-9 h-9 rounded-full bg-[#F37021] text-white flex items-center justify-center shrink-0 shadow-xs">
                                                     <FaEnvelope className="w-4 h-4" />
                                                 </div>
-                                                <span className="text-xs sm:text-sm font-bold text-[#3E1408] truncate">
+                                                <span className="text-sm sm:text-sm font-bold text-[#3E1408] truncate">
                                                     {data.getInTouch.email}
                                                 </span>
                                             </div>
@@ -162,7 +162,7 @@ export default function TeamDetails({ data }: TeamDetailsProps) {
                                                 <div className="w-9 h-9 rounded-full bg-[#F37021] text-white flex items-center justify-center shrink-0 shadow-xs">
                                                     <FaMapMarkerAlt className="w-4 h-4" />
                                                 </div>
-                                                <span className="text-xs sm:text-sm font-bold text-[#3E1408]">
+                                                <span className="text-sm sm:text-sm font-bold text-[#3E1408]">
                                                     {data.getInTouch.location}
                                                 </span>
                                             </div>
@@ -188,7 +188,7 @@ export default function TeamDetails({ data }: TeamDetailsProps) {
             {/* BOTTOM SECTION: About Paragraphs (6 cols) + Stats Grid (6 cols) */}
             <div className="mt-8 sm:mt-10 bg-[#FFFBF8] rounded-[28px] border border-[#FDE8DC] p-6 sm:p-8 lg:p-10 shadow-sm">
                 <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
-                    
+
                     {/* About Member Paragraphs (6 cols) */}
                     {data.aboutSection && (
                         <div className="lg:col-span-6 flex flex-col justify-center">

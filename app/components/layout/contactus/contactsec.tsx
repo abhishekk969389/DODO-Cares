@@ -99,8 +99,8 @@ export default function ContactSec() {
                         {/* Circular Icon Container */}
                         <div
                           className={`w-12 h-12 rounded-full flex items-center justify-center shrink-0 shadow-xs transition-transform duration-300 group-hover:scale-105 ${isOrangeBg
-                              ? "bg-[#F37021] text-white shadow-orange-500/20"
-                              : "bg-[#23150C] text-white"
+                            ? "bg-[#F37021] text-white shadow-orange-500/20"
+                            : "bg-[#23150C] text-white"
                             }`}
                         >
                           <IconComp className="w-5 h-5" />
@@ -143,7 +143,7 @@ export default function ContactSec() {
                   <div className="flex items-center gap-2 mb-3">
                     <div className="h-[2.5px] w-8 bg-[#F37021] rounded-full" />
                   </div>
-                  <p className="text-xs sm:text-sm text-[#615147] font-normal leading-relaxed mb-6 sm:mb-8">
+                  <p className="text-sm sm:text-sm text-[#615147] font-normal leading-relaxed mb-6 sm:mb-8">
                     {formSubtitle}
                   </p>
 
@@ -239,29 +239,29 @@ export default function ContactSec() {
                     </div>
 
                   </form>
-                </div>  
+                </div>
 
               </div>
             </FadeIn>
           </div>
 
         </div>
-                 <FadeIn direction="up" delay={0.1} className="h-full">
-        <div className="mt-6 sm:mt-8 md:mt-10">
-                <iframe
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d224356.85923192592!2d77.23701088488971!3d28.522404036526275!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390ce5a43173357b%3A0x37ffce30c87cc03f!2sNoida%2C%20Uttar%20Pradesh!5e0!3m2!1sen!2sin!4v1786345160037!5m2!1sen!2sin"
-                  width="100%"
-                  height="450"
-                  style={{ border: 0 }}
-                  allowFullScreen
-                  className="rounded-[20px] shadow-2xl border border-slate-800/80"
-                  loading="lazy"
-                  referrerPolicy="strict-origin-when-cross-origin"
-                />
-              </div>
-              </FadeIn>
+        <FadeIn direction="up" delay={0.1} className="h-full">
+          <div className="mt-6 sm:mt-8 md:mt-10">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d224356.85923192592!2d77.23701088488971!3d28.522404036526275!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390ce5a43173357b%3A0x37ffce30c87cc03f!2sNoida%2C%20Uttar%20Pradesh!5e0!3m2!1sen!2sin!4v1786345160037!5m2!1sen!2sin"
+              width="100%"
+              height="450"
+              style={{ border: 0 }}
+              allowFullScreen
+              className="rounded-[20px] shadow-2xl border border-slate-800/80"
+              loading="lazy"
+              referrerPolicy="strict-origin-when-cross-origin"
+            />
+          </div>
+        </FadeIn>
       </div>
-          
+
     </section>
   );
 }

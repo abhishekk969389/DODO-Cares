@@ -52,10 +52,10 @@ export default function LocationDetails({ data }: LocationDetailsProps) {
 
     return (
         <section className="relative w-full max-w-[1320px] mt-8 sm:mt-10 md:mt-12 lg:mt-14 mx-auto px-4 sm:px-6 lg:px-8 font-sans">
-            
+
             {/* 1. TOP ROW: Title & Bio (5 cols) + 4 Contact Cards Grid (7 cols) */}
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start mb-8 sm:mb-10">
-                
+
                 {/* Left Side: Center Title, Subtitle Badge & Description */}
                 <div className="lg:col-span-5 flex flex-col justify-center pt-2">
                     <FadeIn direction="up" delay={0.02}>
@@ -83,7 +83,7 @@ export default function LocationDetails({ data }: LocationDetailsProps) {
 
                 {/* Right Side: 4 Contact Info Cards (Address, Phone, Email, Timings) */}
                 <div className="lg:col-span-7 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-                    
+
                     {/* Address Card */}
                     {data.contacts?.address && (
                         <FadeIn direction="up" delay={0.1}>
@@ -164,7 +164,7 @@ export default function LocationDetails({ data }: LocationDetailsProps) {
             {/* 2. MIDDLE ROW: About This Location (Left 5 cols) + Interactive Map Card (Right 7 cols) */}
             <div className="bg-[#FFFBF8] rounded-[28px] border border-[#FDE8DC] p-6 sm:p-8 lg:p-10 shadow-xs mb-10 sm:mb-12">
                 <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-center">
-                    
+
                     {/* Left: About Text, Check Points & CTA Button */}
                     {data.aboutSection && (
                         <div className="lg:col-span-5 flex flex-col justify-center">
@@ -262,7 +262,7 @@ export default function LocationDetails({ data }: LocationDetailsProps) {
                                     <h4 className="text-sm sm:text-base font-extrabold text-[#3E1408] mb-1">
                                         {data.mapInfo.pinTitle}
                                     </h4>
-                                    <p className="text-[11px] sm:text-xs text-[#7A6B62] font-medium leading-relaxed">
+                                    <p className="text-[11px] sm:text-sm text-[#7A6B62] font-medium leading-relaxed">
                                         {data.mapInfo.pinAddress}
                                     </p>
                                 </div>

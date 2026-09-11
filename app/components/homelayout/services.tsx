@@ -64,7 +64,7 @@ export default function Services() {
 
                     {/* Top Tag / Badge */}
                     <FadeIn direction="up" delay={0.05}>
-                        <div className="inline-flex items-center gap-1.5 text-[#F37021] font-bold text-xs sm:text-sm tracking-widest uppercase mb-2 sm:mb-3">
+                        <div className="inline-flex items-center gap-1.5 text-[#F37021] font-bold text-sm sm:text-sm tracking-widest uppercase mb-2 sm:mb-3">
                             <FaPaw className="w-5 h-5 text-[#F37021]" />
                             <span>{ourServicesData.badge}</span>
                         </div>
@@ -139,7 +139,7 @@ export default function Services() {
                                     </h3>
 
                                     {/* Description */}
-                                    <p className="text-xs sm:text-sm text-[#615147] font-normal leading-relaxed mb-6 px-3 flex-1">
+                                    <p className="text-sm sm:text-sm text-[#615147] font-normal leading-relaxed mb-6 px-3 flex-1">
                                         {service.description}
                                     </p>
 

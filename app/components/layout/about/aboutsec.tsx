@@ -34,7 +34,7 @@ export default function AboutSec() {
                                     <span className="text-3xl sm:text-4xl lg:text-[46px] font-extrabold text-white leading-none mb-1 tracking-tight">
                                         {aboutData.experienceYears}
                                     </span>
-                                    <span className="text-[11px] sm:text-xs lg:text-sm font-semibold text-white leading-tight px-1 max-w-[135px]">
+                                    <span className="text-[11px] sm:text-sm lg:text-sm font-semibold text-white leading-tight px-1 max-w-[135px]">
                                         {aboutData.experienceTitle}
                                     </span>
                                 </motion.div>

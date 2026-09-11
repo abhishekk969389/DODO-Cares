@@ -15,7 +15,7 @@ export default function BlogContent({ data }: BlogContentProps) {
     return (
         <article className="w-full">
             {/* Category Badge Pill */}
-            <div className="inline-block bg-[#FFF0E6] text-[#F37021] font-bold text-xs sm:text-sm px-4 py-1.5 rounded-full">
+            <div className="inline-block bg-[#FFF0E6] text-[#F37021] font-bold text-sm sm:text-sm px-4 py-1.5 rounded-full">
                 {data.category}
             </div>
 
@@ -25,7 +25,7 @@ export default function BlogContent({ data }: BlogContentProps) {
             </h1>
 
             {/* Meta Bar: Date | Author | Read Time */}
-            <div className="flex flex-wrap items-center gap-3 sm:gap-4 text-xs sm:text-sm text-[#8C7E7A] font-semibold mb-6">
+            <div className="flex flex-wrap items-center gap-3 sm:gap-4 text-sm sm:text-sm text-[#8C7E7A] font-semibold mb-6">
                 <div className="flex items-center gap-2">
                     <FaRegCalendarAlt className="text-[#F37021] w-4 h-4" />
                     <span>{data.date}</span>

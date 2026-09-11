@@ -79,21 +79,21 @@ export default function ServiceIncluded({ data }: ServiceIncludedProps) {
         <section className="w-full mt-12 sm:mt-16 lg:mt-20">
             {/* Section Header */}
             <div className="flex flex-col items-start mb-8">
-                <div className="inline-flex items-center gap-1.5 mt-2 text-[#F37021] font-bold text-xs sm:text-sm tracking-widest uppercase mb-1.5">
+                <div className="inline-flex items-center gap-1.5 mt-2 text-[#F37021] font-bold text-sm sm:text-sm tracking-widest uppercase mb-1.5">
                     <FaPaw className="w-5 h-5 text-[#F37021]" />
                     <span>{includedSection.badge || "WHAT'S INCLUDED"}</span>
                 </div>
-                
+
                 <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-[#3E1408] tracking-tight">
                     {includedSection.title}
-                    
+
                 </h2>
-                
+
             </div>
 
             {/* Main Grid: Tabs + Active Content + Benefits Sidebar */}
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
-                
+
                 {/* 1. LEFT COLUMN: VERTICAL TABS LIST (4 COLS) */}
                 <div className="lg:col-span-4 bg-[#FFF7F2] rounded-3xl p-3 sm:p-4 border border-[#FDEAE0] shadow-2xs space-y-2">
                     {includedSection.items.map((item, idx) => {
@@ -103,25 +103,22 @@ export default function ServiceIncluded({ data }: ServiceIncludedProps) {
                             <button
                                 key={item.id}
                                 onClick={() => setActiveIndex(idx)}
-                                className={`w-full text-left p-3.5 sm:p-4 rounded-2xl transition-all duration-300 flex items-center justify-between gap-3 cursor-pointer ${
-                                    isActive
+                                className={`w-full text-left p-3.5 sm:p-4 rounded-2xl transition-all duration-300 flex items-center justify-between gap-3 cursor-pointer ${isActive
                                         ? "bg-white border-2 border-[#F37021] shadow-xs"
                                         : "bg-transparent border border-transparent hover:bg-white/60"
-                                }`}
+                                    }`}
                             >
                                 <div className="flex items-center gap-3.5 min-w-0">
                                     <div
-                                        className={`w-11 h-11 rounded-full flex items-center justify-center shrink-0 ${
-                                            isActive ? "bg-[#FFF0E6]" : "bg-[#FFF0E6]/80"
-                                        }`}
+                                        className={`w-11 h-11 rounded-full flex items-center justify-center shrink-0 ${isActive ? "bg-[#FFF0E6]" : "bg-[#FFF0E6]/80"
+                                            }`}
                                     >
                                         {renderTabIcon(item.icon)}
                                     </div>
                                     <div className="min-w-0">
                                         <h3
-                                            className={`text-sm sm:text-base font-extrabold leading-snug ${
-                                                isActive ? "text-[#F37021]" : "text-[#3E1408]"
-                                            }`}
+                                            className={`text-sm sm:text-base font-extrabold leading-snug ${isActive ? "text-[#F37021]" : "text-[#3E1408]"
+                                                }`}
                                         >
                                             {item.title}
                                         </h3>
@@ -181,10 +178,10 @@ export default function ServiceIncluded({ data }: ServiceIncludedProps) {
                 {benefitsSection && (
                     <div className="lg:col-span-3">
                         <div className="bg-[#FFF7F2] rounded-3xl p-5 sm:p-6 border border-[#FDEAE0] shadow-2xs">
-                            
+
                             {/* Benefits Header */}
                             <div className="mb-5">
-                                <div className="inline-flex items-center gap-1.5 text-[#F37021] font-bold text-xs tracking-widest uppercase mb-1">
+                                <div className="inline-flex items-center gap-1.5 text-[#F37021] font-bold text-sm tracking-widest uppercase mb-1">
                                     <FaPaw className="w-5 h-5 text-[#F37021]" />
                                     <span>{benefitsSection.badge || "BENEFITS"}</span>
                                 </div>
@@ -198,9 +195,8 @@ export default function ServiceIncluded({ data }: ServiceIncludedProps) {
                                 {benefitsSection.items?.map((benefit, bIdx) => (
                                     <div
                                         key={benefit.id}
-                                        className={`flex gap-3.5 items-start ${
-                                            bIdx === 0 ? "pb-3.5" : bIdx === (benefitsSection.items.length - 1) ? "pt-3.5" : "py-3.5"
-                                        }`}
+                                        className={`flex gap-3.5 items-start ${bIdx === 0 ? "pb-3.5" : bIdx === (benefitsSection.items.length - 1) ? "pt-3.5" : "py-3.5"
+                                            }`}
                                     >
                                         <div className="w-11 h-11 rounded-full bg-[#FFF0E6] flex items-center justify-center shrink-0 mt-0.5 shadow-2xs">
                                             {renderBenefitIcon(benefit.icon)}
@@ -209,7 +205,7 @@ export default function ServiceIncluded({ data }: ServiceIncludedProps) {
                                             <h4 className="text-sm sm:text-base font-extrabold text-[#3E1408] mb-0.5 leading-snug">
                                                 {benefit.title}
                                             </h4>
-                                            <p className="text-xs sm:text-sm text-[#796B66] font-normal leading-relaxed">
+                                            <p className="text-sm sm:text-sm text-[#796B66] font-normal leading-relaxed">
                                                 {benefit.description}
                                             </p>
                                         </div>

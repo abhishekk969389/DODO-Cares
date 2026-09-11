@@ -127,7 +127,7 @@ export default function ServiceProcess({ data }: ServiceProcessProps) {
         <section className="w-full mt-6 md:mt-8">
             {/* Header: Title with Side Lines & Paw Print Icon */}
             <div className="flex flex-col items-center text-center mb-6">
-                <div className="inline-flex items-center gap-1.5 text-[#F37021] font-bold text-xs sm:text-sm tracking-widest uppercase mb-1.5">
+                <div className="inline-flex items-center gap-1.5 text-[#F37021] font-bold text-sm sm:text-sm tracking-widest uppercase mb-1.5">
                     <FaPaw className="w-4 h-4 text-[#F37021]" />
                     <span>{processSection.badge || "OUR GROOMING PROCESS"}</span>
                 </div>
@@ -158,7 +158,7 @@ export default function ServiceProcess({ data }: ServiceProcessProps) {
                             {/* Circle Group with Number Badge on Top */}
                             <div className="relative flex flex-col items-center mb-3.5">
                                 {/* Step Number Circle Badge */}
-                                <div className="w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-[#F37021] text-white text-xs sm:text-sm font-extrabold flex items-center justify-center shadow-xs z-20 mb-[-10px]">
+                                <div className="w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-[#F37021] text-white text-sm sm:text-sm font-extrabold flex items-center justify-center shadow-xs z-20 mb-[-10px]">
                                     {step.stepNumber || idx + 1}
                                 </div>
 

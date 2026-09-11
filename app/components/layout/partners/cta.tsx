@@ -35,7 +35,7 @@ export default function PartnerCTA() {
 
                     {/* Left Icon + Text Content */}
                     <div className="flex flex-col sm:flex-row items-center mx-16 sm:items-center gap-4 sm:gap-6 text-center sm:text-left z-10 flex-1">
-                        
+
                         {/* Circular Orange Icon Container */}
                         <div className="w-14 h-14 sm:w-16 sm:h-16 rounded-full bg-[#F37021] text-white flex items-center justify-center shadow-md shadow-orange-500/20 shrink-0">
                             <MainIcon className="w-7 h-7 sm:w-8 sm:h-8 text-white" />
@@ -46,7 +46,7 @@ export default function PartnerCTA() {
                             <h3 className="text-lg sm:text-xl md:text-2xl font-extrabold text-[#1E1B26] mb-1 tracking-tight">
                                 {ctaData.title}
                             </h3>
-                            <p className="text-xs sm:text-sm md:text-base text-[#615147] font-normal leading-relaxed max-w-xl">
+                            <p className="text-sm sm:text-sm md:text-base text-[#615147] font-normal leading-relaxed max-w-xl">
                                 {ctaData.description}
                             </p>
                         </div>

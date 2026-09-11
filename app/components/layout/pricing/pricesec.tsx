@@ -56,7 +56,7 @@ export default function PriceSec() {
                     <FadeIn direction="up" delay={0.05}>
                         <div className="inline-flex items-center gap-2 mb-2 sm:mb-3">
                             <FaPaw className="w-5 h-5 text-[#F37021]" />
-                            <span className="text-[#F37021] font-extrabold text-xs sm:text-sm tracking-widest uppercase">
+                            <span className="text-[#F37021] font-extrabold text-sm sm:text-sm tracking-widest uppercase">
                                 {pricingData.badge}
                             </span>
                         </div>
@@ -100,8 +100,8 @@ export default function PriceSec() {
                                     hoverY={-6}
                                     hoverScale={1.01}
                                     className={`bg-white rounded-[28px] p-6 sm:p-7 flex flex-col justify-between relative group cursor-pointer h-full transition-all duration-300 ${isPopular
-                                            ? "border-2 border-[#F37021] shadow-xl"
-                                            : "border border-neutral-100/90 shadow-sm hover:shadow-xl"
+                                        ? "border-2 border-[#F37021] shadow-xl"
+                                        : "border border-neutral-100/90 shadow-sm hover:shadow-xl"
                                         }`}
                                 >
                                     {/* Most Popular Badge */}
@@ -121,19 +121,19 @@ export default function PriceSec() {
                                         <h3 className="font-extrabold text-lg sm:text-xl text-[#2C1810] tracking-tight text-center mb-1">
                                             {pkg.title}
                                         </h3>
-                                        <p className="text-xs text-[#7A6A60] text-center font-medium leading-relaxed mb-4 min-h-[36px] flex items-center justify-center">
+                                        <p className="text-sm text-[#7A6A60] text-center font-medium leading-relaxed mb-4 min-h-[36px] flex items-center justify-center">
                                             {pkg.subtitle}
                                         </p>
 
                                         {/* Price */}
                                         <div className="flex items-center justify-center gap-1.5 mb-5">
-                                            <div className="w-6 h-6 rounded-full bg-[#F37021] text-white flex items-center justify-center font-bold text-xs shadow-2xs">
+                                            <div className="w-6 h-6 rounded-full bg-[#F37021] text-white flex items-center justify-center font-bold text-sm shadow-2xs">
                                                 {pkg.currency}
                                             </div>
                                             <span className="text-3xl sm:text-4xl font-extrabold text-[#2C1810] tracking-tight">
                                                 {pkg.price}
                                             </span>
-                                            <span className="text-xs font-bold text-[#7A6A60] ml-0.5">
+                                            <span className="text-sm font-bold text-[#7A6A60] ml-0.5">
                                                 {pkg.period}
                                             </span>
                                         </div>
@@ -141,7 +141,7 @@ export default function PriceSec() {
                                         {/* Features List */}
                                         <ul className="flex flex-col gap-2.5 mb-6 text-left w-full">
                                             {pkg.features?.map((feat, fIdx) => (
-                                                <li key={fIdx} className="flex items-start gap-2.5 text-xs sm:text-sm text-[#3D2C24] font-medium leading-snug">
+                                                <li key={fIdx} className="flex items-start gap-2.5 text-sm sm:text-sm text-[#3D2C24] font-medium leading-snug">
                                                     <FaPaw className="w-4 h-4 text-[#F37021] shrink-0 mt-0.5" />
                                                     <span>{feat}</span>
                                                 </li>
@@ -151,13 +151,13 @@ export default function PriceSec() {
 
                                     {/* Bottom Duration & Button Box */}
                                     <div className="bg-[#FFF8F2] rounded-2xl p-3 flex flex-col items-center gap-2.5 mt-auto border border-[#F5EBE1]">
-                                        <div className="flex items-center justify-center gap-1.5 text-xs font-bold text-[#7A6A60]">
+                                        <div className="flex items-center justify-center gap-1.5 text-sm font-bold text-[#7A6A60]">
                                             <FaClock className="w-4.5 h-4.5 text-[#F37021]" />
                                             <span>{pkg.duration}</span>
                                         </div>
                                         <Link
                                             href={pkg.btnLink}
-                                            className="bg-[#F37021] hover:bg-[#d95c0e] text-white font-extrabold text-xs sm:text-sm py-2.5 px-4 rounded-xl w-full flex items-center justify-center gap-2 shadow-xs transition-colors group/btn"
+                                            className="bg-[#F37021] hover:bg-[#d95c0e] text-white font-extrabold text-sm sm:text-sm py-2.5 px-4 rounded-xl w-full flex items-center justify-center gap-2 shadow-xs transition-colors group/btn"
                                         >
                                             <span>{pkg.btnText}</span>
                                             <FaPaw className="w-4.5 h-4.5 text-white group-hover/btn:rotate-12 transition-transform" />

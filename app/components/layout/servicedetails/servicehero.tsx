@@ -110,7 +110,7 @@ export default function ServiceHero({ data }: ServiceHeroProps) {
                 <div className="lg:col-span-4 flex flex-col justify-between py-1">
                     <div>
                         {/* Top Badge */}
-                        <div className="inline-flex items-center gap-1.5 text-[#F37021] font-bold text-xs sm:text-sm tracking-widest uppercase mb-2">
+                        <div className="inline-flex items-center gap-1.5 text-[#F37021] font-bold text-sm sm:text-sm tracking-widest uppercase mb-2">
                             <FaPaw className="w-5 h-5 text-[#F37021]" />
                             <span>{data.badge || "OUR SERVICE"}</span>
                         </div>
@@ -127,7 +127,7 @@ export default function ServiceHero({ data }: ServiceHeroProps) {
                         </h1>
 
                         {/* Description (max-w added) */}
-                        <p className="text-xs sm:text-sm md:text-base text-[#615147] font-normal leading-relaxed mb-6 max-w-sm">
+                        <p className="text-sm sm:text-sm md:text-base text-[#615147] font-normal leading-relaxed mb-6 max-w-sm">
                             {data.description}
                         </p>
                     </div>
@@ -142,7 +142,7 @@ export default function ServiceHero({ data }: ServiceHeroProps) {
                                 <div className="w-11 h-11 sm:w-14 sm:h-14 rounded-2xl bg-[#FFF0E6] flex items-center justify-center mb-1.5 transition-transform duration-300 group-hover:scale-105 shadow-2xs">
                                     {renderIcon(feat.icon)}
                                 </div>
-                                <span className="text-[11px] sm:text-xs font-extrabold text-[#3E1408] leading-tight">
+                                <span className="text-[11px] sm:text-sm font-extrabold text-[#3E1408] leading-tight">
                                     {feat.title}
                                 </span>
                             </div>
@@ -172,7 +172,7 @@ export default function ServiceHero({ data }: ServiceHeroProps) {
                                 <h3 className="text-lg sm:text-xl font-extrabold text-[#3E1408] tracking-tight">
                                     Enquire Now
                                 </h3>
-                                
+
                             </div>
                             <p className="text-sm md:text-md font-semibold text-[#796B66] font-normal leading-relaxed">
                                 Fill out the form and our team will get back to you shortly.
@@ -186,7 +186,7 @@ export default function ServiceHero({ data }: ServiceHeroProps) {
                                     type="text"
                                     required
                                     placeholder="Your Name *"
-                                    className="w-full bg-[#FAFAFA] border border-neutral-200 rounded-xl px-3.5 py-2.5 text-xs sm:text-sm text-[#3E1408] placeholder:text-[#9E8E88] focus:outline-none focus:border-[#F37021] focus:ring-1 focus:ring-[#F37021] transition-all"
+                                    className="w-full bg-[#FAFAFA] border border-neutral-200 rounded-xl px-3.5 py-2.5 text-sm sm:text-sm text-[#3E1408] placeholder:text-[#9E8E88] focus:outline-none focus:border-[#F37021] focus:ring-1 focus:ring-[#F37021] transition-all"
                                 />
                             </div>
 
@@ -195,7 +195,7 @@ export default function ServiceHero({ data }: ServiceHeroProps) {
                                     type="email"
                                     required
                                     placeholder="Email Address *"
-                                    className="w-full bg-[#FAFAFA] border border-neutral-200 rounded-xl px-3.5 py-2.5 text-xs sm:text-sm text-[#3E1408] placeholder:text-[#9E8E88] focus:outline-none focus:border-[#F37021] focus:ring-1 focus:ring-[#F37021] transition-all"
+                                    className="w-full bg-[#FAFAFA] border border-neutral-200 rounded-xl px-3.5 py-2.5 text-sm sm:text-sm text-[#3E1408] placeholder:text-[#9E8E88] focus:outline-none focus:border-[#F37021] focus:ring-1 focus:ring-[#F37021] transition-all"
                                 />
                             </div>
 
@@ -204,7 +204,7 @@ export default function ServiceHero({ data }: ServiceHeroProps) {
                                     type="tel"
                                     required
                                     placeholder="Phone Number *"
-                                    className="w-full bg-[#FAFAFA] border border-neutral-200 rounded-xl px-3.5 py-2.5 text-xs sm:text-sm text-[#3E1408] placeholder:text-[#9E8E88] focus:outline-none focus:border-[#F37021] focus:ring-1 focus:ring-[#F37021] transition-all"
+                                    className="w-full bg-[#FAFAFA] border border-neutral-200 rounded-xl px-3.5 py-2.5 text-sm sm:text-sm text-[#3E1408] placeholder:text-[#9E8E88] focus:outline-none focus:border-[#F37021] focus:ring-1 focus:ring-[#F37021] transition-all"
                                 />
                             </div>
 
@@ -212,7 +212,7 @@ export default function ServiceHero({ data }: ServiceHeroProps) {
                                 <select
                                     defaultValue=""
                                     required
-                                    className="w-full bg-[#FAFAFA] border border-neutral-200 rounded-xl px-3.5 py-2.5 text-xs sm:text-sm text-[#3E1408] focus:outline-none focus:border-[#F37021] focus:ring-1 focus:ring-[#F37021] transition-all cursor-pointer"
+                                    className="w-full bg-[#FAFAFA] border border-neutral-200 rounded-xl px-3.5 py-2.5 text-sm sm:text-sm text-[#3E1408] focus:outline-none focus:border-[#F37021] focus:ring-1 focus:ring-[#F37021] transition-all cursor-pointer"
                                 >
                                     <option value="" disabled>
                                         Select Service *
@@ -229,20 +229,20 @@ export default function ServiceHero({ data }: ServiceHeroProps) {
                                 <textarea
                                     rows={2}
                                     placeholder="Your Message"
-                                    className="w-full bg-[#FAFAFA] border border-neutral-200 rounded-xl px-3.5 py-2.5 text-xs sm:text-sm text-[#3E1408] placeholder:text-[#9E8E88] focus:outline-none focus:border-[#F37021] focus:ring-1 focus:ring-[#F37021] transition-all resize-none"
+                                    className="w-full bg-[#FAFAFA] border border-neutral-200 rounded-xl px-3.5 py-2.5 text-sm sm:text-sm text-[#3E1408] placeholder:text-[#9E8E88] focus:outline-none focus:border-[#F37021] focus:ring-1 focus:ring-[#F37021] transition-all resize-none"
                                 />
                             </div>
 
                             <button
                                 type="submit"
-                                className="w-full bg-[#F37021] hover:bg-[#d95c0e] text-white font-extrabold text-xs sm:text-sm px-4 py-3 rounded-xl transition-all duration-300 flex items-center justify-center gap-2 cursor-pointer shadow-xs mt-1"
+                                className="w-full bg-[#F37021] hover:bg-[#d95c0e] text-white font-extrabold text-sm sm:text-sm px-4 py-3 rounded-xl transition-all duration-300 flex items-center justify-center gap-2 cursor-pointer shadow-xs mt-1"
                             >
                                 <span>Submit Enquiry</span>
                                 <FaPaw className="w-3.5 h-3.5 text-white" />
                             </button>
 
                             {formSubmitted && (
-                                <p className="text-xs text-emerald-600 font-bold text-center mt-1">
+                                <p className="text-sm text-emerald-600 font-bold text-center mt-1">
                                     Thank you! We will reach out to you.
                                 </p>
                             )}

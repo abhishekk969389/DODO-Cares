@@ -73,7 +73,7 @@ export default function BlogSec() {
                                         />
 
                                         {/* Category Tag Pill */}
-                                        <div className="absolute top-3.5 left-3.5 bg-white/95 backdrop-blur-xs text-[#F37021] text-xs font-bold px-3 py-1.5 rounded-full shadow-xs flex items-center gap-1.5 border border-neutral-100">
+                                        <div className="absolute top-3.5 left-3.5 bg-white/95 backdrop-blur-xs text-[#F37021] text-sm font-bold px-3 py-1.5 rounded-full shadow-xs flex items-center gap-1.5 border border-neutral-100">
                                             <FaPaw className="w-3.5 h-3.5 text-[#F37021]" />
                                             <span>{post.category}</span>
                                         </div>
@@ -83,7 +83,7 @@ export default function BlogSec() {
                                     <div className="flex flex-col flex-1 text-left px-1.5 pb-1">
 
                                         {/* Date */}
-                                        <div className="flex items-center gap-2 text-xs font-semibold text-[#F37021] mb-2">
+                                        <div className="flex items-center gap-2 text-sm font-semibold text-[#F37021] mb-2">
                                             <Calendar className="w-4 h-4 text-[#F37021]" strokeWidth={2} />
                                             <span>{post.date}</span>
                                         </div>
@@ -94,7 +94,7 @@ export default function BlogSec() {
                                         </h2>
 
                                         {/* Excerpt */}
-                                        <p className="text-xs sm:text-sm text-[#615147] font-normal leading-relaxed mb-5 flex-1">
+                                        <p className="text-sm sm:text-sm text-[#615147] font-normal leading-relaxed mb-5 flex-1">
                                             {post.excerpt}
                                         </p>
 

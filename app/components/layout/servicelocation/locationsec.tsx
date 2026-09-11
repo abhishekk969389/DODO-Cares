@@ -24,7 +24,7 @@ export default function LocationSec() {
         <div className="flex flex-col items-center text-center mb-6">
           {/* Top Badge */}
           <FadeIn direction="up" delay={0.05}>
-            <div className="inline-flex items-center gap-2 text-[#F37021] font-extrabold text-xs sm:text-sm tracking-widest uppercase mb-3">
+            <div className="inline-flex items-center gap-2 text-[#F37021] font-extrabold text-sm sm:text-sm tracking-widest uppercase mb-3">
               <FaPaw className="w-4 h-4 text-[#F37021]" />
               <span>{serviceData.badge}</span>
             </div>
@@ -80,7 +80,7 @@ export default function LocationSec() {
                     <h3 className="text-xl font-extrabold text-[#2C1810] mb-1 group-hover:text-[#F37021] transition-colors">
                       {loc.name}
                     </h3>
-                    <p className="text-xs sm:text-sm text-[#7A6A60] font-medium leading-relaxed max-w-[240px]">
+                    <p className="text-sm sm:text-sm text-[#7A6A60] font-medium leading-relaxed max-w-[240px]">
                       {loc.description}
                     </p>
                   </div>

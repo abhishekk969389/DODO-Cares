@@ -68,7 +68,7 @@ export default function Services() {
                 <div className="flex flex-col items-center text-center mb-6">
                     {/* Top Tag / Badge */}
                     <FadeIn direction="up" delay={0.05}>
-                        <div className="inline-flex items-center gap-1.5 text-[#F37021] font-bold text-xs sm:text-sm tracking-widest uppercase mb-2">
+                        <div className="inline-flex items-center gap-1.5 text-[#F37021] font-bold text-sm sm:text-sm tracking-widest uppercase mb-2">
                             <FaPaw className="w-5 h-5 text-[#F37021]" />
                             <span>{serviceData.badge}</span>
                         </div>
@@ -147,7 +147,7 @@ export default function Services() {
                                     <h3 className="text-lg sm:text-xl font-extrabold text-[#2C1810] mb-1 group-hover:text-[#F37021] transition-colors">
                                         {loc.name}
                                     </h3>
-                                    <p className="text-xs sm:text-sm text-[#7A6A60] px-3 font-medium leading-snug">
+                                    <p className="text-sm sm:text-sm text-[#7A6A60] px-3 font-medium leading-snug">
                                         {loc.description}
                                     </p>
                                 </Link>
@@ -180,8 +180,8 @@ export default function Services() {
                             onClick={() => handleDotClick(dotIndex)}
                             aria-label={`Go to slide ${dotIndex + 1}`}
                             className={`w-2.5 h-2.5 rounded-full transition-colors duration-300 cursor-pointer ${activeDot === dotIndex
-                                    ? "bg-[#F37021] scale-110"
-                                    : "bg-neutral-300 hover:bg-neutral-400"
+                                ? "bg-[#F37021] scale-110"
+                                : "bg-neutral-300 hover:bg-neutral-400"
                                 }`}
                         />
                     ))}

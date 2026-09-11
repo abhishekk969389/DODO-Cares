@@ -307,7 +307,7 @@ export default function AppSection() {
                   </div>
 
                   {/* Bottom Privacy Note */}
-                  <div className="flex items-center justify-center gap-2 text-xs sm:text-sm text-neutral-500 mt-2">
+                  <div className="flex items-center justify-center gap-2 text-sm sm:text-sm text-neutral-500 mt-2">
                     <Lock className="w-4 h-4 text-neutral-400" />
                     <span>{form.privacyNote}</span>
                   </div>
@@ -348,12 +348,12 @@ export default function AppSection() {
                         </span>
                         {contact.lines ? (
                           contact.lines.map((line, lIdx) => (
-                            <span key={lIdx} className="text-xs sm:text-sm text-[#615147] font-medium leading-relaxed">
+                            <span key={lIdx} className="text-sm sm:text-sm text-[#615147] font-medium leading-relaxed">
                               {line}
                             </span>
                           ))
                         ) : (
-                          <span className="text-xs sm:text-sm text-[#615147] font-medium leading-relaxed">
+                          <span className="text-sm sm:text-sm text-[#615147] font-medium leading-relaxed">
                             {contact.value}
                           </span>
                         )}
@@ -370,7 +370,7 @@ export default function AppSection() {
                     <FaPaw className="w-4.5 h-4.5 text-[#F37021]" />
                     <span>{sidebar.careBox.title}</span>
                   </div>
-                  <p className="text-xs sm:text-sm text-[#615147] leading-relaxed">
+                  <p className="text-sm sm:text-sm text-[#615147] leading-relaxed">
                     {sidebar.careBox.description}
                   </p>
                 </div>

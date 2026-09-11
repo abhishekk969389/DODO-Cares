@@ -29,7 +29,7 @@ export default function Teams() {
 
                     {/* Top Tag / Badge */}
                     <FadeIn direction="up" delay={0.05}>
-                        <div className="inline-flex items-center gap-1.5 text-[#F37021] font-bold text-xs sm:text-sm tracking-widest uppercase mb-2 sm:mb-3">
+                        <div className="inline-flex items-center gap-1.5 text-[#F37021] font-bold text-sm sm:text-sm tracking-widest uppercase mb-2 sm:mb-3">
                             <FaPaw className="w-5 h-5 text-[#F37021]" />
                             <span>{teamData.badge}</span>
                         </div>
@@ -87,7 +87,7 @@ export default function Teams() {
                                             <h3 className="text-lg sm:text-[20px] font-extrabold text-[#1E1B26] mb-1 group-hover:text-[#F37021] transition-colors leading-snug">
                                                 {member.name}
                                             </h3>
-                                            <span className="text-xs sm:text-sm font-bold text-[#F37021] block mb-1.5">
+                                            <span className="text-sm sm:text-sm font-bold text-[#F37021] block mb-1.5">
                                                 {member.role}
                                             </span>
                                             <div className="h-[2.5px] w-8 bg-[#F37021] rounded-full" />

@@ -30,7 +30,7 @@ export default function BlogSidebar({
     // Helper function to find target URL for a category click
     const getCategoryHref = (catName: string) => {
         const lowerCat = catName.toLowerCase();
-        
+
         // 1. First check in allBlogDetails
         const detailMatch = allBlogDetails.find(
             (b) => b.category?.toLowerCase() === lowerCat || b.category?.toLowerCase().includes(lowerCat)
@@ -54,7 +54,7 @@ export default function BlogSidebar({
 
     return (
         <aside className="w-full space-y-6 sm:space-y-8">
-            
+
             {/* CATEGORIES CARD */}
             <div className="bg-white rounded-2xl sm:rounded-3xl p-5 sm:p-6 border border-neutral-100 shadow-xs">
                 <h3 className="text-xl font-extrabold text-[#3E1408] mb-4 sm:mb-5 tracking-tight">
@@ -72,16 +72,14 @@ export default function BlogSidebar({
                             <Link
                                 key={idx}
                                 href={categoryHref}
-                                className={`w-full flex items-center gap-3 px-4 py-2.5 rounded-xl text-sm font-semibold transition-all cursor-pointer ${
-                                    isActive
+                                className={`w-full flex items-center gap-3 px-4 py-2.5 rounded-xl text-sm font-semibold transition-all cursor-pointer ${isActive
                                         ? "bg-[#FFF0E6] text-[#F37021] font-bold"
                                         : "text-[#5C4D48] hover:text-[#F37021] hover:bg-orange-50/50"
-                                }`}
+                                    }`}
                             >
                                 <FaPaw
-                                    className={`w-3.5 h-3.5 shrink-0 ${
-                                        isActive ? "text-[#F37021]" : "text-[#B8ACA7]"
-                                    }`}
+                                    className={`w-3.5 h-3.5 shrink-0 ${isActive ? "text-[#F37021]" : "text-[#B8ACA7]"
+                                        }`}
                                 />
                                 <span>{cat.name}</span>
                             </Link>
@@ -123,7 +121,7 @@ export default function BlogSidebar({
                                     <h4 className="text-sm font-bold text-[#3E1408] group-hover:text-[#F37021] transition-colors leading-snug line-clamp-2 mb-1.5">
                                         {post.title}
                                     </h4>
-                                    <div className="flex items-center gap-1.5 text-xs text-[#8C7E7A] font-semibold">
+                                    <div className="flex items-center gap-1.5 text-sm text-[#8C7E7A] font-semibold">
                                         <FaRegCalendarAlt className="w-3.5 h-3.5 text-[#F37021]" />
                                         <span>{post.date}</span>
                                     </div>
