@@ -849,7 +849,7 @@
             "titlePrefix": "Why Choose",
             "titleHighlight": "Us?",
             "description": "Your pet's health and happiness are our top priorities. We provide a wide range of services to ensure they receive the best care, every step of the way our pet's health and happiness are our top priorities. We provide a wide range of services to ensure they receive the best care, every step of the way.",
-            "mainImage": "/whychoose.jpg",
+            "mainImage": "/whychoos.jpg",
             "btnText": "More About Us",
             "btnLink": "/about",
             "features": [
@@ -2012,7 +2012,7 @@
               "icon": "eye",
               "title": "A Better World for Pets",
               "description": "Our vision is to be a trusted leader in pet care, creating a world where every pet lives a healthy, happy, and comfortable life.",
-              "image": "/whychoose.jpg",
+              "image": "/whychoos.jpg",
               "btnText": "Learn More About Us",
               "btnLink": "/about"
             },

@@ -107,7 +107,7 @@ export default function Banner() {
     const interval = setInterval(() => {
       setIsTransitioning(true);
       setVirtualIndex((prev) => prev + 1);
-    }, 4500);
+    }, 6500);
     return () => clearInterval(interval);
   }, [totalSlides]);
 
@@ -116,7 +116,7 @@ export default function Banner() {
       const timer = setTimeout(() => {
         setIsTransitioning(false);
         setVirtualIndex(virtualIndex % totalSlides);
-      }, 1050);
+      }, 1450);
       return () => clearTimeout(timer);
     }
   }, [virtualIndex, totalSlides]);
@@ -130,7 +130,7 @@ export default function Banner() {
       <div
         style={{
           transform: `translateX(-${virtualIndex * 100}%)`,
-          transition: isTransitioning ? "transform 1.0s cubic-bezier(0.16, 1, 0.3, 1)" : "none",
+          transition: isTransitioning ? "transform 1.4s cubic-bezier(0.25, 1, 0.35, 1)" : "none",
           willChange: "transform",
         }}
         className="w-full flex shrink-0"

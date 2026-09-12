@@ -285,30 +285,30 @@ export default function Footer() {
             </FadeIn>
 
             {/* Bottom Bar Section */}
-            <div className="bg-[#0A101D] text-neutral-200 py-5 sm:py-6 lg:py-6 relative overflow-hidden border-t border-neutral-800/80">
+            <div className="bg-[#0A101D] text-neutral-200 py-1 sm:py-1.5 lg:py-2 relative overflow-hidden border-t border-neutral-800/80">
                 <div className="w-full max-w-[1320px] mx-auto px-4 sm:px-6 lg:px-8">
-                    <div className="flex flex-col lg:flex-row items-center justify-between gap-4 sm:gap-5 lg:gap-6 relative z-10 text-center lg:text-left">
+                    <div className="flex flex-col lg:flex-row items-center justify-between gap-2 sm:gap-3 lg:gap-4 relative z-10 text-center lg:text-left">
 
                         {/* Left: Copyright & Divider & Made with love */}
-                        <div className="flex flex-col sm:flex-row items-center justify-center gap-2.5 sm:gap-4 md:gap-5 xl:gap-6 text-sm md:text-[12px] lg:text-[16px] xl:text-[18px] font-medium text-neutral-200">
+                        <div className="flex flex-col sm:flex-row items-center justify-center gap-2 sm:gap-3 md:gap-4 xl:gap-5 text-sm md:text-[12px] lg:text-[15px] xl:text-[17px] font-medium text-neutral-200">
                             <div className="text-center sm:text-left leading-normal max-w-full">
                                 {renderCopyright(footer.bottomBar.copyright)}
                             </div>
 
                             {/* Vertical Divider Line */}
-                            <div className="hidden sm:block h-8 w-[2px] bg-neutral-700/80 shrink-0" />
+                            <div className="hidden sm:block h-5 w-[2px] bg-neutral-700/80 shrink-0" />
 
                             {/* Made with love for pets */}
-                            <div className="flex items-center gap-2 whitespace-nowrap shrink-0 text-sm md:text-[12px] lg:text-[16px] xl:text-[18px]">
-                                <Heart className="w-6 h-6 text-[#F37021] stroke-[2.2] fill-none " />
+                            <div className="flex items-center gap-2 whitespace-nowrap shrink-0 text-sm md:text-[12px] lg:text-[15px] xl:text-[17px]">
+                                <Heart className="w-5 h-5 text-[#F37021] stroke-[2.2] fill-none " />
                                 <span>{footer.bottomBar.loveText}</span>
-                                <Heart className="w-6 h-6 text-[#F37021] stroke-[2.2] fill-none" />
+                                <Heart className="w-5 h-5 text-[#F37021] stroke-[2.2] fill-none" />
                             </div>
                         </div>
 
                         {/* Right: Follow Us & Social Icons & Paw Watermark */}
                         <div className="flex items-center justify-center gap-1.5 sm:gap-2 lg:gap-2.5 xl:gap-3 shrink-0 max-w-full">
-                            <span className="text-sm md:text-[12px] lg:text-[16px] xl:text-[18px] font-medium text-neutral-200 whitespace-nowrap">
+                            <span className="text-sm md:text-[12px] lg:text-[15px] xl:text-[17px] font-medium text-neutral-200 whitespace-nowrap">
                                 {footer.bottomBar.followText}
                             </span>
                             <div className="flex items-center gap-2 sm:gap-2.5 lg:gap-3">
@@ -321,7 +321,7 @@ export default function Footer() {
                                         href={social.url}
                                         target="_blank"
                                         rel="noopener noreferrer"
-                                        className="w-8.5 h-8.5 sm:w-9.5 sm:h-9.5 lg:w-11 lg:h-11 rounded-full border border-neutral-600/80 flex items-center justify-center text-white hover:bg-[#F37021] hover:border-[#F37021] transition-colors duration-200 shadow-xs shrink-0"
+                                        className="w-7.5 h-7.5 sm:w-8 sm:h-8 lg:w-9.5 lg:h-9.5 rounded-full border border-neutral-600/80 flex items-center justify-center text-white hover:bg-[#F37021] hover:border-[#F37021] transition-colors duration-200 shadow-xs shrink-0"
                                         aria-label={social.platform}
                                     >
                                         {renderSocialIcon(social.platform)}
@@ -330,8 +330,8 @@ export default function Footer() {
                             </div>
 
                             {/* Translucent Paw Watermark */}
-                            <div className="hidden sm:flex items-center justify-center opacity-30 text-white/80 ml-2 sm:ml-4 xl:ml-5 shrink-0">
-                                <FaPaw className="w-12 h-12 sm:w-16 sm:h-16 lg:w-18 lg:h-18 xl:w-22 xl:h-22" />
+                            <div className="hidden sm:flex items-center justify-center opacity-30 text-white/80 ml-2 sm:ml-3 xl:ml-4 shrink-0">
+                                <FaPaw className="w-8 h-8 sm:w-10 sm:h-10 lg:w-12 lg:h-12 xl:w-13 xl:h-13" />
                             </div>
                         </div>
 
