@@ -87,7 +87,7 @@ export default function TestimonialSec() {
                                             </span>
                                         </div>
                                     </div>
-                                    <FaPaw className="w-8 h-8 sm:w-9 sm:h-9 text-[#F37021]/15 shrink-0" />
+                                    <FaPaw className="w-8 h-8 sm:w-9 sm:h-9 md:w-12 md:h-12 text-[#F37021]/20 shrink-0" />
                                 </div>
                             </MotionCard>
                         </FadeIn>

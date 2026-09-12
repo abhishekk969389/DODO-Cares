@@ -35,7 +35,7 @@ export default function DisclaimerSec() {
                 <FadeIn direction="up" delay={0.1}>
                     <div className="flex items-center justify-center gap-2.5 my-1.5">
                         <div className="h-[1.5px] w-9 bg-[#F37021]/60 rounded-full" />
-                        <FaPaw className="w-4 h-4 text-[#F37021]" />
+                        <FaPaw className="w-5 h-5 text-[#F37021]" />
                         <div className="h-[1.5px] w-9 bg-[#F37021]/60 rounded-full" />
                     </div>
                 </FadeIn>
