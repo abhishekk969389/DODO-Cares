@@ -42,8 +42,7 @@ const TwitterIcon = ({ className = "w-4 h-4" }: { className?: string }) => (
 
 const YoutubeIcon = ({ className = "w-4 h-4" }: { className?: string }) => (
     <svg className={className} viewBox="0 0 24 24" fill="currentColor">
-        <path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z" />
-        <polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02" fill="#fff" />
+        <path fillRule="evenodd" clipRule="evenodd" d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" />
     </svg>
 );
 
@@ -61,15 +60,15 @@ export default function Footer() {
     const renderSocialIcon = (platform: string) => {
         switch (platform.toLowerCase()) {
             case "facebook":
-                return <FacebookIcon className="w-4 h-4" />;
+                return <FacebookIcon className="w-4 h-4 md:w-5 md:h-5" />;
             case "instagram":
-                return <InstagramIcon className="w-4 h-4" />;
+                return <InstagramIcon className="w-4 h-4 md:w-5 md:h-5" />;
             case "twitter":
-                return <TwitterIcon className="w-4 h-4" />;
+                return <TwitterIcon className="w-4 h-4 md:w-5 md:h-5" />;
             case "youtube":
-                return <YoutubeIcon className="w-4 h-4" />;
+                return <YoutubeIcon className="w-4 h-4 md:w-5 md:h-5" />;
             case "linkedin":
-                return <LinkedinIcon className="w-4 h-4" />;
+                return <LinkedinIcon className="w-4 h-4 md:w-5 md:h-5" />;
             default:
                 return null;
         }
@@ -286,33 +285,33 @@ export default function Footer() {
             </FadeIn>
 
             {/* Bottom Bar Section */}
-            <div className="bg-[#0A101D] text-neutral-200 py-4 relative overflow-hidden border-t border-neutral-800/80">
+            <div className="bg-[#0A101D] text-neutral-200 py-5 sm:py-6 lg:py-6 relative overflow-hidden border-t border-neutral-800/80">
                 <div className="w-full max-w-[1320px] mx-auto px-4 sm:px-6 lg:px-8">
-                    <div className="px-0 flex flex-col lg:flex-row items-center justify-between gap-4 sm:gap-6 relative z-10 text-center lg:text-left">
+                    <div className="flex flex-col lg:flex-row items-center justify-between gap-4 sm:gap-5 lg:gap-6 relative z-10 text-center lg:text-left">
 
                         {/* Left: Copyright & Divider & Made with love */}
-                        <div className="flex flex-col sm:flex-row items-center justify-center gap-2.5 sm:gap-4 lg:gap-3 xl:gap-6 text-sm sm:text-sm lg:text-[13px] xl:text-sm font-medium text-neutral-200">
-                            <div className="whitespace-nowrap">
+                        <div className="flex flex-col sm:flex-row items-center justify-center gap-2.5 sm:gap-4 md:gap-5 xl:gap-6 text-sm md:text-[12px] lg:text-[16px] xl:text-[18px] font-medium text-neutral-200">
+                            <div className="text-center sm:text-left leading-normal max-w-full">
                                 {renderCopyright(footer.bottomBar.copyright)}
                             </div>
 
                             {/* Vertical Divider Line */}
-                            <div className="hidden sm:block h-4 sm:h-5 w-[1.5px] bg-neutral-700/80" />
+                            <div className="hidden sm:block h-8 w-[2px] bg-neutral-700/80 shrink-0" />
 
                             {/* Made with love for pets */}
-                            <div className="flex items-center gap-1.5 sm:gap-2 whitespace-nowrap">
-                                <Heart className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-[#F37021] stroke-[2.2] fill-none" />
+                            <div className="flex items-center gap-2 whitespace-nowrap shrink-0 text-sm md:text-[12px] lg:text-[16px] xl:text-[18px]">
+                                <Heart className="w-6 h-6 text-[#F37021] stroke-[2.2] fill-none " />
                                 <span>{footer.bottomBar.loveText}</span>
-                                <Heart className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-[#F37021] stroke-[2.2] fill-none" />
+                                <Heart className="w-6 h-6 text-[#F37021] stroke-[2.2] fill-none" />
                             </div>
                         </div>
 
                         {/* Right: Follow Us & Social Icons & Paw Watermark */}
-                        <div className="flex flex-wrap items-center justify-center gap-3 sm:gap-4 lg:gap-4 xl:gap-6">
-                            <div className="flex items-center gap-2 sm:gap-3 lg:gap-2.5 xl:gap-3">
-                                <span className="text-sm sm:text-sm lg:text-[13px] xl:text-base font-medium text-neutral-200 mr-1 whitespace-nowrap">
-                                    {footer.bottomBar.followText}
-                                </span>
+                        <div className="flex items-center justify-center gap-1.5 sm:gap-2 lg:gap-2.5 xl:gap-3 shrink-0 max-w-full">
+                            <span className="text-sm md:text-[12px] lg:text-[16px] xl:text-[18px] font-medium text-neutral-200 whitespace-nowrap">
+                                {footer.bottomBar.followText}
+                            </span>
+                            <div className="flex items-center gap-2 sm:gap-2.5 lg:gap-3">
                                 {footer.bottomBar.socialLinks.map((social, index: number) => (
                                     <motion.a
                                         key={index}
@@ -322,7 +321,7 @@ export default function Footer() {
                                         href={social.url}
                                         target="_blank"
                                         rel="noopener noreferrer"
-                                        className="w-8 h-8 sm:w-9 sm:h-9 lg:w-8 lg:h-8 xl:w-9.5 xl:h-9.5 rounded-full border border-neutral-600/80 flex items-center justify-center text-white hover:bg-[#F37021] hover:border-[#F37021] transition-colors duration-200 shadow-xs"
+                                        className="w-8.5 h-8.5 sm:w-9.5 sm:h-9.5 lg:w-11 lg:h-11 rounded-full border border-neutral-600/80 flex items-center justify-center text-white hover:bg-[#F37021] hover:border-[#F37021] transition-colors duration-200 shadow-xs shrink-0"
                                         aria-label={social.platform}
                                     >
                                         {renderSocialIcon(social.platform)}
@@ -331,8 +330,8 @@ export default function Footer() {
                             </div>
 
                             {/* Translucent Paw Watermark */}
-                            <div className="hidden xl:flex items-center justify-center opacity-30 text-[#2C384E] ml-2 shrink-0">
-                                <FaPaw className="w-10 h-10 sm:w-14 sm:h-14 xl:w-20 xl:h-20" />
+                            <div className="hidden sm:flex items-center justify-center opacity-30 text-white/80 ml-2 sm:ml-4 xl:ml-5 shrink-0">
+                                <FaPaw className="w-12 h-12 sm:w-16 sm:h-16 lg:w-18 lg:h-18 xl:w-22 xl:h-22" />
                             </div>
                         </div>
 

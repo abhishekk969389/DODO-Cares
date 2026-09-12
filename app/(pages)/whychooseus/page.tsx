@@ -4,7 +4,7 @@ import WhyChooseUs from "@/app/components/homelayout/whychooseus";
 
 export default function WhyChooseUsPage() {
     return (
-        <main className="w-full min-h-screen bg-[#FDF8F3]">
+        <main className="w-full min-h-screen">
             <SubBanner pageKey="whychooseus" />
             <WhyChooseUs />
         </main>
