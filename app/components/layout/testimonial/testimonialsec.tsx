@@ -23,7 +23,7 @@ export default function TestimonialSec() {
                 <div className="flex flex-col items-center text-center mb-6">
                     <FadeIn direction="up" delay={0.05}>
                         <div className="flex items-center gap-2 mb-2">
-                            <FaPaw className="w-4 h-4 text-[#F37021]" />
+                            <FaPaw className="w-5 h-5 text-[#F37021]" />
                             <span className="text-[#F37021] font-bold text-sm sm:text-sm uppercase tracking-widest">
                                 {badge || "TESTIMONIALS"}
                             </span>
@@ -39,7 +39,7 @@ export default function TestimonialSec() {
                     </FadeIn>
                     <div className="flex items-center justify-center gap-2.5 mb-3.5">
                         <div className="h-[1.5px] w-10 bg-[#F37021] rounded-full" />
-                        <FaPaw className="w-3.5 h-3.5 text-[#F37021]" />
+                        <FaPaw className="w-5 h-5 text-[#F37021]" />
                         <div className="h-[1.5px] w-10 bg-[#F37021] rounded-full" />
                     </div>
                     <FadeIn direction="up" delay={0.12}>

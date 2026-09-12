@@ -46,7 +46,7 @@ export default function PriceSec() {
             <FaPaw className="absolute bottom-10 right-8 w-32 h-32 text-[#F37021]/5 rotate-45 pointer-events-none" />
 
             <div className="max-w-[1320px] mx-auto px-4 sm:px-6 lg:px-8 w-full relative z-10">
-                <div className="flex flex-col items-center text-center mb-12 sm:mb-16">
+                <div className="flex flex-col items-center text-center mb-10">
                     <FadeIn direction="up" delay={0.05}>
                         <div className="inline-flex items-center gap-2 mb-2 sm:mb-3">
                             <FaPaw className="w-5 h-5 text-[#F37021]" />

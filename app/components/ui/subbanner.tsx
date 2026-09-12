@@ -78,12 +78,12 @@ export default function SubBanner({
                                 {item.href && !item.active ? (
                                     <Link
                                         href={item.href}
-                                        className="text-[#2C1810] hover:text-[#F37021] font-bold text-sm sm:text-base md:text-lg transition-colors duration-200"
+                                        className="text-[#2C1810] hover:text-[#F37021] font-bold text-sm sm:text-base md:text-[18px] lg:text-[20px] transition-colors duration-200"
                                     >
                                         {item.label}
                                     </Link>
                                 ) : (
-                                    <span className="text-[#F37021] font-bold text-sm sm:text-base md:text-lg">
+                                    <span className="text-[#F37021] font-bold text-sm sm:text-base md:text-[18px] lg:text-[20px]">
                                         {item.label}
                                     </span>
                                 )}

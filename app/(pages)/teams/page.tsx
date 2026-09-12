@@ -6,7 +6,7 @@ import Teams from "@/app/components/homelayout/teams";
 export default function TeamsPage() {
     return (
         <main className="w-full min-h-screen">
-            <SubBanner title="Our Team" pageKey="about" />
+            <SubBanner title="Our Team" pageKey="ourteam" />
             <Teams />
         </main>
     );

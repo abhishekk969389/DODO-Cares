@@ -283,7 +283,7 @@ export default function AppSection() {
                   <div className="pt-2">
                     <button
                       type="submit"
-                      className="bg-[#F37021] hover:bg-[#d95f19] text-white font-bold text-base sm:text-lg py-4 px-9 rounded-xl flex items-center justify-center gap-2.5 transition-all duration-200 shadow-md shadow-[#F37021]/20 cursor-pointer active:scale-98"
+                      className="bg-[#F37021] hover:bg-[#d95f19] text-white font-bold text-base sm:text-lg py-3 px-9 rounded-xl flex items-center justify-center gap-2.5 transition-all duration-200 shadow-md shadow-[#F37021]/20 cursor-pointer active:scale-98"
                     >
                       <span>{form.submitBtnText}</span>
                       <FaPaw className="w-5 h-5 text-white" />

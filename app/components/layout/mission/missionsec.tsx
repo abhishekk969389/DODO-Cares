@@ -22,7 +22,7 @@ export default function MissionSec() {
                     <FadeIn direction="up" delay={0.02}>
                         <div className="flex items-center justify-center gap-2 text-[#F37021] font-bold text-sm sm:text-sm tracking-wider uppercase mb-2">
                             <div className="h-[1.5px] w-7 sm:w-9 bg-[#F37021] rounded-full" />
-                            <FaPaw className="w-3.5 h-3.5" />
+                            <FaPaw className="w-5 h-5" />
                             <span>{missionData.badge}</span>
                             <div className="h-[1.5px] w-7 sm:w-9 bg-[#F37021] rounded-full" />
                         </div>
@@ -39,7 +39,7 @@ export default function MissionSec() {
                 <FadeIn direction="up" delay={0.08}>
                     <div className="flex items-center justify-center gap-2.5 my-2">
                         <div className="h-[1.5px] w-9 bg-[#F37021]/60 rounded-full" />
-                        <FaPaw className="w-4 h-4 text-[#F37021]" />
+                        <FaPaw className="w-5 h-5 text-[#F37021]" />
                         <div className="h-[1.5px] w-9 bg-[#F37021]/60 rounded-full" />
                     </div>
                 </FadeIn>

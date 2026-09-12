@@ -452,7 +452,7 @@
                   "href": "/"
                 },
                 {
-                  "label": "Services",
+                  "label": "Our Services",
                   "active": true
                 }
               ]
@@ -1401,6 +1401,7 @@
       "VideoGallery": {
         "variants": {
           "DodoVideoGallery1": {
+            "badge": "OUR VIDEOS",
             "titlePrefix": "Video",
             "titleHighlight": "Gallery",
             "description": "Watch our happy pets, expert grooming sessions, and care tips in action.",

@@ -22,7 +22,7 @@ export default function LocationSec() {
         <div className="flex flex-col items-center text-center mb-6">
           <FadeIn direction="up" delay={0.05}>
             <div className="inline-flex items-center gap-2 text-[#F37021] font-extrabold text-sm sm:text-sm tracking-widest uppercase mb-3">
-              <FaPaw className="w-4 h-4 text-[#F37021]" />
+              <FaPaw className="w-5 h-5 text-[#F37021]" />
               <span>{serviceData.badge}</span>
             </div>
           </FadeIn>

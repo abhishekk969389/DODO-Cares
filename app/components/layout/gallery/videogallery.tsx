@@ -16,7 +16,7 @@ export default function VideoGallery() {
 
   if (!videoData) return null;
 
-  const { titlePrefix, titleHighlight, description, videos } = videoData;
+  const { badge, titlePrefix, titleHighlight, description, videos } = videoData;
 
   const handlePrev = useCallback((e?: React.MouseEvent) => {
     e?.stopPropagation();
@@ -53,6 +53,14 @@ export default function VideoGallery() {
       <div className="max-w-[1320px] mx-auto px-4 sm:px-6 lg:px-8 w-full">
 
         <div className="flex flex-col items-center text-center mb-10 sm:mb-12">
+          {badge && (
+            <FadeIn direction="up" delay={0.03}>
+              <div className="inline-flex items-center gap-1.5 text-[#F37021] font-bold text-sm sm:text-sm tracking-widest uppercase">
+                <FaPaw className="w-5 h-5 text-[#F37021]" />
+                <span>{badge}</span>
+              </div>
+            </FadeIn>
+          )}
           <FadeIn direction="up" delay={0.05}>
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[#2C1810] tracking-tight leading-tight mb-3">
               {titlePrefix}{" "}
