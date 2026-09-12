@@ -53,7 +53,7 @@ export default function SubBanner({
                     </h1>
                 </FadeIn>
             </div>
-            <div className="absolute  w-60 sm:w-120 md:w-140 bottom-0 left-1/2 -translate-x-1/2 z-20">
+            <div className="absolute w-60 sm:w-120 md:w-140 bottom-[-1px] left-1/2 -translate-x-1/2 z-20">
                 <FadeIn direction="up" delay={0.15}>
                     <div className="relative bg-white rounded-t-[28px] sm:rounded-t-[36px] px-8 sm:px-14 py-3 sm:py-4 flex items-center justify-center gap-2.5">
                         
@@ -64,7 +64,7 @@ export default function SubBanner({
                                 preserveAspectRatio="none"
                                 aria-hidden="true"
                             >
-                                <path d="M 0 36 A 36 36 0 0 0 36 0 L 36 36 Z" />
+                                <path d="M 0 36 A 36 36 0 0 0 36 0 L 37 0 L 37 37 L 0 37 Z" />
                             </svg>
                         </div>
 
@@ -96,7 +96,7 @@ export default function SubBanner({
                                 preserveAspectRatio="none"
                                 aria-hidden="true"
                             >
-                                <path d="M 0 0 A 36 36 0 0 0 36 36 L 0 36 Z" />
+                                <path d="M 0 0 A 36 36 0 0 0 36 36 L 37 37 L -1 37 L -1 0 Z" />
                             </svg>
                         </div>
 
