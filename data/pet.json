@@ -1068,7 +1068,7 @@
       "Blog": {
         "variants": {
           "DodoBlog1": {
-            "badge": "Pet Care Insights",
+            "badge": "OUR BLOGS",
             "titlePrefix": "Latest",
             "titleHighlight": "Pet Care Insights",
             "description": "Helpful tips, expert advice, and pet care insights to help you keep your furry friends happy, healthy, and well-cared for.",
@@ -2071,7 +2071,7 @@
       "Team": {
         "variants": {
           "DodoTeam1": {
-            "badge": "EXPERT TEAM",
+            "badge": "OUR TEAM",
             "titlePrefix": "Meet Our",
             "titleHighlight": "Pet Care Experts",
             "description": "Our passionate team of certified pet lovers and specialists treat every pet with the love, respect, and care they deserve.",

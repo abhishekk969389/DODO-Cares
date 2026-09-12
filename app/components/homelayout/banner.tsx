@@ -215,7 +215,7 @@ export default function Banner() {
                               )}
                               <div className="flex items-center justify-center sm:justify-start gap-2 sm:gap-3">
                                 <div className="w-9 h-9 sm:w-12 sm:h-12 rounded-full border-2 border-[#F37021] bg-white flex items-center justify-center shrink-0 shadow-2xs">
-                                  <IconComponent className="w-4 h-4 sm:w-5.5 sm:h-5.5 text-[#F37021]" strokeWidth={2.2} />
+                                  <IconComponent className="w-4 h-4 sm:w-6 sm:h-6 text-[#F37021]" strokeWidth={2.2} />
                                 </div>
                                 <div className="flex flex-col text-sm sm:text-sm lg:text-[15px] font-bold text-[#2C1810] leading-tight text-left">
                                   <span>{line1}</span>
@@ -310,9 +310,9 @@ export default function Banner() {
             onClick={() => goToSlide(index)}
             aria-label={`Go to slide ${index + 1}`}
             aria-current={index === activeDotIndex}
-            className={`h-2.5 rounded-full transition-all duration-300 cursor-pointer shadow-2xs ${index === activeDotIndex
-                ? "bg-[#F37021] w-7"
-                : "bg-white/90 w-2.5 ring-1 ring-black/10 hover:bg-white"
+            className={`w-2.5 h-2.5 rounded-full transition-all duration-300 cursor-pointer shadow-2xs ${index === activeDotIndex
+                ? "bg-[#F37021] scale-125"
+                : "bg-white/90 ring-1 ring-black/10 hover:bg-white"
               }`}
           />
         ))}

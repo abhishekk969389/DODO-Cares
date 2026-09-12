@@ -88,10 +88,14 @@ export default function Services() {
                         </p>
                     </FadeIn>
                     <FadeIn direction="up" delay={0.2}>
-                        <FaPaw
-                            className="w-5 h-5 text-[#F37021] mt-1"
-                            aria-hidden="true"
-                        />
+                        <div className="flex items-center justify-center gap-2.5 mt-1">
+                            <div className="h-[1.5px] w-7 sm:w-8 bg-[#F37021]/50 rounded-full" />
+                            <FaPaw
+                                className="w-5 h-5 text-[#F37021]"
+                                aria-hidden="true"
+                            />
+                            <div className="h-[1.5px] w-7 sm:w-8 bg-[#F37021]/50 rounded-full" />
+                        </div>
                     </FadeIn>
                 </div>
                 <FadeIn direction="up" delay={0.25}>
