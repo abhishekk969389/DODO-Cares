@@ -24,10 +24,8 @@ export default function Teams() {
         <section className="relative w-full max-w-[1320px] mx-auto mt-8 sm:mt-10 md:mt-12 lg:mt-14 overflow-hidden">
             <div className="px-4 sm:px-6 lg:px-8 w-full relative z-10">
 
-                {/* Section Header */}
                 <div className="flex flex-col items-center text-center">
 
-                    {/* Top Tag / Badge */}
                     <FadeIn direction="up" delay={0.05}>
                         <div className="inline-flex items-center gap-1.5 text-[#F37021] font-bold text-sm sm:text-sm tracking-widest uppercase mb-2 sm:mb-3">
                             <FaPaw className="w-5 h-5 text-[#F37021]" />
@@ -35,7 +33,6 @@ export default function Teams() {
                         </div>
                     </FadeIn>
 
-                    {/* Main Title */}
                     <FadeIn direction="up" delay={0.1}>
                         <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[#1E1B26] tracking-tight leading-tight mb-3.5 max-w-3xl">
                             {teamData.titlePrefix}{" "}
@@ -45,14 +42,12 @@ export default function Teams() {
                         </h2>
                     </FadeIn>
 
-                    {/* Paw Icon Divider Line */}
                     <div className="flex items-center justify-center gap-2.5 mt-1 mb-4">
                         <div className="h-[1.5px] w-7 bg-[#F37021]/50 rounded-full" />
                         <FaPaw className="w-5 h-5 text-[#F37021]" />
                         <div className="h-[1.5px] w-7 bg-[#F37021]/50 rounded-full" />
                     </div>
 
-                    {/* Subtitle */}
                     <FadeIn direction="up" delay={0.15}>
                         <p className="text-sm sm:text-base text-[#615147] max-w-xl mx-auto font-normal leading-relaxed">
                             {teamData.description}
@@ -61,7 +56,6 @@ export default function Teams() {
 
                 </div>
 
-                {/* 4 Team Member Cards Grid (StaggerContainer + StaggerItem + MotionCard) */}
                 <StaggerContainer className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mt-4 lg:gap-7 w-full">
                     {teamData.members?.map((member) => (
                         <StaggerItem key={member.id} direction="up">
@@ -70,7 +64,6 @@ export default function Teams() {
                                     href={member.link || "/team"}
                                     className="bg-white rounded-[24px] sm:rounded-[28px] overflow-hidden p-3.5 sm:p-4 border border-amber-900/10 flex flex-col justify-between group cursor-pointer h-full"
                                 >
-                                    {/* Member Image */}
                                     <div className="relative w-full aspect-[4/4.2] sm:aspect-[4/4.4] overflow-hidden rounded-[20px] mb-4">
                                         <Image
                                             src={member.image}
@@ -81,7 +74,6 @@ export default function Teams() {
                                         />
                                     </div>
 
-                                    {/* Card Footer Details */}
                                     <div className="flex items-end justify-between px-2 pb-2 pt-1">
                                         <div className="flex flex-col text-left">
                                             <h3 className="text-lg sm:text-[20px] font-extrabold text-[#1E1B26] mb-1 group-hover:text-[#F37021] transition-colors leading-snug">
@@ -93,7 +85,6 @@ export default function Teams() {
                                             <div className="h-[2.5px] w-8 bg-[#F37021] rounded-full" />
                                         </div>
 
-                                        {/* Right Arrow Circle */}
                                         <div className="w-8.5 h-8.5 sm:w-9.5 sm:h-9.5 rounded-full border border-neutral-200 text-[#F37021] flex items-center justify-center group-hover:border-[#F37021] group-hover:bg-[#F37021] group-hover:text-white transition-colors duration-200 shrink-0 ml-2">
                                             <ArrowRight className="w-4 h-4 sm:w-4.5 sm:h-4.5" strokeWidth={2.5} />
                                         </div>

@@ -31,8 +31,14 @@ export async function generateMetadata({ params }: ServiceDetailPageProps) {
         };
     }
 
+    const serviceTitle = service.titlePrefix && service.titleHighlight
+        ? `${service.titlePrefix} ${service.titleHighlight}`.trim()
+        : service.title && service.title !== "Service Detail"
+        ? service.title
+        : service.titleHighlight || service.title || "Service Detail";
+
     return {
-        title: `${service.titlePrefix || ""} ${service.titleHighlight || service.title} - Dodo Cares`,
+        title: `${serviceTitle} - Dodo Cares`,
         description: service.description,
     };
 }
@@ -46,29 +52,30 @@ export default async function ServiceDetailPage({ params }: ServiceDetailPagePro
         notFound();
     }
 
-    const breadcrumbs = service.breadcrumbs || [
+    const serviceTitle = service.titlePrefix && service.titleHighlight
+        ? `${service.titlePrefix} ${service.titleHighlight}`.trim()
+        : service.title && service.title !== "Service Detail"
+        ? service.title
+        : service.titleHighlight || service.title || "Service Detail";
+
+    const breadcrumbs = service.breadcrumbs?.map((b) => ({
+        ...b,
+        label: b.active ? serviceTitle : b.label,
+    })) || [
         { label: "Home", href: "/" },
-        { label: "Service Detail", active: true },
+        { label: serviceTitle, active: true },
     ];
 
     return (
         <main className="min-h-screen">
-            {/* SUBBANNER WITH BREADCRUMBS: Home / Service Detail */}
             <SubBanner
-                title={service.title || "Service Detail"}
+                title={serviceTitle}
                 breadcrumbs={breadcrumbs}
                 bgImage={service.bgImage}
             />
-
-            {/* MAIN SERVICE DETAIL CONTENT (3 COMPONENTS) */}
             <div className="max-w-[1320px] mx-auto px-4 sm:px-6 lg:px-8 mt-10 sm:mt-12 lg:mt-14">
-                {/* 1. HERO & ENQUIRE NOW FORM */}
                 <ServiceHero data={service} />
-
-                {/* 2. WHAT'S INCLUDED TABS & BENEFITS */}
                 <ServiceIncluded data={service} />
-
-                {/* 3. GROOMING PROCESS TIMELINE */}
                 <ServiceProcess data={service} />
             </div>
         </main>

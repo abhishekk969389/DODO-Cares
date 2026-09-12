@@ -66,15 +66,9 @@ export default function ContactSec() {
   return (
     <section className="relative max-w-[1320px] mt-8 sm:mt-10 md:mt-12 lg:mt-14 mx-auto w-full overflow-hidden">
       <div className="px-4 sm:px-6 lg:px-8 w-full relative z-10">
-
-        {/* Main 2-Column Grid */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-stretch">
-
-          {/* LEFT COLUMN: Get in Touch Cards (5 Cols on LG) */}
           <div className="lg:col-span-5 flex flex-col justify-between">
             <FadeIn direction="up" delay={0.05}>
-
-              {/* Header Title */}
               <div className="mb-6 mt-7">
                 <h2 className="text-2xl sm:text-3xl font-extrabold text-[#1E1B26] tracking-tight mb-2">
                   {touchTitle}
@@ -85,8 +79,6 @@ export default function ContactSec() {
 
                 </div>
               </div>
-
-              {/* 4 Info Cards Stack */}
               <StaggerContainer className="flex flex-col gap-4 sm:gap-4.5 w-full">
                 {infoCards?.map((card) => {
                   const IconComp = iconMap[card.icon] || FaPhoneAlt;
@@ -95,8 +87,6 @@ export default function ContactSec() {
                   return (
                     <StaggerItem key={card.id} direction="up">
                       <div className="bg-[#FFF9F6] border border-[#FDE8DC]/70 rounded-[20px] p-4.5 sm:p-5 flex items-start gap-4 transition-all duration-300 hover:shadow-xs hover:border-[#F37021]/30 group">
-
-                        {/* Circular Icon Container */}
                         <div
                           className={`w-12 h-12 rounded-full flex items-center justify-center shrink-0 shadow-xs transition-transform duration-300 group-hover:scale-105 ${isOrangeBg
                             ? "bg-[#F37021] text-white shadow-orange-500/20"
@@ -105,8 +95,6 @@ export default function ContactSec() {
                         >
                           <IconComp className="w-5 h-5" />
                         </div>
-
-                        {/* Card Details */}
                         <div className="flex flex-col flex-1 min-w-0">
                           <h3 className="text-base md:text-[18px] font-bold text-[#1E1B26] mb-1">
                             {card.title}
@@ -129,14 +117,11 @@ export default function ContactSec() {
 
             </FadeIn>
           </div>
-
-          {/* RIGHT COLUMN: Send Us a Message Form (7 Cols on LG) */}
           <div className="lg:col-span-7 flex flex-col  ">
             <FadeIn direction="up" delay={0.1} className="h-full">
               <div className="bg-white border border-neutral-200/70 rounded-[28px] sm:rounded-[32px] p-10 shadow-xs flex flex-col justify-between h-full">
 
                 <div>
-                  {/* Form Header */}
                   <h2 className="text-2xl sm:text-3xl font-extrabold text-[#1E1B26] tracking-tight mb-2">
                     {formTitle}
                   </h2>
@@ -146,19 +131,13 @@ export default function ContactSec() {
                   <p className="text-sm sm:text-sm text-[#615147] font-normal leading-relaxed mb-6 sm:mb-8">
                     {formSubtitle}
                   </p>
-
-                  {/* Success Toast / Notification */}
                   {isSubmitted && (
                     <div className="mb-6 p-4 rounded-xl bg-emerald-50 border border-emerald-200 text-emerald-800 text-sm font-bold flex items-center gap-2">
                       <FaPaw className="w-4 h-4 text-emerald-600 shrink-0" />
                       <span>Thank you! Your message has been sent successfully. We will get back to you soon.</span>
                     </div>
                   )}
-
-                  {/* Contact Form */}
                   <form onSubmit={handleSubmit} className="flex flex-col gap-4 sm:gap-5 md:gap-7 lg:gap-10">
-
-                    {/* Row 1: Name + Phone */}
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-5">
                       <input
                         type="text"
@@ -180,8 +159,6 @@ export default function ContactSec() {
                         className="w-full border border-neutral-200 bg-neutral-50/50 focus:bg-white focus:border-[#F37021] focus:outline-hidden rounded-xl px-4 py-5 text-sm text-[#1E1B26] placeholder:text-neutral-400 font-medium transition-all"
                       />
                     </div>
-
-                    {/* Row 2: Email + Subject Select */}
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-5">
                       <input
                         type="email"
@@ -213,8 +190,6 @@ export default function ContactSec() {
                         <FaChevronDown className="absolute right-4 top-1/2 -translate-y-1/2 w-3.5 h-3.5 text-neutral-400 pointer-events-none" />
                       </div>
                     </div>
-
-                    {/* Row 3: Message */}
                     <div>
                       <textarea
                         name="message"
@@ -226,8 +201,6 @@ export default function ContactSec() {
                         className="w-full border border-neutral-200 bg-neutral-50/50 focus:bg-white focus:border-[#F37021] focus:outline-hidden rounded-xl px-4 py-5 text-sm text-[#1E1B26] placeholder:text-neutral-400 font-medium transition-all min-h-[140px] resize-none"
                       />
                     </div>
-
-                    {/* Submit Button */}
                     <div className="pt-2">
                       <button
                         type="submit"

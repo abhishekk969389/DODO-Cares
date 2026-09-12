@@ -21,11 +21,9 @@ export default function About() {
             <div className="max-w-[1320px] mx-auto px-4 sm:px-6 lg:px-8 w-full">
                 <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-6 items-center">
 
-                    {/* Left Column - Overlapping Circles Visual */}
                     <div className="lg:col-span-6 flex justify-center lg:justify-start">
                         <div className="relative w-full max-w-[480px] sm:max-w-[560px] lg:max-w-[620px] min-h-[370px] sm:min-h-[480px] lg:min-h-[530px] flex items-center justify-end">
 
-                            {/* Top Left Badge Circle (25+ Years Experience) */}
                             <ScaleIn delay={0.1} className="absolute top-0 left-0 sm:top-2 sm:left-2 lg:left-0 z-20">
                                 <motion.div
                                     whileHover={{ scale: 1.03 }}
@@ -41,8 +39,6 @@ export default function About() {
                                     </span>
                                 </motion.div>
                             </ScaleIn>
-
-                            {/* Bottom Left Image Circle */}
                             <ScaleIn delay={0.2} className="absolute bottom-0 left-0 sm:bottom-2 sm:left-4 lg:left-2 z-20">
                                 <motion.div
                                     whileHover={{ scale: 1.03 }}
@@ -60,7 +56,6 @@ export default function About() {
                                 </motion.div>
                             </ScaleIn>
 
-                            {/* Main Large Image Circle - Expanded Rightwards */}
                             <ScaleIn delay={0} className="relative z-10 ml-auto mr-0">
                                 <motion.div
                                     whileHover={{ scale: 1.03 }}
@@ -82,10 +77,8 @@ export default function About() {
                         </div>
                     </div>
 
-                    {/* Right Column - Text Content */}
                     <div className="lg:col-span-6 flex flex-col justify-center text-white">
 
-                        {/* Top Tag / Badge */}
                         <FadeIn direction="up" delay={0.05}>
                             <div className="inline-flex items-center gap-2 mb-3 sm:mb-4">
                                 <FaPaw className="w-4.5 h-4.5 text-white shrink-0" />
@@ -95,14 +88,12 @@ export default function About() {
                             </div>
                         </FadeIn>
 
-                        {/* Main Title */}
                         <FadeIn direction="up" delay={0.1}>
                             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white leading-[1.15] mb-6 tracking-tight max-w-2xl">
                                 {aboutData.title}
                             </h2>
                         </FadeIn>
 
-                        {/* Paragraphs */}
                         <div className="flex flex-col gap-4 sm:gap-5 mb-8 max-w-2xl">
                             {aboutData.paragraphs?.map((para, index) => (
                                 <FadeIn key={index} direction="up" delay={0.15 + index * 0.05}>
@@ -113,7 +104,6 @@ export default function About() {
                             ))}
                         </div>
 
-                        {/* CTA Button */}
                         <FadeIn direction="up" delay={0.25}>
                             <motion.div
                                 whileHover={{ scale: 1.03 }}

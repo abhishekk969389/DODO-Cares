@@ -39,10 +39,8 @@ export default function TeamDetails({ data }: TeamDetailsProps) {
     return (
         <section className="relative w-full max-w-[1320px] mt-8 sm:mt-10 md:mt-12 lg:mt-14 mx-auto px-4 sm:px-6 lg:px-8 font-sans">
 
-            {/* TOP ROW: Member Photo (4 cols) + Bio Info (4 cols) + Get in Touch Sidebar (4 cols) */}
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-8 items-stretch">
 
-                {/* 1. Left Member Photo */}
                 <div className="lg:col-span-4 relative w-full h-[340px] sm:h-[400px] lg:h-full min-h-[360px] rounded-[28px] overflow-hidden border-4 border-white shadow-lg shrink-0">
                     <Image
                         src={data.image}
@@ -52,11 +50,8 @@ export default function TeamDetails({ data }: TeamDetailsProps) {
                         className="object-cover object-center"
                     />
                 </div>
-
-                {/* 2. Middle Column: Bio & Details */}
                 <div className="lg:col-span-5 flex flex-col justify-between py-2">
                     <div>
-                        {/* Badge */}
                         {data.badge && (
                             <FadeIn direction="up" delay={0.02}>
                                 <div className="flex items-center gap-2 text-[#F37021] font-bold text-sm sm:text-sm tracking-wider uppercase mb-2">
@@ -65,16 +60,12 @@ export default function TeamDetails({ data }: TeamDetailsProps) {
                                 </div>
                             </FadeIn>
                         )}
-
-                        {/* Full Name */}
                         <FadeIn direction="up" delay={0.05}>
                             <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[#3E1408] tracking-tight leading-tight mb-2">
                                 <span className="text-[#F37021]">{data.firstName}</span>{" "}
                                 <span className="text-[#3E1408]">{data.lastName}</span>
                             </h1>
                         </FadeIn>
-
-                        {/* Role & Experience */}
                         <FadeIn direction="up" delay={0.08}>
                             <h3 className="text-lg sm:text-xl font-bold text-[#3E1408] mb-1">
                                 {data.role}
@@ -86,16 +77,12 @@ export default function TeamDetails({ data }: TeamDetailsProps) {
                             )}
                             <div className="w-10 h-[2.5px] bg-[#F37021] rounded-full mb-4" />
                         </FadeIn>
-
-                        {/* Short Bio */}
                         <FadeIn direction="up" delay={0.1}>
                             <p className="text-sm sm:text-sm md:text-base text-[#6C5C52] leading-relaxed mb-6">
                                 {data.shortBio}
                             </p>
                         </FadeIn>
                     </div>
-
-                    {/* Social Media Icons */}
                     {data.socialLinks && data.socialLinks.length > 0 && (
                         <FadeIn direction="up" delay={0.12}>
                             <div className="flex items-center gap-3 pt-2">
@@ -118,8 +105,6 @@ export default function TeamDetails({ data }: TeamDetailsProps) {
                         </FadeIn>
                     )}
                 </div>
-
-                {/* 3. Right Sidebar: Get in Touch Card */}
                 {data.getInTouch && (
                     <div className="lg:col-span-3 w-full flex flex-col">
                         <FadeIn direction="up" delay={0.15} className="h-full">
@@ -132,8 +117,6 @@ export default function TeamDetails({ data }: TeamDetailsProps) {
                                     <p className="text-sm text-[#7A6B62] mb-5 leading-relaxed">
                                         {data.getInTouch.subtitle}
                                     </p>
-
-                                    {/* Contact Items */}
                                     <div className="flex flex-col gap-4 mb-6">
                                         {data.getInTouch.phone && (
                                             <div className="flex items-center gap-3">
@@ -169,8 +152,6 @@ export default function TeamDetails({ data }: TeamDetailsProps) {
                                         )}
                                     </div>
                                 </div>
-
-                                {/* Booking Button */}
                                 <Link
                                     href={data.getInTouch.btnLink || "/appointment"}
                                     className="w-full py-3.5 bg-[#F37021] hover:bg-[#d95e14] text-white font-bold text-sm rounded-2xl transition shadow-sm flex items-center justify-center gap-2 cursor-pointer mt-auto"
@@ -184,12 +165,8 @@ export default function TeamDetails({ data }: TeamDetailsProps) {
                 )}
 
             </div>
-
-            {/* BOTTOM SECTION: About Paragraphs (6 cols) + Stats Grid (6 cols) */}
             <div className="mt-8 sm:mt-10 bg-[#FFFBF8] rounded-[28px] border border-[#FDE8DC] p-6 sm:p-8 lg:p-10 shadow-sm">
                 <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
-
-                    {/* About Member Paragraphs (6 cols) */}
                     {data.aboutSection && (
                         <div className="lg:col-span-6 flex flex-col justify-center">
                             <h3 className="text-xl sm:text-2xl font-extrabold text-[#3E1408] mb-1">
@@ -206,8 +183,6 @@ export default function TeamDetails({ data }: TeamDetailsProps) {
                             </div>
                         </div>
                     )}
-
-                    {/* Stats 2x2 Grid (6 cols) */}
                     {data.stats && data.stats.length > 0 && (
                         <div className="lg:col-span-6 grid grid-cols-1 sm:grid-cols-2 gap-4">
                             {data.stats.map((st) => {

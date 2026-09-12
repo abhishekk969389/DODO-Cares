@@ -54,7 +54,6 @@ export default function Pagination({
         <ChevronLeft className="w-5 h-5" strokeWidth={2.2} />
       </motion.button>
 
-      {/* Page Numbers */}
       <div className="flex items-center gap-2 sm:gap-2.5">
         {pages.map((page) => {
           const isActive = page === currentPage;
@@ -78,7 +77,6 @@ export default function Pagination({
         })}
       </div>
 
-      {/* Next Button */}
       <motion.button
         whileHover={currentPage < totalPages ? { scale: 1.05 } : {}}
         whileTap={currentPage < totalPages ? { scale: 0.95 } : {}}

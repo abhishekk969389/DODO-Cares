@@ -22,10 +22,8 @@ export default function DisclaimerSec() {
 
     return (
         <section className="relative max-w-[1320px] mt-4 sm:mt-6 md:mt-8 lg:mt-10 mx-auto w-full px-4 sm:px-6 lg:px-8">
-            {/* Main Header */}
             <div className="flex flex-col items-center text-center mb-6">
 
-                {/* Title */}
                 <FadeIn direction="up" delay={0.05}>
                     <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[#3E1408] tracking-tight leading-tight mb-2">
                         {disclaimerSecData.titlePrefix}{" "}
@@ -34,8 +32,6 @@ export default function DisclaimerSec() {
                         </span>
                     </h1>
                 </FadeIn>
-
-                {/* Paw Line Divider */}
                 <FadeIn direction="up" delay={0.1}>
                     <div className="flex items-center justify-center gap-2.5 my-1.5">
                         <div className="h-[1.5px] w-9 bg-[#F37021]/60 rounded-full" />
@@ -45,26 +41,18 @@ export default function DisclaimerSec() {
                 </FadeIn>
 
             </div>
-
-            {/* Document Content - Direct layout without card container */}
             <FadeIn direction="up" delay={0.15}>
                 <div className="w-full text-left font-sans space-y-5">
-                    
-                    {/* Last Updated */}
                     {disclaimerSecData.lastUpdated && (
                         <p className="text-sm sm:text-sm md:text-lg text-[#3E342F] font-normal">
                             <strong className="font-bold text-[#2A211C]">Last Updated:</strong> {disclaimerSecData.lastUpdated}
                         </p>
                     )}
-
-                    {/* Intro Paragraph */}
                     {disclaimerSecData.intro && (
                         <p className="text-sm sm:text-sm md:text-lg text-[#4A403A] leading-relaxed font-normal">
                             {disclaimerSecData.intro}
                         </p>
                     )}
-
-                    {/* Numbered Sections List */}
                     <div className="space-y-5 pt-2">
                         {disclaimerSecData.sections?.map((item) => (
                             <div key={item.id} className="space-y-1">
@@ -79,7 +67,6 @@ export default function DisclaimerSec() {
                     </div>
                       
                       <hr className="w-full border-0 border-t border-[#FCE3D3] my-6" />
-                    {/* Footer Note */}
                     {(disclaimerSecData.footerNote || disclaimerSecData.footerSubnote) && (
                         <div className="mt-8 flex flex-col items-center justify-center text-center space-y-1.5">
                             {disclaimerSecData.footerNote && (

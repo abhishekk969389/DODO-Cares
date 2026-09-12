@@ -63,22 +63,18 @@ export default async function BlogDetailPage({ params }: BlogDetailPageProps) {
 
     return (
         <main className="min-h-screen">
-            {/* SUBBANNER WITH DYNAMIC BREADCRUMBS: Home / Blog Detail */}
             <SubBanner
                 title={blogPost.title || "Blog Detail"}
                 breadcrumbs={breadcrumbs}
                 bgImage={blogPost.bgImage}
             />
 
-            {/* MAIN CONTENT & SIDEBAR SECTION */}
             <section className="max-w-[1320px] mx-auto px-4 sm:px-6 lg:px-8 mt-10 sm:mt-12 lg:mt-14">
                 <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12">
-                    {/* LEFT COLUMN: BLOG CONTENT (8 COLS) */}
+
                     <div className="lg:col-span-8">
                         <BlogContent data={blogPost} />
                     </div>
-
-                    {/* RIGHT COLUMN: BLOG SIDEBAR (4 COLS) */}
                     <div className="lg:col-span-4">
                         <BlogSidebar
                             data={sidebarData}

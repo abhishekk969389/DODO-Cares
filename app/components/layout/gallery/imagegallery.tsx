@@ -77,8 +77,6 @@ export default function ImageGallery() {
     return (
         <section className="relative w-full mt-6 sm:mt-8 md:mt-10 lg:mt-10 overflow-hidden">
             <div className="max-w-[1320px] mx-auto px-4 sm:px-6 lg:px-8 w-full">
-
-                {/* Section Header */}
                 <div className="flex flex-col items-center text-center mb-8">
                     <FadeIn direction="up" delay={0.05}>
                         <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[#2C1810] tracking-tight leading-tight mb-3">
@@ -88,8 +86,6 @@ export default function ImageGallery() {
                             </span>
                         </h1>
                     </FadeIn>
-
-                    {/* Paw Line Divider */}
                     <div className="flex items-center justify-center gap-2.5 mb-3.5">
                         <div className="h-[1.5px] w-12 bg-[#F37021] rounded-full" />
                         <FaPaw className="w-5 h-5 text-[#F37021]" />
@@ -102,8 +98,6 @@ export default function ImageGallery() {
                         </p>
                     </FadeIn>
                 </div>
-
-                {/* Category Filter Pills Row */}
                 <FadeIn direction="up" delay={0.15}>
                     <div className="flex flex-wrap items-center justify-center gap-2.5 sm:gap-4 mb-10 sm:mb-12">
                         {categories?.map((cat) => {
@@ -129,8 +123,6 @@ export default function ImageGallery() {
                         })}
                     </div>
                 </FadeIn>
-
-                {/* Image Grid */}
                 <motion.div layout className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
                     <AnimatePresence>
                         {filteredItems?.map((item, index) => (
@@ -155,8 +147,6 @@ export default function ImageGallery() {
                                         sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                                         className="object-cover object-center group-hover:scale-108 transition-transform duration-500"
                                     />
-
-                                    {/* Gradient Overlay on Hover */}
                                     <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-5 text-white">
                                         <div className="flex items-center justify-between">
                                             <span className="font-extrabold text-sm sm:text-base drop-shadow-sm">
@@ -172,8 +162,6 @@ export default function ImageGallery() {
                         ))}
                     </AnimatePresence>
                 </motion.div>
-
-                {/* Fullscreen Lightbox Modal */}
                 <AnimatePresence>
                     {selectedIndex !== null && currentItem && (
                         <motion.div
@@ -184,7 +172,6 @@ export default function ImageGallery() {
                             className="fixed inset-0 z-50 bg-[#0c0d10]/92 backdrop-blur-md flex items-center justify-center p-4 sm:p-6"
                             onClick={() => setSelectedIndex(null)}
                         >
-                            {/* Close Button Top Right */}
                             <button
                                 onClick={() => setSelectedIndex(null)}
                                 className="absolute top-6 right-6 sm:top-8 sm:right-8 w-11 h-11 rounded-full bg-white/10 hover:bg-white/20 text-white flex items-center justify-center transition-all cursor-pointer z-50 backdrop-blur-sm hover:scale-105"
@@ -192,8 +179,6 @@ export default function ImageGallery() {
                             >
                                 <FaTimes className="w-5 h-5 text-white" />
                             </button>
-
-                            {/* Previous Button Left */}
                             {filteredItems.length > 1 && (
                                 <button
                                     onClick={handlePrev}
@@ -204,7 +189,6 @@ export default function ImageGallery() {
                                 </button>
                             )}
 
-                            {/* Next Button Right */}
                             {filteredItems.length > 1 && (
                                 <button
                                     onClick={handleNext}
@@ -214,8 +198,6 @@ export default function ImageGallery() {
                                     <FaChevronRight className="w-5 h-5 text-white" />
                                 </button>
                             )}
-
-                            {/* Main Image Container */}
                             <div
                                 className="relative max-w-5xl w-full h-[75vh] sm:h-[82vh] flex flex-col items-center justify-center"
                                 onClick={(e) => e.stopPropagation()}
@@ -235,8 +217,6 @@ export default function ImageGallery() {
                                         priority
                                         className="object-contain select-none"
                                     />
-
-                                    {/* Bottom Title Badge */}
                                     {currentItem.title && (
                                         <div className="absolute bottom-4 sm:bottom-6 left-1/2 -translate-x-1/2 bg-[#2d211b]/85 backdrop-blur-md border border-white/10 px-6 py-2.5 rounded-full shadow-2xl z-20 pointer-events-none max-w-[90%] text-center">
                                             <p className="text-white font-bold text-sm sm:text-base tracking-wide drop-shadow-sm whitespace-nowrap overflow-hidden text-ellipsis">

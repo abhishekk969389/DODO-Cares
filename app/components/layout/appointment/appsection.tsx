@@ -74,7 +74,6 @@ export default function AppSection() {
     <section className="relative w-full mt-8 sm:mt-10 md:mt-12 lg:mt-14 overflow-hidden">
       <div className="max-w-[1320px] mx-auto px-4 sm:px-6 lg:px-8 w-full">
 
-        {/* Section Header */}
         <div className="flex flex-col items-start  mb-6">
           <FadeIn direction="up" delay={0.05}>
             <div className="inline-flex items-center gap-2 text-[#F37021] font-extrabold text-sm sm:text-base tracking-widest uppercase mb-2">
@@ -95,11 +94,7 @@ export default function AppSection() {
             </p>
           </FadeIn>
         </div>
-
-        {/* Main Grid: Form Left (8 cols) + Sidebar Right (4 cols) */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
-
-          {/* Left Form Card */}
           <FadeIn direction="up" delay={0.2} className="lg:col-span-8 w-full">
             <div className="bg-white rounded-[28px] sm:rounded-[32px] p-6 sm:p-8 md:p-10 border border-neutral-100/90 shadow-sm">
               <h2 className="text-2xl sm:text-3xl font-bold text-[#2C1810] mb-1.5">
@@ -117,7 +112,6 @@ export default function AppSection() {
                 </div>
               ) : (
                 <form onSubmit={handleSubmit} className="flex flex-col gap-5 sm:gap-6">
-                  {/* Row 1: Full Name & Phone Number */}
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 sm:gap-6">
                     <div>
                       <label className="block text-sm sm:text-base font-bold text-[#2C1810] mb-2">
@@ -149,8 +143,6 @@ export default function AppSection() {
                       />
                     </div>
                   </div>
-
-                  {/* Row 2: Email Address & Pet Name */}
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 sm:gap-6">
                     <div>
                       <label className="block text-sm sm:text-base font-bold text-[#2C1810] mb-2">
@@ -181,8 +173,6 @@ export default function AppSection() {
                       />
                     </div>
                   </div>
-
-                  {/* Row 3: Pet Type & Service Required */}
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 sm:gap-6">
                     <div>
                       <label className="block text-sm sm:text-base font-bold text-[#2C1810] mb-2">
@@ -234,8 +224,6 @@ export default function AppSection() {
                       </div>
                     </div>
                   </div>
-
-                  {/* Row 4: Preferred Date & Preferred Time */}
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 sm:gap-6">
                     <div>
                       <label className="block text-sm sm:text-base font-bold text-[#2C1810] mb-2">
@@ -279,8 +267,6 @@ export default function AppSection() {
                       </div>
                     </div>
                   </div>
-
-                  {/* Row 5: Additional Message */}
                   <div>
                     <label className="block text-sm sm:text-base font-bold text-[#2C1810] mb-2">
                       {form.messageLabel}
@@ -294,8 +280,6 @@ export default function AppSection() {
                       className="w-full bg-[#FAF9F6] border border-neutral-200/80 rounded-xl px-4.5 py-3.5 text-sm sm:text-base text-[#2C1810] placeholder:text-neutral-400 focus:outline-none focus:border-[#F37021] focus:ring-1 focus:ring-[#F37021] transition-all resize-y"
                     />
                   </div>
-
-                  {/* Submit Button */}
                   <div className="pt-2">
                     <button
                       type="submit"
@@ -305,8 +289,6 @@ export default function AppSection() {
                       <FaPaw className="w-5 h-5 text-white" />
                     </button>
                   </div>
-
-                  {/* Bottom Privacy Note */}
                   <div className="flex items-center justify-center gap-2 text-sm sm:text-sm text-neutral-500 mt-2">
                     <Lock className="w-4 h-4 text-neutral-400" />
                     <span>{form.privacyNote}</span>
@@ -315,11 +297,8 @@ export default function AppSection() {
               )}
             </div>
           </FadeIn>
-
-          {/* Right Sidebar Card */}
           <FadeIn direction="up" delay={0.25} className="lg:col-span-4 w-full">
             <div className="bg-white rounded-[28px] sm:rounded-[32px] p-6 sm:p-8 border border-neutral-100/90 shadow-sm flex flex-col gap-6">
-              {/* Header */}
               <div>
                 <h3 className="text-2xl font-bold text-[#2C1810] mb-1">
                   {sidebar.title}
@@ -328,20 +307,15 @@ export default function AppSection() {
                   {sidebar.subtitle}
                 </p>
               </div>
-
-              {/* Contact List */}
               <div className="flex flex-col gap-5">
                 {sidebar.contacts?.map((contact) => {
                   const IconComp = contactIconMap[contact.icon] || Phone;
 
                   return (
                     <div key={contact.id} className="flex items-start gap-4">
-                      {/* Orange Circle Icon Badge */}
                       <div className="w-11 h-11 rounded-full bg-[#F37021] text-white flex items-center justify-center shrink-0 shadow-xs mt-0.5">
                         <IconComp className="w-5 h-5 text-white" />
                       </div>
-
-                      {/* Content */}
                       <div className="flex flex-col">
                         <span className="text-sm sm:text-base font-bold text-[#2C1810]">
                           {contact.title}
@@ -362,8 +336,6 @@ export default function AppSection() {
                   );
                 })}
               </div>
-
-              {/* Bottom Care Callout Box */}
               {sidebar.careBox && (
                 <div className="bg-[#FEF5ED] border border-[#F37021]/15 rounded-2xl p-5 sm:p-6 mt-2">
                   <div className="flex items-center gap-2 text-[#F37021] font-bold text-base mb-2">

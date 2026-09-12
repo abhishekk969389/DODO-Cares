@@ -18,7 +18,6 @@ import { FaPaw } from "react-icons/fa";
 
 const ourServicesData: OurServicesData = petData.ourServices as OurServicesData;
 
-// Dot Matrix Background Grid Graphic
 const DotMatrixDecoration = () => (
     <svg
         width="90"
@@ -49,7 +48,6 @@ export default function Services() {
     return (
         <section className="relative w-full mt-8 sm:mt-10 md:mt-12 lg:mt-14 overflow-hidden">
 
-            {/* Background Decorative Graphics */}
             <div className="absolute top-10 left-6 sm:left-12 pointer-events-none hidden sm:block">
                 <DotMatrixDecoration />
             </div>
@@ -59,10 +57,7 @@ export default function Services() {
 
             <div className="max-w-[1320px] mx-auto px-4 sm:px-6 lg:px-8 w-full relative z-10">
 
-                {/* Section Header */}
                 <div className="flex flex-col items-center text-center mb-6">
-
-                    {/* Top Tag / Badge */}
                     <FadeIn direction="up" delay={0.05}>
                         <div className="inline-flex items-center gap-1.5 text-[#F37021] font-bold text-sm sm:text-sm tracking-widest uppercase mb-2 sm:mb-3">
                             <FaPaw className="w-5 h-5 text-[#F37021]" />
@@ -70,7 +65,6 @@ export default function Services() {
                         </div>
                     </FadeIn>
 
-                    {/* Main Title */}
                     <FadeIn direction="up" delay={0.1}>
                         <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[#1E1B26] tracking-tight leading-tight mb-3.5 max-w-3xl">
                             {ourServicesData.titlePrefix} {ourServicesData.titleMiddle}{" "}
@@ -80,14 +74,11 @@ export default function Services() {
                         </h2>
                     </FadeIn>
 
-                    {/* Subtitle */}
                     <FadeIn direction="up" delay={0.15}>
                         <p className="text-sm sm:text-base text-[#615147] max-w-xl mx-auto mb-4 font-normal leading-relaxed">
                             {ourServicesData.description}
                         </p>
                     </FadeIn>
-
-                    {/* Paw Icon Divider Line */}
                     <div className="flex items-center justify-center gap-2.5 mt-1">
                         <div className="h-[1.5px] w-7 bg-[#F37021]/50 rounded-full" />
                         <FaPaw className="w-5 h-5 text-[#F37021]" />
@@ -96,7 +87,7 @@ export default function Services() {
 
                 </div>
 
-                {/* 4 Service Cards Grid (StaggerContainer + StaggerItem + MotionCard) */}
+
                 <StaggerContainer className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-7 w-full">
                     {ourServicesData.services?.map((service) => {
                         const isStar = service.badgeIcon === "Star";
@@ -108,7 +99,7 @@ export default function Services() {
                                     hoverScale={1.01}
                                     className="bg-white rounded-[24px] sm:rounded-[28px] overflow-hidden border border-amber-900/5 p-4 flex flex-col items-center text-center pb-7 group cursor-pointer h-full"
                                 >
-                                    {/* Top Image Frame */}
+
                                     <div className="relative w-full h-[190px] sm:h-[210px] overflow-hidden rounded-[20px]">
                                         <Image
                                             src={service.image}
@@ -118,13 +109,11 @@ export default function Services() {
                                             className="object-cover object-center group-hover:scale-105 transition-transform duration-500"
                                         />
 
-                                        {/* Top Right Small Arrow Badge */}
                                         <div className="absolute top-3 right-3 w-8 h-8 rounded-full bg-white/90 backdrop-blur-xs text-[#2C1810] flex items-center justify-center shadow-xs">
                                             <ArrowUpRight className="w-4 h-4 text-[#2C1810]" strokeWidth={2.5} />
                                         </div>
                                     </div>
 
-                                    {/* Overlapping Circle Icon Badge */}
                                     <div className="relative z-10 w-13 h-13 sm:w-14 sm:h-14 rounded-full bg-[#F37021] border-4 border-white text-white flex items-center justify-center shadow-md -mt-7 mb-2 shrink-0">
                                         {isStar ? (
                                             <Star className="w-6 h-6 text-white fill-white" strokeWidth={1.5} />
@@ -133,17 +122,16 @@ export default function Services() {
                                         )}
                                     </div>
 
-                                    {/* Title */}
+
                                     <h3 className="text-lg sm:text-[20px] font-extrabold text-[#1E1B26] mt-2 mb-2 px-2 leading-snug">
                                         {service.title}
                                     </h3>
 
-                                    {/* Description */}
+
                                     <p className="text-sm sm:text-sm text-[#615147] font-normal leading-relaxed mb-6 px-3 flex-1">
                                         {service.description}
                                     </p>
 
-                                    {/* Action Link */}
                                     <Link
                                         href={service.link}
                                         className="inline-flex items-center gap-2 text-[#F37021] font-bold text-sm hover:text-[#d95c0e] transition-colors mt-auto group/link"

@@ -17,7 +17,6 @@ import {
 } from "lucide-react";
 import { FaPaw } from "react-icons/fa";
 
-// Lucide Icon mapping helper
 const iconMap: Record<string, React.ElementType> = {
   Heart,
   ShieldCheck,
@@ -29,7 +28,6 @@ const iconMap: Record<string, React.ElementType> = {
 
 const bannerData: BannerData = petData.banner;
 
-// Decorative wavy line with heart SVG (~ ♡)
 const DecorativeScribbleHeart = () => (
   <svg
     width="54"
@@ -66,24 +64,23 @@ export default function Banner() {
     bannerData.slides && bannerData.slides.length > 0
       ? (bannerData.slides as BannerSlideItem[])
       : [
-          {
-            id: "1",
-            badge: bannerData.badge,
-            titlePrefix: bannerData.titlePrefix,
-            titleHighlight: bannerData.titleHighlight,
-            titleSuffix: bannerData.titleSuffix,
-            description: bannerData.description,
-            bgImage: bannerData.bgImage || "/img2.png",
-            primaryBtnText: bannerData.primaryBtnText,
-            primaryBtnLink: bannerData.primaryBtnLink,
-            secondaryBtnText: bannerData.secondaryBtnText,
-            secondaryBtnLink: bannerData.secondaryBtnLink,
-          },
-        ];
+        {
+          id: "1",
+          badge: bannerData.badge,
+          titlePrefix: bannerData.titlePrefix,
+          titleHighlight: bannerData.titleHighlight,
+          titleSuffix: bannerData.titleSuffix,
+          description: bannerData.description,
+          bgImage: bannerData.bgImage || "/img2.png",
+          primaryBtnText: bannerData.primaryBtnText,
+          primaryBtnLink: bannerData.primaryBtnLink,
+          secondaryBtnText: bannerData.secondaryBtnText,
+          secondaryBtnLink: bannerData.secondaryBtnLink,
+        },
+      ];
 
   const totalSlides = slides.length;
 
-  // Create repeated slide list for continuous infinite right-to-left scrolling
   const displaySlides = Array.from({ length: 20 }).flatMap(() => slides);
 
   const handlePrev = () => {
@@ -105,7 +102,6 @@ export default function Banner() {
     });
   };
 
-  // Auto slide whole banner infinitely from right toward left every 4.5 seconds
   useEffect(() => {
     if (totalSlides <= 1) return;
     const interval = setInterval(() => {
@@ -115,7 +111,6 @@ export default function Banner() {
     return () => clearInterval(interval);
   }, [totalSlides]);
 
-  // Silent reset of virtual index when reaching high loop threshold
   useEffect(() => {
     if (virtualIndex >= totalSlides * 12) {
       const timer = setTimeout(() => {
@@ -131,7 +126,7 @@ export default function Banner() {
   return (
     <section className="relative w-full min-h-[580px] sm:min-h-[720px] lg:min-h-[760px] bg-[#FDF8F3] overflow-hidden flex flex-col justify-center">
 
-      {/* INFINITE WHOLE BANNER SLIDER TRACK (Never Rewinds Backward, Infinite Right-to-Left) */}
+
       <div
         style={{
           transform: `translateX(-${virtualIndex * 100}%)`,
@@ -148,7 +143,7 @@ export default function Banner() {
               key={index}
               className="relative w-full shrink-0 flex flex-col justify-center pt-20 sm:pt-40 lg:pt-44 pb-10 sm:pb-44 lg:pb-56 min-h-[540px] sm:min-h-[720px] lg:min-h-[760px]"
             >
-              {/* BACKGROUND IMAGE FOR THIS SLIDE */}
+
               <div className="absolute inset-0 w-full h-full pointer-events-none z-0 overflow-hidden bg-[#FDF8F3]">
                 <Image
                   src={slide.bgImage}
@@ -159,21 +154,17 @@ export default function Banner() {
                   className="object-cover object-right sm:object-[88%_bottom] lg:object-right-bottom"
                 />
 
-                {/* HIGH VISIBILITY CLEAN GRADIENT OVERLAYS */}
                 <div className="absolute inset-0 bg-gradient-to-r from-[#FDF8F3] via-[#FDF8F3]/95 via-45% to-transparent to-75% hidden lg:block z-20 pointer-events-none" />
 
-                {/* Mobile View: High Visibility Gradient Overlay */}
                 <div className="absolute inset-0 bg-gradient-to-b from-[#FDF8F3] via-[#FDF8F3]/90 via-55% to-[#FDF8F3]/30 lg:hidden z-20 pointer-events-none" />
               </div>
 
-              {/* ALIGNED CONTENT CONTAINER FOR THIS SLIDE */}
               <div className="relative z-20 max-w-[1320px] mx-auto px-4 sm:px-6 lg:px-8 w-full">
                 <div className="grid mx-1 sm:mx-10 lg:mx-12 grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-8 items-center px-1 sm:px-4 lg:px-6">
 
-                  {/* Left Text Column */}
                   <div className="lg:col-span-7 flex flex-col justify-center min-h-0 sm:min-h-[400px]">
                     <div className="flex flex-col justify-center items-center sm:items-start text-center sm:text-left">
-                      {/* Top Tagline / Badge */}
+
                       <div className="inline-flex items-center justify-center gap-1.5 mb-2.5 sm:mb-4 mt-8 sm:mt-10 mx-auto sm:mx-0">
                         <span className="text-[#F37021] font-semibold text-base sm:text-xl tracking-tight">
                           {slide.badge}
@@ -181,7 +172,6 @@ export default function Banner() {
                         <DecorativeScribbleHeart />
                       </div>
 
-                      {/* Main Title */}
                       <h1 className="text-3xl sm:text-5xl lg:text-6xl font-semibold text-[#2C1810] tracking-tight leading-[1.15] mb-4 sm:mb-6 max-w-2xl text-center sm:text-left mx-auto sm:mx-0">
                         {slide.titlePrefix}{" "}
                         <span className="text-[#F37021] font-semibold">
@@ -190,12 +180,10 @@ export default function Banner() {
                         {slide.titleSuffix}
                       </h1>
 
-                      {/* Description */}
                       <p className="text-sm sm:text-lg text-[#615147] leading-relaxed max-w-lg mb-6 sm:mb-8 font-normal text-center sm:text-left mx-auto sm:mx-0">
                         {slide.description}
                       </p>
 
-                      {/* 4 Feature Badges Row */}
                       <div className="grid grid-cols-2 sm:flex sm:flex-nowrap items-center justify-center gap-3 sm:gap-0 mb-6 sm:mb-11 max-w-4xl mx-auto sm:mx-0">
                         {slideFeatures?.map((feature: { id: string; title: string; icon: string }, idx: number) => {
                           const IconComponent = iconMap[feature.icon] || FaPaw;
@@ -239,7 +227,6 @@ export default function Banner() {
                         })}
                       </div>
 
-                      {/* Action Buttons Row */}
                       <div className="flex flex-wrap items-center justify-center sm:justify-start gap-4 sm:gap-8 mx-auto sm:mx-0">
                         <div>
                           <Link
@@ -267,7 +254,6 @@ export default function Banner() {
                     </div>
                   </div>
 
-                  {/* Right Column Spacer for Background Image */}
                   <div className="hidden lg:block lg:col-span-5 pointer-events-none" />
 
                 </div>
@@ -277,7 +263,6 @@ export default function Banner() {
         })}
       </div>
 
-      {/* Left Slider Arrow Button - REMOVED ON PHONE / MOBILE (hidden md:flex) */}
       <button
         onClick={handlePrev}
         aria-label="Previous Slide"
@@ -286,7 +271,6 @@ export default function Banner() {
         <ChevronLeft className="w-5.5 h-5.5 text-white" />
       </button>
 
-      {/* Right Slider Arrow Button - REMOVED ON PHONE / MOBILE (hidden md:flex) */}
       <button
         onClick={handleNext}
         aria-label="Next Slide"
@@ -295,7 +279,6 @@ export default function Banner() {
         <ChevronRight className="w-5.5 h-5.5 text-white" />
       </button>
 
-      {/* Curved Bottom Band */}
       <div className="absolute bottom-0 left-0 right-0 w-full overflow-hidden leading-none pointer-events-none z-20">
         <svg
           className="relative block w-full h-[60px] sm:h-[130px] md:h-[170px] lg:h-[200px]"
@@ -320,7 +303,6 @@ export default function Banner() {
         />
       </div>
 
-      {/* Slider Pagination Dots representing the current page (VISIBLE FOR MOBILE & DESKTOP) */}
       <div className="absolute bottom-9 sm:bottom-20 lg:bottom-24 left-0 right-0 z-30 flex items-center justify-center gap-2.5">
         {Array.from({ length: totalSlides }).map((_, index) => (
           <button
@@ -328,11 +310,10 @@ export default function Banner() {
             onClick={() => goToSlide(index)}
             aria-label={`Go to slide ${index + 1}`}
             aria-current={index === activeDotIndex}
-            className={`h-2.5 rounded-full transition-all duration-300 cursor-pointer shadow-2xs ${
-              index === activeDotIndex
+            className={`h-2.5 rounded-full transition-all duration-300 cursor-pointer shadow-2xs ${index === activeDotIndex
                 ? "bg-[#F37021] w-7"
                 : "bg-white/90 w-2.5 ring-1 ring-black/10 hover:bg-white"
-            }`}
+              }`}
           />
         ))}
       </div>

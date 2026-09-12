@@ -77,7 +77,6 @@ export default function ServiceIncluded({ data }: ServiceIncludedProps) {
 
     return (
         <section className="w-full mt-12 sm:mt-16 lg:mt-20">
-            {/* Section Header */}
             <div className="flex flex-col items-start mb-8">
                 <div className="inline-flex items-center gap-1.5 mt-2 text-[#F37021] font-bold text-sm sm:text-sm tracking-widest uppercase mb-1.5">
                     <FaPaw className="w-5 h-5 text-[#F37021]" />
@@ -90,11 +89,7 @@ export default function ServiceIncluded({ data }: ServiceIncludedProps) {
                 </h2>
 
             </div>
-
-            {/* Main Grid: Tabs + Active Content + Benefits Sidebar */}
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
-
-                {/* 1. LEFT COLUMN: VERTICAL TABS LIST (4 COLS) */}
                 <div className="lg:col-span-4 bg-[#FFF7F2] rounded-3xl p-3 sm:p-4 border border-[#FDEAE0] shadow-2xs space-y-2">
                     {includedSection.items.map((item, idx) => {
                         const isActive = idx === activeIndex;
@@ -135,11 +130,8 @@ export default function ServiceIncluded({ data }: ServiceIncludedProps) {
                         );
                     })}
                 </div>
-
-                {/* 2. CENTER COLUMN: ACTIVE TAB DETAIL & IMAGE (4.5 COLS) */}
                 <div className="lg:col-span-5 bg-white rounded-3xl p-5 sm:p-6 border border-neutral-100 shadow-xs flex flex-col justify-between h-full">
                     <div>
-                        {/* Active Image */}
                         <div className="relative w-full h-[220px] sm:h-[260px] rounded-2xl overflow-hidden mb-5 border border-neutral-100">
                             <Image
                                 src={activeItem.image || data.heroImage}
@@ -149,18 +141,12 @@ export default function ServiceIncluded({ data }: ServiceIncludedProps) {
                                 className="object-cover object-center"
                             />
                         </div>
-
-                        {/* Active Title */}
                         <h3 className="text-xl sm:text-2xl font-extrabold text-[#3E1408] mb-2">
                             {activeItem.title}
                         </h3>
-
-                        {/* Active Full Description */}
                         <p className="text-sm md:text-[16px] text-[#615147] font-normal leading-relaxed mb-5">
                             {activeItem.fullDesc || activeItem.shortDesc}
                         </p>
-
-                        {/* Bullet Points */}
                         {activeItem.bulletPoints && activeItem.bulletPoints.length > 0 && (
                             <div className="space-y-2">
                                 {activeItem.bulletPoints.map((point, pIdx) => (
@@ -173,13 +159,10 @@ export default function ServiceIncluded({ data }: ServiceIncludedProps) {
                         )}
                     </div>
                 </div>
-
-                {/* 3. RIGHT COLUMN: BENEFITS SIDEBAR CARD (3.5 COLS) */}
                 {benefitsSection && (
                     <div className="lg:col-span-3">
                         <div className="bg-[#FFF7F2] rounded-3xl p-5 sm:p-6 border border-[#FDEAE0] shadow-2xs">
 
-                            {/* Benefits Header */}
                             <div className="mb-5">
                                 <div className="inline-flex items-center gap-1.5 text-[#F37021] font-bold text-sm tracking-widest uppercase mb-1">
                                     <FaPaw className="w-5 h-5 text-[#F37021]" />
@@ -189,8 +172,6 @@ export default function ServiceIncluded({ data }: ServiceIncludedProps) {
                                     {benefitsSection.title || "Why Regular Grooming Matters"}
                                 </h3>
                             </div>
-
-                            {/* Benefits List */}
                             <div className="divide-y divide-[#FDEAE0]">
                                 {benefitsSection.items?.map((benefit, bIdx) => (
                                     <div

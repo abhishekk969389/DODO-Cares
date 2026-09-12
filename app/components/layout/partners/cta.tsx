@@ -28,20 +28,15 @@ export default function PartnerCTA() {
         <section className="relative max-w-[1320px] mx-auto px-4 sm:px-6 lg:px-8 w-full mt-8">
             <FadeIn direction="up" delay={0.1}>
                 <div className="relative bg-[#FFF9F6] border border-[#FDE8DC] rounded-[12px] p-4 overflow-hidden shadow-xs flex flex-col md:flex-row items-center justify-between gap-6 md:gap-8">
-
-                    {/* Decorative Background Paw Prints */}
                     <FaPaw className="absolute -left-6 -bottom-6 w-32 h-32 text-[#F37021]/5 -rotate-12 pointer-events-none" />
                     <FaPaw className="absolute -right-6 -top-6 w-32 h-32 text-[#F37021]/5 rotate-45 pointer-events-none" />
 
-                    {/* Left Icon + Text Content */}
                     <div className="flex flex-col sm:flex-row items-center mx-16 sm:items-center gap-4 sm:gap-6 text-center sm:text-left z-10 flex-1">
 
-                        {/* Circular Orange Icon Container */}
                         <div className="w-14 h-14 sm:w-16 sm:h-16 rounded-full bg-[#F37021] text-white flex items-center justify-center shadow-md shadow-orange-500/20 shrink-0">
                             <MainIcon className="w-7 h-7 sm:w-8 sm:h-8 text-white" />
                         </div>
 
-                        {/* Title & Description */}
                         <div className="flex flex-col">
                             <h3 className="text-lg sm:text-xl md:text-2xl font-extrabold text-[#1E1B26] mb-1 tracking-tight">
                                 {ctaData.title}
@@ -52,8 +47,6 @@ export default function PartnerCTA() {
                         </div>
 
                     </div>
-
-                    {/* Right CTA Button */}
                     <div className="z-10 shrink-0 mx-16">
                         <Link
                             href={ctaData.btnLink || "/contactus"}

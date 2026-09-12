@@ -17,7 +17,6 @@ export default function MissionSec() {
 
     return (
         <section className="relative max-w-[1320px] mt-8 sm:mt-10 md:mt-12 lg:mt-14 mx-auto w-full px-4 sm:px-6 lg:px-8 font-sans">
-            {/* Header Section */}
             <div className="flex flex-col items-center text-center max-w-3xl mx-auto mb-6">
                 {missionData.badge && (
                     <FadeIn direction="up" delay={0.02}>
@@ -53,16 +52,11 @@ export default function MissionSec() {
                     </FadeIn>
                 )}
             </div>
-
-            {/* Grid Cards */}
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 items-stretch">
-
-                {/* Card 1: Vision */}
                 {missionData.vision && (
                     <FadeIn direction="up" delay={0.12} className="h-full">
                         <div className="relative h-full min-h-[380px] bg-[#FFF9F5] rounded-[32px] overflow-hidden flex flex-col md:flex-row items-stretch border border-[#FDE8DC]/60 shadow-sm">
 
-                            {/* Left Arch Image */}
                             <div className="relative w-full md:w-[48%] min-h-[320px] md:min-h-full shrink-0 overflow-hidden">
                                 <div className="absolute inset-0 border-b-4 md:border-b-4 md:border-r-4 border-[#F37021] rounded-b-[180px] md:rounded-b-none md:rounded-tr-[100%] md:rounded-br-[100%] overflow-hidden">
                                     <Image
@@ -72,16 +66,12 @@ export default function MissionSec() {
                                         className="object-cover"
                                     />
                                 </div>
-
-                                {/* Overlaid Bottom Left Circular Eye Badge */}
                                 <div className="absolute bottom-3 left-3 sm:bottom-4 sm:left-4 w-20 h-20 rounded-full bg-white/95 p-1.5 shadow-md flex items-center justify-center z-10">
                                     <div className="w-full h-full rounded-full border border-orange-200/80 bg-[#FFF6F0] flex items-center justify-center">
                                         <Eye className="w-8 h-8 text-[#F37021] stroke-[2.2]" />
                                     </div>
                                 </div>
                             </div>
-
-                            {/* Vision Content */}
                             <div className="flex-1 p-6 sm:p-8 flex flex-col justify-between text-left z-10">
                                 <div>
                                     <div className="flex items-center gap-3 mb-4">
@@ -123,13 +113,10 @@ export default function MissionSec() {
                         </div>
                     </FadeIn>
                 )}
-
-                {/* Card 2: Mission */}
                 {missionData.mission && (
                     <FadeIn direction="up" delay={0.15} className="h-full">
                         <div className="relative h-full min-h-[380px] bg-[#FFF9F5] rounded-[32px] overflow-hidden flex flex-col-reverse md:flex-row items-stretch border border-[#FDE8DC]/60 shadow-sm">
 
-                            {/* Mission Content */}
                             <div className="flex-1 p-6 sm:p-8 flex flex-col justify-center text-left z-10">
                                 <div className="flex items-center gap-3 mb-4">
                                     <div className="w-10 h-10 rounded-full bg-[#FFEFE5] flex items-center justify-center shrink-0">
@@ -167,8 +154,6 @@ export default function MissionSec() {
                                     </div>
                                 )}
                             </div>
-
-                            {/* Right Arch Image */}
                             <div className="relative w-full md:w-[48%] min-h-[320px] md:min-h-full shrink-0 overflow-hidden">
                                 <div className="absolute inset-0 border-b-4 md:border-b-4 md:border-l-4 border-[#F37021] rounded-b-[180px] md:rounded-b-none md:rounded-tl-[100%] md:rounded-bl-[100%] overflow-hidden">
                                     <Image

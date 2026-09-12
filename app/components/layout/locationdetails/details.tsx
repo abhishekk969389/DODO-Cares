@@ -53,10 +53,8 @@ export default function LocationDetails({ data }: LocationDetailsProps) {
     return (
         <section className="relative w-full max-w-[1320px] mt-8 sm:mt-10 md:mt-12 lg:mt-14 mx-auto px-4 sm:px-6 lg:px-8 font-sans">
 
-            {/* 1. TOP ROW: Title & Bio (5 cols) + 4 Contact Cards Grid (7 cols) */}
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start mb-8 sm:mb-10">
 
-                {/* Left Side: Center Title, Subtitle Badge & Description */}
                 <div className="lg:col-span-5 flex flex-col justify-center pt-2">
                     <FadeIn direction="up" delay={0.02}>
                         <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[#3E1408] tracking-tight leading-tight mb-2">
@@ -81,10 +79,8 @@ export default function LocationDetails({ data }: LocationDetailsProps) {
                     </FadeIn>
                 </div>
 
-                {/* Right Side: 4 Contact Info Cards (Address, Phone, Email, Timings) */}
                 <div className="lg:col-span-7 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
 
-                    {/* Address Card */}
                     {data.contacts?.address && (
                         <FadeIn direction="up" delay={0.1}>
                             <div className="bg-[#FFFBF8] border border-[#FDE8DC] rounded-2xl p-4 sm:p-5 flex flex-col items-center text-center h-full shadow-2xs">
@@ -101,7 +97,6 @@ export default function LocationDetails({ data }: LocationDetailsProps) {
                         </FadeIn>
                     )}
 
-                    {/* Phone Card */}
                     {data.contacts?.phone && (
                         <FadeIn direction="up" delay={0.12}>
                             <div className="bg-[#FFFBF8] border border-[#FDE8DC] rounded-2xl p-4 sm:p-5 flex flex-col items-center text-center h-full shadow-2xs">
@@ -118,7 +113,6 @@ export default function LocationDetails({ data }: LocationDetailsProps) {
                         </FadeIn>
                     )}
 
-                    {/* Email Card */}
                     {data.contacts?.email && (
                         <FadeIn direction="up" delay={0.14}>
                             <div className="bg-[#FFFBF8] border border-[#FDE8DC] rounded-2xl p-4 sm:p-5 flex flex-col items-center text-center h-full shadow-2xs">
@@ -135,7 +129,6 @@ export default function LocationDetails({ data }: LocationDetailsProps) {
                         </FadeIn>
                     )}
 
-                    {/* Timings Card */}
                     {data.contacts?.timings && (
                         <FadeIn direction="up" delay={0.16}>
                             <div className="bg-[#FFFBF8] border border-[#FDE8DC] rounded-2xl p-4 sm:p-5 flex flex-col items-center text-center h-full shadow-2xs">
@@ -161,11 +154,9 @@ export default function LocationDetails({ data }: LocationDetailsProps) {
 
             </div>
 
-            {/* 2. MIDDLE ROW: About This Location (Left 5 cols) + Interactive Map Card (Right 7 cols) */}
             <div className="bg-[#FFFBF8] rounded-[28px] border border-[#FDE8DC] p-6 sm:p-8 lg:p-10 shadow-xs mb-10 sm:mb-12">
                 <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-center">
 
-                    {/* Left: About Text, Check Points & CTA Button */}
                     {data.aboutSection && (
                         <div className="lg:col-span-5 flex flex-col justify-center">
                             <h2 className="text-2xl sm:text-3xl font-extrabold text-[#3E1408] mb-1">
@@ -177,7 +168,6 @@ export default function LocationDetails({ data }: LocationDetailsProps) {
                                 {data.aboutSection.description}
                             </p>
 
-                            {/* Checkmark Points List */}
                             {data.aboutSection.points && (
                                 <div className="flex flex-col gap-3 mb-7">
                                     {data.aboutSection.points.map((pt, idx) => (
@@ -193,7 +183,6 @@ export default function LocationDetails({ data }: LocationDetailsProps) {
                                 </div>
                             )}
 
-                            {/* Appointment CTA Button */}
                             <Link
                                 href={data.aboutSection.btnLink || "/appointment"}
                                 className="inline-flex items-center justify-center gap-2.5 px-8 py-3.5 bg-[#F37021] hover:bg-[#d95e14] text-white font-bold text-sm rounded-lg transition shadow-xs cursor-pointer w-fit"
@@ -204,7 +193,6 @@ export default function LocationDetails({ data }: LocationDetailsProps) {
                         </div>
                     )}
 
-                    {/* Right: Map Graphic / Google Map Iframe with Pin Badge */}
                     {data.mapInfo && (
                         <div className="lg:col-span-7 relative w-full h-[340px] sm:h-[400px] rounded-[24px] overflow-hidden border border-[#FDE8DC] bg-slate-100 flex items-center justify-center shadow-xs group">
                             {data.mapInfo.mapEmbedUrl ? (
@@ -220,21 +208,18 @@ export default function LocationDetails({ data }: LocationDetailsProps) {
                                 />
                             ) : (
                                 <>
-                                    {/* Map Image Background */}
                                     <Image
                                         src={data.mapInfo.image || "/service/service1.jpg"}
                                         alt={data.mapInfo.pinTitle}
                                         fill
                                         className="object-cover object-center opacity-85"
                                     />
-                                    {/* Overlay Gradient */}
                                     <div className="absolute inset-0 bg-sky-900/10 backdrop-blur-[1px]" />
                                 </>
                             )}
 
-                            {/* Pin & White Location Card Overlay */}
                             <div className="absolute z-10 flex flex-col items-center px-4 max-w-sm text-center pointer-events-none">
-                                {/* Teardrop Pin Marker with Paw */}
+
                                 <div className="relative flex flex-col items-center justify-center mb-1 drop-shadow-md animate-bounce">
                                     <div className="relative w-11 h-14 flex items-center justify-center">
                                         <svg
@@ -257,7 +242,6 @@ export default function LocationDetails({ data }: LocationDetailsProps) {
                                     <div className="w-5 h-1.5 bg-black/25 rounded-full blur-[1px] -mt-1" />
                                 </div>
 
-                                {/* Floating White Address Box */}
                                 <div className="bg-white/95 backdrop-blur-md rounded-2xl p-4 sm:p-5 shadow-xl border border-neutral-100/90 text-center pointer-events-auto">
                                     <h4 className="text-sm sm:text-base font-extrabold text-[#3E1408] mb-1">
                                         {data.mapInfo.pinTitle}
@@ -273,7 +257,6 @@ export default function LocationDetails({ data }: LocationDetailsProps) {
                 </div>
             </div>
 
-            {/* 3. BOTTOM ROW: Our Facilities Section */}
             {data.facilitiesSection && (
                 <Facility data={data.facilitiesSection} />
             )}

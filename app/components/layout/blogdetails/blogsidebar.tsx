@@ -26,20 +26,14 @@ export default function BlogSidebar({
     if (!data) return null;
 
     const displayPosts = posts?.slice(0, 5);
-
-    // Helper function to find target URL for a category click
     const getCategoryHref = (catName: string) => {
         const lowerCat = catName.toLowerCase();
-
-        // 1. First check in allBlogDetails
         const detailMatch = allBlogDetails.find(
             (b) => b.category?.toLowerCase() === lowerCat || b.category?.toLowerCase().includes(lowerCat)
         );
         if (detailMatch) {
             return `/blog/${detailMatch.slug}`;
         }
-
-        // 2. Then check in posts array
         const postMatch = posts.find(
             (p) => p.category?.toLowerCase() === lowerCat || p.category?.toLowerCase().includes(lowerCat)
         );
@@ -47,15 +41,12 @@ export default function BlogSidebar({
             const postSlug = postMatch.link ? postMatch.link.replace("/blog/", "") : postMatch.id;
             return `/blog/${postSlug}`;
         }
-
-        // 3. Fallback to main blog list page if category doesn't have a direct post
         return "/blog";
     };
 
     return (
         <aside className="w-full space-y-6 sm:space-y-8">
 
-            {/* CATEGORIES CARD */}
             <div className="bg-white rounded-2xl sm:rounded-3xl p-5 sm:p-6 border border-neutral-100 shadow-xs">
                 <h3 className="text-xl font-extrabold text-[#3E1408] mb-4 sm:mb-5 tracking-tight">
                     {data.categoriesTitle || "Categories"}
@@ -73,8 +64,8 @@ export default function BlogSidebar({
                                 key={idx}
                                 href={categoryHref}
                                 className={`w-full flex items-center gap-3 px-4 py-2.5 rounded-xl text-sm font-semibold transition-all cursor-pointer ${isActive
-                                        ? "bg-[#FFF0E6] text-[#F37021] font-bold"
-                                        : "text-[#5C4D48] hover:text-[#F37021] hover:bg-orange-50/50"
+                                    ? "bg-[#FFF0E6] text-[#F37021] font-bold"
+                                    : "text-[#5C4D48] hover:text-[#F37021] hover:bg-orange-50/50"
                                     }`}
                             >
                                 <FaPaw
@@ -87,8 +78,6 @@ export default function BlogSidebar({
                     })}
                 </div>
             </div>
-
-            {/* LATEST UPDATES CARD */}
             <div className="bg-white rounded-2xl sm:rounded-3xl p-5 sm:p-6 border border-neutral-100 shadow-xs">
                 <h3 className="text-xl font-extrabold text-[#3E1408] mb-5 tracking-tight">
                     {data.latestUpdatesTitle || "Latest Updates"}
@@ -105,7 +94,6 @@ export default function BlogSidebar({
                                 href={href}
                                 className="flex items-center gap-4 group cursor-pointer"
                             >
-                                {/* Thumbnail */}
                                 <div className="relative w-18 h-18 sm:w-20 sm:h-20 rounded-xl overflow-hidden shrink-0 border border-neutral-100">
                                     <Image
                                         src={post.image}
@@ -115,8 +103,6 @@ export default function BlogSidebar({
                                         className="object-cover group-hover:scale-105 transition-transform duration-300"
                                     />
                                 </div>
-
-                                {/* Info */}
                                 <div className="flex-1 min-w-0">
                                     <h4 className="text-sm font-bold text-[#3E1408] group-hover:text-[#F37021] transition-colors leading-snug line-clamp-2 mb-1.5">
                                         {post.title}
@@ -130,8 +116,6 @@ export default function BlogSidebar({
                         );
                     })}
                 </div>
-
-                {/* View All Blogs Button */}
                 <Link
                     href="/blog"
                     className="w-full inline-flex items-center justify-center gap-2 border-2 border-[#F37021] text-[#F37021] hover:bg-[#F37021] hover:text-white font-extrabold text-sm px-6 py-3 rounded-xl transition-all duration-300 group/btn"

@@ -3,6 +3,7 @@
 import React, { useState } from "react";
 import Image from "next/image";
 import type { ServiceDetailsItem as ServiceDetailItem } from "@/data/index";
+import { defaultEnquireForm } from "@/data/index";
 import {
     FaPaw,
     FaShieldAlt,
@@ -35,8 +36,6 @@ import { Sparkles as FaSparkles } from "lucide-react";
 interface ServiceHeroProps {
     data: ServiceDetailItem;
 }
-
-// Map string icon names from JSON to React Icons
 const renderIcon = (iconName: string) => {
     const iconClass = "w-5 h-5 sm:w-8 sm:h-8 text-[#F37021]";
     switch (iconName) {
@@ -96,6 +95,8 @@ export default function ServiceHero({ data }: ServiceHeroProps) {
 
     if (!data) return null;
 
+    const formConfig = data?.enquireForm || defaultEnquireForm;
+
     const handleSubmit = (e: React.FormEvent) => {
         e.preventDefault();
         setFormSubmitted(true);
@@ -106,16 +107,13 @@ export default function ServiceHero({ data }: ServiceHeroProps) {
         <section className="w-full">
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-7 items-stretch">
 
-                {/* 1. LEFT TEXT & FEATURES COLUMN (Reduced to 4 Cols) */}
                 <div className="lg:col-span-4 flex flex-col justify-between py-1">
                     <div>
-                        {/* Top Badge */}
                         <div className="inline-flex items-center gap-1.5 text-[#F37021] font-bold text-sm sm:text-sm tracking-widest uppercase mb-2">
                             <FaPaw className="w-5 h-5 text-[#F37021]" />
                             <span>{data.badge || "OUR SERVICE"}</span>
                         </div>
 
-                        {/* Title with Underline */}
                         <h1 className="text-3xl sm:text-4xl lg:text-[44px] font-extrabold text-[#3E1408] tracking-tight leading-tight mb-4">
                             {data.titlePrefix ? (
                                 <span className="text-[#F37021] relative inline-block mr-2 pb-1">
@@ -125,14 +123,10 @@ export default function ServiceHero({ data }: ServiceHeroProps) {
                             ) : null}
                             <span>{data.titleHighlight || data.title}</span>
                         </h1>
-
-                        {/* Description (max-w added) */}
                         <p className="text-sm sm:text-sm md:text-base text-[#615147] font-normal leading-relaxed mb-6 max-w-sm">
                             {data.description}
                         </p>
                     </div>
-
-                    {/* 4 Feature Badges in 1 Row */}
                     <div className="grid grid-cols-4 gap-2 sm:gap-3 pt-2">
                         {data.heroFeatures?.map((feat) => (
                             <div
@@ -149,8 +143,6 @@ export default function ServiceHero({ data }: ServiceHeroProps) {
                         ))}
                     </div>
                 </div>
-
-                {/* 2. CENTER IMAGE COLUMN (Expanded to 5 Cols - Left se bada) */}
                 <div className="lg:col-span-5 min-h-[300px] sm:min-h-[360px] lg:min-h-full relative rounded-3xl overflow-hidden shadow-xs border border-neutral-100">
                     <Image
                         src={data.heroImage}
@@ -161,31 +153,25 @@ export default function ServiceHero({ data }: ServiceHeroProps) {
                         className="object-cover object-center"
                     />
                 </div>
-
-                {/* 3. RIGHT FORM COLUMN (3 COLS) */}
                 <div className="lg:col-span-3 flex flex-col h-full">
                     <div className="bg-white rounded-3xl p-4 sm:p-5 border border-neutral-100 shadow-xs flex flex-col justify-between h-full">
-
-                        {/* Form Header */}
                         <div className="mb-3">
                             <div className="flex items-center gap-2 mb-1">
                                 <h3 className="text-lg sm:text-xl font-extrabold text-[#3E1408] tracking-tight">
-                                    Enquire Now
+                                    {formConfig?.title || "Enquire Now"}
                                 </h3>
 
                             </div>
                             <p className="text-sm md:text-md font-semibold text-[#796B66] font-normal leading-relaxed">
-                                Fill out the form and our team will get back to you shortly.
+                                {formConfig?.subtitle || "Fill out the form and our team will get back to you shortly."}
                             </p>
                         </div>
-
-                        {/* Form Fields */}
                         <form onSubmit={handleSubmit} className="space-y-2.5">
                             <div>
                                 <input
                                     type="text"
                                     required
-                                    placeholder="Your Name *"
+                                    placeholder={formConfig?.namePlaceholder || "Your Name *"}
                                     className="w-full bg-[#FAFAFA] border border-neutral-200 rounded-xl px-3.5 py-2.5 text-sm sm:text-sm text-[#3E1408] placeholder:text-[#9E8E88] focus:outline-none focus:border-[#F37021] focus:ring-1 focus:ring-[#F37021] transition-all"
                                 />
                             </div>
@@ -194,7 +180,7 @@ export default function ServiceHero({ data }: ServiceHeroProps) {
                                 <input
                                     type="email"
                                     required
-                                    placeholder="Email Address *"
+                                    placeholder={formConfig?.emailPlaceholder || "Email Address *"}
                                     className="w-full bg-[#FAFAFA] border border-neutral-200 rounded-xl px-3.5 py-2.5 text-sm sm:text-sm text-[#3E1408] placeholder:text-[#9E8E88] focus:outline-none focus:border-[#F37021] focus:ring-1 focus:ring-[#F37021] transition-all"
                                 />
                             </div>
@@ -203,7 +189,7 @@ export default function ServiceHero({ data }: ServiceHeroProps) {
                                 <input
                                     type="tel"
                                     required
-                                    placeholder="Phone Number *"
+                                    placeholder={formConfig?.phonePlaceholder || "Phone Number *"}
                                     className="w-full bg-[#FAFAFA] border border-neutral-200 rounded-xl px-3.5 py-2.5 text-sm sm:text-sm text-[#3E1408] placeholder:text-[#9E8E88] focus:outline-none focus:border-[#F37021] focus:ring-1 focus:ring-[#F37021] transition-all"
                                 />
                             </div>
@@ -215,20 +201,20 @@ export default function ServiceHero({ data }: ServiceHeroProps) {
                                     className="w-full bg-[#FAFAFA] border border-neutral-200 rounded-xl px-3.5 py-2.5 text-sm sm:text-sm text-[#3E1408] focus:outline-none focus:border-[#F37021] focus:ring-1 focus:ring-[#F37021] transition-all cursor-pointer"
                                 >
                                     <option value="" disabled>
-                                        Select Service *
+                                        {formConfig?.selectServicePlaceholder || "Select Service *"}
                                     </option>
-                                    <option value="grooming">Dog Grooming</option>
-                                    <option value="training">Puppy Training</option>
-                                    <option value="medical">Medical Services</option>
-                                    <option value="shower">Pet Shower & Bath</option>
-                                    <option value="boarding">Pet Boarding</option>
+                                    {formConfig?.serviceOptions?.map((opt: { value: string; label: string }) => (
+                                        <option key={opt.value} value={opt.value}>
+                                            {opt.label}
+                                        </option>
+                                    ))}
                                 </select>
                             </div>
 
                             <div>
                                 <textarea
                                     rows={2}
-                                    placeholder="Your Message"
+                                    placeholder={formConfig?.messagePlaceholder || "Your Message"}
                                     className="w-full bg-[#FAFAFA] border border-neutral-200 rounded-xl px-3.5 py-2.5 text-sm sm:text-sm text-[#3E1408] placeholder:text-[#9E8E88] focus:outline-none focus:border-[#F37021] focus:ring-1 focus:ring-[#F37021] transition-all resize-none"
                                 />
                             </div>
@@ -237,13 +223,13 @@ export default function ServiceHero({ data }: ServiceHeroProps) {
                                 type="submit"
                                 className="w-full bg-[#F37021] hover:bg-[#d95c0e] text-white font-extrabold text-sm sm:text-sm px-4 py-3 rounded-xl transition-all duration-300 flex items-center justify-center gap-2 cursor-pointer shadow-xs mt-1"
                             >
-                                <span>Submit Enquiry</span>
+                                <span>{formConfig?.submitBtnText || "Submit Enquiry"}</span>
                                 <FaPaw className="w-3.5 h-3.5 text-white" />
                             </button>
 
                             {formSubmitted && (
                                 <p className="text-sm text-emerald-600 font-bold text-center mt-1">
-                                    Thank you! We will reach out to you.
+                                    {formConfig?.successMessage || "Thank you! We will reach out to you."}
                                 </p>
                             )}
                         </form>

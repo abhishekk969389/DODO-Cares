@@ -35,9 +35,7 @@ export default function FaqSec() {
         <section className="relative w-full mt-8 sm:mt-10 md:mt-12 lg:mt-14 overflow-hidden">
             <div className="max-w-[1320px] mx-auto px-4 sm:px-6 lg:px-8 w-full">
 
-                {/* Section Header */}
                 <div className="flex flex-col items-center text-center mb-6">
-                    {/* Main Title */}
                     <FadeIn direction="up" delay={0.05}>
                         <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[#2C1810] tracking-tight leading-tight mb-2.5">
                             {titlePrefix}{" "}
@@ -47,40 +45,28 @@ export default function FaqSec() {
                             {titleSuffix}
                         </h2>
                     </FadeIn>
-
-                    {/* Paw Line Divider */}
                     <div className="flex items-center justify-center gap-2.5 mb-3.5">
                         <div className="h-[1.5px] w-10 bg-[#F37021] rounded-full" />
                         <FaPaw className="w-5 h-5 text-[#F37021]" />
                         <div className="h-[1.5px] w-10 bg-[#F37021] rounded-full" />
                     </div>
-
-                    {/* Description */}
                     <FadeIn direction="up" delay={0.1}>
                         <p className="text-sm  sm:text-base text-[#615147] font-normal max-w-xl mx-auto">
                             {description}
                         </p>
                     </FadeIn>
                 </div>
-
-                {/* 2-Column Content Grid */}
                 <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-start">
 
-                    {/* Left Sidebar Card */}
                     <div className="lg:col-span-5 flex flex-col items-center">
                         <FadeIn direction="up" delay={0.15} className="w-full">
                             <div className="relative w-full">
-
-                                {/* Top Arch Image Frame */}
                                 <div className="relative w-full h-[230px] flex items-end justify-center">
-                                    {/* Arch Background Shape */}
                                     <div className="absolute bottom-0 w-[88%] h-[82%] bg-[#FDEFE5] rounded-t-full z-0" />
 
-                                    {/* Floating Paw Decorative Icons */}
                                     <FaPaw className="absolute top-6 left-6 w-10 h-10 text-[#F37021]/20 -rotate-12" />
                                     <FaPaw className="absolute top-12 right-6 w-10 h-10 text-[#F37021]/20 rotate-12" />
 
-                                    {/* Dog & Cat Image Cutout */}
                                     {sidebar?.image && (
                                         <div className="relative w-full h-full z-10">
                                             <Image
@@ -94,11 +80,8 @@ export default function FaqSec() {
                                         </div>
                                     )}
                                 </div>
-
-                                {/* Soft Cream Box */}
                                 <div className="bg-[#FFF5EE] rounded-[28px] p-6 sm:p-9 border border-[#F7EBE1] shadow-sm relative overflow-hidden flex flex-col pt-8 -mt-2">
 
-                                    {/* Headset Support Header */}
                                     <div className="flex items-start gap-4 mb-6">
                                         <div className="w-13 h-13 rounded-full bg-[#F37021] text-white flex items-center justify-center shadow-md shrink-0">
                                             <FaHeadset className="w-6 h-6 text-white" />
@@ -115,10 +98,7 @@ export default function FaqSec() {
                                             </p>
                                         </div>
                                     </div>
-
-                                    {/* Contact Details List */}
                                     <div className="space-y-4 sm:space-y-5 mb-8">
-                                        {/* Phone */}
                                         {sidebar?.phone && (
                                             <div className="flex items-center gap-4">
                                                 <div className="w-11 h-11 sm:w-12 sm:h-12 rounded-full bg-white text-[#F37021] flex items-center justify-center shadow-xs shrink-0">
@@ -130,8 +110,6 @@ export default function FaqSec() {
                                                 </div>
                                             </div>
                                         )}
-
-                                        {/* Email */}
                                         {sidebar?.email && (
                                             <div className="flex items-center gap-4">
                                                 <div className="w-11 h-11 sm:w-12 sm:h-12 rounded-full bg-white text-[#F37021] flex items-center justify-center shadow-xs shrink-0">
@@ -143,8 +121,6 @@ export default function FaqSec() {
                                                 </div>
                                             </div>
                                         )}
-
-                                        {/* Visit Us */}
                                         {sidebar?.address && (
                                             <div className="flex items-center gap-4">
                                                 <div className="w-11 h-11 sm:w-12 sm:h-12 rounded-full bg-white text-[#F37021] flex items-center justify-center shadow-xs shrink-0">
@@ -156,8 +132,6 @@ export default function FaqSec() {
                                                 </div>
                                             </div>
                                         )}
-
-                                        {/* Opening Hours */}
                                         {sidebar?.hours && (
                                             <div className="flex items-center gap-4">
                                                 <div className="w-11 h-11 sm:w-12 sm:h-12 rounded-full bg-white text-[#F37021] flex items-center justify-center shadow-xs shrink-0">
@@ -170,10 +144,7 @@ export default function FaqSec() {
                                             </div>
                                         )}
                                     </div>
-
-                                    {/* Bottom Vector Illustration Watermark */}
                                     <div className="w-full pt-4 border-t border-[#F7EBE1]/80 relative flex items-end justify-between px-1 opacity-80 pointer-events-none">
-                                        {/* House with Paw SVG */}
                                         <div className="flex flex-col items-center">
                                             <svg width="56" height="46" viewBox="0 0 60 50" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                 <path d="M30 5L5 25H12V45H48V25H55L30 5Z" fill="#F8DFCE" />
@@ -184,16 +155,12 @@ export default function FaqSec() {
                                                 <circle cx="37" cy="31" r="2" fill="#FFF5EE" />
                                             </svg>
                                         </div>
-
-                                        {/* Food Bowl SVG */}
                                         <div className="flex flex-col items-center mb-0.5">
                                             <svg width="26" height="16" viewBox="0 0 30 18" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                 <path d="M3 3C3 1.34315 4.34315 0 6 0H24C25.6569 0 27 1.34315 27 3V6C27 12.6274 21.6274 18 15 18C8.37258 18 3 12.6274 3 6V3Z" fill="#F8DFCE" />
                                                 <circle cx="15" cy="9" r="2.5" fill="#FFF5EE" />
                                             </svg>
                                         </div>
-
-                                        {/* Yarn Ball SVG */}
                                         <div className="flex flex-col items-center mb-0.5">
                                             <svg width="65" height="26" viewBox="0 0 70 30" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                 <circle cx="55" cy="15" r="10" fill="#F8DFCE" />
@@ -207,8 +174,6 @@ export default function FaqSec() {
                             </div>
                         </FadeIn>
                     </div>
-
-                    {/* Right Side FAQ Accordions */}
                     <div className="lg:col-span-7 flex flex-col gap-3.5">
                         {faqs?.map((item, idx) => {
                             const isOpen = openIndex === idx;
@@ -222,10 +187,8 @@ export default function FaqSec() {
                                             : "border-neutral-100 hover:border-[#F37021]/40 shadow-xs"
                                             }`}
                                     >
-                                        {/* Question Bar */}
                                         <div className="flex items-center justify-between gap-4">
                                             <div className="flex items-center gap-3.5">
-                                                {/* Number Badge */}
                                                 <div
                                                     className={`w-7 h-7 sm:w-8 sm:h-8 rounded-full text-sm font-extrabold flex items-center justify-center shrink-0 transition-colors duration-300 ${isOpen
                                                         ? "bg-[#F37021] text-white"
@@ -239,8 +202,6 @@ export default function FaqSec() {
                                                     {item.question}
                                                 </h3>
                                             </div>
-
-                                            {/* Toggle Plus / Minus */}
                                             <div className="text-[#F37021] font-bold shrink-0">
                                                 {isOpen ? (
                                                     <FaMinus className="w-4 h-4 text-[#F37021]" />
@@ -249,8 +210,6 @@ export default function FaqSec() {
                                                 )}
                                             </div>
                                         </div>
-
-                                        {/* Answer Content */}
                                         <AnimatePresence initial={false}>
                                             {isOpen && (
                                                 <motion.div

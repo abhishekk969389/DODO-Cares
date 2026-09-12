@@ -64,17 +64,14 @@ export default function Services() {
         <section className="relative w-full mt-8 sm:mt-10 md:mt-12 lg:mt-14 overflow-hidden">
             <div className="max-w-[1320px] mx-auto px-4 sm:px-6 lg:px-8 w-full">
 
-                {/* Section Header */}
                 <div className="flex flex-col items-center text-center mb-6">
-                    {/* Top Tag / Badge */}
+                  
                     <FadeIn direction="up" delay={0.05}>
                         <div className="inline-flex items-center gap-1.5 text-[#F37021] font-bold text-sm sm:text-sm tracking-widest uppercase mb-2">
                             <FaPaw className="w-5 h-5 text-[#F37021]" />
                             <span>{serviceData.badge}</span>
                         </div>
                     </FadeIn>
-
-                    {/* Main Title */}
                     <FadeIn direction="up" delay={0.1}>
                         <h2 className="text-3xl sm:text-4xl lg:text-[44px] font-extrabold text-[#2C1810] tracking-tight leading-tight mb-3.5 max-w-3xl">
                             {serviceData.titlePrefix} {serviceData.titleMiddle}{" "}
@@ -83,25 +80,19 @@ export default function Services() {
                             </span>
                         </h2>
                     </FadeIn>
-
-                    {/* Subtitle */}
                     <FadeIn direction="up" delay={0.15}>
                         <p className="text-sm sm:text-base text-[#615147] max-w-md mx-auto mb-3 font-normal leading-relaxed">
                             {serviceData.description}
                         </p>
                     </FadeIn>
-
-                    {/* Small Paw Print Icon Divider */}
                     <FaPaw
                         className="w-5 h-5 text-[#F37021] mt-1"
                         aria-hidden="true"
                     />
                 </div>
-
-                {/* Cards Container with Side Arrows */}
                 <div className="relative flex items-center gap-3 sm:gap-4">
 
-                    {/* Left Carousel Arrow Button */}
+
                     <motion.button
                         whileHover={{ scale: 1.03 }}
                         whileTap={{ scale: 0.97 }}
@@ -112,8 +103,6 @@ export default function Services() {
                     >
                         <ChevronLeft className="w-5 h-5 text-[#F37021]" />
                     </motion.button>
-
-                    {/* Scrollable 5 Location Cards Row */}
                     <div
                         ref={scrollRef}
                         onScroll={handleScroll}
@@ -127,7 +116,7 @@ export default function Services() {
                                 className="w-full sm:w-[calc(50%-0.75rem)] md:w-[calc(33.333%-0.75rem)] lg:w-[calc(20%-1rem)] shrink-0 snap-start bg-white rounded-[28px] sm:rounded-[32px] overflow-hidden border border-amber-900/5 flex flex-col items-center text-center group cursor-pointer"
                             >
                                 <Link href={loc.link || `/servicelocation/${loc.name.toLowerCase()}`} className="w-full h-full flex flex-col items-center pb-6">
-                                    {/* Arched Image Frame */}
+                         
                                     <div className="relative w-full h-[180px] sm:h-[200px] overflow-hidden rounded-t-[28px] sm:rounded-t-[32px]">
                                         <Image
                                             src={loc.image}
@@ -137,13 +126,9 @@ export default function Services() {
                                             className="object-cover object-center group-hover:scale-105 transition-transform duration-500"
                                         />
                                     </div>
-
-                                    {/* Overlapping Location Pin Badge */}
                                     <div className="relative z-10 w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-white shadow-md border border-neutral-100 flex items-center justify-center -mt-5 mb-2 shrink-0">
                                         <FaMapMarkerAlt className="w-5 h-5 text-[#F37021] fill-[#F37021]" strokeWidth={1.5} />
                                     </div>
-
-                                    {/* Location Details */}
                                     <h3 className="text-lg sm:text-xl font-extrabold text-[#2C1810] mb-1 group-hover:text-[#F37021] transition-colors">
                                         {loc.name}
                                     </h3>
@@ -155,7 +140,6 @@ export default function Services() {
                         ))}
                     </div>
 
-                    {/* Right Carousel Arrow Button */}
                     <motion.button
                         whileHover={{ scale: 1.03 }}
                         whileTap={{ scale: 0.97 }}
@@ -168,8 +152,6 @@ export default function Services() {
                     </motion.button>
 
                 </div>
-
-                {/* Pagination Dots */}
                 <div className="flex items-center justify-center gap-2 mt-6">
                     {[0, 1, 2].map((dotIndex) => (
                         <motion.button
@@ -186,8 +168,7 @@ export default function Services() {
                         />
                     ))}
                 </div>
-
-                {/* Bottom Floating Statistics Bar */}
+                
                 <Statistics stats={serviceData.stats} />
 
             </div>

@@ -59,12 +59,9 @@ export default function Statistics({ stats: propsStats, className = "" }: Statis
                   transition={{ duration: 0.2, ease: "easeInOut" }}
                   className="flex items-center gap-4 sm:gap-5 justify-start lg:justify-center w-full flex-1 px-1 sm:px-2 md:px-6 lg:px-4 cursor-pointer"
                 >
-                  {/* Orange Circle Icon Badge */}
                   <div className="w-13 h-13 sm:w-14 sm:h-14 rounded-full bg-[#F37021] text-white flex items-center justify-center shrink-0 shadow-2xs">
                     <IconComponent className="w-6.5 h-6.5 text-white" strokeWidth={1.8} />
                   </div>
-
-                  {/* Stat Value & Label */}
                   <div className="flex flex-col text-left">
                     <span className="text-xl sm:text-2xl font-extrabold text-[#2C1810] leading-none mb-1 tracking-tight">
                       {stat.value}

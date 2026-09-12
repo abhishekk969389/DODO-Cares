@@ -46,12 +46,9 @@ export default function MissionCta() {
                                             : ""
                                     }`}
                                 >
-                                    {/* Icon Container Circle */}
                                     <div className="w-16 h-16 sm:w-20 sm:h-20 rounded-full bg-[#FFEFE5] flex items-center justify-center shrink-0 shadow-xs">
                                         <IconComponent className="w-9 h-9 sm:w-11 sm:h-11 text-[#F37021]" />
                                     </div>
-
-                                    {/* Content */}
                                     <div className="flex-1">
                                         <h3 className="text-base sm:text-[17px] font-extrabold text-[#3E1408] mb-1 leading-tight">
                                             {item.title}

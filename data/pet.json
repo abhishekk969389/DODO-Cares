@@ -2085,7 +2085,7 @@
               },
               {
                 "id": "2",
-                "name": "Dr. Alexander Smith",
+                "name": "Alexander Smith",
                 "role": "Veterinary Specialist",
                 "image": "/teams/teams2.jpg",
                 "link": "/teams/dr-alexander-smith"
@@ -3875,10 +3875,43 @@
       "ServiceDetails": {
         "variants": {
           "DodoServiceDetails1": {
+            "enquireForm": {
+              "title": "Enquire Now",
+              "subtitle": "Fill out the form and our team will get back to you shortly.",
+              "namePlaceholder": "Your Name *",
+              "emailPlaceholder": "Email Address *",
+              "phonePlaceholder": "Phone Number *",
+              "selectServicePlaceholder": "Select Service *",
+              "serviceOptions": [
+                {
+                  "value": "grooming",
+                  "label": "Dog Grooming"
+                },
+                {
+                  "value": "training",
+                  "label": "Puppy Training"
+                },
+                {
+                  "value": "medical",
+                  "label": "Medical Services"
+                },
+                {
+                  "value": "shower",
+                  "label": "Pet Shower & Bath"
+                },
+                {
+                  "value": "boarding",
+                  "label": "Pet Boarding"
+                }
+              ],
+              "messagePlaceholder": "Your Message",
+              "submitBtnText": "Submit Enquiry",
+              "successMessage": "Thank you! We will reach out to you."
+            },
             "services": [
               {
                 "slug": "puppy-training",
-                "title": "Service Detail",
+                "title": "Puppy Training",
                 "titlePrefix": "Puppy",
                 "titleHighlight": "Training",
                 "badge": "OUR SERVICE",
@@ -3891,7 +3924,7 @@
                     "href": "/"
                   },
                   {
-                    "label": "Service Detail",
+                    "label": "Puppy Training",
                     "active": true
                   }
                 ],
@@ -4073,7 +4106,7 @@
               },
               {
                 "slug": "obedience-training",
-                "title": "Service Detail",
+                "title": "Obedience Training",
                 "titlePrefix": "Obedience",
                 "titleHighlight": "Training",
                 "badge": "OUR SERVICE",
@@ -4086,7 +4119,7 @@
                     "href": "/"
                   },
                   {
-                    "label": "Service Detail",
+                    "label": "Obedience Training",
                     "active": true
                   }
                 ],
@@ -4268,7 +4301,7 @@
               },
               {
                 "slug": "pet-walking",
-                "title": "Service Detail",
+                "title": "Pet Walking",
                 "titlePrefix": "Pet",
                 "titleHighlight": "Walking",
                 "badge": "OUR SERVICE",
@@ -4281,7 +4314,7 @@
                     "href": "/"
                   },
                   {
-                    "label": "Service Detail",
+                    "label": "Pet Walking",
                     "active": true
                   }
                 ],
@@ -4463,11 +4496,11 @@
               },
               {
                 "slug": "behavior-correction",
-                "title": "Service Detail",
+                "title": "Behavior Correction",
                 "titlePrefix": "Behavior",
                 "titleHighlight": "Correction",
                 "badge": "OUR SERVICE",
-                "description": "We address unwanted behaviors with proven techniques and positive reinforcement while ensuring daily active exercise.",
+                "description": "Professional behavior correction for anxiety, reactivity, aggression, excessive barking, and leash pulling with certified behaviorists.",
                 "heroImage": "/blogs/blog4.jpg",
                 "bgImage": "/subbanner.jpg",
                 "breadcrumbs": [
@@ -4476,7 +4509,7 @@
                     "href": "/"
                   },
                   {
-                    "label": "Service Detail",
+                    "label": "Behavior Correction",
                     "active": true
                   }
                 ],
@@ -4658,11 +4691,11 @@
               },
               {
                 "slug": "pet-sitting",
-                "title": "Service Detail",
+                "title": "Pet Sitting",
                 "titlePrefix": "Pet",
                 "titleHighlight": "Sitting",
                 "badge": "OUR SERVICE",
-                "description": "Take your dog's abilities to the next level with advanced tricks, skill training, and dedicated in-home pet sitting care Build a strong foundation for your young pup with early socialization, house training, basic commands, and positive reinforcement habitsBuild a strong foundation for your young pup with early socialization, house training, basic commands, and positive reinforcement habits .",
+                "description": "Loving in-home pet sitting and drop-in care ensuring your pet stays relaxed, safe, and well-fed in their familiar home environment.",
                 "heroImage": "/blogs/blog5.jpg",
                 "bgImage": "/subbanner.jpg",
                 "breadcrumbs": [
@@ -4671,7 +4704,7 @@
                     "href": "/"
                   },
                   {
-                    "label": "Service Detail",
+                    "label": "Pet Sitting",
                     "active": true
                   }
                 ],
@@ -4853,11 +4886,11 @@
               },
               {
                 "slug": "advanced-skills",
-                "title": "Service Detail",
+                "title": "Advanced Skills",
                 "titlePrefix": "Advanced",
                 "titleHighlight": "Skills",
                 "badge": "OUR SERVICE",
-                "description": "Take your dog's abilities to the next level with advanced tricks, skill training, and dedicated in-home pet sitting care.",
+                "description": "Take your dog's training to the next level with agility, off-leash obedience, trick training, and specialized task commands.",
                 "heroImage": "/blogs/blog6.jpg",
                 "bgImage": "/subbanner.jpg",
                 "breadcrumbs": [
@@ -4866,7 +4899,7 @@
                     "href": "/"
                   },
                   {
-                    "label": "Service Detail",
+                    "label": "Advanced Skills",
                     "active": true
                   }
                 ],
@@ -5048,11 +5081,11 @@
               },
               {
                 "slug": "medical",
-                "title": "Service Detail",
+                "title": "Medical Services",
                 "titlePrefix": "Medical",
                 "titleHighlight": "Services",
                 "badge": "OUR SERVICE",
-                "description": "Comprehensive healthcare to keep your pets healthy, from checkups to treatments Comprehensive healthcare to keep your pets healthy, from checkups to treatments Comprehensive healthcare to keep your pets healthy, from checkups to treatments Comprehensive healthcare to keep your pets healthy, from checkups to treatments.",
+                "description": "Comprehensive veterinary wellness exams, vaccinations, diagnostics, and routine health checks by experienced veterinary professionals.",
                 "heroImage": "/blogs/blog1.jpg",
                 "bgImage": "/subbanner.jpg",
                 "breadcrumbs": [
@@ -5061,7 +5094,7 @@
                     "href": "/"
                   },
                   {
-                    "label": "Service Detail",
+                    "label": "Medical Services",
                     "active": true
                   }
                 ],
@@ -5243,11 +5276,11 @@
               },
               {
                 "slug": "shower",
-                "title": "Service Detail",
+                "title": "Pet Shower",
                 "titlePrefix": "Pet",
                 "titleHighlight": "Shower",
                 "badge": "OUR SERVICE",
-                "description": "Hygienic and relaxing baths that keep your pet fresh, clean, and happy Comprehensive healthcare to keep your pets healthy, from checkups to treatments Comprehensive healthcare to keep your pets Hygienic and relaxing baths that keep your pet fresh, clean, and happy Comprehensive healthcare to keep your pets healthy, from checkups to treatments Comprehensive healthcare to keep your pets healthy.",
+                "description": "Refreshing deep-cleansing pet baths with hypoallergenic shampoos, coat conditioning, blow drying, and ear/nail hygiene care.",
                 "heroImage": "/blogs/blog2.jpg",
                 "bgImage": "/subbanner.jpg",
                 "breadcrumbs": [
@@ -5256,7 +5289,7 @@
                     "href": "/"
                   },
                   {
-                    "label": "Service Detail",
+                    "label": "Pet Shower",
                     "active": true
                   }
                 ],
@@ -5438,11 +5471,11 @@
               },
               {
                 "slug": "trimmer",
-                "title": "Service Detail",
+                "title": "Pets Hair Trimmer",
                 "titlePrefix": "Pets Hair",
                 "titleHighlight": "Trimmer",
                 "badge": "OUR SERVICE",
-                "description": "Professional grooming and coat care for a neat, healthy, and comfortable pet Hygienic and relaxing baths that keep your pet fresh, clean, and happy Comprehensive healthcare to keep your pets healthy, from checkups to treatments Comprehensive healthcare to keep your pets healthy, from checkups to treatments Comprehensive healthcare to keep your pets healthy, from checkups to treatments.",
+                "description": "Professional breed-specific hair styling, coat trimming, dematting, and hygienic styling by skilled pet stylists.",
                 "heroImage": "/blogs/blog3.jpg",
                 "bgImage": "/subbanner.jpg",
                 "breadcrumbs": [
@@ -5451,7 +5484,7 @@
                     "href": "/"
                   },
                   {
-                    "label": "Service Detail",
+                    "label": "Pets Hair Trimmer",
                     "active": true
                   }
                 ],
@@ -5633,11 +5666,11 @@
               },
               {
                 "slug": "surgical",
-                "title": "Service Detail",
+                "title": "Surgical Care",
                 "titlePrefix": "Surgical",
                 "titleHighlight": "Care",
                 "badge": "OUR SERVICE",
-                "description": "Safe and advanced surgical services for your pet's specialized health needs Hygienic and relaxing baths that keep your pet fresh, clean, and happy Comprehensive healthcare to keep your pets healthy, from checkups to treatments Comprehensive healthcare to keep your pets healthy, from checkups to treatments Comprehensive healthcare to keep your pets healthy, from checkups to treatments.",
+                "description": "Safe, state-of-the-art veterinary surgical procedures with dedicated post-operative care and monitoring.",
                 "heroImage": "/blogs/blog4.jpg",
                 "bgImage": "/subbanner.jpg",
                 "breadcrumbs": [
@@ -5646,7 +5679,7 @@
                     "href": "/"
                   },
                   {
-                    "label": "Service Detail",
+                    "label": "Surgical Care",
                     "active": true
                   }
                 ],
@@ -5828,11 +5861,11 @@
               },
               {
                 "slug": "senior-wellness",
-                "title": "Service Detail",
+                "title": "Senior Pet Wellness",
                 "titlePrefix": "Senior Pet",
                 "titleHighlight": "Wellness",
                 "badge": "OUR SERVICE",
-                "description": "Special care and regular checkups to ensure a healthy and active senior life Hygienic and relaxing baths that keep your pet fresh, clean, and happy Comprehensive healthcare to keep your pets healthy, from checkups to treatments Comprehensive healthcare to keep your pets healthy, from checkups to treatments Comprehensive healthcare to keep your pets healthy, from checkups to treatments.",
+                "description": "Specialized geriatric healthcare, joint support, nutrition planning, and pain management for senior dogs and cats.",
                 "heroImage": "/blogs/blog5.jpg",
                 "bgImage": "/subbanner.jpg",
                 "breadcrumbs": [
@@ -5841,7 +5874,7 @@
                     "href": "/"
                   },
                   {
-                    "label": "Service Detail",
+                    "label": "Senior Pet Wellness",
                     "active": true
                   }
                 ],
@@ -6023,11 +6056,11 @@
               },
               {
                 "slug": "wellness-approach",
-                "title": "Service Detail",
+                "title": "Wellness Approach",
                 "titlePrefix": "Wellness",
                 "titleHighlight": "Approach",
                 "badge": "OUR SERVICE",
-                "description": "Preventive care and wellness plans for long-term health and happiness Hygienic and relaxing baths that keep your pet fresh, clean, and happy Comprehensive healthcare to keep your pets healthy, from checkups to treatments Comprehensive healthcare to keep your pets healthy, from checkups to treatments Comprehensive healthcare to keep your pets healthy, from checkups to treatments.",
+                "description": "Holistic preventive health strategies, lifestyle advice, and ongoing physical wellness plans tailored for your pet.",
                 "heroImage": "/blogs/blog6.jpg",
                 "bgImage": "/subbanner.jpg",
                 "breadcrumbs": [
@@ -6036,7 +6069,7 @@
                     "href": "/"
                   },
                   {
-                    "label": "Service Detail",
+                    "label": "Wellness Approach",
                     "active": true
                   }
                 ],

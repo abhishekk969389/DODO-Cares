@@ -76,14 +76,19 @@ export const site = {
   testimonialSec: sec.Testimonial.variants.DodoTestimonial1,
   faqSec: sec.Faq.variants.DodoFaq1,
   blogSidebar: sec.BlogSidebar.variants.DodoBlogSidebar1,
+  serviceDetailsSec: sec.ServiceDetails.variants.DodoServiceDetails1,
 };
 
 const serviceDetailItems = sec.ServiceDetails.variants.DodoServiceDetails1.services;
+export const defaultEnquireForm = sec.ServiceDetails.variants.DodoServiceDetails1.enquireForm;
 const teamDetailMembers = sec.TeamDetails.variants.DodoTeamDetails1.members;
 const blogDetailPosts = sec.BlogDetails.variants.DodoBlogDetails1.posts;
 const serviceAreaDetailLocations = sec.ServiceAreaDetails.variants.DodoServiceAreaDetails1.locations;
 
-export type ServiceDetailsItem = typeof serviceDetailItems[number];
+export type ServiceEnquireForm = typeof defaultEnquireForm;
+export type ServiceDetailsItem = typeof serviceDetailItems[number] & {
+  enquireForm?: ServiceEnquireForm;
+};
 export type PetTeamMemberDetail = typeof teamDetailMembers[number];
 export type PetBlogDetailPost = typeof blogDetailPosts[number];
 export type PetServiceAreaDetail = typeof serviceAreaDetailLocations[number];

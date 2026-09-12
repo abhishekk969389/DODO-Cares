@@ -23,7 +23,6 @@ const iconMap: Record<string, React.ElementType> = {
 
 const worksData: HowItWorksData = petData.howItWorks as HowItWorksData;
 
-// Dashed Arrow SVG for desktop connectors
 const DashedConnectorArrow = () => (
     <svg
         width="44"
@@ -57,16 +56,13 @@ export default function Works() {
     return (
         <section className="relative w-full bg-[#FDF8F3] py-8 sm:py-10 md:py-12 lg:py-14 mt-8 sm:mt-10 md:mt-12 lg:mt-14 overflow-hidden">
 
-            {/* Background Decorative Faint Paws & Grid */}
             <FaPaw className="absolute top-10 left-8 w-24 h-24 text-[#F37021]/5 -rotate-12 pointer-events-none" />
             <FaPaw className="absolute bottom-8 right-10 w-28 h-28 text-[#F37021]/5 rotate-45 pointer-events-none" />
 
             <div className="max-w-[1320px] mx-auto px-4 sm:px-6 lg:px-8 w-full relative z-10">
 
-                {/* Section Header */}
                 <div className="flex flex-col items-center text-center mb-6">
 
-                    {/* Top Tag / Badge */}
                     <FadeIn direction="up" delay={0.05}>
                         <div className="inline-flex items-center gap-1.5 text-[#F37021] font-bold text-sm sm:text-sm tracking-widest uppercase mb-2 sm:mb-3">
                             <FaPaw className="w-5 h-5 text-[#F37021]" />
@@ -74,7 +70,7 @@ export default function Works() {
                         </div>
                     </FadeIn>
 
-                    {/* Main Title */}
+
                     <FadeIn direction="up" delay={0.1}>
                         <h2 className="text-3xl sm:text-4xl lg:text-[44px] font-extrabold text-[#2C1810] tracking-tight leading-tight mb-3.5 max-w-3xl">
                             {worksData.titlePrefix}{" "}
@@ -84,14 +80,12 @@ export default function Works() {
                         </h2>
                     </FadeIn>
 
-                    {/* Subtitle */}
                     <FadeIn direction="up" delay={0.15}>
                         <p className="text-sm sm:text-base text-[#615147] max-w-md mx-auto mb-3 font-normal leading-relaxed">
                             {worksData.description}
                         </p>
                     </FadeIn>
 
-                    {/* Paw Line Divider */}
                     <div className="flex items-center justify-center gap-2.5">
                         <div className="h-[1.5px] w-7 bg-[#F37021]/40 rounded-full" />
                         <FaPaw className="w-5 h-5 text-[#F37021]" />
@@ -100,7 +94,6 @@ export default function Works() {
 
                 </div>
 
-                {/* 4 Step Cards Grid */}
                 <StaggerContainer className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-6 w-full">
                     {worksData.steps?.map((step, idx) => {
                         const IconComponent = iconMap[step.icon] || User;
@@ -113,12 +106,9 @@ export default function Works() {
                                     hoverScale={1.01}
                                     className="bg-white rounded-[28px] sm:rounded-[32px] p-6 flex flex-col items-center text-center shadow-sm border border-neutral-100/90 hover:shadow-xl transition-all duration-300 relative group h-full"
                                 >
-                                    {/* Top Left Step Number Badge */}
                                     <div className="absolute top-4 left-4 z-20 w-9 h-9 rounded-full border-2 border-[#F37021] text-[#F37021] font-extrabold text-sm sm:text-sm bg-white flex items-center justify-center shadow-2xs">
                                         {step.stepNumber}
                                     </div>
-
-                                    {/* Circular Image Container */}
                                     <div className="relative w-36 h-36 sm:w-40 sm:h-40 rounded-full overflow-hidden border-4 border-[#FDF8F3] shadow-md mb-2 mt-2 group-hover:scale-105 transition-transform duration-500">
                                         <Image
                                             src={step.image}
@@ -128,25 +118,19 @@ export default function Works() {
                                             className="object-cover object-center"
                                         />
                                     </div>
-
-                                    {/* Overlapping Icon Circle */}
                                     <div className="relative z-10 w-11 h-11 sm:w-12 sm:h-12 rounded-full bg-white border-2 border-[#F37021] text-[#F37021] flex items-center justify-center shadow-md -mt-6 mb-3 shrink-0">
                                         <IconComponent className="w-5.5 h-5.5 text-[#F37021]" strokeWidth={2} />
                                     </div>
 
-                                    {/* Title */}
                                     <h3 className="text-lg sm:text-xl font-extrabold text-[#2C1810] mb-2 leading-snug">
                                         {step.title}
                                     </h3>
 
-                                    {/* Description */}
                                     <p className="text-sm sm:text-sm text-[#7A6A60] font-medium leading-relaxed px-1">
                                         {step.description}
                                     </p>
 
                                 </MotionCard>
-
-                                {/* Connector Arrow for Desktop View */}
                                 {isNotLast && (
                                     <div className="hidden lg:flex absolute top-1/2 w-10 -translate-y-5 -right-8 z-40 pointer-events-none items-center justify-center">
                                         <DashedConnectorArrow />
