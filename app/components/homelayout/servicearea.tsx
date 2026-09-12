@@ -29,13 +29,15 @@ export default function Services() {
 
     const handlePrev = () => {
         if (scrollRef.current) {
-            scrollRef.current.scrollBy({ left: -280, behavior: "smooth" });
+            const scrollAmount = scrollRef.current.clientWidth * 0.75;
+            scrollRef.current.scrollBy({ left: -scrollAmount, behavior: "smooth" });
         }
     };
 
     const handleNext = () => {
         if (scrollRef.current) {
-            scrollRef.current.scrollBy({ left: 280, behavior: "smooth" });
+            const scrollAmount = scrollRef.current.clientWidth * 0.75;
+            scrollRef.current.scrollBy({ left: scrollAmount, behavior: "smooth" });
         }
     };
 
@@ -85,91 +87,113 @@ export default function Services() {
                             {serviceData.description}
                         </p>
                     </FadeIn>
-                    <FaPaw
-                        className="w-5 h-5 text-[#F37021] mt-1"
-                        aria-hidden="true"
-                    />
+                    <FadeIn direction="up" delay={0.2}>
+                        <FaPaw
+                            className="w-5 h-5 text-[#F37021] mt-1"
+                            aria-hidden="true"
+                        />
+                    </FadeIn>
                 </div>
-                <div className="relative flex items-center gap-3 sm:gap-4">
+                <FadeIn direction="up" delay={0.25}>
+                    <div className="relative flex items-center gap-3 sm:gap-4">
 
+                        <motion.button
+                            whileHover={{ scale: 1.1, backgroundColor: "#F37021", color: "#ffffff" }}
+                            whileTap={{ scale: 0.9 }}
+                            transition={{ duration: 0.2 }}
+                            onClick={handlePrev}
+                            aria-label="Previous locations"
+                            className="hidden sm:flex shrink-0 w-10 h-10 rounded-full border-2 border-[#F37021]/30 text-[#F37021] bg-white items-center justify-center shadow-xs transition-colors duration-200 cursor-pointer z-10 group"
+                        >
+                            <ChevronLeft className="w-5 h-5 text-[#F37021] group-hover:text-white transition-colors" />
+                        </motion.button>
+                        <div
+                            ref={scrollRef}
+                            onScroll={handleScroll}
+                            className="flex overflow-x-auto gap-4 sm:gap-5 w-full pb-3 pt-1 scroll-smooth snap-x snap-mandatory [ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
+                        >
+                            <div className="flex gap-4 sm:gap-5 min-w-full flex-nowrap">
+                                {serviceData.locations?.map((loc, idx) => (
+                                    <motion.div
+                                        key={loc.id || idx}
+                                        initial={{ opacity: 0.5, scale: 0.93, y: 15 }}
+                                        whileInView={{ opacity: 1, scale: 1, y: 0 }}
+                                        viewport={{ amount: 0.25 }}
+                                        transition={{ duration: 0.45, ease: [0.25, 0.1, 0.25, 1], delay: idx * 0.05 }}
+                                        className="w-full sm:w-[calc(50%-0.75rem)] md:w-[calc(33.333%-0.75rem)] lg:w-[calc(20%-1rem)] shrink-0 snap-start"
+                                    >
+                                        <MotionCard
+                                            hoverY={-8}
+                                            hoverScale={1.02}
+                                            className="bg-white rounded-t-[58px] sm:rounded-t-[70px] rounded-b-[22px] p-2.5 sm:p-3 border border-neutral-100 shadow-md flex flex-col items-center text-center group cursor-pointer h-full"
+                                        >
+                                            <Link href={loc.link || `/servicelocation/${loc.name.toLowerCase()}`} className="w-full h-full flex flex-col items-center">
 
-                    <motion.button
-                        whileHover={{ scale: 1.03 }}
-                        whileTap={{ scale: 0.97 }}
-                        transition={{ duration: 0.2, ease: "easeInOut" }}
-                        onClick={handlePrev}
-                        aria-label="Previous locations"
-                        className="hidden sm:flex shrink-0 w-10 h-10 rounded-full border-2 border-[#F37021]/30 hover:border-[#F37021] text-[#F37021] bg-white items-center justify-center shadow-xs transition-colors duration-200 cursor-pointer z-10"
-                    >
-                        <ChevronLeft className="w-5 h-5 text-[#F37021]" />
-                    </motion.button>
-                    <div
-                        ref={scrollRef}
-                        onScroll={handleScroll}
-                        className="flex overflow-x-auto gap-4 sm:gap-5 w-full pb-3 pt-1 scroll-smooth snap-x snap-mandatory [ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
-                    >
-                        {serviceData.locations?.map((loc) => (
-                            <MotionCard
-                                key={loc.id}
-                                hoverY={-6}
-                                hoverScale={1.01}
-                                className="w-full sm:w-[calc(50%-0.75rem)] md:w-[calc(33.333%-0.75rem)] lg:w-[calc(20%-1rem)] shrink-0 snap-start bg-white rounded-[28px] sm:rounded-[32px] overflow-hidden border border-amber-900/5 flex flex-col items-center text-center group cursor-pointer"
-                            >
-                                <Link href={loc.link || `/servicelocation/${loc.name.toLowerCase()}`} className="w-full h-full flex flex-col items-center pb-6">
-                         
-                                    <div className="relative w-full h-[180px] sm:h-[200px] overflow-hidden rounded-t-[28px] sm:rounded-t-[32px]">
-                                        <Image
-                                            src={loc.image}
-                                            alt={loc.name}
-                                            fill
-                                            sizes="(max-width: 640px) 100vw, (max-width: 1024px) 33vw, 20vw"
-                                            className="object-cover object-center group-hover:scale-105 transition-transform duration-500"
-                                        />
-                                    </div>
-                                    <div className="relative z-10 w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-white shadow-md border border-neutral-100 flex items-center justify-center -mt-5 mb-2 shrink-0">
-                                        <FaMapMarkerAlt className="w-5 h-5 text-[#F37021] fill-[#F37021]" strokeWidth={1.5} />
-                                    </div>
-                                    <h3 className="text-lg sm:text-xl font-extrabold text-[#2C1810] mb-1 group-hover:text-[#F37021] transition-colors">
-                                        {loc.name}
-                                    </h3>
-                                    <p className="text-sm sm:text-sm text-[#7A6A60] px-3 font-medium leading-snug">
-                                        {loc.description}
-                                    </p>
-                                </Link>
-                            </MotionCard>
+                                                <div className="relative w-full h-[180px] sm:h-[195px] overflow-hidden rounded-t-[48px] sm:rounded-t-[60px]">
+                                                    <Image
+                                                        src={loc.image}
+                                                        alt={loc.name}
+                                                        fill
+                                                        sizes="(max-width: 640px) 100vw, (max-width: 1024px) 33vw, 20vw"
+                                                        className="object-cover object-center group-hover:scale-108 transition-transform duration-500"
+                                                    />
+                                                </div>
+                                                <motion.div
+                                                    whileHover={{ rotate: [0, -10, 10, -5, 0], scale: 1.15 }}
+                                                    transition={{ duration: 0.4 }}
+                                                    className="relative z-10 w-11 h-11 rounded-full bg-white shadow-md border border-neutral-100 flex items-center justify-center -mt-5.5 mb-2 shrink-0 group-hover:bg-[#F37021] transition-colors duration-300"
+                                                >
+                                                    <FaMapMarkerAlt className="w-5 h-5 text-[#F37021] group-hover:text-white transition-colors duration-300" />
+                                                </motion.div>
+                                                <h3 className="text-lg sm:text-xl font-extrabold text-[#1E1B26] mb-1 group-hover:text-[#F37021] transition-colors">
+                                                    {loc.name}
+                                                </h3>
+                                                <p className="text-sm sm:text-sm text-[#7A6A60] px-3 pb-3 font-normal leading-relaxed max-w-[240px]">
+                                                    {loc.description}
+                                                </p>
+                                            </Link>
+                                        </MotionCard>
+                                    </motion.div>
+                                ))}
+                            </div>
+                        </div>
+
+                        <motion.button
+                            whileHover={{ scale: 1.1, backgroundColor: "#F37021", color: "#ffffff" }}
+                            whileTap={{ scale: 0.9 }}
+                            transition={{ duration: 0.2 }}
+                            onClick={handleNext}
+                            aria-label="Next locations"
+                            className="hidden sm:flex shrink-0 w-10 h-10 rounded-full border-2 border-[#F37021]/30 text-[#F37021] bg-white items-center justify-center shadow-xs transition-colors duration-200 cursor-pointer z-10 group"
+                        >
+                            <ChevronRight className="w-5 h-5 text-[#F37021] group-hover:text-white transition-colors" />
+                        </motion.button>
+
+                    </div>
+                </FadeIn>
+
+                <FadeIn direction="up" delay={0.3}>
+                    <div className="flex items-center justify-center gap-2 mt-6">
+                        {[0, 1, 2].map((dotIndex) => (
+                            <motion.button
+                                key={dotIndex}
+                                whileHover={{ scale: 1.2 }}
+                                whileTap={{ scale: 0.9 }}
+                                transition={{ duration: 0.2 }}
+                                onClick={() => handleDotClick(dotIndex)}
+                                aria-label={`Go to slide ${dotIndex + 1}`}
+                                className={`w-2.5 h-2.5 rounded-full transition-colors duration-300 cursor-pointer ${activeDot === dotIndex
+                                    ? "bg-[#F37021] scale-110"
+                                    : "bg-neutral-300 hover:bg-neutral-400"
+                                    }`}
+                            />
                         ))}
                     </div>
-
-                    <motion.button
-                        whileHover={{ scale: 1.03 }}
-                        whileTap={{ scale: 0.97 }}
-                        transition={{ duration: 0.2, ease: "easeInOut" }}
-                        onClick={handleNext}
-                        aria-label="Next locations"
-                        className="hidden sm:flex shrink-0 w-10 h-10 rounded-full border-2 border-[#F37021]/30 hover:border-[#F37021] text-[#F37021] bg-white items-center justify-center shadow-xs transition-colors duration-200 cursor-pointer z-10"
-                    >
-                        <ChevronRight className="w-5 h-5 text-[#F37021]" />
-                    </motion.button>
-
-                </div>
-                <div className="flex items-center justify-center gap-2 mt-6">
-                    {[0, 1, 2].map((dotIndex) => (
-                        <motion.button
-                            key={dotIndex}
-                            whileHover={{ scale: 1.03 }}
-                            whileTap={{ scale: 0.97 }}
-                            transition={{ duration: 0.2, ease: "easeInOut" }}
-                            onClick={() => handleDotClick(dotIndex)}
-                            aria-label={`Go to slide ${dotIndex + 1}`}
-                            className={`w-2.5 h-2.5 rounded-full transition-colors duration-300 cursor-pointer ${activeDot === dotIndex
-                                ? "bg-[#F37021] scale-110"
-                                : "bg-neutral-300 hover:bg-neutral-400"
-                                }`}
-                        />
-                    ))}
-                </div>
+                </FadeIn>
                 
-                <Statistics stats={serviceData.stats} />
+                <FadeIn direction="up" delay={0.35}>
+                    <Statistics stats={serviceData.stats} />
+                </FadeIn>
 
             </div>
         </section>

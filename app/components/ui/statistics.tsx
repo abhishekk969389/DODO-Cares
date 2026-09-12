@@ -1,7 +1,7 @@
 "use client";
 
-import React from "react";
-import { motion } from "framer-motion";
+import React, { useState, useEffect, useRef } from "react";
+import { motion, useInView, animate } from "framer-motion";
 import { site as petData } from "@/data/index";
 import type { StatisticItem, StatisticsProps } from "@/types/pet";
 import { FadeIn } from "@/app/components/ui/animations";
@@ -34,7 +34,49 @@ const statIconMap: Record<string, React.ElementType> = {
   FaPaw,
 };
 
+function CountUp({ value }: { value: string }) {
+  const ref = useRef<HTMLSpanElement>(null);
+  const isInView = useInView(ref, { once: true, margin: "-30px" });
+  const [displayValue, setDisplayValue] = useState<string>("0");
 
+  useEffect(() => {
+    if (!isInView || !value) return;
+
+    const match = value.match(/^([^\d]*)([\d,.]+)(.*)$/);
+    if (!match) {
+      setDisplayValue(value);
+      return;
+    }
+
+    const prefix = match[1] || "";
+    const rawNumStr = match[2].replace(/,/g, "");
+    const suffix = match[3] || "";
+    const targetNum = parseFloat(rawNumStr);
+
+    if (isNaN(targetNum)) {
+      setDisplayValue(value);
+      return;
+    }
+
+    const hasComma = match[2].includes(",");
+
+    const controls = animate(0, targetNum, {
+      duration: 1.8,
+      ease: [0.25, 0.1, 0.25, 1],
+      onUpdate(latest) {
+        const rounded = Math.floor(latest);
+        const formattedNum = hasComma
+          ? rounded.toLocaleString()
+          : rounded.toString();
+        setDisplayValue(`${prefix}${formattedNum}${suffix}`);
+      },
+    });
+
+    return () => controls.stop();
+  }, [isInView, value]);
+
+  return <span ref={ref}>{isInView ? displayValue : "0"}</span>;
+}
 
 export default function Statistics({ stats: propsStats, className = "" }: StatisticsProps) {
   const statsList: StatisticItem[] = propsStats || petData.serviceAreas?.stats || [];
@@ -64,7 +106,7 @@ export default function Statistics({ stats: propsStats, className = "" }: Statis
                   </div>
                   <div className="flex flex-col text-left">
                     <span className="text-xl sm:text-2xl font-extrabold text-[#2C1810] leading-none mb-1 tracking-tight">
-                      {stat.value}
+                      <CountUp value={stat.value} />
                     </span>
                     <span className="text-sm sm:text-sm font-bold text-[#382219] leading-tight">
                       {stat.label}
