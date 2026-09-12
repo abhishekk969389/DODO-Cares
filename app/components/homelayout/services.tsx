@@ -94,52 +94,47 @@ export default function Services() {
 
                         return (
                             <StaggerItem key={service.id} direction="up">
-                                <MotionCard
-                                    hoverY={-6}
-                                    hoverScale={1.01}
-                                    className="bg-white rounded-[24px] sm:rounded-[28px] overflow-hidden border border-amber-900/5 p-4 flex flex-col items-center text-center pb-7 group cursor-pointer h-full"
-                                >
-
-                                    <div className="relative w-full h-[190px] sm:h-[210px] overflow-hidden rounded-[20px]">
-                                        <Image
-                                            src={service.image}
-                                            alt={service.title}
-                                            fill
-                                            sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
-                                            className="object-cover object-center group-hover:scale-105 transition-transform duration-500"
-                                        />
-
-                                        <div className="absolute top-3 right-3 w-8 h-8 rounded-full bg-white/90 backdrop-blur-xs text-[#2C1810] flex items-center justify-center shadow-xs">
-                                            <ArrowUpRight className="w-4 h-4 text-[#2C1810]" strokeWidth={2.5} />
-                                        </div>
-                                    </div>
-
-                                    <div className="relative z-10 w-13 h-13 sm:w-14 sm:h-14 rounded-full bg-[#F37021] border-4 border-white text-white flex items-center justify-center shadow-md -mt-7 mb-2 shrink-0">
-                                        {isStar ? (
-                                            <Star className="w-6 h-6 text-white fill-white" strokeWidth={1.5} />
-                                        ) : (
-                                            <Dog className="w-6.5 h-6.5 text-white" strokeWidth={2} />
-                                        )}
-                                    </div>
-
-
-                                    <h3 className="text-lg sm:text-[20px] font-extrabold text-[#1E1B26] mt-2 mb-2 px-2 leading-snug">
-                                        {service.title}
-                                    </h3>
-
-
-                                    <p className="text-sm sm:text-sm text-[#615147] font-normal leading-relaxed mb-6 px-3 flex-1">
-                                        {service.description}
-                                    </p>
-
+                                <MotionCard hoverY={-6} hoverScale={1.01} className="h-full">
                                     <Link
-                                        href={service.link}
-                                        className="inline-flex items-center gap-2 text-[#F37021] font-bold text-sm hover:text-[#d95c0e] transition-colors mt-auto group/link"
+                                        href={service.link || `/services/${service.id}`}
+                                        className="bg-white rounded-[24px] sm:rounded-[28px] overflow-hidden border border-amber-900/5 p-4 flex flex-col items-center text-center pb-7 group cursor-pointer h-full block"
                                     >
-                                        <span>Learn More</span>
-                                        <div className="w-7 h-7 rounded-full border border-[#F37021] text-[#F37021] flex items-center justify-center group-hover/link:bg-[#F37021] group-hover/link:text-white transition-all duration-200">
-                                            <ArrowRight className="w-3.5 h-3.5" strokeWidth={2.5} />
+                                        <div className="relative w-full h-[190px] sm:h-[210px] overflow-hidden rounded-[20px]">
+                                            <Image
+                                                src={service.image}
+                                                alt={service.title}
+                                                fill
+                                                sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
+                                                className="object-cover object-center group-hover:scale-105 transition-transform duration-500"
+                                            />
+
+                                            <div className="absolute top-3 right-3 w-8 h-8 rounded-full bg-white/90 backdrop-blur-xs text-[#2C1810] flex items-center justify-center shadow-xs">
+                                                <ArrowUpRight className="w-4 h-4 text-[#2C1810]" strokeWidth={2.5} />
+                                            </div>
                                         </div>
+
+                                        <div className="relative z-10 w-13 h-13 sm:w-14 sm:h-14 rounded-full bg-[#F37021] border-4 border-white text-white flex items-center justify-center shadow-md -mt-7 mb-2 shrink-0">
+                                            {isStar ? (
+                                                <Star className="w-6 h-6 text-white fill-white" strokeWidth={1.5} />
+                                            ) : (
+                                                <Dog className="w-6.5 h-6.5 text-white" strokeWidth={2} />
+                                            )}
+                                        </div>
+
+                                        <h3 className="text-lg sm:text-[20px] font-extrabold text-[#1E1B26] mt-2 mb-2 px-2 leading-snug group-hover:text-[#F37021] transition-colors">
+                                            {service.title}
+                                        </h3>
+
+                                        <p className="text-sm sm:text-sm text-[#615147] font-normal leading-relaxed mb-6 px-3 flex-1">
+                                            {service.description}
+                                        </p>
+
+                                        <span className="inline-flex items-center gap-2 text-[#F37021] font-bold text-sm group-hover:text-[#d95c0e] transition-colors mt-auto group/link">
+                                            <span>Learn More</span>
+                                            <div className="w-7 h-7 rounded-full border border-[#F37021] text-[#F37021] flex items-center justify-center group-hover:bg-[#F37021] group-hover:text-white transition-all duration-200">
+                                                <ArrowRight className="w-3.5 h-3.5" strokeWidth={2.5} />
+                                            </div>
+                                        </span>
                                     </Link>
                                 </MotionCard>
                             </StaggerItem>

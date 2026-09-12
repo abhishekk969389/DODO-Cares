@@ -61,7 +61,10 @@ export default function Blogs() {
                     {blogsData.posts?.slice(0, 4).map((post) => (
                         <StaggerItem key={post.id} direction="up">
                             <MotionCard hoverY={-6} hoverScale={1.01} className="h-full">
-                                <div className="bg-white rounded-[24px] sm:rounded-[28px] overflow-hidden p-4 border border-amber-900/10 flex flex-col justify-between group cursor-pointer h-full">
+                                <Link
+                                    href={post.link || `/blog/${post.id}`}
+                                    className="bg-white rounded-[24px] sm:rounded-[28px] overflow-hidden p-4 border border-amber-900/10 flex flex-col justify-between group cursor-pointer h-full block"
+                                >
 
                                     <div className="relative w-full h-[180px] sm:h-[200px] overflow-hidden rounded-[20px] mb-4">
                                         <Image
@@ -98,16 +101,13 @@ export default function Blogs() {
                                             {post.excerpt}
                                         </p>
 
-                                        <Link
-                                            href={post.link}
-                                            className="inline-flex items-center gap-1.5 text-[#F37021] font-extrabold text-sm hover:text-[#d95c0e] transition-colors mt-auto group/link"
-                                        >
+                                        <span className="inline-flex items-center gap-1.5 text-[#F37021] font-extrabold text-sm group-hover:text-[#d95c0e] transition-colors mt-auto group/link">
                                             <span>Read More</span>
                                             <ArrowRight className="w-4 h-4 transition-transform duration-300 group-hover/link:translate-x-1" strokeWidth={2.5} />
-                                        </Link>
+                                        </span>
 
                                     </div>
-                                </div>
+                                </Link>
                             </MotionCard>
                         </StaggerItem>
                     ))}

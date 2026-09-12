@@ -67,7 +67,10 @@ export default function BlogSec() {
                     {currentPosts.map((post) => (
                         <StaggerItem key={post.id} direction="up">
                             <MotionCard hoverY={-6} hoverScale={1.01} className="h-full">
-                                <div className="bg-white rounded-[24px] sm:rounded-[28px] overflow-hidden p-4 sm:p-4.5 border border-amber-900/10 shadow-xs flex flex-col justify-between group cursor-pointer h-full">
+                                <Link
+                                    href={post.link || `/blog/${post.id}`}
+                                    className="bg-white rounded-[24px] sm:rounded-[28px] overflow-hidden p-4 sm:p-4.5 border border-amber-900/10 shadow-xs flex flex-col justify-between group cursor-pointer h-full block"
+                                >
                                     <div className="relative w-full h-[210px] sm:h-[230px] overflow-hidden rounded-[20px] mb-4">
                                         <Image
                                             src={post.image}
@@ -93,16 +96,13 @@ export default function BlogSec() {
                                         <p className="text-sm sm:text-sm text-[#615147] font-normal leading-relaxed mb-5 flex-1">
                                             {post.excerpt}
                                         </p>
-                                        <Link
-                                            href={post.link}
-                                            className="inline-flex items-center gap-1.5 text-[#F37021] font-extrabold text-sm hover:text-[#d95c0e] transition-colors mt-auto group/link"
-                                        >
+                                        <span className="inline-flex items-center gap-1.5 text-[#F37021] font-extrabold text-sm group-hover:text-[#d95c0e] transition-colors mt-auto group/link">
                                             <span>Read More</span>
                                             <ArrowRight className="w-4 h-4 transition-transform duration-300 group-hover/link:translate-x-1" strokeWidth={2.5} />
-                                        </Link>
+                                        </span>
 
                                     </div>
-                                </div>
+                                </Link>
                             </MotionCard>
                         </StaggerItem>
                     ))}
