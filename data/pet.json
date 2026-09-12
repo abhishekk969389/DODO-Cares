@@ -684,11 +684,11 @@
               {
                 "id": "3",
                 "badge": "24/7 Dedicated Support",
-                "titlePrefix": "Your Pet",
-                "titleHighlight": "Deserve",
+                "titlePrefix": "Making ",
+                "titleHighlight": "Deserve Your Pet",
                 "titleSuffix": "Pure Comfort",
                 "description": "Safe home-like boarding, expert veterinary guidance, and daily walking routines for complete peace of mind.",
-                "bgImage": "/img2.png",
+                "bgImage": "/img3.png",
                 "primaryBtnText": "Our Services",
                 "primaryBtnLink": "/services",
                 "secondaryBtnText": "Contact Us",
@@ -764,7 +764,7 @@
                 "id": "6",
                 "name": "Meerut",
                 "description": "Serving all major areas in Meerut.",
-                "image": "/service/service1.jpg",
+                "image": "/service/service6.jpg",
                 "link": "/servicelocation/meerut"
               }
             ],
@@ -1411,7 +1411,7 @@
                 "category": "Grooming",
                 "duration": "2:45",
                 "thumbnail": "/blogs/blog1.jpg",
-                "videoUrl": "https://www.youtube.com/embed/dQw4w9WgXcQ"
+                "videoUrl": "https://www.youtube.com/embed/YLslsZuEaNE"
               },
               {
                 "id": "2",
@@ -1419,7 +1419,7 @@
                 "category": "Spa & Bath",
                 "duration": "3:15",
                 "thumbnail": "/blogs/blog2.jpg",
-                "videoUrl": "https://www.youtube.com/embed/dQw4w9WgXcQ"
+                "videoUrl": "https://www.youtube.com/embed/YLslsZuEaNE"
               },
               {
                 "id": "3",
@@ -1427,7 +1427,7 @@
                 "category": "Playtime",
                 "duration": "1:50",
                 "thumbnail": "/blogs/blog3.jpg",
-                "videoUrl": "https://www.youtube.com/embed/dQw4w9WgXcQ"
+                "videoUrl": "https://www.youtube.com/embed/YLslsZuEaNE"
               },
               {
                 "id": "4",
@@ -1435,7 +1435,7 @@
                 "category": "Our Center",
                 "duration": "4:10",
                 "thumbnail": "/blogs/blog4.jpg",
-                "videoUrl": "https://www.youtube.com/embed/dQw4w9WgXcQ"
+                "videoUrl": "https://www.youtube.com/embed/YLslsZuEaNE"
               },
               {
                 "id": "5",
@@ -1443,7 +1443,7 @@
                 "category": "Training",
                 "duration": "3:30",
                 "thumbnail": "/blogs/blog5.jpg",
-                "videoUrl": "https://www.youtube.com/embed/dQw4w9WgXcQ"
+                "videoUrl": "https://www.youtube.com/embed/YLslsZuEaNE"
               },
               {
                 "id": "6",
@@ -1451,7 +1451,7 @@
                 "category": "Care",
                 "duration": "2:20",
                 "thumbnail": "/blogs/blog6.jpg",
-                "videoUrl": "https://www.youtube.com/embed/dQw4w9WgXcQ"
+                "videoUrl": "https://www.youtube.com/embed/YLslsZuEaNE"
               }
             ]
           }

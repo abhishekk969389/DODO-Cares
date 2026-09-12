@@ -168,7 +168,14 @@ export default function VideoGallery() {
                   className="relative w-full aspect-video rounded-2xl overflow-hidden shadow-2xl bg-black border border-white/10"
                 >
                   <iframe
-                    src={`${activeVideo.videoUrl}?autoplay=1`}
+                    src={
+                      activeVideo.videoUrl
+                        ? (activeVideo.videoUrl.includes("watch?v=")
+                            ? activeVideo.videoUrl.replace("watch?v=", "embed/")
+                            : activeVideo.videoUrl) +
+                          (activeVideo.videoUrl.includes("?") ? "&autoplay=1" : "?autoplay=1")
+                        : ""
+                    }
                     title={activeVideo.title}
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                     allowFullScreen
