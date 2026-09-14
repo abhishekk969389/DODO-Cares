@@ -6,6 +6,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { site as petData } from "@/data/index";
 import type { DodoGalleryData as GallerySecData } from "@/data/index";
 import { FadeIn, MotionCard } from "@/app/components/ui/animations";
+import Pagination from "@/app/components/ui/pagination";
 import {
     FaCut as FaScissors,
     FaBath,
@@ -34,6 +35,8 @@ const galleryData: GallerySecData = petData.gallerySec as GallerySecData;
 export default function ImageGallery() {
     const [activeCategory, setActiveCategory] = useState<string>("all");
     const [selectedIndex, setSelectedIndex] = useState<number | null>(null);
+    const [currentPage, setCurrentPage] = useState<number>(1);
+    const itemsPerPage = 6;
 
     if (!galleryData) return null;
 
@@ -43,6 +46,19 @@ export default function ImageGallery() {
         activeCategory === "all"
             ? items
             : items.filter((item) => item.category === activeCategory);
+
+    const totalPages = Math.ceil((filteredItems?.length || 0) / itemsPerPage);
+    const startIndex = (currentPage - 1) * itemsPerPage;
+    const paginatedItems = filteredItems?.slice(startIndex, startIndex + itemsPerPage) || [];
+
+    const handlePageChange = (page: number) => {
+        setCurrentPage(page);
+        setSelectedIndex(null);
+        const sectionElement = document.getElementById("image-gallery-section");
+        if (sectionElement) {
+            sectionElement.scrollIntoView({ behavior: "smooth" });
+        }
+    };
 
     const handlePrev = useCallback((e?: React.MouseEvent) => {
         e?.stopPropagation();
@@ -75,7 +91,7 @@ export default function ImageGallery() {
     const currentItem = selectedIndex !== null ? filteredItems[selectedIndex] : null;
 
     return (
-        <section className="relative w-full mt-6 sm:mt-8 md:mt-10 lg:mt-10 overflow-hidden">
+        <section id="image-gallery-section" className="relative w-full mt-6 sm:mt-8 md:mt-10 lg:mt-10 overflow-hidden">
             <div className="max-w-[1320px] mx-auto px-4 sm:px-6 lg:px-8 w-full">
                 <div className="flex flex-col items-center text-center mb-8">
                     <FadeIn direction="up" delay={0.05}>
@@ -109,6 +125,7 @@ export default function ImageGallery() {
                                     key={cat.id}
                                     onClick={() => {
                                         setActiveCategory(cat.id);
+                                        setCurrentPage(1);
                                         setSelectedIndex(null);
                                     }}
                                     className={`rounded-full px-5 py-2.5 sm:px-6 sm:py-3 font-extrabold text-sm sm:text-sm transition-all duration-300 cursor-pointer flex items-center gap-2 border ${isActive
@@ -125,7 +142,7 @@ export default function ImageGallery() {
                 </FadeIn>
                 <motion.div layout className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
                     <AnimatePresence>
-                        {filteredItems?.map((item, index) => (
+                        {paginatedItems?.map((item, index) => (
                             <motion.div
                                 key={item.id}
                                 layout
@@ -138,7 +155,7 @@ export default function ImageGallery() {
                                     hoverY={-6}
                                     hoverScale={1.02}
                                     className="bg-white rounded-[24px] sm:rounded-[28px] overflow-hidden border border-neutral-100/90 shadow-sm hover:shadow-xl transition-all duration-300 group cursor-pointer relative h-[240px] sm:h-[280px]"
-                                    onClick={() => setSelectedIndex(index)}
+                                    onClick={() => setSelectedIndex(startIndex + index)}
                                 >
                                     <Image
                                         src={item.image}
@@ -162,6 +179,13 @@ export default function ImageGallery() {
                         ))}
                     </AnimatePresence>
                 </motion.div>
+
+                <Pagination
+                    currentPage={currentPage}
+                    totalPages={totalPages}
+                    onPageChange={handlePageChange}
+                />
+
                 <AnimatePresence>
                     {selectedIndex !== null && currentItem && (
                         <motion.div
@@ -234,4 +258,5 @@ export default function ImageGallery() {
         </section>
     );
 }
+
 

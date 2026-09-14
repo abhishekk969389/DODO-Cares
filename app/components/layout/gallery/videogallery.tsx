@@ -6,6 +6,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { site as petData } from "@/data/index";
 import type { DodoVideoGalleryData as VideoGalleryData } from "@/data/index";
 import { FadeIn, MotionCard } from "@/app/components/ui/animations";
+import Pagination from "@/app/components/ui/pagination";
 import { FaPaw, FaPlay, FaChevronLeft, FaChevronRight, FaTimes } from "react-icons/fa";
 
 
@@ -13,10 +14,25 @@ const videoData: VideoGalleryData = petData.videoGallery as VideoGalleryData;
 
 export default function VideoGallery() {
   const [selectedIndex, setSelectedIndex] = useState<number | null>(null);
+  const [currentPage, setCurrentPage] = useState<number>(1);
+  const itemsPerPage = 6;
 
   if (!videoData) return null;
 
   const { badge, titlePrefix, titleHighlight, description, videos } = videoData;
+
+  const totalPages = Math.ceil((videos?.length || 0) / itemsPerPage);
+  const startIndex = (currentPage - 1) * itemsPerPage;
+  const paginatedVideos = videos?.slice(startIndex, startIndex + itemsPerPage) || [];
+
+  const handlePageChange = (page: number) => {
+    setCurrentPage(page);
+    setSelectedIndex(null);
+    const sectionElement = document.getElementById("video-gallery-section");
+    if (sectionElement) {
+      sectionElement.scrollIntoView({ behavior: "smooth" });
+    }
+  };
 
   const handlePrev = useCallback((e?: React.MouseEvent) => {
     e?.stopPropagation();
@@ -49,7 +65,7 @@ export default function VideoGallery() {
   const activeVideo = selectedIndex !== null ? videos[selectedIndex] : null;
 
   return (
-    <section className="relative w-full mt-8 sm:mt-10 md:mt-12 lg:mt-14">
+    <section id="video-gallery-section" className="relative w-full mt-8 sm:mt-10 md:mt-12 lg:mt-14">
       <div className="max-w-[1320px] mx-auto px-4 sm:px-6 lg:px-8 w-full">
 
         <div className="flex flex-col items-center text-center mb-10 sm:mb-12">
@@ -83,13 +99,13 @@ export default function VideoGallery() {
         </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 pb-2 -mb-2">
-          {videos?.map((vid, idx) => (
+          {paginatedVideos?.map((vid, idx) => (
             <FadeIn key={vid.id || idx} direction="up" delay={0.1 + idx * 0.05}>
               <MotionCard
                 hoverY={-6}
                 hoverScale={1.02}
                 className="bg-white rounded-[24px] sm:rounded-[28px] overflow-hidden border border-neutral-200 shadow-sm transition-all duration-300 group cursor-pointer flex flex-col h-full"
-                onClick={() => setSelectedIndex(idx)}
+                onClick={() => setSelectedIndex(startIndex + idx)}
               >
                 <div className="relative w-full h-[210px] sm:h-[230px] overflow-hidden rounded-t-[24px] sm:rounded-t-[28px]">
                   <Image
@@ -127,6 +143,12 @@ export default function VideoGallery() {
             </FadeIn>
           ))}
         </div>
+
+        <Pagination
+          currentPage={currentPage}
+          totalPages={totalPages}
+          onPageChange={handlePageChange}
+        />
 
         <AnimatePresence>
           {selectedIndex !== null && activeVideo && (
@@ -207,4 +229,5 @@ export default function VideoGallery() {
     </section>
   );
 }
+
 

@@ -1453,6 +1453,13 @@
                 "duration": "2:20",
                 "thumbnail": "/blogs/blog6.jpg",
                 "videoUrl": "https://www.youtube.com/embed/YLslsZuEaNE"
+              }, {
+                "id": "7",
+                "title": "Veterinary Care & Wellness Check",
+                "category": "Care",
+                "duration": "2:20",
+                "thumbnail": "/blogs/blog6.jpg",
+                "videoUrl": "https://www.youtube.com/embed/YLslsZuEaNE"
               }
             ]
           }

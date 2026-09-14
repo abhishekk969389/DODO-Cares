@@ -53,10 +53,9 @@ export default function SubBanner({
                     </h1>
                 </FadeIn>
             </div>
-            <div className="absolute w-60 sm:w-120 md:w-140 bottom-[-1px] left-1/2 -translate-x-1/2 z-20">
+            <div className="absolute w-70 sm:w-120 md:w-140 bottom-[-1px] left-1/2 -translate-x-1/2 z-20">
                 <FadeIn direction="up" delay={0.15}>
                     <div className="relative bg-white rounded-t-[28px] sm:rounded-t-[36px] px-8 sm:px-14 py-3 sm:py-4 flex items-center justify-center gap-2.5">
-                        
                         <div className="absolute right-[calc(100%-0.5px)] bottom-0 w-7 h-7 sm:w-9 sm:h-9 text-white pointer-events-none overflow-hidden">
                             <svg
                                 viewBox="0 0 36 36"
